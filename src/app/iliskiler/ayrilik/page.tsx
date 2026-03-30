@@ -3,7 +3,8 @@
 import Link from "next/link";
 import Lottie from "lottie-react";
 import ayrilikAnim from "../../../../public/lottie/ayrilik.json";
-import RelatedCards, { ILISKI_ONERILERI, BURC_ONERILERI } from "@/components/RelatedCards";
+import RelatedCards from "@/components/RelatedCards";
+import { ILISKI_ONERILERI, BURC_ONERILERI } from "@/components/related-cards-data";
 
 const AYRILIK_BURCLARI = [
   { burc: "Koç", emoji: "♈", tepki: "Erholt sich schnell, stürzt sich in neue Abenteuer", iyilesme: "Sport und körperliche Aktivität", tavsiye: "Überstürze nichts, verarbeite deine Gefühle" },

@@ -1,7 +1,8 @@
 "use client";
 
 import { FormEvent, useState } from "react";
-import RelatedCards, { RUYA_ONERILERI, BURC_ONERILERI } from "@/components/RelatedCards";
+import RelatedCards from "@/components/RelatedCards";
+import { RUYA_ONERILERI, BURC_ONERILERI } from "@/components/related-cards-data";
 
 type DreamResponse = {
   genelAnlam: string;

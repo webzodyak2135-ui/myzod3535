@@ -3,7 +3,8 @@
 import Link from "next/link";
 import Lottie from "lottie-react";
 import soulmateAnim from "../../../../public/lottie/soulmate.json";
-import RelatedCards, { ILISKI_ONERILERI, BURC_ONERILERI } from "@/components/RelatedCards";
+import RelatedCards from "@/components/RelatedCards";
+import { ILISKI_ONERILERI, BURC_ONERILERI } from "@/components/related-cards-data";
 
 const SOULMATE_ISARETLERI = [
   { isaret: "Sofortige Erkennung", aciklama: "Vertrautheitsgefühl auf den ersten Blick, als hättet ihr euch schon mal getroffen", icon: "👀" },

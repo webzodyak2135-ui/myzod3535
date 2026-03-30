@@ -1,5 +1,6 @@
 import Link from "next/link";
-import RelatedCards, { BURC_ONERILERI } from "@/components/RelatedCards";
+import RelatedCards from "@/components/RelatedCards";
+import { BURC_ONERILERI } from "@/components/related-cards-data";
 
 const NEWS_ITEMS = [
   {

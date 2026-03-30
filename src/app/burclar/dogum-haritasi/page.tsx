@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import RelatedCards, { BURC_ONERILERI, GENEL_ONERILERI } from "@/components/RelatedCards";
+import RelatedCards from "@/components/RelatedCards";
+import { BURC_ONERILERI, GENEL_ONERILERI } from "@/components/related-cards-data";
 
 const GEZEGENLER = [
   { name: "Güneş", icon: "☀️", anlam: "Benlik, ego, yaşam enerjisi" },

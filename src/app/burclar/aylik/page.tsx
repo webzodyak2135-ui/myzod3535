@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { generateMonthlyHoroscopeBatch } from "@/lib/ai-content";
-import RelatedCards, { BURC_ONERILERI, ILISKI_ONERILERI } from "@/components/RelatedCards";
+import RelatedCards from "@/components/RelatedCards";
+import { BURC_ONERILERI, ILISKI_ONERILERI } from "@/components/related-cards-data";
 
 const BURCLAR = [
   { name: "Widder", emoji: "♈", slug: "koc", color: "#ef4444", aylik: "Diesen Monat stehen Karriere und Ziele im Vordergrund. Neue Jobchancen oder Beförderungsnachrichten sind möglich. Gegen Monatsende gibt es positive Entwicklungen in Beziehungen. Achte auf mehr Bewegung." },

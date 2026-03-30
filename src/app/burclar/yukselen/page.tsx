@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import RelatedCards, { BURC_ONERILERI, GENEL_ONERILERI } from "@/components/RelatedCards";
+import RelatedCards from "@/components/RelatedCards";
+import { BURC_ONERILERI, GENEL_ONERILERI } from "@/components/related-cards-data";
 
 const YUKSELEN_BURCLAR = [
   { name: "Koç", emoji: "♈", ozellik: "Enerjik, cesur ve doğrudan bir ilk izlenim bırakırsın. İnsanlar seni dinamik ve lider ruhlu görür." },

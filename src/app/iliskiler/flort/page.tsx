@@ -3,7 +3,8 @@
 import Link from "next/link";
 import Lottie from "lottie-react";
 import flortAnim from "../../../../public/lottie/flort.json";
-import RelatedCards, { ILISKI_ONERILERI, BURC_ONERILERI } from "@/components/RelatedCards";
+import RelatedCards from "@/components/RelatedCards";
+import { ILISKI_ONERILERI, BURC_ONERILERI } from "@/components/related-cards-data";
 
 const FLORT_BURCLARI = [
   { burc: "Koç", emoji: "♈", tarzi: "Direkt und mutig", etkileme: "Fordere heraus, konkurriere", kacirma: "Passiv und langweilig sein", ipucu: "Mach den ersten Schritt, sei nicht schüchtern" },

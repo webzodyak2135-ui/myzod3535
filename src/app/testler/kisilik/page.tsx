@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import RelatedCards, { TEST_ONERILERI, BURC_ONERILERI } from "@/components/RelatedCards";
+import RelatedCards from "@/components/RelatedCards";
+import { TEST_ONERILERI, BURC_ONERILERI } from "@/components/related-cards-data";
 
 const SORULAR = [
   {

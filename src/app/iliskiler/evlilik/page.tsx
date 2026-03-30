@@ -3,7 +3,8 @@
 import Link from "next/link";
 import Lottie from "lottie-react";
 import evlilikAnim from "../../../../public/lottie/evlilik.json";
-import RelatedCards, { ILISKI_ONERILERI, BURC_ONERILERI } from "@/components/RelatedCards";
+import RelatedCards from "@/components/RelatedCards";
+import { ILISKI_ONERILERI, BURC_ONERILERI } from "@/components/related-cards-data";
 
 const EVLILIK_BURCLARI = [
   { burc: "Koç", emoji: "♈", evlilikYasi: "Bevorzugt späte Ehe", idealPartner: "Geduldig und unterstützend", tavsiye: "Wähle einen Partner, der deine Unabhängigkeit respektiert" },
