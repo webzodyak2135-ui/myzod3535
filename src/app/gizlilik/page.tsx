@@ -61,7 +61,21 @@ export default function GizlilikPage() {
               6. Kontakt
             </h2>
             <p style={{ color: "#ffffff", lineHeight: 1.8 }}>
-              Bei Fragen zu unserer Datenschutzrichtlinie kannst du uns unter info@zodyakli.com kontaktieren.
+              Bei datenschutzrechtlichen Anliegen erreichst du uns unter:
+              <br />
+              E-Mail: emreipekyuz7@gmail.com
+              <br />
+              Telefon: +90 530 832 13 95
+              <br />
+              Max Mustermann (murat emre ipekyuz)
+              <br />
+              Akatay Towers, Firat Mah.
+              <br />
+              494/1. Sokak No: 17, B1 Blok
+              <br />
+              21070 Kayapinar / Diyarbakir
+              <br />
+              Turkei
             </p>
           </div>
         </div>

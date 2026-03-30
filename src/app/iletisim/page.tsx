@@ -50,27 +50,32 @@ export default function IletisimPage() {
                   </div>
                   <div>
                     <div style={{ fontSize: "0.85rem", color: "#ffffff" }}>E-Mail</div>
-                    <div style={{ fontSize: "1rem", fontWeight: 600, color: "#ffffff" }}>info@SternenFeed.com</div>
+                    <div style={{ fontSize: "1rem", fontWeight: 600, color: "#ffffff" }}>emreipekyuz7@gmail.com</div>
                   </div>
                 </div>
 
                 <div style={{ display: "flex", alignItems: "center", gap: "1rem", padding: "1rem", background: "#1a0b2e", borderRadius: "12px", boxShadow: "0 2px 8px rgba(0,0,0,0.04)" }}>
                   <div style={{ width: "48px", height: "48px", borderRadius: "12px", background: "#1a0b2e", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.25rem" }}>
-                    📱
+                    📍
                   </div>
                   <div>
-                    <div style={{ fontSize: "0.85rem", color: "#ffffff" }}>Social Media</div>
-                    <div style={{ fontSize: "1rem", fontWeight: 600, color: "#ffffff" }}>@SternenFeed</div>
+                    <div style={{ fontSize: "0.85rem", color: "#ffffff" }}>Adresse</div>
+                    <div style={{ fontSize: "1rem", fontWeight: 600, color: "#ffffff" }}>
+                      Akatay Towers, Firat Mah.<br />
+                      494/1. Sokak No: 17, B1 Blok<br />
+                      21070 Kayapinar / Diyarbakir<br />
+                      Turkei
+                    </div>
                   </div>
                 </div>
 
                 <div style={{ display: "flex", alignItems: "center", gap: "1rem", padding: "1rem", background: "#1a0b2e", borderRadius: "12px", boxShadow: "0 2px 8px rgba(0,0,0,0.04)" }}>
                   <div style={{ width: "48px", height: "48px", borderRadius: "12px", background: "#1a0b2e", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.25rem" }}>
-                    ⏰
+                    ☎️
                   </div>
                   <div>
-                    <div style={{ fontSize: "0.85rem", color: "#ffffff" }}>Antwortzeit</div>
-                    <div style={{ fontSize: "1rem", fontWeight: 600, color: "#ffffff" }}>Innerhalb von 24 Stunden</div>
+                    <div style={{ fontSize: "0.85rem", color: "#ffffff" }}>Telefon</div>
+                    <div style={{ fontSize: "1rem", fontWeight: 600, color: "#ffffff" }}>+90 530 832 13 95</div>
                   </div>
                 </div>
               </div>
