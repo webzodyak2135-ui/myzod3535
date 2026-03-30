@@ -54,6 +54,9 @@ export const metadata: Metadata = {
     description:
       "Tägliche Horoskope, Traumdeutung und Astrologie-Ratgeber.",
   },
+  verification: {
+    google: "IWxTZG6MLB91OFZOOtTLOen_WTwIdzNKgWYXbuCK9A8",
+  },
   robots: {
     index: true,
     follow: true,
