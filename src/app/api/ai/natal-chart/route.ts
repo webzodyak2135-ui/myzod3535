@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import { generateNatalChartReading, TonePreset } from "@/lib/ai-content";
 
+export const runtime = "edge";
+
 export async function POST(req: NextRequest) {
   try {
     const body = (await req.json()) as {

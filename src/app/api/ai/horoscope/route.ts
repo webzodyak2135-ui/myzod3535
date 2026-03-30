@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import { generateDailyHoroscopeBatch, TONE_PRESETS, type TonePreset, ZODIAC_SIGNS } from "@/lib/ai-content";
 
+export const runtime = "edge";
+
 export async function POST(request: Request) {
   try {
     const body = (await request.json().catch(() => ({}))) as {

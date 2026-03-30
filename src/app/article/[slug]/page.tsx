@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { Share2, MessageCircle, Instagram } from "lucide-react";
 
+export const runtime = "edge";
+
 const ARTICLE_DATA = {
   title: "Flugträume: Freiheit oder Flucht?",
   category: "Traumdeutung",
