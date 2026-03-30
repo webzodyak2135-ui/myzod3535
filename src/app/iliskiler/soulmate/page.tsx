@@ -6,21 +6,21 @@ import soulmateAnim from "../../../../public/lottie/soulmate.json";
 import RelatedCards, { ILISKI_ONERILERI, BURC_ONERILERI } from "@/components/RelatedCards";
 
 const SOULMATE_ISARETLERI = [
-  { isaret: "Anında Tanıma", aciklama: "İlk görüşte tanıdık hissi, sanki daha önce tanışmışsınız gibi", icon: "👀" },
-  { isaret: "Derin Anlayış", aciklama: "Sözlere gerek kalmadan birbirinizi anlarsınız", icon: "🧠" },
-  { isaret: "Senkronisite", aciklama: "Aynı anda aynı şeyleri düşünür, tesadüfler yaşarsınız", icon: "✨" },
-  { isaret: "Koşulsuz Kabul", aciklama: "Birbirinizi olduğunuz gibi kabul edersiniz", icon: "💕" },
-  { isaret: "Büyüme", aciklama: "Birbirinizi daha iyi insanlar olmaya itersiniz", icon: "🌱" },
-  { isaret: "Zamansızlık", aciklama: "Birlikte zaman farklı akar, saatler dakikalar gibi geçer", icon: "⏰" },
-  { isaret: "Güvenlik", aciklama: "Yanında kendin olabilirsin, yargılanma korkusu yok", icon: "🛡️" },
-  { isaret: "Telepati", aciklama: "Birbirinizin düşüncelerini hissedersiniz", icon: "🔮" },
+  { isaret: "Sofortige Erkennung", aciklama: "Vertrautheitsgefühl auf den ersten Blick, als hättet ihr euch schon mal getroffen", icon: "👀" },
+  { isaret: "Tiefes Verständnis", aciklama: "Ihr versteht euch ohne Worte", icon: "🧠" },
+  { isaret: "Synchronizität", aciklama: "Ihr denkt gleichzeitig dasselbe, erlebt Zufälle", icon: "✨" },
+  { isaret: "Bedingungslose Akzeptanz", aciklama: "Ihr akzeptiert euch gegenseitig so wie ihr seid", icon: "💕" },
+  { isaret: "Wachstum", aciklama: "Ihr inspiriert euch gegenseitig, bessere Menschen zu werden", icon: "🌱" },
+  { isaret: "Zeitlosigkeit", aciklama: "Zeit vergeht anders zusammen, Stunden fühlen sich wie Minuten an", icon: "⏰" },
+  { isaret: "Sicherheit", aciklama: "Du kannst du selbst sein, keine Angst vor Verurteilung", icon: "🛡️" },
+  { isaret: "Telepathie", aciklama: "Ihr spürt die Gedanken des anderen", icon: "🔮" },
 ];
 
 const SOULMATE_BURCLARI = [
-  { burc: "Koç", emoji: "♈", soulmate: ["Aslan", "Yay"], aciklama: "Ateş elementinden ruh eşleri, tutku ve macera paylaşımı" },
-  { burc: "Boğa", emoji: "♉", soulmate: ["Başak", "Oğlak"], aciklama: "Toprak elementinden derin bağlar, istikrar ve güven" },
-  { burc: "İkizler", emoji: "♊", soulmate: ["Terazi", "Kova"], aciklama: "Hava elementinden zihinsel uyum, entelektüel bağ" },
-  { burc: "Yengeç", emoji: "♋", soulmate: ["Akrep", "Balık"], aciklama: "Su elementinden duygusal derinlik, sezgisel anlayış" },
+  { burc: "Koç", emoji: "♈", soulmate: ["Löwe", "Schütze"], aciklama: "Seelenverwandte vom Feuerelement, teilen Leidenschaft und Abenteuer" },
+  { burc: "Boğa", emoji: "♉", soulmate: ["Jungfrau", "Steinbock"], aciklama: "Tiefe Bindungen vom Erdelement, Stabilität und Vertrauen" },
+  { burc: "İkizler", emoji: "♊", soulmate: ["Waage", "Wassermann"], aciklama: "Geistige Harmonie vom Luftelement, intellektuelle Bindung" },
+  { burc: "Yengeç", emoji: "♋", soulmate: ["Skorpion", "Fische"], aciklama: "Emotionale Tiefe vom Wasserelement, intuitives Verständnis" },
   { burc: "Aslan", emoji: "♌", soulmate: ["Koç", "Yay"], aciklama: "Ateş elementinden karşılıklı hayranlık ve tutku" },
   { burc: "Başak", emoji: "♍", soulmate: ["Boğa", "Oğlak"], aciklama: "Toprak elementinden pratik uyum, güvenilir bağ" },
   { burc: "Terazi", emoji: "♎", soulmate: ["İkizler", "Kova"], aciklama: "Hava elementinden uyum ve denge, estetik paylaşım" },
@@ -32,10 +32,10 @@ const SOULMATE_BURCLARI = [
 ];
 
 const SOULMATE_TURLERI = [
-  { tur: "Romantik Ruh Eşi", aciklama: "Hayat boyu partner, derin romantik bağ", icon: "💑" },
-  { tur: "Karmik Ruh Eşi", aciklama: "Geçmiş yaşamlardan gelen, ders öğreten bağ", icon: "🔄" },
-  { tur: "İkiz Alev", aciklama: "Ruhunuzun diğer yarısı, yoğun ve dönüştürücü", icon: "🔥" },
-  { tur: "Ruh Arkadaşı", aciklama: "Derin dostluk, ömür boyu destek", icon: "🤝" },
+  { tur: "Romantischer Seelenverwandter", aciklama: "Lebenspartner, tiefe romantische Bindung", icon: "💑" },
+  { tur: "Karmischer Seelenverwandter", aciklama: "Aus vergangenen Leben, lehrreiche Verbindung", icon: "🔄" },
+  { tur: "Zwillingsflamme", aciklama: "Die andere Hälfte deiner Seele, intensiv und transformierend", icon: "🔥" },
+  { tur: "Seelenfreund", aciklama: "Tiefe Freundschaft, lebenslange Unterstützung", icon: "🤝" },
 ];
 
 export default function SoulmatePage() {
@@ -91,14 +91,14 @@ export default function SoulmatePage() {
 
         <div style={{ maxWidth: "72rem", margin: "0 auto", position: "relative", zIndex: 1 }}>
           <Link href="/iliskiler" style={{ color: "rgba(255,255,255,0.75)", fontSize: "0.9rem", textDecoration: "none", padding: "0.5rem 1rem", background: "rgba(255,255,255,0.08)", backdropFilter: "blur(10px)", borderRadius: "9999px", border: "1px solid rgba(255,255,255,0.12)", display: "inline-block", marginBottom: "1.5rem" }}>
-            ← İlişkiler
+            ← Beziehungen
           </Link>
 
           <h1 style={{ fontSize: "clamp(2.2rem, 5vw, 3.5rem)", fontWeight: 800, color: "#ffffff", marginBottom: "0.5rem", textShadow: "0 0 40px rgba(99,102,241,0.6)", letterSpacing: "-0.02em" }}>
-            Soulmate Bağı
+            Seelenverwandte Verbindung
           </h1>
           <p style={{ fontSize: "1rem", color: "rgba(255,255,255,0.65)", maxWidth: "500px", margin: "0 auto 2.5rem" }}>
-            Ruh eşini tanımanın yolları - Kozmik bağlantılar ve işaretler
+            Wege deine Seelenverwandten zu erkennen - Kosmische Verbindungen und Zeichen
           </p>
 
           {/* Hero Görsel - Animasyonlu */}
@@ -126,11 +126,11 @@ export default function SoulmatePage() {
         </div>
       </section>
 
-      {/* Ruh Eşi Türleri */}
+      {/* Arten von Seelenverwandten */}
       <section style={{ padding: "3rem 1rem" }}>
         <div style={{ maxWidth: "72rem", margin: "0 auto" }}>
           <h2 style={{ fontSize: "1.5rem", fontWeight: 700, color: "#ffffff", marginBottom: "1.5rem", textAlign: "center" }}>
-            Ruh Eşi Türleri
+            Arten von Seelenverwandten
           </h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "1rem" }}>
             {SOULMATE_TURLERI.map((item, i) => (
@@ -157,7 +157,7 @@ export default function SoulmatePage() {
       <section style={{ padding: "3rem 1rem", background: "#1a0b2e" }}>
         <div style={{ maxWidth: "72rem", margin: "0 auto" }}>
           <h2 style={{ fontSize: "1.5rem", fontWeight: 700, color: "#ffffff", marginBottom: "1.5rem", textAlign: "center" }}>
-            Ruh Eşini Tanımanın İşaretleri
+            Zeichen, um deine Seelenverwandten zu Erkennen
           </h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1rem" }}>
             {SOULMATE_ISARETLERI.map((item, i) => (
@@ -184,11 +184,11 @@ export default function SoulmatePage() {
         </div>
       </section>
 
-      {/* Burçlara Göre */}
+      {/* Nach Sternzeichen */}
       <section style={{ padding: "3rem 1rem" }}>
         <div style={{ maxWidth: "72rem", margin: "0 auto" }}>
           <h2 style={{ fontSize: "1.5rem", fontWeight: 700, color: "#ffffff", marginBottom: "1.5rem", textAlign: "center" }}>
-            Burcuna Göre Potansiyel Ruh Eşlerin
+            Deine potenziellen Seelenverwandten nach Sternzeichen
           </h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1rem" }}>
             {SOULMATE_BURCLARI.map((item) => (
@@ -221,22 +221,22 @@ export default function SoulmatePage() {
         <div style={{ maxWidth: "72rem", margin: "0 auto" }}>
           <div style={{ background: "linear-gradient(135deg, #6366f115, #a855f715)", borderRadius: "24px", padding: "2rem" }}>
             <h2 style={{ fontSize: "1.25rem", fontWeight: 700, color: "#ffffff", marginBottom: "1rem" }}>
-              💫 Ruh Eşi Hakkında Bilmeniz Gerekenler
+              💫 Was du über Seelenverwandte Wissen Solltest
             </h2>
             <p style={{ color: "#ffffff", lineHeight: 1.8, marginBottom: "1rem" }}>
-              Ruh eşi kavramı, hayatımıza derin bir anlam ve bağlantı getiren özel kişileri tanımlar.
-              Ancak unutmayın ki ruh eşi bulmak, mükemmel bir ilişki garantisi değildir.
-              Her ilişki çaba, anlayış ve büyüme gerektirir.
+              Das Konzept der Seelenverwandten beschreibt besondere Menschen, die tiefe Bedeutung und Verbindung in unser Leben bringen.
+              Aber denk daran, dass das Finden einer Seelenverwandten keine Garantie für eine perfekte Beziehung ist.
+              Jede Beziehung erfordert Anstrengung, Verständnis und Wachstum.
             </p>
             <p style={{ color: "#ffffff", lineHeight: 1.8 }}>
-              Ruh eşinizi ararken kendinizi geliştirmeye odaklanın. Çünkü en iyi ilişkiler,
-              iki bütün insanın bir araya gelmesiyle oluşur, iki yarımın değil.
+              Während du nach deiner Seelenverwandten suchst, konzentriere dich auf deine eigene Entwicklung. Denn die besten Beziehungen
+              entstehen durch das Zusammenkommen zweier ganzer Menschen, nicht zweier Hälften.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Önerilen İçerikler */}
+      {/* Empfohlene Inhalte */}
       <RelatedCards
         title="İlgini Çekebilir"
         items={[

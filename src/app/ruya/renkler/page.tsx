@@ -1,25 +1,25 @@
 import Link from "next/link";
 
 const RENKLER = [
-  { renk: "Beyaz", anlam: "Saflık, masumiyet, yeni başlangıç, spiritüel arınma", hex: "#1a0b2e", textColor: "#ffffff" },
-  { renk: "Siyah", anlam: "Bilinmeyen, gizem, bilinçaltı, dönüşüm", hex: "#ffffff", textColor: "#ffffff" },
-  { renk: "Kırmızı", anlam: "Tutku, enerji, öfke, güç, tehlike", hex: "#ef4444", textColor: "#ffffff" },
-  { renk: "Mavi", anlam: "Huzur, iletişim, sadakat, melankoli", hex: "#3b82f6", textColor: "#ffffff" },
-  { renk: "Yeşil", anlam: "Doğa, şifa, büyüme, umut, kıskançlık", hex: "#22c55e", textColor: "#ffffff" },
-  { renk: "Sarı", anlam: "Mutluluk, zeka, uyarı, aydınlanma", hex: "#eab308", textColor: "#ffffff" },
-  { renk: "Turuncu", anlam: "Yaratıcılık, coşku, sıcaklık, macera", hex: "#f97316", textColor: "#ffffff" },
-  { renk: "Mor", anlam: "Spiritüellik, lüks, gizem, dönüşüm", hex: "#a855f7", textColor: "#ffffff" },
-  { renk: "Pembe", anlam: "Aşk, şefkat, feminen enerji, romantizm", hex: "#ec4899", textColor: "#ffffff" },
-  { renk: "Kahverengi", anlam: "Topraklama, istikrar, güvenlik, doğa", hex: "#92400e", textColor: "#ffffff" },
-  { renk: "Gri", anlam: "Tarafsızlık, belirsizlik, denge, olgunluk", hex: "#6b7280", textColor: "#ffffff" },
-  { renk: "Altın", anlam: "Zenginlik, başarı, bilgelik, ilahi enerji", hex: "#d4af37", textColor: "#ffffff" },
+  { renk: "Weiß", anlam: "Reinheit, Unschuld, Neuanfang, spirituelle Reinigung", hex: "#1a0b2e", textColor: "#ffffff" },
+  { renk: "Schwarz", anlam: "Das Unbekannte, Mysterium, Unterbewusstsein, Transformation", hex: "#ffffff", textColor: "#ffffff" },
+  { renk: "Rot", anlam: "Leidenschaft, Energie, Wut, Kraft, Gefahr", hex: "#ef4444", textColor: "#ffffff" },
+  { renk: "Blau", anlam: "Frieden, Kommunikation, Loyalität, Melancholie", hex: "#3b82f6", textColor: "#ffffff" },
+  { renk: "Grün", anlam: "Natur, Heilung, Wachstum, Hoffnung, Eifersucht", hex: "#22c55e", textColor: "#ffffff" },
+  { renk: "Gelb", anlam: "Glück, Intelligenz, Warnung, Erleuchtung", hex: "#eab308", textColor: "#ffffff" },
+  { renk: "Orange", anlam: "Kreativität, Begeisterung, Wärme, Abenteuer", hex: "#f97316", textColor: "#ffffff" },
+  { renk: "Lila", anlam: "Spiritualität, Luxus, Mysterium, Transformation", hex: "#a855f7", textColor: "#ffffff" },
+  { renk: "Rosa", anlam: "Liebe, Mitgefühl, feminine Energie, Romantik", hex: "#ec4899", textColor: "#ffffff" },
+  { renk: "Braun", anlam: "Erdung, Stabilität, Sicherheit, Natur", hex: "#92400e", textColor: "#ffffff" },
+  { renk: "Grau", anlam: "Neutralität, Unsicherheit, Balance, Reife", hex: "#6b7280", textColor: "#ffffff" },
+  { renk: "Gold", anlam: "Reichtum, Erfolg, Weisheit, göttliche Energie", hex: "#d4af37", textColor: "#ffffff" },
 ];
 
 const RENK_KOMBINASYONLARI = [
-  { kombinasyon: "Siyah & Beyaz", anlam: "Dualite, denge, zıtlıkların birliği, yin-yang" },
-  { kombinasyon: "Kırmızı & Siyah", anlam: "Güç, tutku, gizli arzular, yoğun duygular" },
-  { kombinasyon: "Mavi & Yeşil", anlam: "Doğa ile uyum, huzur, şifa enerjisi" },
-  { kombinasyon: "Altın & Mor", anlam: "Spiritüel zenginlik, yüksek bilinç, lüks" },
+  { kombinasyon: "Schwarz & Weiß", anlam: "Dualität, Balance, Einheit der Gegensätze, Yin-Yang" },
+  { kombinasyon: "Rot & Schwarz", anlam: "Kraft, Leidenschaft, geheime Wünsche, intensive Emotionen" },
+  { kombinasyon: "Blau & Grün", anlam: "Harmonie mit der Natur, Frieden, Heilenergie" },
+  { kombinasyon: "Gold & Lila", anlam: "Spiritueller Reichtum, höheres Bewusstsein, Luxus" },
 ];
 
 export default function RenkSembolleriPage() {
@@ -35,14 +35,14 @@ export default function RenkSembolleriPage() {
       >
         <div style={{ maxWidth: "72rem", margin: "0 auto" }}>
           <Link href="/ruya-tabirleri" style={{ color: "rgba(255,255,255,0.8)", fontSize: "0.9rem", textDecoration: "none" }}>
-            ← Rüya Tabirleri
+            ← Traumdeutung
           </Link>
           <div style={{ fontSize: "4rem", marginTop: "1rem" }}>🎨</div>
           <h1 style={{ fontSize: "clamp(2rem, 5vw, 3rem)", fontWeight: 800, color: "#ffffff", marginTop: "0.5rem" }}>
-            Renk Sembolleri
+            Farbsymbole
           </h1>
           <p style={{ fontSize: "1.1rem", color: "rgba(255,255,255,0.9)", maxWidth: "600px", margin: "1rem auto 0" }}>
-            Rüyadaki renklerin dili - her rengin taşıdığı anlam
+            Die Sprache der Farben im Traum - die Bedeutung jeder Farbe
           </p>
         </div>
       </section>
@@ -51,7 +51,7 @@ export default function RenkSembolleriPage() {
       <section style={{ padding: "3rem 1rem" }}>
         <div style={{ maxWidth: "72rem", margin: "0 auto" }}>
           <h2 style={{ fontSize: "1.5rem", fontWeight: 700, color: "#ffffff", marginBottom: "1.5rem", textAlign: "center" }}>
-            Renklerin Anlamları
+            Bedeutungen der Farben
           </h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1rem" }}>
             {RENKLER.map((item, i) => (
@@ -115,13 +115,13 @@ export default function RenkSembolleriPage() {
               🎨 Rüyalarda Renkleri Yorumlamak
             </h2>
             <p style={{ color: "#ffffff", lineHeight: 1.8, marginBottom: "1rem" }}>
-              Rüyalardaki renkler, duygusal durumunuzu ve bilinçaltı mesajlarını güçlü bir şekilde iletir. 
-              Canlı renkler genellikle yoğun duyguları, soluk renkler ise bastırılmış veya zayıflamış 
+              Rüyalardaki renkler, duygusal durumunuzu ve bilinçaltı mesajlarını güçlü bir şekilde iletir.
+              Canlı renkler genellikle yoğun duyguları, soluk renkler ise bastırılmış veya zayıflamış
               duyguları temsil eder.
             </p>
             <p style={{ color: "#ffffff", lineHeight: 1.8 }}>
-              Rüyanızda öne çıkan rengi hatırlamaya çalışın. O rengin size ne hissettirdiği, 
-              genel anlamından daha önemli olabilir. Kişisel çağrışımlarınız evrensel anlamlardan 
+              Rüyanızda öne çıkan rengi hatırlamaya çalışın. O rengin size ne hissettirdiği,
+              genel anlamından daha önemli olabilir. Kişisel çağrışımlarınız evrensel anlamlardan
               önce gelir.
             </p>
           </div>

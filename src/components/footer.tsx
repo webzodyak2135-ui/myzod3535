@@ -1,29 +1,30 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const FOOTER_LINKS = {
   burclar: [
-    { label: "Günlük Yorumlar", href: "/burclar/gunluk" },
-    { label: "Haftalık Yorumlar", href: "/burclar/haftalik" },
-    { label: "Aylık Yorumlar", href: "/burclar/aylik" },
-    { label: "Burç Uyumu", href: "/burclar/uyum" },
+    { label: "Tageshoroskop", href: "/burclar/gunluk" },
+    { label: "Wochenhoroskop", href: "/burclar/haftalik" },
+    { label: "Monatshoroskop", href: "/burclar/aylik" },
+    { label: "Kompatibilität", href: "/burclar/uyum" },
   ],
   ruya: [
-    { label: "Rüya Sözlüğü", href: "/ruya/sozluk" },
-    { label: "Su Rüyaları", href: "/ruya/su" },
-    { label: "Uçma Rüyaları", href: "/ruya/ucma" },
-    { label: "Aşk Rüyaları", href: "/ruya/ask" },
+    { label: "Traumlexikon", href: "/ruya/sozluk" },
+    { label: "Wasserträume", href: "/ruya/su" },
+    { label: "Flugträume", href: "/ruya/ucma" },
+    { label: "Liebesträume", href: "/ruya/ask" },
   ],
   testler: [
-    { label: "Burç Testi", href: "/testler/burc" },
-    { label: "Numeroloji", href: "/testler/numeroloji" },
-    { label: "Element Testi", href: "/testler/element" },
-    { label: "Aşk Uyumu", href: "/testler/ask-uyumu" },
+    { label: "Sternzeichen-Test", href: "/testler/burc" },
+    { label: "Numerologie", href: "/testler/numeroloji" },
+    { label: "Element-Test", href: "/testler/element" },
+    { label: "Liebes-Kompatibilität", href: "/testler/ask-uyumu" },
   ],
   diger: [
-    { label: "Gök Gündemi", href: "/gok-gundemi" },
-    { label: "İlişkiler", href: "/iliskiler" },
-    { label: "Hakkımızda", href: "/hakkimizda" },
-    { label: "İletişim", href: "/iletisim" },
+    { label: "Kosmischer Kalender", href: "/gok-gundemi" },
+    { label: "Beziehungen", href: "/iliskiler" },
+    { label: "Über uns", href: "/hakkimizda" },
+    { label: "Kontakt", href: "/iletisim" },
   ],
 };
 
@@ -63,14 +64,17 @@ export default function Footer() {
                     width: "40px",
                     height: "40px",
                     borderRadius: "12px",
-                    background: "linear-gradient(135deg, #7c3aed, #a855f7)",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    fontSize: "1.25rem",
+                    overflow: "hidden",
+                    position: "relative",
+                    border: "2px solid rgba(168,85,247,0.3)",
                   }}
                 >
-                  ✨
+                  <Image
+                    src="/img/newfavicon.png"
+                    alt="SternenFeed Logo"
+                    fill
+                    style={{ objectFit: "cover" }}
+                  />
                 </div>
                 <span
                   style={{
@@ -82,19 +86,19 @@ export default function Footer() {
                     WebkitTextFillColor: "transparent",
                   }}
                 >
-                  ZODYAKLI
+                  SternenFeed
                 </span>
               </div>
             </Link>
             <p style={{ fontSize: "0.9rem", color: "rgba(255,255,255,0.7)", lineHeight: 1.7 }}>
-              Günlük burç yorumları, rüya tabirleri ve astroloji testleriyle kozmik rehberiniz.
+              Dein kosmischer Guide mit täglichen Horoskopen, Traumdeutung und Astrologie-Tests.
             </p>
           </div>
 
           {/* Burçlar */}
           <div>
             <h4 style={{ fontSize: "0.9rem", fontWeight: 700, marginBottom: "1rem", color: "#a78bfa" }}>
-              ♈ Burçlar
+              ♈ Sternzeichen
             </h4>
             <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
               {FOOTER_LINKS.burclar.map((link) => (
@@ -118,7 +122,7 @@ export default function Footer() {
           {/* Rüya Tabirleri */}
           <div>
             <h4 style={{ fontSize: "0.9rem", fontWeight: 700, marginBottom: "1rem", color: "#818cf8" }}>
-              🌙 Rüya Tabirleri
+              🌙 Traumdeutung
             </h4>
             <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
               {FOOTER_LINKS.ruya.map((link) => (
@@ -141,7 +145,7 @@ export default function Footer() {
           {/* Testler */}
           <div>
             <h4 style={{ fontSize: "0.9rem", fontWeight: 700, marginBottom: "1rem", color: "#c084fc" }}>
-              ✨ Testler
+              ✨ Tests
             </h4>
             <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
               {FOOTER_LINKS.testler.map((link) => (
@@ -164,7 +168,7 @@ export default function Footer() {
           {/* Diğer */}
           <div>
             <h4 style={{ fontSize: "0.9rem", fontWeight: 700, marginBottom: "1rem", color: "#f0abfc" }}>
-              🌌 Diğer
+              🌌 Mehr
             </h4>
             <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
               {FOOTER_LINKS.diger.map((link) => (
@@ -198,20 +202,20 @@ export default function Footer() {
           }}
         >
           <p style={{ fontSize: "0.8rem", color: "rgba(255,255,255,0.5)" }}>
-            © 2024 Zodyaklı. Tüm hakları saklıdır.
+            © 2024 SternenFeed. Alle Rechte vorbehalten.
           </p>
           <div style={{ display: "flex", gap: "1.5rem" }}>
             <Link
               href="/gizlilik"
               style={{ fontSize: "0.8rem", color: "rgba(255,255,255,0.5)", textDecoration: "none" }}
             >
-              Gizlilik Politikası
+              Datenschutzerklärung
             </Link>
             <Link
               href="/kullanim-sartlari"
               style={{ fontSize: "0.8rem", color: "rgba(255,255,255,0.5)", textDecoration: "none" }}
             >
-              Kullanım Şartları
+              Nutzungsbedingungen
             </Link>
           </div>
         </div>

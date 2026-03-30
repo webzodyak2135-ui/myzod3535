@@ -5,18 +5,18 @@
 ********************************************************************* */
 
 const BURCLAR = [
-  { name: "Koç", emoji: "♈", keyword: "Enerji", href: "/burclar/koc" },
-  { name: "Boğa", emoji: "♉", keyword: "Sabır", href: "/burclar/boga" },
-  { name: "İkizler", emoji: "♊", keyword: "İletişim", href: "/burclar/ikizler" },
-  { name: "Yengeç", emoji: "♋", keyword: "Sezgi", href: "/burclar/yengec" },
-  { name: "Aslan", emoji: "♌", keyword: "Cesaret", href: "/burclar/aslan" },
-  { name: "Başak", emoji: "♍", keyword: "Detay", href: "/burclar/basak" },
-  { name: "Terazi", emoji: "♎", keyword: "Denge", href: "/burclar/terazi" },
-  { name: "Akrep", emoji: "♏", keyword: "Dönüşüm", href: "/burclar/akrep" },
-  { name: "Yay", emoji: "♐", keyword: "Özgürlük", href: "/burclar/yay" },
-  { name: "Oğlak", emoji: "♑", keyword: "Disiplin", href: "/burclar/oglak" },
-  { name: "Kova", emoji: "♒", keyword: "Yenilik", href: "/burclar/kova" },
-  { name: "Balık", emoji: "♓", keyword: "Hayal", href: "/burclar/balik" },
+  { name: "Widder", emoji: "♈", keyword: "Energie", href: "/burclar/koc" },
+  { name: "Stier", emoji: "♉", keyword: "Geduld", href: "/burclar/boga" },
+  { name: "Zwillinge", emoji: "♊", keyword: "Kommunikation", href: "/burclar/ikizler" },
+  { name: "Krebs", emoji: "♋", keyword: "Intuition", href: "/burclar/yengec" },
+  { name: "Löwe", emoji: "♌", keyword: "Mut", href: "/burclar/aslan" },
+  { name: "Jungfrau", emoji: "♍", keyword: "Details", href: "/burclar/basak" },
+  { name: "Waage", emoji: "♎", keyword: "Balance", href: "/burclar/terazi" },
+  { name: "Skorpion", emoji: "♏", keyword: "Wandel", href: "/burclar/akrep" },
+  { name: "Schütze", emoji: "♐", keyword: "Freiheit", href: "/burclar/yay" },
+  { name: "Steinbock", emoji: "♑", keyword: "Disziplin", href: "/burclar/oglak" },
+  { name: "Wassermann", emoji: "♒", keyword: "Innovation", href: "/burclar/kova" },
+  { name: "Fische", emoji: "♓", keyword: "Träume", href: "/burclar/balik" },
 ];
 
 /* *********************************************************************
@@ -24,13 +24,13 @@ const BURCLAR = [
 ********************************************************************* */
 
 const RUYA_CARDS = [
-  { tag: "Klasik", title: "Uçma Rüyası: Özgürlük mü, Kaçış mı?", excerpt: "Rüyanda uçmak bilinçaltının en güçlü mesajlarından biridir.", readTime: "5 dk", href: "/ruya/ucma" },
-  { tag: "Sembol", title: "Su Rüyası: Duygularınızın Aynası", excerpt: "Berrak mı bulanık mı? Suyun durumu çok şey anlatır.", readTime: "4 dk", href: "/ruya/su" },
-  { tag: "Hayvan", title: "Yılan Rüyası: Tehlike mi, Şifa mı?", excerpt: "Kültürel ve psikolojik açıdan yılanın derin anlamları.", readTime: "6 dk", href: "/ruya/yilan" },
-  { tag: "Yaygın", title: "Diş Dökülmesi: Neden Bu Kadar Sık Görülür?", excerpt: "Kaygı, güç kaybı ya da dönüşüm? Uzman yorumu.", readTime: "5 dk", href: "/ruya/dis" },
-  { tag: "Anlam", title: "Ölüm Rüyası Kötü Değil — İşte Nedeni", excerpt: "Korku değil, kapanış ve yeniden doğuşun sembolü.", readTime: "4 dk", href: "/ruya/olum" },
-  { tag: "Duygu", title: "Düşme Rüyası: Kontrol Kaybı mı?", excerpt: "Hayatının hangi alanında dengeyi kaybettiğini gösterir.", readTime: "4 dk", href: "/ruya/dusme" },
-  { tag: "Renk", title: "Rüyada Kırmızı Renk Ne Demek?", excerpt: "Tutku, tehlike ya da enerji? Renklerin rüya dili.", readTime: "3 dk", href: "/ruya/renkler" },
+  { tag: "Klassisch", title: "Flugtraum: Freiheit oder Flucht?", excerpt: "Im Traum zu fliegen ist eine der stärksten Botschaften des Unterbewusstseins.", readTime: "5 Min.", href: "/ruya/ucma" },
+  { tag: "Symbol", title: "Wassertraum: Der Spiegel deiner Gefühle", excerpt: "Klar oder trüb? Der Zustand des Wassers verrät viel.", readTime: "4 Min.", href: "/ruya/su" },
+  { tag: "Tier", title: "Schlangentraum: Gefahr oder Heilung?", excerpt: "Die tiefe Symbolik der Schlange – kulturell und psychologisch.", readTime: "6 Min.", href: "/ruya/yilan" },
+  { tag: "Häufig", title: "Zähne fallen aus: Warum ist dieser Traum so verbreitet?", excerpt: "Angst, Machtverlust oder Wandel? Einschätzung vom Experten.", readTime: "5 Min.", href: "/ruya/dis" },
+  { tag: "Bedeutung", title: "Der Traum vom Tod ist nicht schlecht — hier ist der Grund", excerpt: "Nicht Angst, sondern ein Symbol für Abschluss und Neubeginn.", readTime: "4 Min.", href: "/ruya/olum" },
+  { tag: "Gefühl", title: "Fallen im Traum: Kontrollverlust?", excerpt: "Zeigt dir, in welchem Bereich deines Lebens du das Gleichgewicht verlierst.", readTime: "4 Min.", href: "/ruya/dusme" },
+  { tag: "Farbe", title: "Was bedeutet die Farbe Rot im Traum?", excerpt: "Leidenschaft, Gefahr oder Energie? Die Sprache der Farben.", readTime: "3 Min.", href: "/ruya/renkler" },
 ];
 
 /* *********************************************************************
@@ -38,12 +38,12 @@ const RUYA_CARDS = [
 ********************************************************************* */
 
 const TESTLER_CARDS = [
-  { qCount: "8", icon: "⬆", title: "Yükselen Burcun Hangisi?", desc: "Dış dünyaya nasıl göründüğünü keşfet.", href: "/testler/yukselen" },
-  { qCount: "12", icon: "♾", title: "Ruh Eşin Hangi Burçtan?", desc: "Kozmik uyumu belirleyen unsurları analiz et.", href: "/testler/ruh-esi" },
-  { qCount: "6", icon: "✦", title: "2025 Kişisel Yıl Sayın Kaç?", desc: "Doğum tarihinle bu yılın enerjisini hesapla.", href: "/testler/numeroloji" },
-  { qCount: "5", icon: "⚡", title: "Hangi Element Grubundasın?", desc: "Ateş, Toprak, Hava, Su — asıl enerjin hangisi?", href: "/testler/element" },
-  { qCount: "15", icon: "◈", title: "Gerçek Kişilik Tipin Nedir?", desc: "Baskın yıldız enerjine göre derin kişilik analizi.", href: "/testler/kisilik" },
-  { qCount: "10", icon: "◇", title: "Aşk Dilini Keşfet", desc: "Venüs işaretine göre sevgi stilin ve beklentilerin.", href: "/testler/venus" },
+  { qCount: "8", icon: "⬆", title: "Welcher Aszendent bist du?", desc: "Entdecke, wie du nach außen wirkst.", href: "/testler/yukselen" },
+  { qCount: "12", icon: "♾", title: "Welches Sternzeichen hat dein Seelenpartner?", desc: "Analysiere die Faktoren kosmischer Harmonie.", href: "/testler/ruh-esi" },
+  { qCount: "6", icon: "✦", title: "Deine persönliche Jahreszahl 2025", desc: "Berechne die Energie dieses Jahres anhand deines Geburtsdatums.", href: "/testler/numeroloji" },
+  { qCount: "5", icon: "⚡", title: "Welcher Elementgruppe gehörst du an?", desc: "Feuer, Erde, Luft, Wasser — welche Energie ist deine?", href: "/testler/element" },
+  { qCount: "15", icon: "◈", title: "Welcher Persönlichkeitstyp bist du wirklich?", desc: "Tiefgehende Analyse nach deiner dominanten Sternenergie.", href: "/testler/kisilik" },
+  { qCount: "10", icon: "◇", title: "Entdecke deine Liebessprache", desc: "Dein Liebesstil und Erwartungen nach deinem Venuszeichen.", href: "/testler/venus" },
 ];
 
 /* *********************************************************************
@@ -51,19 +51,19 @@ const TESTLER_CARDS = [
 ********************************************************************* */
 
 const GOK_FEATURED = {
-  tag: "Öne Çıkan",
-  title: "Merkür Retrosu 2025: Tüm Tarihleri ve Burç Etkileri",
-  excerpt: "Yılın dört kritik retro dönemi başlamadan önce bilmeniz gereken her şey. Hangi kararlar ertelenmeli, hangi adımlar atılmalı?",
-  readTime: "7 dk",
+  tag: "Highlight",
+  title: "Merkur rückläufig 2025: Alle Termine & Sternzeichen-Einflüsse",
+  excerpt: "Alles, was du wissen musst, bevor die vier kritischen Retro-Phasen starten. Was solltest du verschieben und was angehen?",
+  readTime: "7 Min.",
   href: "/gok/merkur-retro",
 };
 
 const GOK_LIST = [
-  { tag: "Dolunay", title: "Nisan Dolunayı: Terazi'de İlişki Kırılmaları", date: "23 Nis", href: "/gok/dolunay-nisan" },
-  { tag: "Tutulma", title: "Güneş Tutulması: Bu Yıl Neler Değişecek?", date: "29 Mar", href: "/gok/gunes-tutulmasi" },
-  { tag: "Transit", title: "Mars Koç'ta: 6 Haftalık Enerji Dalgası", date: "15 Mar", href: "/gok/mars-koc" },
-  { tag: "Transit", title: "Venüs Boğa'da: Aşk ve Estetik Sezonu", date: "5 Nis", href: "/gok/venus-boga" },
-  { tag: "Satürn", title: "Satürn Balık'tan Çıkıyor: 3 Yılın Özeti", date: "25 May", href: "/gok/saturn-balik" },
+  { tag: "Vollmond", title: "Vollmond im April: Beziehungsbrüche in der Waage", date: "23 Apr", href: "/gok/dolunay-nisan" },
+  { tag: "Finsternis", title: "Sonnenfinsternis: Was ändert sich dieses Jahr?", date: "29 Mär", href: "/gok/gunes-tutulmasi" },
+  { tag: "Transit", title: "Mars im Widder: Eine 6-wöchige Energiewelle", date: "15 Mär", href: "/gok/mars-koc" },
+  { tag: "Transit", title: "Venus im Stier: Saison für Liebe und Ästhetik", date: "5 Apr", href: "/gok/venus-boga" },
+  { tag: "Saturn", title: "Saturn verlässt die Fische: Rückblick auf 3 Jahre", date: "25 Mai", href: "/gok/saturn-balik" },
 ];
 
 /* *********************************************************************
@@ -71,12 +71,12 @@ const GOK_LIST = [
 ********************************************************************* */
 
 const ILISKILER_ARTICLES = [
-  { num: "01", tag: "Uyum", title: "Koç–Akrep: Ateş ile Su Buluşunca", excerpt: "Yoğun çekim, derin çatışma — bu ilişki gerçekten işler mi?", readTime: "6 dk", href: "/iliskiler/koc-akrep" },
-  { num: "02", tag: "Ayrılık", title: "Ayrılıktan Sonra İyileşme: Burç Rehberi", excerpt: "Her burcun kalp kırıklığını atlatma süreci farklıdır.", readTime: "5 dk", href: "/iliskiler/ayrilik" },
-  { num: "03", tag: "Evlilik", title: "En Uyumlu 5 Burç Çifti (2025)", excerpt: "Uzun vadeli bağlılık için kozmik uyum analizi.", readTime: "6 dk", href: "/iliskiler/evlilik-uyumu" },
-  { num: "04", tag: "2025", title: "2025'te Aşk Hayatınıza Ne Geliyor?", excerpt: "Gezegen konumlarının aşk ve ilişkilere etkileri.", readTime: "7 dk", href: "/iliskiler/2025-ask" },
-  { num: "05", tag: "Venüs", title: "Partnerinin Venüs İşareti Ne Anlama Gelir?", excerpt: "Onun aşk dili, değerleri ve ilişki beklentileri.", readTime: "5 dk", href: "/iliskiler/venus-isareti" },
-  { num: "06", tag: "Çekim", title: "Hangi Burç Sizi Çekiyor? Astrolojik Analiz", excerpt: "Venüs ve Mars pozisyonları çekim enerjinizi belirler.", readTime: "4 dk", href: "/iliskiler/cekim" },
+  { num: "01", tag: "Harmonie", title: "Widder–Skorpion: Wenn Feuer auf Wasser trifft", excerpt: "Starke Anziehung, tiefer Konflikt — funktioniert diese Beziehung wirklich?", readTime: "6 Min.", href: "/iliskiler/koc-akrep" },
+  { num: "02", tag: "Trennung", title: "Heilung nach der Trennung: Sternzeichen-Guide", excerpt: "Jedes Sternzeichen verarbeitet Herzschmerz auf seine eigene Art.", readTime: "5 Min.", href: "/iliskiler/ayrilik" },
+  { num: "03", tag: "Ehe", title: "Die 5 kompatibelsten Sternzeichen-Paare (2025)", excerpt: "Kosmische Kompatibilitätsanalyse für langfristige Bindung.", readTime: "6 Min.", href: "/iliskiler/evlilik-uyumu" },
+  { num: "04", tag: "2025", title: "Was kommt 2025 in dein Liebesleben?", excerpt: "Einfluss der Planetenstände auf Liebe und Beziehungen.", readTime: "7 Min.", href: "/iliskiler/2025-ask" },
+  { num: "05", tag: "Venus", title: "Was bedeutet das Venuszeichen deines Partners?", excerpt: "Seine Liebessprache, Werte und Beziehungserwartungen.", readTime: "5 Min.", href: "/iliskiler/venus-isareti" },
+  { num: "06", tag: "Anziehung", title: "Welches Sternzeichen zieht dich an? Astrologische Analyse", excerpt: "Venus- und Mars-Positionen bestimmen deine Anziehungsenergie.", readTime: "4 Min.", href: "/iliskiler/cekim" },
 ];
 
 /* Shared */
@@ -106,7 +106,7 @@ function SectionHeader({ title, color, allHref }: { title: string; color: string
         <h2 style={{ fontSize: "1rem", fontWeight: 700, color: "var(--theme-text)", margin: 0 }}>{title}</h2>
       </div>
       <Link href={allHref} style={{ fontSize: "11px", fontWeight: 600, color, textDecoration: "none" }}>
-        Tümünü Gör →
+        Alle ansehen →
       </Link>
     </div>
   );
@@ -115,7 +115,7 @@ function SectionHeader({ title, color, allHref }: { title: string; color: string
 const CATEGORY_BLOCKS: CategoryBlock[] = [
   {
     key: "ruya",
-    title: "Rüya Tabirleri",
+    title: "Traumdeutung",
     color: "#818cf8",
     allHref: "/ruya",
     layout: "onedio",
@@ -123,28 +123,28 @@ const CATEGORY_BLOCKS: CategoryBlock[] = [
       href: x.href,
       title: x.title,
       meta: x.readTime,
-      label: i === 1 ? "Sponsorlu" : undefined,
+      label: i === 1 ? "Gesponsert" : undefined,
       thumb: `linear-gradient(140deg, rgba(129,140,248,0.45), rgba(67,56,202,0.15))`,
       variant: (i === 0 ? "featured" : i % 3 === 0 ? "compact" : "standard") as CategoryCard["variant"],
     })),
   },
   {
     key: "testler",
-    title: "Testler",
+    title: "Tests",
     color: "#f472b6",
     allHref: "/testler",
     layout: "buzzfeed",
     cards: TESTLER_CARDS.map((x) => ({
       href: x.href,
       title: x.title,
-      meta: `${x.qCount} soru`,
+      meta: `${x.qCount} Fragen`,
       thumb: `linear-gradient(140deg, rgba(244,114,182,0.45), rgba(157,23,77,0.18))`,
       variant: "standard",
     })),
   },
   {
     key: "gok",
-    title: "Gök Gündemi",
+    title: "Kosmischer Kalender",
     color: "#34d399",
     allHref: "/gok",
     layout: "ticker",
@@ -167,7 +167,7 @@ const CATEGORY_BLOCKS: CategoryBlock[] = [
   },
   {
     key: "iliskiler",
-    title: "İlişkiler",
+    title: "Beziehungen",
     color: "#fb923c",
     allHref: "/iliskiler",
     layout: "duo",
@@ -185,7 +185,7 @@ export default function CategoryFeed() {
   return (
     <div style={{ paddingTop: "0.5rem" }}>
       <section className="feed-section" style={{ borderTop: "1px solid var(--theme-border)" }}>
-        <SectionHeader title="Burçlar" color="#a78bfa" allHref="/burclar" />
+        <SectionHeader title="Sternzeichen" color="#a78bfa" allHref="/burclar" />
         <div className="burc-grid">
           {BURCLAR.map((b) => (
             <Link key={b.href} href={b.href} className="burc-cell">
@@ -208,7 +208,7 @@ export default function CategoryFeed() {
                   <span className="ticker-dot" />
                   <span className="ticker-time">{card.meta}</span>
                   <p className="ticker-title">{card.title}</p>
-                  {i === 0 ? <span className="ticker-badge">Öne Çıkan</span> : null}
+                  {i === 0 ? <span className="ticker-badge">Highlight</span> : null}
                 </Link>
               ))}
             </div>

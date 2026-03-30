@@ -6,25 +6,25 @@ import evlilikAnim from "../../../../public/lottie/evlilik.json";
 import RelatedCards, { ILISKI_ONERILERI, BURC_ONERILERI } from "@/components/RelatedCards";
 
 const EVLILIK_BURCLARI = [
-  { burc: "Koç", emoji: "♈", evlilikYasi: "Geç evlilik tercih eder", idealPartner: "Sabırlı ve destekleyici", tavsiye: "Bağımsızlığını koruyacak bir partner seç" },
-  { burc: "Boğa", emoji: "♉", evlilikYasi: "Hazır hissettiğinde", idealPartner: "Sadık ve güvenilir", tavsiye: "Maddi güvenlik önemli ama tek kriter olmasın" },
-  { burc: "İkizler", emoji: "♊", evlilikYasi: "Zihinsel olgunlaştığında", idealPartner: "Entelektüel ve eğlenceli", tavsiye: "Sıkılmayacağın biriyle evlen" },
-  { burc: "Yengeç", emoji: "♋", evlilikYasi: "Erken evlilik eğilimi", idealPartner: "Aile odaklı ve koruyucu", tavsiye: "Duygusal güvenlik sağlayan biriyle" },
-  { burc: "Aslan", emoji: "♌", evlilikYasi: "Doğru kişiyi bulduğunda", idealPartner: "Takdir eden ve destekleyen", tavsiye: "Seni olduğun gibi seven biriyle" },
-  { burc: "Başak", emoji: "♍", evlilikYasi: "Her şey mükemmel olduğunda", idealPartner: "Düzenli ve güvenilir", tavsiye: "Mükemmeliyetçiliği bırak, kusurları kabul et" },
-  { burc: "Terazi", emoji: "♎", evlilikYasi: "İlişki odaklı, erken olabilir", idealPartner: "Uyumlu ve zarif", tavsiye: "Kendi kimliğini kaybetme" },
-  { burc: "Akrep", emoji: "♏", evlilikYasi: "Güvendiğinde", idealPartner: "Sadık ve derin", tavsiye: "Kontrol ihtiyacını bırak" },
-  { burc: "Yay", emoji: "♐", evlilikYasi: "Geç, özgürlüğü sevdiği için", idealPartner: "Maceraperest ve özgür", tavsiye: "Seni kısıtlamayan biriyle" },
-  { burc: "Oğlak", emoji: "♑", evlilikYasi: "Kariyer oturduktan sonra", idealPartner: "Hırslı ve destekleyici", tavsiye: "İş-yaşam dengesini kur" },
-  { burc: "Kova", emoji: "♒", evlilikYasi: "Geleneksel evliliğe mesafeli", idealPartner: "Bağımsız ve entelektüel", tavsiye: "Farklı bir ilişki modeli düşün" },
-  { burc: "Balık", emoji: "♓", evlilikYasi: "Aşık olduğunda hemen", idealPartner: "Romantik ve anlayışlı", tavsiye: "Gerçekçi beklentiler koy" },
+  { burc: "Koç", emoji: "♈", evlilikYasi: "Bevorzugt späte Ehe", idealPartner: "Geduldig und unterstützend", tavsiye: "Wähle einen Partner, der deine Unabhängigkeit respektiert" },
+  { burc: "Boğa", emoji: "♉", evlilikYasi: "Wenn bereit", idealPartner: "Treu und zuverlässig", tavsiye: "Finanzielle Sicherheit ist wichtig, aber nicht das einzige Kriterium" },
+  { burc: "İkizler", emoji: "♊", evlilikYasi: "Bei geistiger Reife", idealPartner: "Intellektuell und unterhaltsam", tavsiye: "Heirate jemanden, mit dem dir nicht langweilig wird" },
+  { burc: "Yengeç", emoji: "♋", evlilikYasi: "Tendenz zur frühen Ehe", idealPartner: "Familienorientiert und beschützend", tavsiye: "Mit jemandem, der emotionale Sicherheit bietet" },
+  { burc: "Aslan", emoji: "♌", evlilikYasi: "Wenn die richtige Person gefunden", idealPartner: "Wertschätzend und unterstützend", tavsiye: "Mit jemandem, der dich so liebt, wie du bist" },
+  { burc: "Başak", emoji: "♍", evlilikYasi: "Wenn alles perfekt ist", idealPartner: "Ordentlich und zuverlässig", tavsiye: "Lass Perfektionismus los, akzeptiere Fehler" },
+  { burc: "Terazi", emoji: "♎", evlilikYasi: "Beziehungsorientiert, kann früh sein", idealPartner: "Harmonisch und elegant", tavsiye: "Verliere nicht deine eigene Identität" },
+  { burc: "Akrep", emoji: "♏", evlilikYasi: "Wenn Vertrauen da ist", idealPartner: "Loyal und tiefgründig", tavsiye: "Lass das Bedürfnis nach Kontrolle los" },
+  { burc: "Yay", emoji: "♐", evlilikYasi: "Spät, liebt Freiheit", idealPartner: "Abenteuerlustig und frei", tavsiye: "Mit jemandem, der dich nicht einschränkt" },
+  { burc: "Oğlak", emoji: "♑", evlilikYasi: "Nach Karriereaufbau", idealPartner: "Ehrgeizig und unterstützend", tavsiye: "Finde Work-Life-Balance" },
+  { burc: "Kova", emoji: "♒", evlilikYasi: "Distanziert zu traditioneller Ehe", idealPartner: "Unabhängig und intellektuell", tavsiye: "Denke an ein alternatives Beziehungsmodell" },
+  { burc: "Balık", emoji: "♓", evlilikYasi: "Sofort wenn verliebt", idealPartner: "Romantisch und verständnisvoll", tavsiye: "Setze realistische Erwartungen" },
 ];
 
 const EVLILIK_ZAMANLARI = [
-  { donem: "İlkbahar Evlilikleri", aciklama: "Yeni başlangıçlar, umut dolu. Koç, Boğa, İkizler dönemleri için ideal." },
-  { donem: "Yaz Evlilikleri", aciklama: "Tutku ve enerji dolu. Yengeç, Aslan, Başak dönemleri için uygun." },
-  { donem: "Sonbahar Evlilikleri", aciklama: "Denge ve uyum. Terazi, Akrep, Yay dönemleri için şanslı." },
-  { donem: "Kış Evlilikleri", aciklama: "Ciddi ve kalıcı. Oğlak, Kova, Balık dönemleri için anlamlı." },
+  { donem: "Frühlingshochzeiten", aciklama: "Neue Anfänge, voller Hoffnung. Ideal für Widder, Stier, Zwillinge Perioden." },
+  { donem: "Sommerhochzeiten", aciklama: "Voller Leidenschaft und Energie. Passend für Krebs, Löwe, Jungfrau Perioden." },
+  { donem: "Herbsthochzeiten", aciklama: "Balance und Harmonie. Glücklich für Waage, Skorpion, Schütze Perioden." },
+  { donem: "Winterhochzeiten", aciklama: "Ernst und dauerhaft. Bedeutungsvoll für Steinbock, Wassermann, Fische Perioden." },
 ];
 
 export default function EvlilikPage() {
@@ -80,20 +80,20 @@ export default function EvlilikPage() {
 
         <div style={{ maxWidth: "72rem", margin: "0 auto", position: "relative", zIndex: 1 }}>
           <Link href="/iliskiler" style={{ color: "rgba(255,255,255,0.75)", fontSize: "0.9rem", textDecoration: "none", padding: "0.5rem 1rem", background: "rgba(255,255,255,0.08)", backdropFilter: "blur(10px)", borderRadius: "9999px", border: "1px solid rgba(255,255,255,0.12)", display: "inline-block", marginBottom: "1.5rem" }}>
-            ← İlişkiler
+            ← Beziehungen
           </Link>
 
           <h1 style={{ fontSize: "clamp(2.2rem, 5vw, 3.5rem)", fontWeight: 800, color: "#ffffff", marginBottom: "0.5rem", textShadow: "0 0 40px rgba(168,85,247,0.6)", letterSpacing: "-0.02em" }}>
-            Evlilik Önerileri
+            Heiratsempfehlungen
           </h1>
           <p style={{ fontSize: "1rem", color: "rgba(255,255,255,0.65)", maxWidth: "500px", margin: "0 auto 2.5rem" }}>
-            Yıldızlar evlilik için ne diyor? Burcuna göre evlilik rehberi
+            Was sagen die Sterne zur Ehe? Heiratsratgeber nach deinem Sternzeichen
           </p>
 
           {/* Hero Görsel - Animasyonlu */}
           <img
             src="/img/iliskiler-evlilikonerileri%20(1).jpg"
-            alt="Evlilik Önerileri"
+            alt="Heiratsempfehlungen"
             style={{
               width: "clamp(150px, 18vw, 210px)",
               height: "clamp(150px, 18vw, 210px)",
@@ -115,11 +115,11 @@ export default function EvlilikPage() {
         </div>
       </section>
 
-      {/* Burçlara Göre Evlilik */}
+      {/* Ehe nach Sternzeichen */}
       <section style={{ padding: "3rem 1rem" }}>
         <div style={{ maxWidth: "72rem", margin: "0 auto" }}>
           <h2 style={{ fontSize: "1.5rem", fontWeight: 700, color: "#ffffff", marginBottom: "1.5rem", textAlign: "center" }}>
-            Burcuna Göre Evlilik Rehberi
+            Heiratsratgeber nach Sternzeichen
           </h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1rem" }}>
             {EVLILIK_BURCLARI.map((item) => (
@@ -129,10 +129,10 @@ export default function EvlilikPage() {
                   <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#ffffff" }}>{item.burc}</h3>
                 </div>
                 <div style={{ fontSize: "0.85rem", color: "#ffffff", marginBottom: "0.5rem" }}>
-                  <strong>Evlilik Zamanı:</strong> {item.evlilikYasi}
+                  <strong>Heiratszeit:</strong> {item.evlilikYasi}
                 </div>
                 <div style={{ fontSize: "0.85rem", color: "#ffffff", marginBottom: "0.5rem" }}>
-                  <strong>İdeal Partner:</strong> {item.idealPartner}
+                  <strong>Idealer Partner:</strong> {item.idealPartner}
                 </div>
                 <div style={{ padding: "0.75rem", background: "#1a0b2e", borderRadius: "12px", marginTop: "0.75rem" }}>
                   <p style={{ fontSize: "0.85rem", color: "#7c3aed" }}>💡 {item.tavsiye}</p>
@@ -178,7 +178,7 @@ export default function EvlilikPage() {
         </div>
       </section>
 
-      {/* Önerilen İçerikler */}
+      {/* Empfohlene Inhalte */}
       <RelatedCards
         title="İlgini Çekebilir"
         items={[

@@ -1,26 +1,26 @@
 import Link from "next/link";
 
 const UCMA_TURLERI = [
-  { baslik: "Özgürce Uçmak", anlam: "Başarı, özgürlük, engelleri aşma, yükseliş", icon: "🦅", durum: "Olumlu", slug: "ozgurce-ucmak" },
-  { baslik: "Zorlanarak Uçmak", anlam: "Engeller, zorluklar, mücadele, çaba gerektiren hedefler", icon: "💨", durum: "Dikkat", slug: "zorlanarak-ucmak" },
-  { baslik: "Yüksekten Uçmak", anlam: "Büyük hedefler, hırs, geniş perspektif", icon: "☁️", durum: "Olumlu", slug: "yuksekten-ucmak" },
-  { baslik: "Alçaktan Uçmak", anlam: "Temkinli ilerleme, gerçekçi hedefler", icon: "🌿", durum: "Nötr", slug: "alcaktan-ucmak" },
-  { baslik: "Düşmek (Uçarken)", anlam: "Kontrol kaybı, başarısızlık korkusu, güvensizlik", icon: "⬇️", durum: "Uyarı", slug: "ucarken-dusmek" },
-  { baslik: "Kanatlarla Uçmak", anlam: "Spiritüel yükseliş, melek enerjisi, koruma", icon: "👼", durum: "Olumlu", slug: "kanatlarla-ucmak" },
+  { baslik: "Frei fliegen", anlam: "Erfolg, Freiheit, Hindernisse überwinden, Aufstieg", icon: "🦅", durum: "Positiv", slug: "frei-fliegen" },
+  { baslik: "Mühsam fliegen", anlam: "Hindernisse, Schwierigkeiten, Kampf, anstrengende Ziele", icon: "💨", durum: "Achtung", slug: "muhhsam-fliegen" },
+  { baslik: "Hoch fliegen", anlam: "Große Ziele, Ehrgeiz, weite Perspektive", icon: "☁️", durum: "Positiv", slug: "hoch-fliegen" },
+  { baslik: "Tief fliegen", anlam: "Vorsichtiger Fortschritt, realistische Ziele", icon: "🌿", durum: "Neutral", slug: "tief-fliegen" },
+  { baslik: "Fallen (beim Fliegen)", anlam: "Kontrollverlust, Versagensangst, Unsicherheit", icon: "⬇️", durum: "Warnung", slug: "fallen-beim-fliegen" },
+  { baslik: "Mit Flügeln fliegen", anlam: "Spiritueller Aufstieg, Engelsenergie, Schutz", icon: "👼", durum: "Positiv", slug: "mit-flugeln-fliegen" },
 ];
 
 const DETAYLI_ANLAMLAR = [
   {
-    baslik: "Uçma Rüyasının Genel Anlamı",
-    icerik: "Uçma rüyaları en yaygın ve en olumlu rüya türlerinden biridir. Genellikle özgürlük, başarı, engelleri aşma ve yükselme arzusunu simgeler. Bu rüyalar, hayatınızda kontrolü ele aldığınızı veya almak istediğinizi gösterir."
+    baslik: "Allgemeine Bedeutung von Flugträumen",
+    icerik: "Flugträume sind eine der häufigsten und positivsten Traumarten. Sie symbolisieren meist Freiheit, Erfolg, das Überwinden von Hindernissen und den Wunsch nach Aufstieg. Diese Träume zeigen, dass du die Kontrolle in deinem Leben übernommen hast oder übernehmen möchtest."
   },
   {
-    baslik: "Psikolojik Yorum",
-    icerik: "Psikologlar uçma rüyalarını, kişinin hayattaki sınırlamalardan kurtulma isteğiyle ilişkilendirir. Stresli dönemlerde sıkça görülür ve bilinçaltının özgürleşme arzusunu yansıtır."
+    baslik: "Psychologische Deutung",
+    icerik: "Psychologen verbinden Flugträume mit dem Wunsch, sich von Einschränkungen im Leben zu befreien. Sie treten häufig in stressigen Zeiten auf und spiegeln das Verlangen des Unterbewusstseins nach Befreiung wider."
   },
   {
-    baslik: "Spiritüel Yorum",
-    icerik: "Spiritüel açıdan uçma rüyaları, ruhun bedenden ayrılması (astral projeksiyon), yüksek bilinç seviyelerine ulaşma ve spiritüel uyanışın işaretleri olarak yorumlanır."
+    baslik: "Spirituelle Deutung",
+    icerik: "Aus spiritueller Sicht werden Flugträume als Zeichen für die Trennung der Seele vom Körper (Astralprojektion), das Erreichen höherer Bewusstseinsebenen und spirituelles Erwachen interpretiert."
   },
 ];
 
@@ -49,17 +49,17 @@ export default function UcmaRuyalariPage() {
 
         <div style={{ maxWidth: "72rem", margin: "0 auto", position: "relative", zIndex: 1 }}>
           <Link href="/ruya-tabirleri" style={{ color: "rgba(255,255,255,0.9)", fontSize: "0.9rem", textDecoration: "none", padding: "0.5rem 1rem", background: "rgba(255,255,255,0.15)", backdropFilter: "blur(10px)", borderRadius: "9999px", border: "1px solid rgba(255,255,255,0.2)", display: "inline-block", marginBottom: "1.5rem" }}>
-            ← Rüya Tabirleri
+            ← Traumdeutung
           </Link>
           <div style={{ position: "relative", display: "inline-block", marginBottom: "1rem" }}>
             <div style={{ position: "absolute", inset: "-20px", borderRadius: "50%", background: "rgba(255,255,255,0.2)", filter: "blur(30px)" }} />
             <div style={{ fontSize: "5rem", position: "relative", filter: "drop-shadow(0 0 30px rgba(255,255,255,0.5))" }}>🦋</div>
           </div>
           <h1 style={{ fontSize: "clamp(2.5rem, 6vw, 4rem)", fontWeight: 800, color: "#ffffff", marginTop: "0.5rem", textShadow: "0 4px 30px rgba(0,0,0,0.2)", letterSpacing: "-0.02em" }}>
-            Uçma Rüyaları
+            Flugträume
           </h1>
           <p style={{ fontSize: "1.1rem", color: "rgba(255,255,255,0.9)", maxWidth: "600px", margin: "1rem auto 0" }}>
-            Havada uçmanın mistik anlamı - özgürlük, yükseliş ve sınırları aşma
+            Die mystische Bedeutung des Fliegens - Freiheit, Aufstieg und Grenzen überschreiten
           </p>
         </div>
         <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "60px", overflow: "hidden" }}>
@@ -73,7 +73,7 @@ export default function UcmaRuyalariPage() {
       <section style={{ padding: "3rem 1rem" }}>
         <div style={{ maxWidth: "72rem", margin: "0 auto" }}>
           <h2 style={{ fontSize: "1.5rem", fontWeight: 700, color: "#ffffff", marginBottom: "1.5rem", textAlign: "center" }}>
-            Uçma Rüyası Türleri
+            Arten von Flugträumen
           </h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1rem" }}>
             {UCMA_TURLERI.map((ruya, i) => (

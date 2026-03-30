@@ -6,27 +6,27 @@ import ayrilikAnim from "../../../../public/lottie/ayrilik.json";
 import RelatedCards, { ILISKI_ONERILERI, BURC_ONERILERI } from "@/components/RelatedCards";
 
 const AYRILIK_BURCLARI = [
-  { burc: "Koç", emoji: "♈", tepki: "Hızlı toparlanır, yeni maceralara atılır", iyilesme: "Spor ve fiziksel aktivite", tavsiye: "Acele etme, duygularını işle" },
-  { burc: "Boğa", emoji: "♉", tepki: "Zor kabullenir, uzun süre üzülür", iyilesme: "Konfor ve güvenlik arayışı", tavsiye: "Değişimi kabul et, bırakmayı öğren" },
-  { burc: "İkizler", emoji: "♊", tepki: "Sosyalleşerek unutmaya çalışır", iyilesme: "Yeni insanlar ve deneyimler", tavsiye: "Duygularından kaçma, yüzleş" },
-  { burc: "Yengeç", emoji: "♋", tepki: "Derin üzüntü, içe kapanma", iyilesme: "Aile ve yakın arkadaşlar", tavsiye: "Kendine şefkat göster, zaman ver" },
-  { burc: "Aslan", emoji: "♌", tepki: "Ego yaralanır, dışarıya güçlü görünür", iyilesme: "Kendine odaklanma, başarı", tavsiye: "Kırılganlığını kabul et" },
-  { burc: "Başak", emoji: "♍", tepki: "Analiz eder, neyin yanlış gittiğini arar", iyilesme: "Düzen ve rutin", tavsiye: "Kendini suçlamayı bırak" },
-  { burc: "Terazi", emoji: "♎", tepki: "Dengesizlik hisseder, hemen yeni ilişki arar", iyilesme: "Sosyal destek ve güzellik", tavsiye: "Yalnız kalmayı öğren" },
-  { burc: "Akrep", emoji: "♏", tepki: "Derin acı, intikam düşünceleri", iyilesme: "Dönüşüm ve yenilenme", tavsiye: "Affetmeyi öğren, bırak" },
-  { burc: "Yay", emoji: "♐", tepki: "Kaçış, seyahat, yeni maceralar", iyilesme: "Özgürlük ve keşif", tavsiye: "Duygularından kaçma" },
-  { burc: "Oğlak", emoji: "♑", tepki: "İşe gömülür, duygularını bastırır", iyilesme: "Başarı ve hedefler", tavsiye: "Duygularına alan ver" },
-  { burc: "Kova", emoji: "♒", tepki: "Rasyonelleştirir, mesafe koyar", iyilesme: "Arkadaşlar ve sosyal aktiviteler", tavsiye: "Duygusal bağlantıya izin ver" },
-  { burc: "Balık", emoji: "♓", tepki: "Derin üzüntü, hayal dünyasına kaçış", iyilesme: "Sanat ve spiritüellik", tavsiye: "Gerçeklikle bağını koru" },
+  { burc: "Koç", emoji: "♈", tepki: "Erholt sich schnell, stürzt sich in neue Abenteuer", iyilesme: "Sport und körperliche Aktivität", tavsiye: "Überstürze nichts, verarbeite deine Gefühle" },
+  { burc: "Boğa", emoji: "♉", tepki: "Akzeptiert schwer, trauert lange", iyilesme: "Suche nach Komfort und Sicherheit", tavsiye: "Akzeptiere Veränderung, lerne loszulassen" },
+  { burc: "İkizler", emoji: "♊", tepki: "Versucht durch Sozialisierung zu vergessen", iyilesme: "Neue Menschen und Erfahrungen", tavsiye: "Fliehe nicht vor deinen Gefühlen, stelle dich ihnen" },
+  { burc: "Yengeç", emoji: "♋", tepki: "Tiefe Trauer, Rückzug", iyilesme: "Familie und enge Freunde", tavsiye: "Sei mitfühlend mit dir selbst, gib dir Zeit" },
+  { burc: "Aslan", emoji: "♌", tepki: "Ego verletzt, wirkt nach außen stark", iyilesme: "Selbstfokus, Erfolg", tavsiye: "Akzeptiere deine Verletzlichkeit" },
+  { burc: "Başak", emoji: "♍", tepki: "Analysiert, sucht nach Fehlern", iyilesme: "Ordnung und Routine", tavsiye: "Hör auf, dich selbst zu beschuldigen" },
+  { burc: "Terazi", emoji: "♎", tepki: "Fühlt sich unausgeglichen, sucht sofort neue Beziehung", iyilesme: "Soziale Unterstützung und Schönheit", tavsiye: "Lerne, allein zu sein" },
+  { burc: "Akrep", emoji: "♏", tepki: "Tiefer Schmerz, Rachegedanken", iyilesme: "Transformation und Erneuerung", tavsiye: "Lerne zu vergeben, lass los" },
+  { burc: "Yay", emoji: "♐", tepki: "Flucht, Reisen, neue Abenteuer", iyilesme: "Freiheit und Entdeckung", tavsiye: "Fliehe nicht vor deinen Gefühlen" },
+  { burc: "Oğlak", emoji: "♑", tepki: "Vergräbt sich in Arbeit, unterdrückt Gefühle", iyilesme: "Erfolg und Ziele", tavsiye: "Gib deinen Gefühlen Raum" },
+  { burc: "Kova", emoji: "♒", tepki: "Rationalisiert, schafft Distanz", iyilesme: "Freunde und soziale Aktivitäten", tavsiye: "Erlaube emotionale Verbindung" },
+  { burc: "Balık", emoji: "♓", tepki: "Tiefe Trauer, Flucht in Traumwelt", iyilesme: "Kunst und Spiritualität", tavsiye: "Behalte den Bezug zur Realität" },
 ];
 
 const IYILESME_ADIMLARI = [
-  { adim: "1. Kabul", aciklama: "Ayrılığı kabul et. İnkar aşamasını geç.", icon: "🤍" },
-  { adim: "2. Yas Tut", aciklama: "Üzülmene izin ver. Duygularını bastırma.", icon: "💔" },
-  { adim: "3. Destek Al", aciklama: "Yakınlarınla konuş, yalnız kalma.", icon: "🤗" },
-  { adim: "4. Kendine Odaklan", aciklama: "Kendi ihtiyaçlarına ve hedeflerine dön.", icon: "🎯" },
-  { adim: "5. Öğren", aciklama: "Bu deneyimden ne öğrenebileceğini düşün.", icon: "📚" },
-  { adim: "6. İlerle", aciklama: "Yeni başlangıçlara hazır ol.", icon: "🌱" },
+  { adim: "1. Akzeptanz", aciklama: "Akzeptiere die Trennung. Überspringe die Verleugnung.", icon: "🤍" },
+  { adim: "2. Trauern", aciklama: "Erlaube dir zu trauern. Unterdrücke deine Gefühle nicht.", icon: "💔" },
+  { adim: "3. Unterstützung", aciklama: "Sprich mit Nahestehenden, bleib nicht allein.", icon: "🤗" },
+  { adim: "4. Selbstfokus", aciklama: "Kehre zu deinen eigenen Bedürfnissen und Zielen zurück.", icon: "🎯" },
+  { adim: "5. Lernen", aciklama: "Überlege, was du aus dieser Erfahrung lernen kannst.", icon: "📚" },
+  { adim: "6. Weitergehen", aciklama: "Sei bereit für neue Anfänge.", icon: "🌱" },
 ];
 
 export default function AyrilikPage() {
@@ -82,20 +82,20 @@ export default function AyrilikPage() {
 
         <div style={{ maxWidth: "72rem", margin: "0 auto", position: "relative", zIndex: 1 }}>
           <Link href="/iliskiler" style={{ color: "rgba(255,255,255,0.75)", fontSize: "0.9rem", textDecoration: "none", padding: "0.5rem 1rem", background: "rgba(255,255,255,0.08)", backdropFilter: "blur(10px)", borderRadius: "9999px", border: "1px solid rgba(255,255,255,0.12)", display: "inline-block", marginBottom: "1.5rem" }}>
-            ← İlişkiler
+            ← Beziehungen
           </Link>
 
           <h1 style={{ fontSize: "clamp(2.2rem, 5vw, 3.5rem)", fontWeight: 800, color: "#ffffff", marginBottom: "0.5rem", textShadow: "0 0 40px rgba(100,116,139,0.6)", letterSpacing: "-0.02em" }}>
-            Ayrılık Rehberi
+            Trennungsratgeber
           </h1>
           <p style={{ fontSize: "1rem", color: "rgba(255,255,255,0.65)", maxWidth: "500px", margin: "0 auto 2.5rem" }}>
-            İyileşme ve toparlanma yolculuğu - Burcuna göre ayrılık rehberi
+            Heilungs- und Erholungsreise - Trennungsratgeber nach deinem Sternzeichen
           </p>
 
           {/* Hero Görsel - Animasyonlu */}
           <img
             src="/img/iliskiler-aytutulmas%C4%B1.jpg"
-            alt="Ayrılık Rehberi"
+            alt="Trennungsratgeber"
             style={{
               width: "clamp(150px, 18vw, 210px)",
               height: "clamp(150px, 18vw, 210px)",
@@ -121,7 +121,7 @@ export default function AyrilikPage() {
       <section style={{ padding: "3rem 1rem" }}>
         <div style={{ maxWidth: "72rem", margin: "0 auto" }}>
           <h2 style={{ fontSize: "1.5rem", fontWeight: 700, color: "#ffffff", marginBottom: "1.5rem", textAlign: "center" }}>
-            İyileşme Yolculuğu
+            Heilungsreise
           </h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: "1rem" }}>
             {IYILESME_ADIMLARI.map((item, i) => (
@@ -144,11 +144,11 @@ export default function AyrilikPage() {
         </div>
       </section>
 
-      {/* Burçlara Göre */}
+      {/* Nach Sternzeichen */}
       <section style={{ padding: "3rem 1rem", background: "#1a0b2e" }}>
         <div style={{ maxWidth: "72rem", margin: "0 auto" }}>
           <h2 style={{ fontSize: "1.5rem", fontWeight: 700, color: "#ffffff", marginBottom: "1.5rem", textAlign: "center" }}>
-            Burcuna Göre Ayrılık Rehberi
+            Trennungsratgeber nach Sternzeichen
           </h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1rem" }}>
             {AYRILIK_BURCLARI.map((item) => (
@@ -195,7 +195,7 @@ export default function AyrilikPage() {
         </div>
       </section>
 
-      {/* Önerilen İçerikler */}
+      {/* Empfohlene Inhalte */}
       <RelatedCards
         title="İlgini Çekebilir"
         items={[

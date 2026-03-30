@@ -136,14 +136,14 @@ export default function AskBurclariPage() {
       >
         <div style={{ maxWidth: "72rem", margin: "0 auto" }}>
           <Link href="/iliskiler" style={{ color: "rgba(255,255,255,0.8)", fontSize: "0.9rem", textDecoration: "none" }}>
-            ← İlişkiler
+            ← Beziehungen
           </Link>
           <div style={{ fontSize: "4rem", marginTop: "1rem" }}>💕</div>
           <h1 style={{ fontSize: "clamp(2rem, 5vw, 3rem)", fontWeight: 800, color: "#ffffff", marginTop: "0.5rem" }}>
-            Aşk Burçları
+            Liebessternzeichen
           </h1>
           <p style={{ fontSize: "1.1rem", color: "rgba(255,255,255,0.9)", maxWidth: "600px", margin: "1rem auto 0" }}>
-            Her burcun aşk tarzı, sevgi dili ve ilişki dinamikleri
+            Liebesstil, Liebessprache und Beziehungsdynamik jedes Sternzeichens
           </p>
         </div>
       </section>

@@ -1,23 +1,23 @@
 import Link from "next/link";
 
 const RUYA_KATEGORILERI = [
-  { title: "Rüya Sözlüğü", desc: "A'dan Z'ye tüm rüya sembolleri", href: "/ruya/sozluk", icon: "📖", color: "#818cf8" },
-  { title: "Su Rüyaları", desc: "Deniz, nehir, yağmur rüyaları", href: "/ruya/su", icon: "💧", color: "#3b82f6" },
-  { title: "Uçma Rüyaları", desc: "Havada uçmanın anlamı", href: "/ruya/ucma", icon: "🦋", color: "#8b5cf6" },
-  { title: "Aşk Rüyaları", desc: "Romantik rüyaların yorumu", href: "/ruya/ask", icon: "❤️", color: "#ec4899" },
-  { title: "Kâbus Yorumları", desc: "Korkutucu rüyaların anlamı", href: "/ruya/kabus", icon: "�️", color: "#ffffff" },
-  { title: "Renk Sembolleri", desc: "Rüyâdaki renklerin dili", href: "/ruya/renkler", icon: "�", color: "#f97316" },
+  { title: "Traumlexikon", desc: "Alle Traumsymbole von A bis Z", href: "/ruya/sozluk", icon: "📖", color: "#818cf8" },
+  { title: "Wasserträume", desc: "Träume von Meer, Fluss und Regen", href: "/ruya/su", icon: "💧", color: "#3b82f6" },
+  { title: "Flugträume", desc: "Die Bedeutung des Fliegens im Traum", href: "/ruya/ucma", icon: "🦋", color: "#8b5cf6" },
+  { title: "Liebesträume", desc: "Deutung romantischer Träume", href: "/ruya/ask", icon: "❤️", color: "#ec4899" },
+  { title: "Albträume", desc: "Die Bedeutung erschreckender Träume", href: "/ruya/kabus", icon: "�️", color: "#ffffff" },
+  { title: "Farbsymbole", desc: "Die Sprache der Farben im Traum", href: "/ruya/renkler", icon: "�", color: "#f97316" },
 ];
 
 const POPULER_RUYALAR = [
-  { title: "Yılan Görmek", meaning: "Düşmanlardan korunma, gizli tehlikeler", icon: "🐍" },
-  { title: "Diş Dökülmesi", meaning: "Aile ile ilgili haberler, değişim", icon: "🦷" },
-  { title: "Düşmek", meaning: "Kontrol kaybı, güvensizlik hissi", icon: "⬇️" },
-  { title: "Kovalanmak", meaning: "Kaçınılan sorunlar, stres", icon: "🏃" },
-  { title: "Uçmak", meaning: "Özgürlük, başarı, yükseliş", icon: "✈️" },
-  { title: "Su Görmek", meaning: "Duygusal durum, bilinçaltı", icon: "🌊" },
-  { title: "Bebek Görmek", meaning: "Yeni başlangıçlar, masumiyet", icon: "👶" },
-  { title: "Ev Görmek", meaning: "İç dünya, aile, güvenlik", icon: "🏠" },
+  { title: "Eine Schlange sehen", meaning: "Schutz vor Feinden, verborgene Gefahren", icon: "🐍" },
+  { title: "Zähne fallen aus", meaning: "Neuigkeiten zur Familie, Veränderung", icon: "🦷" },
+  { title: "Fallen", meaning: "Kontrollverlust, Gefühl der Unsicherheit", icon: "⬇️" },
+  { title: "Verfolgt werden", meaning: "Vermeidete Probleme, Stress", icon: "🏃" },
+  { title: "Fliegen", meaning: "Freiheit, Erfolg, Aufstieg", icon: "✈️" },
+  { title: "Wasser sehen", meaning: "Gefühlslage, Unterbewusstsein", icon: "🌊" },
+  { title: "Ein Baby sehen", meaning: "Neubeginn, Unschuld", icon: "👶" },
+  { title: "Ein Haus sehen", meaning: "Innere Welt, Familie, Sicherheit", icon: "🏠" },
 ];
 
 export default function RuyaTabirleriPage() {
@@ -55,13 +55,13 @@ export default function RuyaTabirleriPage() {
                 background: "rgba(129,140,248,0.3)",
               }}
             >
-              <span>🌙</span> Rüya Tabirleri
+              <span>🌙</span> Traumdeutung
             </div>
             <h1 style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", fontWeight: 800, color: "#ffffff", marginBottom: "1rem" }}>
-              Rüyalarının Gizli Anlamını Keşfet
+              Entdecke die verborgene Bedeutung deiner Träume
             </h1>
             <p style={{ fontSize: "1.1rem", color: "rgba(255,255,255,0.7)", maxWidth: "600px", margin: "0 auto" }}>
-              Binlerce rüya sembolü ve anlamı. Rüyalarındaki mesajları çöz, bilinçaltının sesini dinle.
+              Tausende Traumsymbole und Bedeutungen. Entschlüssele die Botschaften deiner Träume und höre auf dein Unterbewusstsein.
             </p>
           </div>
         </div>
@@ -82,7 +82,7 @@ export default function RuyaTabirleriPage() {
             <span style={{ fontSize: "1.5rem" }}>🔍</span>
             <input
               type="text"
-              placeholder="Rüyanda ne gördün? (örn: yılan, su, uçmak...)"
+              placeholder="Was hast du geträumt? (z.B. Schlange, Wasser, Fliegen...)"
               style={{
                 flex: 1,
                 border: "none",
@@ -103,7 +103,7 @@ export default function RuyaTabirleriPage() {
                 cursor: "pointer",
               }}
             >
-              Ara
+              Suchen
             </button>
           </div>
         </div>
@@ -113,7 +113,7 @@ export default function RuyaTabirleriPage() {
       <section style={{ padding: "3rem 1rem" }}>
         <div style={{ maxWidth: "72rem", margin: "0 auto" }}>
           <h2 style={{ fontSize: "1.5rem", fontWeight: 700, color: "#ffffff", marginBottom: "1.5rem", textAlign: "center" }}>
-            Rüya Kategorileri
+            Traumkategorien
           </h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1rem" }}>
             {RUYA_KATEGORILERI.map((item) => (
@@ -161,7 +161,7 @@ export default function RuyaTabirleriPage() {
       <section style={{ padding: "3rem 1rem", background: "#1a0b2e" }}>
         <div style={{ maxWidth: "72rem", margin: "0 auto" }}>
           <h2 style={{ fontSize: "1.5rem", fontWeight: 700, color: "#ffffff", marginBottom: "1.5rem", textAlign: "center" }}>
-            En Çok Aranan Rüyalar
+            Am häufigsten gesuchte Träume
           </h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "1rem" }}>
             {POPULER_RUYALAR.map((ruya, i) => (
@@ -196,28 +196,28 @@ export default function RuyaTabirleriPage() {
             padding: "2rem",
           }}>
             <h2 style={{ fontSize: "1.5rem", fontWeight: 700, color: "#ffffff", marginBottom: "1rem", textAlign: "center" }}>
-              🌟 Rüya Yorumu Nasıl Yapılır?
+              🌟 Wie deutet man Träume?
             </h2>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "1.5rem", marginTop: "1.5rem" }}>
               <div style={{ textAlign: "center" }}>
                 <div style={{ fontSize: "2rem", marginBottom: "0.5rem" }}>📝</div>
-                <h3 style={{ fontSize: "1rem", fontWeight: 600, color: "#ffffff", marginBottom: "0.25rem" }}>1. Rüyanı Yaz</h3>
-                <p style={{ fontSize: "0.85rem", color: "#ffffff" }}>Uyandığında hemen not al</p>
+                <h3 style={{ fontSize: "1rem", fontWeight: 600, color: "#ffffff", marginBottom: "0.25rem" }}>1. Traum notieren</h3>
+                <p style={{ fontSize: "0.85rem", color: "#ffffff" }}>Direkt nach dem Aufwachen aufschreiben</p>
               </div>
               <div style={{ textAlign: "center" }}>
                 <div style={{ fontSize: "2rem", marginBottom: "0.5rem" }}>🔍</div>
-                <h3 style={{ fontSize: "1rem", fontWeight: 600, color: "#ffffff", marginBottom: "0.25rem" }}>2. Sembolleri Bul</h3>
-                <p style={{ fontSize: "0.85rem", color: "#ffffff" }}>Öne çıkan sembolleri belirle</p>
+                <h3 style={{ fontSize: "1rem", fontWeight: 600, color: "#ffffff", marginBottom: "0.25rem" }}>2. Symbole finden</h3>
+                <p style={{ fontSize: "0.85rem", color: "#ffffff" }}>Wichtige Symbole herausfiltern</p>
               </div>
               <div style={{ textAlign: "center" }}>
                 <div style={{ fontSize: "2rem", marginBottom: "0.5rem" }}>💭</div>
-                <h3 style={{ fontSize: "1rem", fontWeight: 600, color: "#ffffff", marginBottom: "0.25rem" }}>3. Duygularını Hatırla</h3>
-                <p style={{ fontSize: "0.85rem", color: "#ffffff" }}>Rüyadaki hislerini düşün</p>
+                <h3 style={{ fontSize: "1rem", fontWeight: 600, color: "#ffffff", marginBottom: "0.25rem" }}>3. Gefühle erinnern</h3>
+                <p style={{ fontSize: "0.85rem", color: "#ffffff" }}>Welche Emotionen waren präsent?</p>
               </div>
               <div style={{ textAlign: "center" }}>
                 <div style={{ fontSize: "2rem", marginBottom: "0.5rem" }}>✨</div>
-                <h3 style={{ fontSize: "1rem", fontWeight: 600, color: "#ffffff", marginBottom: "0.25rem" }}>4. Yorumla</h3>
-                <p style={{ fontSize: "0.85rem", color: "#ffffff" }}>Hayatınla bağlantı kur</p>
+                <h3 style={{ fontSize: "1rem", fontWeight: 600, color: "#ffffff", marginBottom: "0.25rem" }}>4. Deuten</h3>
+                <p style={{ fontSize: "0.85rem", color: "#ffffff" }}>Mit deinem Leben verknüpfen</p>
               </div>
             </div>
           </div>

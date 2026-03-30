@@ -64,12 +64,12 @@ export default function DogumHaritasiPage() {
       });
       const payload = await res.json() as { ok?: boolean; data?: NatalResult; message?: string };
       if (!res.ok || !payload.ok || !payload.data) {
-        setHata(payload.message ?? "Harita yorumu şu an oluşturulamadı.");
+        setHata(payload.message ?? "Die Horoskop-Interpretation konnte momentan nicht erstellt werden.");
       } else {
         setSonuc(payload.data);
       }
     } catch {
-      setHata("Sunucu ile bağlantı kurulamadı.");
+      setHata("Verbindung zum Server konnte nicht hergestellt werden.");
     } finally {
       setLoading(false);
     }
@@ -158,7 +158,7 @@ export default function DogumHaritasiPage() {
                 cursor: formData.tarih && !loading ? "pointer" : "not-allowed",
               }}
             >
-              {loading ? "✨ Zodyaklı AI ile analiz ediliyor..." : "🔮 Zodyaklı ile Haritamı Oluştur"}
+              {loading ? "✨ SternenFeed AI ile analiz ediliyor..." : "🔮 SternenFeed ile Haritamı Oluştur"}
             </button>
 
             {loading && (
@@ -210,7 +210,7 @@ export default function DogumHaritasiPage() {
                     🌟 Kozmik Haritanız Oluşturuluyor...
                   </p>
                   <p style={{ fontSize: "0.9rem", color: "#ffffff", lineHeight: 1.6 }}>
-                    Zodyaklı AI doğum bilgilerinizi analiz ederek kişisel natal haritanızı hazırlıyor...
+                    SternenFeed AI doğum bilgilerinizi analiz ederek kişisel natal haritanızı hazırlıyor...
                   </p>
                 </div>
               </div>

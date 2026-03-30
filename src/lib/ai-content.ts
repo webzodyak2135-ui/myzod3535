@@ -87,14 +87,14 @@ const GEMINI_FALLBACK_MODELS = [
 
 function toneInstruction(tonePreset: TonePreset = "uzman") {
   if (tonePreset === "kanka") {
-    return "Ton: samimi, yakin, gundelik ve sicak olsun; kisa ama net cumleler kullan.";
+    return "Ton: vertraut, nah, alltäglich und warm; verwende kurze aber klare Sätze.";
   }
 
   if (tonePreset === "soft") {
-    return "Ton: yumusak, sakin, destekleyici ve hassas olsun; yargilayici dilden kacinin.";
+    return "Ton: sanft, ruhig, unterstützend und einfühlsam; vermeide wertende Sprache.";
   }
 
-  return "Ton: profesyonel astrolog gibi guven veren ama dogal ve insani bir dil kullan.";
+  return "Ton: wie ein professioneller Astrologe - vertrauenerweckend aber natürlich und menschlich.";
 }
 
 function getApiKey() {
@@ -109,9 +109,9 @@ function safeNumber(value: unknown, fallback = 7, min = 1, max = 10) {
 
 function scrubAiDisclosure(text: string) {
   return text
-    .replace(/\b(bir\s+)?yapay\s+zeka\s+olarak\b/gi, "")
-    .replace(/\b(as an ai|as a language model)\b/gi, "")
-    .replace(/\b(ai|gemini|google\s*ai|google\s*yapay\s*zeka|dil\s*modeli)\b/gi, "")
+    .replace(/\b(als\s+)?k(ü|ue)nstliche\s+intelligenz\b/gi, "")
+    .replace(/\b(as an ai|as a language model|als ki|als sprachmodell)\b/gi, "")
+    .replace(/\b(ai|gemini|google\s*ai|ki|sprachmodell)\b/gi, "")
     .replace(/\s{2,}/g, " ")
     .trim();
 }
@@ -188,20 +188,20 @@ export async function generateDailyHoroscopeBatch(input?: {
   const tone = toneInstruction(input?.tonePreset ?? "uzman");
 
   const prompt = [
-    "Sen deneyimli, samimi ve icten bir astroloji editoru ve yasam kocusun.",
-    `Tarih: ${dateISO}`,
-    `Burclar: ${signs}`,
-    "Sadece gecerli JSON dondur. Markdown kullanma.",
-    "JSON formati: {\"koc\": {\"gunluk\": \"...\", \"ask\": \"...\", \"kariyer\": \"...\", \"saglik\": \"...\", \"sans\": 8}}",
+    "Du bist ein erfahrener, vertrauter und aufrichtiger Astrologie-Redakteur und Life-Coach.",
+    `Datum: ${dateISO}`,
+    `Sternzeichen: ${signs}`,
+    "Gib nur gültiges JSON zurück. Verwende kein Markdown.",
+    "JSON-Format: {\"koc\": {\"gunluk\": \"...\", \"ask\": \"...\", \"kariyer\": \"...\", \"saglik\": \"...\", \"sans\": 8}}",
     tone,
-    "ONEMLI: Her alan (gunluk, ask, kariyer, saglik) icin 80-150 kelime arasinda ayrintili, akici, samimi bir Turkce yorum yaz.",
-    "gunluk alani: Gunun genel enerjisi, o burcun karakteristik ozellikleri ve bugunki gezegen etkilerini derine inerek anlat.",
-    "ask alani: Ask ve iliskilerde ne hissedecekleri, dikkat etmeleri gerekenler ve firsat noktalari hakkinda ayrintili yaz.",
-    "kariyer alani: Is hayatinda bugunun firsatlari, dikkat edilmesi gerekenler ve onerileri derine inerek yaz.",
-    "saglik alani: Fiziksel ve zihinsel saglik icin bugunun enerjisi ve pratik tavsiyeler hakkinda ayrintili yaz.",
-    "sans degeri 1-10 arasinda tam sayi olsun.",
-    "Yazi tarzi: Yaninda oturan, seni tanıyan, samimi ve deneyimli bir astrolog gibi konuş. Resmi, robotik veya listeleme tarzi kullanma.",
-    "Asla 'yapay zeka', 'AI', 'Gemini', 'Google', 'dil modeli' veya 'model' ifadelerini kullanma.",
+    "WICHTIG: Schreibe für jedes Feld (gunluk, ask, kariyer, saglik) einen detaillierten, fließenden, vertrauten deutschen Kommentar von 80-150 Wörtern.",
+    "gunluk-Feld: Erkläre die allgemeine Energie des Tages, die charakteristischen Eigenschaften dieses Sternzeichens und die heutigen Planeteneinflüsse tiefgehend.",
+    "ask-Feld: Schreibe ausführlich über Gefühle in Liebe und Beziehungen, worauf geachtet werden sollte und Chancenpunkte.",
+    "kariyer-Feld: Schreibe tiefgehend über die heutigen Chancen im Berufsleben, worauf geachtet werden sollte und Empfehlungen.",
+    "saglik-Feld: Schreibe ausführlich über die heutige Energie für körperliche und geistige Gesundheit und praktische Ratschläge.",
+    "sans-Wert soll eine ganze Zahl zwischen 1-10 sein.",
+    "Schreibstil: Sprich wie ein vertrauter, erfahrener Astrologe, der neben dir sitzt und dich kennt. Vermeide formelle, roboterhafte oder listenhafte Sprache.",
+    "Verwende NIEMALS 'künstliche Intelligenz', 'KI', 'AI', 'Gemini', 'Google', 'Sprachmodell' oder 'Modell'.",
   ].join("\n");
 
   const result = await callGeminiJson<Record<string, DailyHoroscope>>(prompt);
@@ -211,10 +211,10 @@ export async function generateDailyHoroscopeBatch(input?: {
   for (const [slug, value] of Object.entries(result)) {
     const v = value as Partial<DailyHoroscope>;
     normalized[slug] = {
-      gunluk: safeText(v.gunluk, "Bugun enerjini dengelemek senin icin onemli."),
-      ask: safeText(v.ask, "Iletisimde netlik iliskilerine iyi gelecek."),
-      kariyer: safeText(v.kariyer, "Planli hareket etmek avantaj saglayacak."),
-      saglik: safeText(v.saglik, "Rutinine dikkat ederek daha iyi hissedebilirsin."),
+      gunluk: safeText(v.gunluk, "Heute ist es wichtig für dich, deine Energie auszugleichen."),
+      ask: safeText(v.ask, "Klarheit in der Kommunikation wird deinen Beziehungen guttun."),
+      kariyer: safeText(v.kariyer, "Planvolles Handeln wird dir Vorteile bringen."),
+      saglik: safeText(v.saglik, "Indem du auf deine Routine achtest, kannst du dich besser fühlen."),
       sans: safeNumber(v.sans, 7),
     };
   }
@@ -229,25 +229,25 @@ export async function generateDreamInterpretation(input: {
 }): Promise<DreamInterpretation | null> {
   const tone = toneInstruction(input.tonePreset ?? "soft");
   const prompt = [
-    "Sen deneyimli bir ruya yorumcususun.",
-    `Burc (opsiyonel): ${input.zodiacSign ?? "belirtilmedi"}`,
-    `Ruyanin anlatimi: ${input.dreamText}`,
-    "Sadece gecerli JSON dondur.",
+    "Du bist ein erfahrener Traumdeuter.",
+    `Sternzeichen (optional): ${input.zodiacSign ?? "nicht angegeben"}`,
+    `Traumbeschreibung: ${input.dreamText}`,
+    "Gib nur gültiges JSON zurück.",
     tone,
-    "Yorumlari samimi, icten ve sohbet diliyle yaz.",
-    "Asla 'yapay zeka', 'AI', 'Gemini', 'Google' veya 'model' ifadelerini kullanma.",
-    "genelAnlam alani 150-300 kelime arasinda ayrintili, akici ve derin bir yorum olmali; duygusal katman, sembolik anlam ve psikolojik mesaj birlikte ele alinmali.",
-    "JSON formati: {\"genelAnlam\":\"...\",\"semboller\":[\"...\"],\"duygusalMesaj\":\"...\",\"hayataYansima\":\"...\",\"tavsiyeler\":[\"...\"]}",
+    "Schreibe Interpretationen vertraut, aufrichtig und in Gesprächssprache.",
+    "Verwende NIEMALS 'künstliche Intelligenz', 'KI', 'AI', 'Gemini', 'Google' oder 'Modell'.",
+    "Das genelAnlam-Feld sollte eine detaillierte, fließende und tiefgehende deutsche Interpretation von 150-300 Wörtern sein; emotionale Ebene, symbolische Bedeutung und psychologische Botschaft sollten zusammen behandelt werden.",
+    "JSON-Format: {\"genelAnlam\":\"...\",\"semboller\":[\"...\"],\"duygusalMesaj\":\"...\",\"hayataYansima\":\"...\",\"tavsiyeler\":[\"...\"]}",
   ].join("\n");
 
   const result = await callGeminiJson<DreamInterpretation>(prompt);
   if (!result) return null;
 
   return {
-    genelAnlam: safeText(result.genelAnlam, "Ruyan, ic dunyanda degisim ihtiyacini isaret ediyor."),
+    genelAnlam: safeText(result.genelAnlam, "Dein Traum deutet auf ein Bedürfnis nach Veränderung in deiner inneren Welt hin."),
     semboller: Array.isArray(result.semboller) ? result.semboller.map((s) => safeText(s)).filter(Boolean).slice(0, 6) : [],
-    duygusalMesaj: safeText(result.duygusalMesaj, "Duygularini daha acik ifade etmen faydali olabilir."),
-    hayataYansima: safeText(result.hayataYansima, "Gunluk hayatta net adimlar atmak bu donemi kolaylastirir."),
+    duygusalMesaj: safeText(result.duygusalMesaj, "Es kann hilfreich sein, deine Gefühle offener auszudrücken."),
+    hayataYansima: safeText(result.hayataYansima, "Klare Schritte im Alltag zu unternehmen, erleichtert diese Phase."),
     tavsiyeler: Array.isArray(result.tavsiyeler) ? result.tavsiyeler.map((s) => safeText(s)).filter(Boolean).slice(0, 6) : [],
   };
 }
@@ -262,19 +262,19 @@ export async function generateWeeklyHoroscopeBatch(input?: {
   const tone = toneInstruction(input?.tonePreset ?? "uzman");
 
   const prompt = [
-    "Sen deneyimli, samimi ve icten bir astroloji editoru ve yasam kocusun.",
-    `Hafta baslangici (ISO): ${weekStartISO}`,
-    `Burclar: ${signs}`,
-    "Sadece gecerli JSON dondur. Markdown kullanma.",
+    "Du bist ein erfahrener, vertrauter und aufrichtiger Astrologie-Redakteur und Life-Coach.",
+    `Wochenbeginn (ISO): ${weekStartISO}`,
+    `Sternzeichen: ${signs}`,
+    "Gib nur gültiges JSON zurück. Verwende kein Markdown.",
     "{\"koc\": {\"haftalik\": \"...\", \"ask\": \"...\", \"kariyer\": \"...\", \"saglik\": \"...\"}}",
     tone,
-    "Her alan icin 80-130 kelime arasinda ayrintili, akici ve samimi Turkce yorum yaz.",
-    "haftalik: Bu haftanin genel enerjisi, onemli gunler, gezegen etkileri ve temel tema.",
-    "ask: Bu hafta ask ve iliskilerde yasanacaklar, firsatlar ve dikkat edilmesi gerekenler.",
-    "kariyer: Bu hafta is hayatinda beklenenler, firsatlar, dikkatler ve pratik onerileri.",
-    "saglik: Bu hafta fiziksel ve zihinsel saglik icin enerji, uyarilar ve pratik tavsiyeler.",
-    "Yazi tarzi: Samimi, icten, deneyimli bir astrolog gibi konuş. Resmi veya robotik olma.",
-    "Asla 'yapay zeka', 'AI', 'Gemini', 'Google', 'dil modeli' veya 'model' ifadelerini kullanma.",
+    "Schreibe für jedes Feld einen detaillierten, fließenden und vertrauten deutschen Kommentar von 80-130 Wörtern.",
+    "haftalik: Die allgemeine Energie dieser Woche, wichtige Tage, Planeteneinflüsse und Hauptthema.",
+    "ask: Was diese Woche in Liebe und Beziehungen passieren wird, Chancen und worauf geachtet werden sollte.",
+    "kariyer: Was diese Woche im Berufsleben zu erwarten ist, Chancen, Aufmerksamkeitspunkte und praktische Empfehlungen.",
+    "saglik: Energie für körperliche und geistige Gesundheit diese Woche, Warnungen und praktische Ratschläge.",
+    "Schreibstil: Sprich vertraut, aufrichtig, wie ein erfahrener Astrologe. Sei nicht formell oder roboterhaft.",
+    "Verwende NIEMALS 'künstliche Intelligenz', 'KI', 'AI', 'Gemini', 'Google', 'Sprachmodell' oder 'Modell'.",
   ].join("\n");
 
   const result = await callGeminiJson<Record<string, WeeklyHoroscope>>(prompt);
@@ -284,10 +284,10 @@ export async function generateWeeklyHoroscopeBatch(input?: {
   for (const [slug, value] of Object.entries(result)) {
     const v = value as Partial<WeeklyHoroscope>;
     normalized[slug] = {
-      haftalik: safeText(v.haftalik, "Bu hafta planli ve dengeli adimlar atman sana avantaj saglayacak."),
-      ask: safeText(v.ask, "Iliskilerde aciklik ve samimilik on planda olacak."),
-      kariyer: safeText(v.kariyer, "Is hayatinda sabir ve kararlilik seni basariya tasiyacak."),
-      saglik: safeText(v.saglik, "Dinlenmeye ve rutine dikkat ederek bu haftayi saglıkli gecirebilirsin."),
+      haftalik: safeText(v.haftalik, "Diese Woche werden dir geplante und ausgewogene Schritte Vorteile bringen."),
+      ask: safeText(v.ask, "Offenheit und Vertrautheit werden in Beziehungen im Vordergrund stehen."),
+      kariyer: safeText(v.kariyer, "Geduld und Entschlossenheit werden dich im Berufsleben zum Erfolg führen."),
+      saglik: safeText(v.saglik, "Indem du auf Ruhe und Routine achtest, kannst du diese Woche gesund verbringen."),
     };
   }
 
@@ -301,14 +301,14 @@ export async function generateCompatibility(input: {
 }): Promise<CompatibilityInterpretation | null> {
   const tone = toneInstruction(input.tonePreset ?? "uzman");
   const prompt = [
-    "Sen uzman bir iliski astrolojisi editorusun.",
-    `Birinci burc: ${input.sign1}`,
-    `Ikinci burc: ${input.sign2}`,
-    "Sadece gecerli JSON dondur.",
+    "Du bist ein Experte für Beziehungsastrologie.",
+    `Erstes Sternzeichen: ${input.sign1}`,
+    `Zweites Sternzeichen: ${input.sign2}`,
+    "Gib nur gültiges JSON zurück.",
     tone,
-    "Yorumlari samimi, dogal ve insan gibi yaz; robotik dil kullanma.",
-    "Asla 'yapay zeka', 'AI', 'Gemini', 'Google' veya 'model' ifadelerini kullanma.",
-    "JSON formati: {\"genelUyum\":80,\"askUyumu\":75,\"arkadaslikUyumu\":85,\"isUyumu\":78,\"gucluYonler\":[\"...\"],\"dikkatEdilecekler\":[\"...\"],\"ozet\":\"...\"}",
+    "Schreibe Interpretationen vertraut, natürlich und menschlich; verwende keine roboterhafte Sprache.",
+    "Verwende NIEMALS 'künstliche Intelligenz', 'KI', 'AI', 'Gemini', 'Google' oder 'Modell'.",
+    "JSON-Format: {\"genelUyum\":80,\"askUyumu\":75,\"arkadaslikUyumu\":85,\"isUyumu\":78,\"gucluYonler\":[\"...\"],\"dikkatEdilecekler\":[\"...\"],\"ozet\":\"...\"}",
   ].join("\n");
 
   const result = await callGeminiJson<CompatibilityInterpretation>(prompt);
@@ -321,7 +321,7 @@ export async function generateCompatibility(input: {
     isUyumu: safeNumber(result.isUyumu, 72),
     gucluYonler: Array.isArray(result.gucluYonler) ? result.gucluYonler.map((x) => safeText(x)).filter(Boolean).slice(0, 6) : [],
     dikkatEdilecekler: Array.isArray(result.dikkatEdilecekler) ? result.dikkatEdilecekler.map((x) => safeText(x)).filter(Boolean).slice(0, 6) : [],
-    ozet: safeText(result.ozet, "Uyumunuz dogru iletisim ve anlayisla guclenebilir."),
+    ozet: safeText(result.ozet, "Eure Kompatibilität kann durch richtige Kommunikation und Verständnis gestärkt werden."),
   };
 }
 
@@ -336,35 +336,35 @@ export async function generateBurcFullContent(input: {
   const tone = toneInstruction(input.tonePreset ?? "uzman");
 
   const prompt = [
-    "Sen deneyimli, samimi ve icten bir astroloji editoru ve yasam kocusun.",
-    `Burc: ${input.name} (${input.slug})`,
-    `Bugunun tarihi: ${dateISO}`,
-    `Bu ayin yil-ay: ${monthISO}`,
-    "Sadece gecerli JSON dondur. Markdown kullanma.",
+    "Du bist ein erfahrener, vertrauter und aufrichtiger Astrologie-Redakteur und Life-Coach.",
+    `Sternzeichen: ${input.name} (${input.slug})`,
+    `Heutiges Datum: ${dateISO}`,
+    `Jahr-Monat dieses Monats: ${monthISO}`,
+    "Gib nur gültiges JSON zurück. Verwende kein Markdown.",
     "{\"gunluk\":\"...\",\"ask\":\"...\",\"kariyer\":\"...\",\"saglik\":\"...\",\"sans\":8,\"haftalik\":\"...\",\"aylik\":\"...\"}",
     tone,
-    "gunluk: Bu burcun bugunun genel enerjisi, duygular ve temel tema (80-130 kelime).",
-    "ask: Bugun ask ve iliskilerde dikkat edilmesi gerekenler, firsatlar (80-130 kelime).",
-    "kariyer: Bugun is ve kariyer alaninda firsatlar ve dikkatler (80-130 kelime).",
-    "saglik: Bugun fiziksel ve zihinsel saglik icin enerji ve tavsiyeler (80-130 kelime).",
-    "sans: 1-10 arasi tam sayi.",
-    "haftalik: Bu haftanin genel yorumu, onemli gunler, gezegen etkileri ve temalar (120-180 kelime).",
-    "aylik: Bu ayin derinlikli yorumu; gezegen hareketleri, onemli temalar, firsatlar, uyarilar ve pratik yonlendirme (150-200 kelime).",
-    "Yazi tarzi: Samimi, icten, deneyimli bir astrolog gibi konuş. Resmi veya robotik olma.",
-    "Asla 'yapay zeka', 'AI', 'Gemini', 'Google', 'dil modeli' veya 'model' ifadelerini kullanma.",
+    "gunluk: Die allgemeine Energie, Emotionen und das Hauptthema dieses Sternzeichens heute (80-130 Wörter auf Deutsch).",
+    "ask: Worauf heute in Liebe und Beziehungen geachtet werden sollte, Chancen (80-130 Wörter auf Deutsch).",
+    "kariyer: Chancen und Aufmerksamkeitspunkte heute im Berufs- und Karrierebereich (80-130 Wörter auf Deutsch).",
+    "saglik: Energie und Ratschläge für körperliche und geistige Gesundheit heute (80-130 Wörter auf Deutsch).",
+    "sans: Ganze Zahl zwischen 1-10.",
+    "haftalik: Allgemeine Interpretation dieser Woche, wichtige Tage, Planeteneinflüsse und Themen (120-180 Wörter auf Deutsch).",
+    "aylik: Tiefgehende Interpretation dieses Monats; Planetenbewegungen, wichtige Themen, Chancen, Warnungen und praktische Anleitung (150-200 Wörter auf Deutsch).",
+    "Schreibstil: Sprich vertraut, aufrichtig, wie ein erfahrener Astrologe. Sei nicht formell oder roboterhaft.",
+    "Verwende NIEMALS 'künstliche Intelligenz', 'KI', 'AI', 'Gemini', 'Google', 'Sprachmodell' oder 'Modell'.",
   ].join("\n");
 
   const result = await callGeminiJson<BurcFullContent>(prompt);
   if (!result) return null;
 
   return {
-    gunluk: safeText(result.gunluk, "Bugun enerjini dengelemek senin icin onemli."),
-    ask: safeText(result.ask, "Iletisimde netlik iliskilerine iyi gelecek."),
-    kariyer: safeText(result.kariyer, "Planli hareket etmek avantaj saglayacak."),
-    saglik: safeText(result.saglik, "Rutinine dikkat ederek daha iyi hissedebilirsin."),
+    gunluk: safeText(result.gunluk, "Heute ist es wichtig für dich, deine Energie auszugleichen."),
+    ask: safeText(result.ask, "Klarheit in der Kommunikation wird deinen Beziehungen guttun."),
+    kariyer: safeText(result.kariyer, "Planvolles Handeln wird dir Vorteile bringen."),
+    saglik: safeText(result.saglik, "Indem du auf deine Routine achtest, kannst du dich besser fühlen."),
     sans: safeNumber(result.sans, 7),
-    haftalik: safeText(result.haftalik, "Bu hafta planli adimlar atman sana avantaj saglayacak."),
-    aylik: safeText(result.aylik, "Bu ay hedeflerine odaklanmak icin ideal bir donem."),
+    haftalik: safeText(result.haftalik, "Diese Woche werden dir geplante Schritte Vorteile bringen."),
+    aylik: safeText(result.aylik, "Dieser Monat ist eine ideale Zeit, um dich auf deine Ziele zu konzentrieren."),
   };
 }
 
@@ -378,19 +378,19 @@ export async function generateMonthlyHoroscopeBatch(input?: {
   const tone = toneInstruction(input?.tonePreset ?? "uzman");
 
   const prompt = [
-    "Sen deneyimli, samimi ve icten bir astroloji editoru ve yasam kocusun.",
-    `Ay (YYYY-MM): ${monthISO}`,
-    `Burclar: ${signs}`,
-    "Sadece gecerli JSON dondur. Markdown kullanma.",
+    "Du bist ein erfahrener, vertrauter und aufrichtiger Astrologie-Redakteur und Life-Coach.",
+    `Monat (YYYY-MM): ${monthISO}`,
+    `Sternzeichen: ${signs}`,
+    "Gib nur gültiges JSON zurück. Verwende kein Markdown.",
     "{\"koc\": {\"aylik\": \"...\", \"ask\": \"...\", \"kariyer\": \"...\", \"saglik\": \"...\"}}",
     tone,
-    "Her alan (aylik, ask, kariyer, saglik) icin 100-180 kelime arasinda ayrintili, akici, samimi Turkce yorum yaz.",
-    "aylik: Bu ayin genel enerjisi, gezegen hareketleri ve o burcun bu aydaki temel temaları hakkinda derinlikli yaz.",
-    "ask: Bu ay ask ve iliskilerde ne hissedecekleri, onemli tarihler, firsatlar ve dikkat noktalari.",
-    "kariyer: Is ve kariyer alaninda bu ayin firsatlari, dikkatler ve somut onerileri.",
-    "saglik: Bu ay fiziksel ve zihinsel saglik icin enerji, dikkat noktalari ve pratik tavsiyeler.",
-    "Yazi tarzi: Samimi, icten, deneyimli bir astrolog gibi konuş. Resmi veya robotik olma.",
-    "Asla 'yapay zeka', 'AI', 'Gemini', 'Google', 'dil modeli' veya 'model' ifadelerini kullanma.",
+    "Schreibe für jedes Feld (aylik, ask, kariyer, saglik) einen detaillierten, fließenden, vertrauten deutschen Kommentar von 100-180 Wörtern.",
+    "aylik: Schreibe tiefgehend über die allgemeine Energie dieses Monats, Planetenbewegungen und die Hauptthemen dieses Sternzeichens in diesem Monat.",
+    "ask: Was sie diesen Monat in Liebe und Beziehungen fühlen werden, wichtige Daten, Chancen und Aufmerksamkeitspunkte.",
+    "kariyer: Die Chancen dieses Monats im Berufs- und Karrierebereich, Aufmerksamkeitspunkte und konkrete Empfehlungen.",
+    "saglik: Energie für körperliche und geistige Gesundheit diesen Monat, Aufmerksamkeitspunkte und praktische Ratschläge.",
+    "Schreibstil: Sprich vertraut, aufrichtig, wie ein erfahrener Astrologe. Sei nicht formell oder roboterhaft.",
+    "Verwende NIEMALS 'künstliche Intelligenz', 'KI', 'AI', 'Gemini', 'Google', 'Sprachmodell' oder 'Modell'.",
   ].join("\n");
 
   const result = await callGeminiJson<Record<string, MonthlyHoroscope>>(prompt);
@@ -400,10 +400,10 @@ export async function generateMonthlyHoroscopeBatch(input?: {
   for (const [slug, value] of Object.entries(result)) {
     const v = value as Partial<MonthlyHoroscope>;
     normalized[slug] = {
-      aylik: safeText(v.aylik, "Bu ay planli ve dengeli adimlar atman sana avantaj saglayacak."),
-      ask: safeText(v.ask, "Iliskilerde acik iletisim ve empati on planda."),
-      kariyer: safeText(v.kariyer, "Kariyer hedeflerine odaklanmak icin uygun bir ay."),
-      saglik: safeText(v.saglik, "Sagligi on planda tutmak ve rutinleri korumak onemli."),
+      aylik: safeText(v.aylik, "Dieser Monat wird dir geplante und ausgewogene Schritte Vorteile bringen."),
+      ask: safeText(v.ask, "Offene Kommunikation und Empathie stehen in Beziehungen im Vordergrund."),
+      kariyer: safeText(v.kariyer, "Ein geeigneter Monat, um sich auf Karriereziele zu konzentrieren."),
+      saglik: safeText(v.saglik, "Es ist wichtig, die Gesundheit in den Vordergrund zu stellen und Routinen beizubehalten."),
     };
   }
 
@@ -425,29 +425,29 @@ export async function generateRisingSignInterpretation(input: {
 }): Promise<RisingSignResult | null> {
   const tone = toneInstruction(input.tonePreset ?? "uzman");
   const prompt = [
-    "Sen deneyimli, samimi ve icten bir astroloji editoru ve yasam kocusun.",
-    `Yukselen Burc: ${input.risingSign}`,
-    input.sunSign ? `Gunes Burcu: ${input.sunSign}` : "",
-    input.birthTime ? `Dogum Saati: ${input.birthTime}` : "",
-    "Sadece gecerli JSON dondur. Markdown kullanma.",
+    "Du bist ein erfahrener, vertrauter und aufrichtiger Astrologie-Redakteur und Life-Coach.",
+    `Aszendent: ${input.risingSign}`,
+    input.sunSign ? `Sonnenzeichen: ${input.sunSign}` : "",
+    input.birthTime ? `Geburtszeit: ${input.birthTime}` : "",
+    "Gib nur gültiges JSON zurück. Verwende kein Markdown.",
     "{\"yorum\":\"...\",\"gucluYonler\":[\"...\"],\"iliski\":\"...\",\"kariyer\":\"...\"}",
     tone,
-    "yorum: Bu yukselen burcun kisilige, dis gorunume ve ilk izlenime etkisi hakkinda 120-180 kelime derinlikli Turkce yorum.",
-    "gucluYonler: Bu yukselen burcun en belirgin 5 guclu ozelligi (kisa ifadeler).",
-    "iliski: Bu yukselen burcun ask ve iliskilerdeki davranisi hakkinda 60-80 kelime.",
-    "kariyer: Bu yukselen burcun is hayatindaki yansimasi hakkinda 60-80 kelime.",
-    "Yazi tarzi: Samimi, icten, deneyimli bir astrolog gibi konus. Robotik olma.",
-    "Asla 'yapay zeka', 'AI', 'Gemini', 'Google', 'dil modeli' veya 'model' ifadelerini kullanma.",
+    "yorum: Tiefgehender deutscher Kommentar von 120-180 Wörtern über den Einfluss dieses Aszendenten auf Persönlichkeit, äußeres Erscheinungsbild und ersten Eindruck.",
+    "gucluYonler: Die 5 markantesten Stärken dieses Aszendenten (kurze Aussagen).",
+    "iliski: 60-80 Wörter über das Verhalten dieses Aszendenten in Liebe und Beziehungen.",
+    "kariyer: 60-80 Wörter über die Reflexion dieses Aszendenten im Berufsleben.",
+    "Schreibstil: Sprich vertraut, aufrichtig, wie ein erfahrener Astrologe. Sei nicht roboterhaft.",
+    "Verwende NIEMALS 'künstliche Intelligenz', 'KI', 'AI', 'Gemini', 'Google', 'Sprachmodell' oder 'Modell'.",
   ].filter(Boolean).join("\n");
 
   const result = await callGeminiJson<RisingSignResult>(prompt);
   if (!result) return null;
 
   return {
-    yorum: safeText(result.yorum, "Yukselen burcun dis dunya ile nasil etkilestigini gosterir."),
+    yorum: safeText(result.yorum, "Der Aszendent zeigt, wie du mit der Außenwelt interagierst."),
     gucluYonler: Array.isArray(result.gucluYonler) ? result.gucluYonler.map((s) => safeText(s)).filter(Boolean).slice(0, 5) : [],
-    iliski: safeText(result.iliski, "Iliskilerde samimi ve icerik odakli yaklasim sergilersin."),
-    kariyer: safeText(result.kariyer, "Is hayatinda dogal yeteneklerini on plana cikarirsin."),
+    iliski: safeText(result.iliski, "In Beziehungen zeigst du einen vertrauten und inhaltsfokussierten Ansatz."),
+    kariyer: safeText(result.kariyer, "Im Berufsleben bringst du deine natürlichen Talente in den Vordergrund."),
   };
 }
 
@@ -468,32 +468,32 @@ export async function generateNatalChartReading(input: {
 }): Promise<NatalChartReading | null> {
   const tone = toneInstruction(input.tonePreset ?? "uzman");
   const prompt = [
-    "Sen deneyimli, samimi ve icten bir astroloji editoru ve dogum haritasi uzmanisin.",
-    `Dogum Tarihi: ${input.birthDate}`,
-    input.birthTime ? `Dogum Saati: ${input.birthTime}` : "Dogum Saati: bilinmiyor (12:00 kullan)",
-    input.birthPlace ? `Dogum Yeri: ${input.birthPlace}` : "Dogum Yeri: belirtilmedi",
-    "Sadece gecerli JSON dondur. Markdown kullanma.",
+    "Du bist ein erfahrener, vertrauter und aufrichtiger Astrologie-Redakteur und Geburtshoroskop-Experte.",
+    `Geburtsdatum: ${input.birthDate}`,
+    input.birthTime ? `Geburtszeit: ${input.birthTime}` : "Geburtszeit: unbekannt (verwende 12:00)",
+    input.birthPlace ? `Geburtsort: ${input.birthPlace}` : "Geburtsort: nicht angegeben",
+    "Gib nur gültiges JSON zurück. Verwende kein Markdown.",
     "{\"genelYorum\":\"...\",\"kisilik\":\"...\",\"ask\":\"...\",\"kariyer\":\"...\",\"saglik\":\"...\",\"oneriler\":[\"...\"]}",
     tone,
-    "genelYorum: Bu dogum tarihine gore Gunes burcunu belirle ve genel kozmik profil hakkinda 120-180 kelime Turkce yorum.",
-    "kisilik: Bu kisinin temel kisilik ozellikleri, guclu ve gelisme gereken yonleri hakkinda 80-120 kelime.",
-    "ask: Ask ve iliskiler alanindaki egilimleri, beklentileri ve tavsiyeleri hakkinda 80-100 kelime.",
-    "kariyer: Kariyer ve meslek alani icin dogal yetenekler, uygun is alanlari ve onerileri hakkinda 80-100 kelime.",
-    "saglik: Fiziksel ve zihinsel saglik egilimler, dikkat edilecekler ve pratik tavsiyeler hakkinda 60-80 kelime.",
-    "oneriler: Bu kisiye ozel 5 somut yasam onerisi (kisa ve ozgul ifadeler).",
-    "Yazi tarzi: Samimi, icten, deneyimli bir astrolog gibi konus. Robotik olma.",
-    "Asla 'yapay zeka', 'AI', 'Gemini', 'Google', 'dil modeli' veya 'model' ifadelerini kullanma.",
+    "genelYorum: Bestimme das Sonnenzeichen basierend auf diesem Geburtsdatum und schreibe einen deutschen Kommentar von 120-180 Wörtern über das allgemeine kosmische Profil.",
+    "kisilik: 80-120 Wörter über die grundlegenden Persönlichkeitsmerkmale dieser Person, Stärken und Entwicklungsbereiche.",
+    "ask: 80-100 Wörter über Tendenzen, Erwartungen und Ratschläge im Bereich Liebe und Beziehungen.",
+    "kariyer: 80-100 Wörter über natürliche Talente für Karriere und Beruf, geeignete Arbeitsbereiche und Empfehlungen.",
+    "saglik: 60-80 Wörter über körperliche und geistige Gesundheitstendenzen, worauf geachtet werden sollte und praktische Ratschläge.",
+    "oneriler: 5 konkrete Lebensempfehlungen speziell für diese Person (kurze und spezifische Aussagen).",
+    "Schreibstil: Sprich vertraut, aufrichtig, wie ein erfahrener Astrologe. Sei nicht roboterhaft.",
+    "Verwende NIEMALS 'künstliche Intelligenz', 'KI', 'AI', 'Gemini', 'Google', 'Sprachmodell' oder 'Modell'.",
   ].filter(Boolean).join("\n");
 
   const result = await callGeminiJson<NatalChartReading>(prompt);
   if (!result) return null;
 
   return {
-    genelYorum: safeText(result.genelYorum, "Dogum haritasi, kozmik potansiyelini ortaya koyar."),
-    kisilik: safeText(result.kisilik, "Guclu bir ic dunya ve zengin bir duygusal yapiya sahipsin."),
-    ask: safeText(result.ask, "Iliskilerde derinlik ve baglilik arayisinda olursun."),
-    kariyer: safeText(result.kariyer, "Yaratici ve analitik yeteneklerin kariyer basarini destekler."),
-    saglik: safeText(result.saglik, "Denge ve rutin, sagligini korumanda temel rol oynar."),
+    genelYorum: safeText(result.genelYorum, "Das Geburtshoroskop offenbart dein kosmisches Potenzial."),
+    kisilik: safeText(result.kisilik, "Du hast eine starke innere Welt und eine reiche emotionale Struktur."),
+    ask: safeText(result.ask, "In Beziehungen suchst du nach Tiefe und Verbindlichkeit."),
+    kariyer: safeText(result.kariyer, "Deine kreativen und analytischen Fähigkeiten unterstützen deinen Karriereerfolg."),
+    saglik: safeText(result.saglik, "Balance und Routine spielen eine grundlegende Rolle beim Erhalt deiner Gesundheit."),
     oneriler: Array.isArray(result.oneriler) ? result.oneriler.map((s) => safeText(s)).filter(Boolean).slice(0, 5) : [],
   };
 }
@@ -506,16 +506,16 @@ export async function generateStaticDreamDetail(input: {
   const tone = toneInstruction(input.tonePreset ?? "soft");
 
   const prompt = [
-    "Sen deneyimli bir ruya yorumcusu ve psikoloji uzmanisun.",
-    `Ruya konusu: ${input.dreamTitle}`,
-    input.dreamKeywords ? `Anahtar kelimeler / semboller: ${input.dreamKeywords}` : "",
-    "Sadece gecerli JSON dondur.",
+    "Du bist ein erfahrener Traumdeuter und Psychologie-Experte.",
+    `Traumthema: ${input.dreamTitle}`,
+    input.dreamKeywords ? `Schlüsselwörter / Symbole: ${input.dreamKeywords}` : "",
+    "Gib nur gültiges JSON zurück.",
     tone,
-    "detay alani 150-250 kelime arasinda ayrintili, akici ve derin Turkce yorum olmali. Psikolojik katman, sembolik anlam, duygusal mesaj ve gunluk hayata yansimasi birlikte ele alinmali.",
-    "olumlu alani: en az 5 ozgul ve anlamli madde (kisa liste degil, gercekci ifadeler).",
-    "olumsuz alani: en az 4 ozgul ve anlamli madde (kisa liste degil, gercekci ifadeler).",
-    "tavsiye alani 60-100 kelime arasinda somut ve samimi Turkce yonlendirme olmali.",
-    "Asla 'yapay zeka', 'AI', 'Gemini', 'Google', 'dil modeli' veya 'model' ifadelerini kullanma.",
+    "Das detay-Feld sollte eine detaillierte, fließende und tiefgehende deutsche Interpretation von 150-250 Wörtern sein. Psychologische Ebene, symbolische Bedeutung, emotionale Botschaft und Reflexion im Alltag sollten zusammen behandelt werden.",
+    "olumlu-Feld: mindestens 5 spezifische und bedeutungsvolle Punkte (keine kurze Liste, realistische Aussagen).",
+    "olumsuz-Feld: mindestens 4 spezifische und bedeutungsvolle Punkte (keine kurze Liste, realistische Aussagen).",
+    "tavsiye-Feld sollte eine konkrete und vertraute deutsche Anleitung von 60-100 Wörtern sein.",
+    "Verwende NIEMALS 'künstliche Intelligenz', 'KI', 'AI', 'Gemini', 'Google', 'Sprachmodell' oder 'Modell'.",
     "{\"detay\":\"...\",\"olumlu\":[\"...\"],\"olumsuz\":[\"...\"],\"tavsiye\":\"...\"}",
   ].filter(Boolean).join("\n");
 
@@ -523,9 +523,9 @@ export async function generateStaticDreamDetail(input: {
   if (!result) return null;
 
   return {
-    detay: safeText(result.detay, "Bu ruya, ic dunyanizdaki derin mesajlari yansitmaktadir."),
+    detay: safeText(result.detay, "Dieser Traum spiegelt die tiefen Botschaften in deiner inneren Welt wider."),
     olumlu: Array.isArray(result.olumlu) ? result.olumlu.map((s) => safeText(s)).filter(Boolean).slice(0, 7) : [],
     olumsuz: Array.isArray(result.olumsuz) ? result.olumsuz.map((s) => safeText(s)).filter(Boolean).slice(0, 7) : [],
-    tavsiye: safeText(result.tavsiye, "Ic duygularinizi dinleyin ve hayatinizda denge saglayin."),
+    tavsiye: safeText(result.tavsiye, "Höre auf deine inneren Gefühle und schaffe Balance in deinem Leben."),
   };
 }

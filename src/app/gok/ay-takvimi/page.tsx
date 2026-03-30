@@ -1,25 +1,25 @@
 import Link from "next/link";
 
 const AY_FAZLARI = [
-  { faz: "Yeni Ay", emoji: "🌑", tarih: "Her ayın başı", anlam: "Yeni başlangıçlar, niyet koyma, tohum ekme zamanı", aktivite: "Niyet belirle, yeni projeler başlat" },
-  { faz: "Hilal (Büyüyen)", emoji: "🌒", tarih: "Yeni aydan 3-4 gün sonra", anlam: "Büyüme, ilerleme, momentum kazanma", aktivite: "Planları hayata geçir, adım at" },
-  { faz: "İlk Dördün", emoji: "🌓", tarih: "Yeni aydan 7 gün sonra", anlam: "Karar zamanı, engelleri aşma, kararlılık", aktivite: "Zorlukları çöz, kararlı ol" },
-  { faz: "Şişkin Ay", emoji: "🌔", tarih: "Dolunaydan 3-4 gün önce", anlam: "Olgunlaşma, sabır, son hazırlıklar", aktivite: "Detayları tamamla, sabret" },
-  { faz: "Dolunay", emoji: "🌕", tarih: "Her ayın ortası", anlam: "Doruk, hasat, aydınlanma, duygusal yoğunluk", aktivite: "Sonuçları gör, kutla, bırak" },
-  { faz: "Dağılan Ay", emoji: "🌖", tarih: "Dolunaydan 3-4 gün sonra", anlam: "Paylaşma, öğretme, minnettarlık", aktivite: "Öğrendiklerini paylaş" },
-  { faz: "Son Dördün", emoji: "🌗", tarih: "Dolunaydan 7 gün sonra", anlam: "Bırakma, temizlik, değerlendirme", aktivite: "Gereksizleri bırak, temizle" },
-  { faz: "Balzamik Ay", emoji: "🌘", tarih: "Yeni aydan 3-4 gün önce", anlam: "Dinlenme, içe dönüş, hazırlık", aktivite: "Dinlen, meditasyon yap" },
+  { faz: "Neumond", emoji: "🌑", tarih: "Monatsbeginn", anlam: "Neue Anfänge, Absichten setzen, Samen säen", aktivite: "Setze Absichten, starte neue Projekte" },
+  { faz: "Zunehmende Sichel", emoji: "🌒", tarih: "3-4 Tage nach Neumond", anlam: "Wachstum, Fortschritt, Momentum gewinnen", aktivite: "Setze Pläne um, handle" },
+  { faz: "Erstes Viertel", emoji: "🌓", tarih: "7 Tage nach Neumond", anlam: "Entscheidungszeit, Hindernisse überwinden, Entschlossenheit", aktivite: "Löse Herausforderungen, sei entschlossen" },
+  { faz: "Zunehmender Mond", emoji: "🌔", tarih: "3-4 Tage vor Vollmond", anlam: "Reifung, Geduld, letzte Vorbereitungen", aktivite: "Schließe Details ab, sei geduldig" },
+  { faz: "Vollmond", emoji: "🌕", tarih: "Monatsmitte", anlam: "Höhepunkt, Ernte, Erleuchtung, emotionale Intensität", aktivite: "Siehe Ergebnisse, feiere, lass los" },
+  { faz: "Abnehmender Mond", emoji: "🌖", tarih: "3-4 Tage nach Vollmond", anlam: "Teilen, Lehren, Dankbarkeit", aktivite: "Teile Gelerntes" },
+  { faz: "Letztes Viertel", emoji: "🌗", tarih: "7 Tage nach Vollmond", anlam: "Loslassen, Reinigung, Bewertung", aktivite: "Lass Unnötiges los, reinige" },
+  { faz: "Abnehmende Sichel", emoji: "🌘", tarih: "3-4 Tage vor Neumond", anlam: "Ruhe, Innenschau, Vorbereitung", aktivite: "Ruhe dich aus, meditiere" },
 ];
 
 const YAKLASAN_AYLAR = [
-  { tarih: "1 Nisan 2026", tip: "Dolunay", burc: "Terazi", ozellik: "-" },
-  { tarih: "17 Nisan 2026", tip: "Yeni Ay", burc: "Koç", ozellik: "-" },
-  { tarih: "1 Mayıs 2026", tip: "Dolunay", burc: "Akrep", ozellik: "Ay Tutulması" },
-  { tarih: "16 Mayıs 2026", tip: "Yeni Ay", burc: "Boğa", ozellik: "Güneş Tutulması" },
-  { tarih: "31 Mayıs 2026", tip: "Dolunay", burc: "Yay", ozellik: "-" },
-  { tarih: "14 Haziran 2026", tip: "Yeni Ay", burc: "İkizler", ozellik: "-" },
-  { tarih: "30 Haziran 2026", tip: "Dolunay", burc: "Oğlak", ozellik: "-" },
-  { tarih: "13 Temmuz 2026", tip: "Yeni Ay", burc: "Yengeç", ozellik: "-" },
+  { tarih: "1. April 2026", tip: "Vollmond", burc: "Waage", ozellik: "-" },
+  { tarih: "17. April 2026", tip: "Neumond", burc: "Widder", ozellik: "-" },
+  { tarih: "1. Mai 2026", tip: "Vollmond", burc: "Skorpion", ozellik: "Mondfinsternis" },
+  { tarih: "16. Mai 2026", tip: "Neumond", burc: "Stier", ozellik: "Sonnenfinsternis" },
+  { tarih: "31. Mai 2026", tip: "Vollmond", burc: "Schütze", ozellik: "-" },
+  { tarih: "14. Juni 2026", tip: "Neumond", burc: "Zwillinge", ozellik: "-" },
+  { tarih: "30. Juni 2026", tip: "Vollmond", burc: "Steinbock", ozellik: "-" },
+  { tarih: "13. Juli 2026", tip: "Neumond", burc: "Krebs", ozellik: "-" },
 ];
 
 export default function AyTakvimiPage() {
@@ -35,14 +35,14 @@ export default function AyTakvimiPage() {
       >
         <div style={{ maxWidth: "72rem", margin: "0 auto" }}>
           <Link href="/gok-gundemi" style={{ color: "rgba(255,255,255,0.8)", fontSize: "0.9rem", textDecoration: "none" }}>
-            ← Gök Gündemi
+            ← Kosmischer Kalender
           </Link>
           <div style={{ fontSize: "4rem", marginTop: "1rem" }}>🌕</div>
           <h1 style={{ fontSize: "clamp(2rem, 5vw, 3rem)", fontWeight: 800, color: "#ffffff", marginTop: "0.5rem" }}>
-            Ay Takvimleri
+            Mondkalender
           </h1>
           <p style={{ fontSize: "1.1rem", color: "rgba(255,255,255,0.85)", maxWidth: "600px", margin: "1rem auto 0" }}>
-            Yeni ay ve dolunay tarihleri - Ay&apos;ın kozmik ritmi
+            Neumond- und Vollmonddaten - Der kosmische Rhythmus des Mondes
           </p>
         </div>
       </section>
@@ -51,7 +51,7 @@ export default function AyTakvimiPage() {
       <section style={{ padding: "3rem 1rem" }}>
         <div style={{ maxWidth: "72rem", margin: "0 auto" }}>
           <h2 style={{ fontSize: "1.5rem", fontWeight: 700, color: "#ffffff", marginBottom: "1.5rem", textAlign: "center" }}>
-            Ay Fazları ve Anlamları
+            Mondphasen und ihre Bedeutungen
           </h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1rem" }}>
             {AY_FAZLARI.map((faz, i) => (

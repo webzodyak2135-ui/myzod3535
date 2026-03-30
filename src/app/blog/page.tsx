@@ -3,44 +3,44 @@ import RelatedCards, { BURC_ONERILERI, ILISKI_ONERILERI } from "@/components/Rel
 
 const DISCOVER_CATEGORIES = [
   {
-    title: "Astroloji Haberleri",
+    title: "Astrologie-News",
     slug: "haberler",
-    desc: "Son astroloji gelişmeleri ve önemli gök olayları",
+    desc: "Neueste astrologische Entwicklungen und wichtige Himmelsereignisse",
     icon: "📰",
     color: "#fbbf24",
   },
   {
-    title: "Burç Trendleri",
+    title: "Sternzeichen-Trends",
     slug: "trendler",
-    desc: "Popüler burç analizleri ve güncel yorumlar",
+    desc: "Beliebte Sternzeichen-Analysen und aktuelle Kommentare",
     icon: "📈",
     color: "#a855f7",
   },
   {
-    title: "Yıldızlardan Öyküler",
+    title: "Sternengeschichten",
     slug: "oykuler",
-    desc: "Mitoloji ve astroloji hikayelerinin büyülü dünyası",
+    desc: "Die zauberhafte Welt der Mythologie und Astrologie-Geschichten",
     icon: "✨",
     color: "#ec4899",
   },
   {
-    title: "Uzman Görüşleri",
+    title: "Expertenmeinungen",
     slug: "uzmanlar",
-    desc: "Profesyonel astrologlardan özel yazılar ve analizler",
+    desc: "Besondere Texte und Analysen von professionellen Astrologen",
     icon: "🔮",
     color: "#8b5cf6",
   },
   {
-    title: "Kozmik Takvim",
+    title: "Kosmischer Kalender",
     slug: "takvim",
-    desc: "Önemli astrolojik tarihler ve gezegen hareketleri",
+    desc: "Wichtige astrologische Daten und Planetenbewegungen",
     icon: "📅",
     color: "#34d399",
   },
   {
-    title: "Burç İstatistikleri",
+    title: "Sternzeichen-Statistiken",
     slug: "istatistik",
-    desc: "Burçlarla ilgili ilginç veriler ve araştırmalar",
+    desc: "Interessante Daten und Forschungen zu Sternzeichen",
     icon: "📊",
     color: "#fb923c",
   },
@@ -173,7 +173,7 @@ export default function DiscoverPage() {
         </div>
       </section>
 
-      {/* Önerilen İçerikler */}
+      {/* Empfohlene Inhalte */}
       <RelatedCards
         title="İlgini Çekebilir"
         items={[

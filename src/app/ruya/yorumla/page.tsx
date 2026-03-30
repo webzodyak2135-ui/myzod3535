@@ -70,10 +70,10 @@ export default function RuyaYorumlaPage() {
           }}
         >
           <h1 style={{ fontSize: "clamp(1.8rem, 4vw, 2.5rem)", marginBottom: "0.5rem" }}>
-            Zodyaklı ile Ruyani Yorumla
+            SternenFeed ile Ruyani Yorumla
           </h1>
           <p style={{ color: "rgba(255,255,255,0.88)" }}>
-            Ruyani detayli yaz, Zodyaklı sana derin bir psikolojik ve sembolik yorum uretsin.
+            Ruyani detayli yaz, SternenFeed sana derin bir psikolojik ve sembolik yorum uretsin.
           </p>
         </section>
 
@@ -127,7 +127,7 @@ export default function RuyaYorumlaPage() {
               cursor: loading ? "not-allowed" : "pointer",
             }}
           >
-            {loading ? "✨ Zodyaklı AI ile analiz ediliyor..." : "🔮 Zodyaklı ile Yorumla"}
+            {loading ? "✨ SternenFeed AI ile analiz ediliyor..." : "🔮 SternenFeed ile Yorumla"}
           </button>
 
           {loading && (
@@ -179,7 +179,7 @@ export default function RuyaYorumlaPage() {
                   🌟 Rüyanız Yorumlanıyor...
                 </p>
                 <p style={{ fontSize: "0.9rem", color: "#ffffff", lineHeight: 1.6 }}>
-                  Zodyaklı AI rüyanızı analiz ediyor. Detaylı yorumunuz hazırlanıyor...
+                  SternenFeed AI rüyanızı analiz ediyor. Detaylı yorumunuz hazırlanıyor...
                 </p>
               </div>
             </div>
@@ -211,7 +211,7 @@ export default function RuyaYorumlaPage() {
           </section>
         )}
 
-        {/* Önerilen İçerikler */}
+        {/* Empfohlene Inhalte */}
         <RelatedCards
           title="İlgini Çekebilir"
           items={[

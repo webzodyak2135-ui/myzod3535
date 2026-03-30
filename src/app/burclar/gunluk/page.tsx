@@ -18,135 +18,135 @@ type BurcCard = {
 
 const BURCLAR: BurcCard[] = [
   {
-    name: "Koç",
+    name: "Widder",
     emoji: "♈",
     slug: "koc",
     color: "#ef4444",
-    gunluk: "Bugün enerjin yüksek! Yeni projelere başlamak için ideal bir gün. Cesur adımlar at.",
-    ask: "Romantik sürprizlere açık ol",
-    kariyer: "Liderlik özelliklerin ön plana çıkıyor",
-    saglik: "Fiziksel aktivite için harika bir gün",
+    gunluk: "Heute ist deine Energie hoch! Ein idealer Tag, um neue Projekte zu starten. Geh mutig voran.",
+    ask: "Sei offen für romantische Überraschungen",
+    kariyer: "Deine Führungsqualitäten treten in den Vordergrund",
+    saglik: "Ein großartiger Tag für körperliche Aktivität",
     sans: 8
   },
   {
-    name: "Boğa",
+    name: "Stier",
     emoji: "♉",
     slug: "boga",
     color: "#ffffff",
-    gunluk: "Maddi konularda olumlu gelişmeler var. Sabırlı ol, emeklerin karşılığını alacaksın.",
-    ask: "Güven duygusu ön planda",
-    kariyer: "Finansal fırsatlar kapıda",
-    saglik: "Dengeli beslenmeye dikkat",
+    gunluk: "In finanziellen Dingen gibt es positive Entwicklungen. Bleib geduldig – deine Mühe zahlt sich aus.",
+    ask: "Vertrauen steht im Mittelpunkt",
+    kariyer: "Finanzielle Chancen stehen vor der Tür",
+    saglik: "Achte auf eine ausgewogene Ernährung",
     sans: 7
   },
   {
-    name: "İkizler",
+    name: "Zwillinge",
     emoji: "♊",
     slug: "ikizler",
     color: "#eab308",
-    gunluk: "İletişim yeteneklerin zirve yapıyor. Sosyal çevren genişliyor, yeni bağlantılar kur.",
-    ask: "Sohbetler romantizme dönüşebilir",
-    kariyer: "Networking için ideal gün",
-    saglik: "Zihinsel dinlenmeye ihtiyacın var",
+    gunluk: "Deine Kommunikationsfähigkeit ist auf dem Höhepunkt. Dein Umfeld erweitert sich – knüpfe neue Kontakte.",
+    ask: "Gespräche können romantisch werden",
+    kariyer: "Ein idealer Tag fürs Networking",
+    saglik: "Du brauchst mentale Erholung",
     sans: 9
   },
   {
-    name: "Yengeç",
+    name: "Krebs",
     emoji: "♋",
     slug: "yengec",
     color: "#3b82f6",
-    gunluk: "Aile ve ev konuları ön planda. İç dünyana dön, duygusal ihtiyaçlarını dinle.",
-    ask: "Duygusal bağlar güçleniyor",
-    kariyer: "Ev ofis çalışması verimli",
-    saglik: "Duygusal dengeye önem ver",
+    gunluk: "Familie und Zuhause stehen im Vordergrund. Kehr nach innen zurück und höre auf deine emotionalen Bedürfnisse.",
+    ask: "Emotionale Bindungen werden stärker",
+    kariyer: "Homeoffice läuft besonders effizient",
+    saglik: "Achte auf emotionales Gleichgewicht",
     sans: 6
   },
   {
-    name: "Aslan",
+    name: "Löwe",
     emoji: "♌",
     slug: "aslan",
     color: "#f97316",
-    gunluk: "Yaratıcılığın dorukta! Sahnede parlama zamanı. Kendini ifade etmekten çekinme.",
-    ask: "Tutkulu anlar seni bekliyor",
-    kariyer: "Tanınma ve takdir alacaksın",
-    saglik: "Kalp sağlığına dikkat",
+    gunluk: "Deine Kreativität ist auf dem Höhepunkt! Zeit zu glänzen. Zögere nicht, dich zu zeigen.",
+    ask: "Leidenschaftliche Momente erwarten dich",
+    kariyer: "Anerkennung und Wertschätzung sind möglich",
+    saglik: "Achte auf deine Herzgesundheit",
     sans: 9
   },
   {
-    name: "Başak",
+    name: "Jungfrau",
     emoji: "♍",
     slug: "basak",
     color: "#84cc16",
-    gunluk: "Detaylara odaklan, mükemmeliyetçiliğin işe yarayacak. Organizasyon günü.",
-    ask: "Küçük jestler büyük anlam taşır",
-    kariyer: "Analitik yeteneklerin parlıyor",
-    saglik: "Sağlıklı rutinler oluştur",
+    gunluk: "Fokussiere dich auf Details – dein Perfektionismus zahlt sich aus. Ein Tag für Ordnung und Struktur.",
+    ask: "Kleine Gesten können viel bedeuten",
+    kariyer: "Deine analytischen Stärken glänzen",
+    saglik: "Schaffe gesunde Routinen",
     sans: 7
   },
   {
-    name: "Terazi",
+    name: "Waage",
     emoji: "♎",
     slug: "terazi",
     color: "#ec4899",
-    gunluk: "İlişkiler ve ortaklıklar gündemde. Denge ve uyum arayışın meyvelerini verecek.",
-    ask: "Romantik atmosfer yoğun",
-    kariyer: "İş ortaklıkları için uygun",
-    saglik: "Estetik aktiviteler iyi gelir",
+    gunluk: "Beziehungen und Partnerschaften stehen im Fokus. Deine Suche nach Balance und Harmonie trägt Früchte.",
+    ask: "Die romantische Stimmung ist intensiv",
+    kariyer: "Gut für Kooperationen und Partnerschaften",
+    saglik: "Ästhetische Aktivitäten tun dir gut",
     sans: 8
   },
   {
-    name: "Akrep",
+    name: "Skorpion",
     emoji: "♏",
     slug: "akrep",
     color: "#8b5cf6",
-    gunluk: "Derin dönüşümler yaşanıyor. Sezgilerin güçlü, iç sesin dinle.",
-    ask: "Yoğun duygusal bağlar",
-    kariyer: "Araştırma ve analiz günü",
-    saglik: "Detoks için uygun zaman",
+    gunluk: "Tiefe Veränderungen sind im Gange. Deine Intuition ist stark – höre auf deine innere Stimme.",
+    ask: "Intensive emotionale Verbindungen",
+    kariyer: "Ein Tag für Recherche und Analyse",
+    saglik: "Gute Zeit für Detox",
     sans: 7
   },
   {
-    name: "Yay",
+    name: "Schütze",
     emoji: "♐",
     slug: "yay",
     color: "#f43f5e",
-    gunluk: "Macera ruhu uyanıyor! Yeni deneyimlere açık ol, ufkunu genişlet.",
-    ask: "Uzak mesafe ilişkiler gündemde",
-    kariyer: "Eğitim ve gelişim fırsatları",
-    saglik: "Açık havada vakit geçir",
+    gunluk: "Dein Abenteuergeist erwacht! Sei offen für neue Erfahrungen und erweitere deinen Horizont.",
+    ask: "Fernbeziehungen können ein Thema sein",
+    kariyer: "Chancen für Bildung und Weiterentwicklung",
+    saglik: "Verbringe Zeit an der frischen Luft",
     sans: 9
   },
   {
-    name: "Oğlak",
+    name: "Steinbock",
     emoji: "♑",
     slug: "oglak",
     color: "#6366f1",
-    gunluk: "Kariyer hedeflerin netleşiyor. Disiplinli çalışman ödüllendirilecek.",
-    ask: "Ciddi ilişkiler ön planda",
-    kariyer: "Terfi ve tanınma fırsatı",
-    saglik: "Kemik ve eklem sağlığı",
+    gunluk: "Deine Karriereziele werden klarer. Diszipliniertes Arbeiten wird belohnt.",
+    ask: "Ernste Beziehungen stehen im Vordergrund",
+    kariyer: "Chance auf Beförderung und Anerkennung",
+    saglik: "Achte auf Knochen und Gelenke",
     sans: 8
   },
   {
-    name: "Kova",
+    name: "Wassermann",
     emoji: "♒",
     slug: "kova",
     color: "#ffffff",
-    gunluk: "Yenilikçi fikirlerin var! Topluluk çalışmaları ve arkadaşlıklar ön planda.",
-    ask: "Arkadaşlıktan aşka geçiş",
-    kariyer: "Teknoloji projeleri parlıyor",
-    saglik: "Ayak bilekleri ve dolaşım",
+    gunluk: "Du hast innovative Ideen! Community-Themen und Freundschaften stehen im Fokus.",
+    ask: "Von Freundschaft zu Liebe",
+    kariyer: "Technologie-Projekte glänzen",
+    saglik: "Achte auf Knöchel und Kreislauf",
     sans: 8
   },
   {
-    name: "Balık",
+    name: "Fische",
     emoji: "♓",
     slug: "balik",
     color: "#a855f7",
-    gunluk: "Sezgisel güçlerin yüksek. Rüyalarına dikkat et, mesajlar alabilirsin.",
-    ask: "Ruh eşi enerjisi güçlü",
-    kariyer: "Sanatsal projeler için ideal",
-    saglik: "Meditasyon ve dinlenme",
+    gunluk: "Deine intuitive Kraft ist hoch. Achte auf deine Träume – sie können Botschaften enthalten.",
+    ask: "Starke Seelenpartner-Energie",
+    kariyer: "Ideal für künstlerische Projekte",
+    saglik: "Meditation und Ruhe",
     sans: 7
   },
 ];
@@ -172,7 +172,7 @@ export default async function GunlukBurclarPage() {
     };
   });
 
-  const today = new Date().toLocaleDateString('tr-TR', {
+  const today = new Date().toLocaleDateString('de-DE', {
     weekday: 'long',
     year: 'numeric',
     month: 'long',
@@ -233,7 +233,7 @@ export default async function GunlukBurclarPage() {
               boxShadow: "0 4px 15px rgba(0,0,0,0.1)",
             }}
           >
-            <span style={{ fontSize: "1.1rem" }}>🌅</span> Günlük Burç Yorumları
+            <span style={{ fontSize: "1.1rem" }}>🌅</span> Tageshoroskope
           </div>
 
           {/* Main Title */}
@@ -245,7 +245,7 @@ export default async function GunlukBurclarPage() {
             textShadow: "0 4px 30px rgba(0,0,0,0.2)",
             letterSpacing: "-0.02em",
           }}>
-            Bugün Yıldızlar Ne Diyor?
+            Was sagen die Sterne heute?
           </h1>
 
           {/* Date Badge */}
@@ -334,15 +334,15 @@ export default async function GunlukBurclarPage() {
 
                   <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.75rem", marginBottom: "1rem" }}>
                     <div style={{ padding: "0.75rem", background: "#1a0b2e", borderRadius: "12px" }}>
-                      <div style={{ fontSize: "0.7rem", fontWeight: 600, color: "#ffffff", marginBottom: "0.25rem" }}>❤️ AŞK</div>
+                      <div style={{ fontSize: "0.7rem", fontWeight: 600, color: "#ffffff", marginBottom: "0.25rem" }}>❤️ LIEBE</div>
                       <div style={{ fontSize: "0.82rem", color: "#ffffff", lineHeight: 1.5 }}>{burc.ask}</div>
                     </div>
                     <div style={{ padding: "0.75rem", background: "#1a0b2e", borderRadius: "12px" }}>
-                      <div style={{ fontSize: "0.7rem", fontWeight: 600, color: "#ffffff", marginBottom: "0.25rem" }}>💼 KARİYER</div>
+                      <div style={{ fontSize: "0.7rem", fontWeight: 600, color: "#ffffff", marginBottom: "0.25rem" }}>💼 KARRIERE</div>
                       <div style={{ fontSize: "0.82rem", color: "#ffffff", lineHeight: 1.5 }}>{burc.kariyer}</div>
                     </div>
                     <div style={{ padding: "0.75rem", background: "#1a0b2e", borderRadius: "12px", gridColumn: "1 / -1" }}>
-                      <div style={{ fontSize: "0.7rem", fontWeight: 600, color: "#ffffff", marginBottom: "0.25rem" }}>🌿 SAĞLIK</div>
+                      <div style={{ fontSize: "0.7rem", fontWeight: 600, color: "#ffffff", marginBottom: "0.25rem" }}>🌿 GESUNDHEIT</div>
                       <div style={{ fontSize: "0.82rem", color: "#ffffff", lineHeight: 1.5 }}>{burc.saglik}</div>
                     </div>
                   </div>
@@ -363,7 +363,7 @@ export default async function GunlukBurclarPage() {
                       border: "1px solid rgba(168, 85, 247, 0.3)",
                     }}
                   >
-                    Detaylı Yorum →
+                    Details lesen →
                   </Link>
                 </div>
               </div>
@@ -376,25 +376,25 @@ export default async function GunlukBurclarPage() {
       <section style={{ padding: "2rem 1rem", background: "#1a0b2e" }}>
         <div style={{ maxWidth: "72rem", margin: "0 auto", textAlign: "center" }}>
           <h2 style={{ fontSize: "1.25rem", fontWeight: 700, color: "#ffffff", marginBottom: "1rem" }}>
-            Diğer Yorum Türleri
+            Weitere Horoskop-Arten
           </h2>
           <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
             <Link href="/burclar/haftalik" style={{ padding: "0.75rem 1.5rem", background: "rgba(168, 85, 247, 0.15)", borderRadius: "9999px", color: "#ffffff", fontWeight: 600, textDecoration: "none", border: "1px solid rgba(168, 85, 247, 0.3)" }}>
-              📅 Haftalık Yorumlar
+              📅 Wochenhoroskop
             </Link>
             <Link href="/burclar/aylik" style={{ padding: "0.75rem 1.5rem", background: "rgba(168, 85, 247, 0.15)", borderRadius: "9999px", color: "#ffffff", fontWeight: 600, textDecoration: "none", border: "1px solid rgba(168, 85, 247, 0.3)" }}>
-              🗓️ Aylık Yorumlar
+              🗓️ Monatshoroskop
             </Link>
             <Link href="/burclar" style={{ padding: "0.75rem 1.5rem", background: "rgba(168, 85, 247, 0.15)", borderRadius: "9999px", color: "#ffffff", fontWeight: 600, textDecoration: "none", border: "1px solid rgba(168, 85, 247, 0.3)" }}>
-              ♈ Tüm Burçlar
+              ♈ Alle Sternzeichen
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Önerilen İçerikler */}
+      {/* Empfohlene Inhalte */}
       <RelatedCards
-        title="İlgini Çekebilir"
+        title="Das könnte dich interessieren"
         items={[
           BURC_ONERILERI[1],
           BURC_ONERILERI[2],

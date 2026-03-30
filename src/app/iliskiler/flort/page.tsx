@@ -6,27 +6,27 @@ import flortAnim from "../../../../public/lottie/flort.json";
 import RelatedCards, { ILISKI_ONERILERI, BURC_ONERILERI } from "@/components/RelatedCards";
 
 const FLORT_BURCLARI = [
-  { burc: "Koç", emoji: "♈", tarzi: "Doğrudan ve cesur", etkileme: "Meydan oku, rekabet et", kacirma: "Pasif ve sıkıcı olmak", ipucu: "İlk adımı at, çekinme" },
-  { burc: "Boğa", emoji: "♉", tarzi: "Yavaş ve romantik", etkileme: "Güzel yemekler, hediyeler", kacirma: "Acele etmek, baskı yapmak", ipucu: "Sabırlı ol, güven inşa et" },
-  { burc: "İkizler", emoji: "♊", tarzi: "Esprili ve entelektüel", etkileme: "İlginç sohbetler, espri", kacirma: "Sıkıcı ve monoton olmak", ipucu: "Zekice flört et, şaşırt" },
-  { burc: "Yengeç", emoji: "♋", tarzi: "Duygusal ve koruyucu", etkileme: "Samimi ilgi, güvenlik", kacirma: "Soğuk ve mesafeli olmak", ipucu: "Duygusal bağ kur, dinle" },
-  { burc: "Aslan", emoji: "♌", tarzi: "Gösterişli ve tutkulu", etkileme: "Övgü, dikkat, hayranlık", kacirma: "Görmezden gelmek", ipucu: "Onu özel hissettir" },
-  { burc: "Başak", emoji: "♍", tarzi: "Nazik ve düşünceli", etkileme: "Detaylara dikkat, yardım", kacirma: "Dağınık ve plansız olmak", ipucu: "Küçük jestler yap" },
-  { burc: "Terazi", emoji: "♎", tarzi: "Zarif ve romantik", etkileme: "Estetik, güzellik, uyum", kacirma: "Kaba ve çirkin davranmak", ipucu: "Romantik ortamlar yarat" },
-  { burc: "Akrep", emoji: "♏", tarzi: "Yoğun ve gizemli", etkileme: "Gizem, derinlik, tutku", kacirma: "Yüzeysel ve sahte olmak", ipucu: "Gizemini koru, derin ol" },
-  { burc: "Yay", emoji: "♐", tarzi: "Eğlenceli ve maceraperest", etkileme: "Macera, spontanlık, eğlence", kacirma: "Kısıtlayıcı ve ciddi olmak", ipucu: "Eğlenceli planlar yap" },
-  { burc: "Oğlak", emoji: "♑", tarzi: "Ciddi ve geleneksel", etkileme: "Başarı, güvenilirlik, statü", kacirma: "Güvenilmez görünmek", ipucu: "Ciddi niyetini göster" },
-  { burc: "Kova", emoji: "♒", tarzi: "Özgün ve arkadaşça", etkileme: "Farklılık, entelektüellik", kacirma: "Sıradan ve baskıcı olmak", ipucu: "Arkadaş gibi yaklaş" },
-  { burc: "Balık", emoji: "♓", tarzi: "Romantik ve hayalperest", etkileme: "Romantizm, sanat, hayal", kacirma: "Kaba ve gerçekçi olmak", ipucu: "Romantik jestler yap" },
+  { burc: "Koç", emoji: "♈", tarzi: "Direkt und mutig", etkileme: "Fordere heraus, konkurriere", kacirma: "Passiv und langweilig sein", ipucu: "Mach den ersten Schritt, sei nicht schüchtern" },
+  { burc: "Boğa", emoji: "♉", tarzi: "Langsam und romantisch", etkileme: "Gutes Essen, Geschenke", kacirma: "Eilen, Druck machen", ipucu: "Sei geduldig, baue Vertrauen auf" },
+  { burc: "İkizler", emoji: "♊", tarzi: "Witzig und intellektuell", etkileme: "Interessante Gespräche, Humor", kacirma: "Langweilig und monoton sein", ipucu: "Flirte clever, überrasche" },
+  { burc: "Yengeç", emoji: "♋", tarzi: "Emotional und beschützend", etkileme: "Aufrichtiges Interesse, Sicherheit", kacirma: "Kalt und distanziert sein", ipucu: "Baue emotionale Bindung auf, höre zu" },
+  { burc: "Aslan", emoji: "♌", tarzi: "Auffällig und leidenschaftlich", etkileme: "Lob, Aufmerksamkeit, Bewunderung", kacirma: "Ignorieren", ipucu: "Lass ihn sich besonders fühlen" },
+  { burc: "Başak", emoji: "♍", tarzi: "Sanft und aufmerksam", etkileme: "Auf Details achten, helfen", kacirma: "Unordentlich und planlos sein", ipucu: "Mache kleine Gesten" },
+  { burc: "Terazi", emoji: "♎", tarzi: "Elegant und romantisch", etkileme: "Ästhetik, Schönheit, Harmonie", kacirma: "Unhöflich und unschön verhalten", ipucu: "Schaffe romantische Atmosphäre" },
+  { burc: "Akrep", emoji: "♏", tarzi: "Intensiv und geheimnisvoll", etkileme: "Mysterium, Tiefe, Leidenschaft", kacirma: "Oberflächlich und falsch sein", ipucu: "Bewahre dein Geheimnis, sei tiefgründig" },
+  { burc: "Yay", emoji: "♐", tarzi: "Spaßig und abenteuerlustig", etkileme: "Abenteuer, Spontanität, Spaß", kacirma: "Einschränkend und ernst sein", ipucu: "Plane lustige Aktivitäten" },
+  { burc: "Oğlak", emoji: "♑", tarzi: "Ernst und traditionell", etkileme: "Erfolg, Zuverlässigkeit, Status", kacirma: "Unzuverlässig wirken", ipucu: "Zeige ernste Absichten" },
+  { burc: "Kova", emoji: "♒", tarzi: "Originell und freundschaftlich", etkileme: "Andersartigkeit, Intellektualität", kacirma: "Gewöhnlich und aufdringlich sein", ipucu: "Nähere dich freundschaftlich" },
+  { burc: "Balık", emoji: "♓", tarzi: "Romantisch und verträumt", etkileme: "Romantik, Kunst, Fantasie", kacirma: "Grob und realistisch sein", ipucu: "Mache romantische Gesten" },
 ];
 
 const FLORT_IPUCLARI = [
-  { baslik: "Göz Teması", aciklama: "Göz teması güven ve ilgi gösterir. Ama abartma!", icon: "👀" },
-  { baslik: "Gülümseme", aciklama: "Samimi bir gülümseme kapıları açar.", icon: "😊" },
-  { baslik: "Aktif Dinleme", aciklama: "Karşındakini gerçekten dinle, sorular sor.", icon: "👂" },
-  { baslik: "Hafif Dokunuş", aciklama: "Uygun anlarda hafif dokunuşlar yakınlık kurar.", icon: "✋" },
-  { baslik: "Özgüven", aciklama: "Kendine güven çekicidir. Ama kibirli olma.", icon: "💪" },
-  { baslik: "Mizah", aciklama: "Güldürmek bağ kurar. Ama aşırıya kaçma.", icon: "😄" },
+  { baslik: "Blickkontakt", aciklama: "Blickkontakt zeigt Vertrauen und Interesse. Aber übertreib's nicht!", icon: "👀" },
+  { baslik: "Lächeln", aciklama: "Ein aufrichtiges Lächeln öffnet Türen.", icon: "😊" },
+  { baslik: "Aktives Zuhören", aciklama: "Höre wirklich zu, stelle Fragen.", icon: "👂" },
+  { baslik: "Leichte Berührung", aciklama: "Sanfte Berührungen im richtigen Moment schaffen Nähe.", icon: "✋" },
+  { baslik: "Selbstvertrauen", aciklama: "Selbstvertrauen ist attraktiv. Aber sei nicht arrogant.", icon: "💪" },
+  { baslik: "Humor", aciklama: "Zum Lachen bringen schafft Verbindung. Aber übertreib's nicht.", icon: "😄" },
 ];
 
 export default function FlortPage() {
@@ -82,20 +82,20 @@ export default function FlortPage() {
 
         <div style={{ maxWidth: "72rem", margin: "0 auto", position: "relative", zIndex: 1 }}>
           <Link href="/iliskiler" style={{ color: "rgba(255,255,255,0.75)", fontSize: "0.9rem", textDecoration: "none", padding: "0.5rem 1rem", background: "rgba(255,255,255,0.08)", backdropFilter: "blur(10px)", borderRadius: "9999px", border: "1px solid rgba(255,255,255,0.12)", display: "inline-block", marginBottom: "1.5rem" }}>
-            ← İlişkiler
+            ← Beziehungen
           </Link>
 
           <h1 style={{ fontSize: "clamp(2.2rem, 5vw, 3.5rem)", fontWeight: 800, color: "#ffffff", marginBottom: "0.5rem", textShadow: "0 0 40px rgba(249,115,22,0.6)", letterSpacing: "-0.02em" }}>
-            Flört Taktikleri
+            Flirttaktiken
           </h1>
           <p style={{ fontSize: "1rem", color: "rgba(255,255,255,0.65)", maxWidth: "500px", margin: "0 auto 2.5rem" }}>
-            Burcuna göre flört tavsiyeleri - Nasıl etkilenir, nasıl etkilersin?
+            Flirttipps nach deinem Sternzeichen - Wie wirst du beeinflusst, wie beeinflusst du?
           </p>
 
           {/* Hero Görsel - Animasyonlu */}
           <img
             src="/img/iliskiler-fl%C3%B6rt.jpg"
-            alt="Flört Taktikleri"
+            alt="Flirttaktiken"
             style={{
               width: "clamp(150px, 18vw, 210px)",
               height: "clamp(150px, 18vw, 210px)",
@@ -144,11 +144,11 @@ export default function FlortPage() {
         </div>
       </section>
 
-      {/* Burçlara Göre */}
+      {/* Nach Sternzeichen */}
       <section style={{ padding: "3rem 1rem", background: "#1a0b2e" }}>
         <div style={{ maxWidth: "72rem", margin: "0 auto" }}>
           <h2 style={{ fontSize: "1.5rem", fontWeight: 700, color: "#ffffff", marginBottom: "1.5rem", textAlign: "center" }}>
-            Burcuna Göre Flört Rehberi
+            Flirtratgeber nach Sternzeichen
           </h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "1rem" }}>
             {FLORT_BURCLARI.map((item) => (
@@ -183,7 +183,7 @@ export default function FlortPage() {
         </div>
       </section>
 
-      {/* Önerilen İçerikler */}
+      {/* Empfohlene Inhalte */}
       <RelatedCards
         title="İlgini Çekebilir"
         items={[

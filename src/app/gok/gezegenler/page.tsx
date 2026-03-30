@@ -1,25 +1,25 @@
 import Link from "next/link";
 
 const GEZEGENLER = [
-  { gezegen: "Güneş", emoji: "☀️", sure: "1 ay", etki: "Kimlik, ego, yaşam gücü, liderlik", gecis: "Her ay yeni bir burca geçer" },
-  { gezegen: "Ay", emoji: "🌙", sure: "2.5 gün", etki: "Duygular, içgüdüler, ev, anne", gecis: "Her 2.5 günde bir burç değiştirir" },
-  { gezegen: "Merkür", emoji: "☿️", sure: "3-4 hafta", etki: "İletişim, düşünce, seyahat, ticaret", gecis: "Yılda 3-4 kez retrograde olur" },
-  { gezegen: "Venüs", emoji: "♀️", sure: "4-5 hafta", etki: "Aşk, güzellik, para, değerler", gecis: "Her 18 ayda bir retrograde" },
-  { gezegen: "Mars", emoji: "♂️", sure: "6-7 hafta", etki: "Enerji, tutku, savaş, cinsellik", gecis: "Her 2 yılda bir retrograde" },
-  { gezegen: "Jüpiter", emoji: "♃", sure: "1 yıl", etki: "Şans, genişleme, felsefe, yurtdışı", gecis: "Her yıl yeni bir burca geçer" },
-  { gezegen: "Satürn", emoji: "♄", sure: "2.5 yıl", etki: "Disiplin, sorumluluk, sınırlar, karma", gecis: "Her 2.5 yılda bir burç değiştirir" },
-  { gezegen: "Uranüs", emoji: "⛢", sure: "7 yıl", etki: "Devrim, özgürlük, teknoloji, sürpriz", gecis: "Nesil gezegeni, uzun süreli etki" },
-  { gezegen: "Neptün", emoji: "♆", sure: "14 yıl", etki: "Hayal, spiritüellik, illüzyon, sanat", gecis: "Nesil gezegeni, kolektif etki" },
-  { gezegen: "Plüton", emoji: "♇", sure: "12-31 yıl", etki: "Dönüşüm, güç, yeniden doğuş, gizli", gecis: "En yavaş, en derin dönüşüm" },
+  { gezegen: "Sonne", emoji: "☀️", sure: "1 Monat", etki: "Identität, Ego, Lebenskraft, Führung", gecis: "Wechselt jeden Monat das Sternzeichen" },
+  { gezegen: "Mond", emoji: "🌙", sure: "2,5 Tage", etki: "Emotionen, Instinkte, Heim, Mutter", gecis: "Wechselt alle 2,5 Tage das Sternzeichen" },
+  { gezegen: "Merkur", emoji: "☿️", sure: "3-4 Wochen", etki: "Kommunikation, Denken, Reisen, Handel", gecis: "Wird 3-4 Mal pro Jahr rückläufig" },
+  { gezegen: "Venus", emoji: "♀️", sure: "4-5 Wochen", etki: "Liebe, Schönheit, Geld, Werte", gecis: "Wird alle 18 Monate rückläufig" },
+  { gezegen: "Mars", emoji: "♂️", sure: "6-7 Wochen", etki: "Energie, Leidenschaft, Konflikt, Sexualität", gecis: "Wird alle 2 Jahre rückläufig" },
+  { gezegen: "Jupiter", emoji: "♃", sure: "1 Jahr", etki: "Glück, Expansion, Philosophie, Ausland", gecis: "Wechselt jedes Jahr das Sternzeichen" },
+  { gezegen: "Saturn", emoji: "♄", sure: "2,5 Jahre", etki: "Disziplin, Verantwortung, Grenzen, Karma", gecis: "Wechselt alle 2,5 Jahre das Sternzeichen" },
+  { gezegen: "Uranus", emoji: "⛢", sure: "7 Jahre", etki: "Revolution, Freiheit, Technologie, Überraschung", gecis: "Generationsplanet, langfristige Wirkung" },
+  { gezegen: "Neptun", emoji: "♆", sure: "14 Jahre", etki: "Träume, Spiritualität, Illusion, Kunst", gecis: "Generationsplanet, kollektive Wirkung" },
+  { gezegen: "Pluto", emoji: "♇", sure: "12-31 Jahre", etki: "Transformation, Macht, Wiedergeburt, Verborgenes", gecis: "Am langsamsten, tiefste Transformation" },
 ];
 
 const GUNCEL_KONUMLAR = [
-  { gezegen: "Güneş", burc: "Koç", tarih: "20 Mart - 19 Nisan 2026" },
-  { gezegen: "Merkür", burc: "Koç", tarih: "Direkt, güçlü iletisim enerjisi" },
-  { gezegen: "Venüs", burc: "Boga", tarih: "Haziran 2026'ya kadar" },
-  { gezegen: "Mars", burc: "Yengeç", tarih: "Duygusal motivasyon" },
-  { gezegen: "Jüpiter", burc: "Yengeç", tarih: "Haziran 2026'ya kadar" },
-  { gezegen: "Satürn", burc: "Koç", tarih: "2028'e kadar" },
+  { gezegen: "Sonne", burc: "Widder", tarih: "20. März - 19. April 2026" },
+  { gezegen: "Merkur", burc: "Widder", tarih: "Direkt, starke Kommunikationsenergie" },
+  { gezegen: "Venus", burc: "Stier", tarih: "Bis Juni 2026" },
+  { gezegen: "Mars", burc: "Krebs", tarih: "Emotionale Motivation" },
+  { gezegen: "Jupiter", burc: "Krebs", tarih: "Bis Juni 2026" },
+  { gezegen: "Saturn", burc: "Widder", tarih: "Bis 2028" },
 ];
 
 export default function GezegenlerPage() {
@@ -35,14 +35,14 @@ export default function GezegenlerPage() {
       >
         <div style={{ maxWidth: "72rem", margin: "0 auto" }}>
           <Link href="/gok-gundemi" style={{ color: "rgba(255,255,255,0.8)", fontSize: "0.9rem", textDecoration: "none" }}>
-            ← Gök Gündemi
+            ← Kosmischer Kalender
           </Link>
           <div style={{ fontSize: "4rem", marginTop: "1rem" }}>🪐</div>
           <h1 style={{ fontSize: "clamp(2rem, 5vw, 3rem)", fontWeight: 800, color: "#ffffff", marginTop: "0.5rem" }}>
-            Gezegen Geçişleri
+            Planetenübergänge
           </h1>
           <p style={{ fontSize: "1.1rem", color: "rgba(255,255,255,0.85)", maxWidth: "600px", margin: "1rem auto 0" }}>
-            Gezegenlerin etkili hareketleri ve burç geçişleri
+            Einflussreiche Bewegungen und Sternzeichenwechsel der Planeten
           </p>
         </div>
       </section>
@@ -51,7 +51,7 @@ export default function GezegenlerPage() {
       <section style={{ padding: "3rem 1rem" }}>
         <div style={{ maxWidth: "72rem", margin: "0 auto" }}>
           <h2 style={{ fontSize: "1.5rem", fontWeight: 700, color: "#ffffff", marginBottom: "1.5rem", textAlign: "center" }}>
-            Güncel Gezegen Konumları
+            Aktuelle Planetenpositionen
           </h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "1rem" }}>
             {GUNCEL_KONUMLAR.map((item, i) => (
@@ -78,7 +78,7 @@ export default function GezegenlerPage() {
       <section style={{ padding: "3rem 1rem", background: "#1a0b2e" }}>
         <div style={{ maxWidth: "72rem", margin: "0 auto" }}>
           <h2 style={{ fontSize: "1.5rem", fontWeight: 700, color: "#ffffff", marginBottom: "1.5rem", textAlign: "center" }}>
-            Gezegen Rehberi
+            Planeten-Guide
           </h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "1rem" }}>
             {GEZEGENLER.map((item, i) => (
@@ -95,11 +95,11 @@ export default function GezegenlerPage() {
                   <span style={{ fontSize: "2rem" }}>{item.emoji}</span>
                   <div>
                     <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#ffffff" }}>{item.gezegen}</h3>
-                    <p style={{ fontSize: "0.8rem", color: "#ffffff" }}>Burçta kalış: {item.sure}</p>
+                    <p style={{ fontSize: "0.8rem", color: "#ffffff" }}>Verweildauer im Zeichen: {item.sure}</p>
                   </div>
                 </div>
                 <p style={{ fontSize: "0.9rem", color: "#ffffff", marginBottom: "0.5rem", lineHeight: 1.6 }}>
-                  <strong>Etki:</strong> {item.etki}
+                  <strong>Einfluss:</strong> {item.etki}
                 </p>
                 <p style={{ fontSize: "0.85rem", color: "#ffffff", lineHeight: 1.5 }}>{item.gecis}</p>
               </div>

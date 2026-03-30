@@ -1,33 +1,33 @@
 import Link from "next/link";
 
 const AY_TUTULMA_ETKILERI = [
-  { alan: "Duygular", etki: "Yoğun duygusal dalgalanmalar, bastırılmış duyguların yüzeye çıkması", icon: "💭" },
-  { alan: "İlişkiler", etki: "İlişkilerde krizler veya dönüm noktaları, gerçeklerin ortaya çıkması", icon: "💔" },
-  { alan: "Bitiş/Kapanış", etki: "Döngülerin tamamlanması, vedalar, bırakma zamanı", icon: "🚪" },
-  { alan: "Farkındalık", etki: "Ani aydınlanmalar, gizli bilgilerin açığa çıkması", icon: "💡" },
-  { alan: "Sağlık", etki: "Fiziksel ve duygusal sağlık konularına dikkat", icon: "🏥" },
-  { alan: "Karma", etki: "Geçmiş eylemlerinin sonuçları, karmik hesaplaşmalar", icon: "⚖️" },
+  { alan: "Emotionen", etki: "Intensive emotionale Schwankungen, verdrängte Gefühle kommen an die Oberfläche", icon: "💭" },
+  { alan: "Beziehungen", etki: "Krisen oder Wendepunkte in Beziehungen, Wahrheiten kommen ans Licht", icon: "💔" },
+  { alan: "Abschluss/Ende", etki: "Vollendung von Zyklen, Abschied, Zeit loszulassen", icon: "🚪" },
+  { alan: "Bewusstsein", etki: "Plötzliche Erleuchtungen, verborgene Informationen werden offenbart", icon: "💡" },
+  { alan: "Gesundheit", etki: "Aufmerksamkeit auf physische und emotionale Gesundheit", icon: "🏥" },
+  { alan: "Karma", etki: "Konsequenzen vergangener Handlungen, karmische Abrechnungen", icon: "⚖️" },
 ];
 
 const YAKLASAN_AY_TUTULMALARI = [
-  { tarih: "1 Mayıs 2026", tur: "Tam Ay Tutulması", burc: "Akrep", etki: "Derin dönüşüm, gizli duyguların yüzeye çıkması" },
-  { tarih: "25 Ekim 2026", tur: "Kısmi Ay Tutulması", burc: "Boğa", etki: "Maddi dönüşümler, değer yargılarında değişim" },
-  { tarih: "20 Mart 2027", tur: "Tam Ay Tutulması", burc: "Başak", etki: "Sağlık ve düzen alanında köklü dönüşüm" },
+  { tarih: "1. Mai 2026", tur: "Totale Mondfinsternis", burc: "Skorpion", etki: "Tiefe Transformation, verborgene Gefühle kommen an die Oberfläche" },
+  { tarih: "25. Oktober 2026", tur: "Partielle Mondfinsternis", burc: "Stier", etki: "Materielle Transformationen, Veränderung in Werten" },
+  { tarih: "20. März 2027", tur: "Totale Mondfinsternis", burc: "Jungfrau", etki: "Grundlegende Transformation in Gesundheit und Ordnung" },
 ];
 
 const BURC_ETKILERI = [
-  { burc: "Koç", etki: "Kimlik krizi, yeni benlik keşfi" },
-  { burc: "Boğa", etki: "Maddi değerler, güvenlik konuları" },
-  { burc: "İkizler", etki: "İletişim, kardeşler, kısa yolculuklar" },
-  { burc: "Yengeç", etki: "Ev, aile, duygusal kökler" },
-  { burc: "Aslan", etki: "Yaratıcılık, aşk, çocuklar" },
-  { burc: "Başak", etki: "Sağlık, iş, günlük rutinler" },
-  { burc: "Terazi", etki: "İlişkiler, ortaklıklar, denge" },
-  { burc: "Akrep", etki: "Dönüşüm, paylaşılan kaynaklar, cinsellik" },
-  { burc: "Yay", etki: "Yurtdışı, eğitim, felsefe" },
-  { burc: "Oğlak", etki: "Kariyer, statü, toplumsal konum" },
-  { burc: "Kova", etki: "Arkadaşlıklar, gruplar, gelecek vizyonu" },
-  { burc: "Balık", etki: "Spiritüellik, bilinçaltı, izolasyon" },
+  { burc: "Widder", etki: "Identitätskrise, Entdeckung des neuen Selbst" },
+  { burc: "Stier", etki: "Materielle Werte, Sicherheitsthemen" },
+  { burc: "Zwillinge", etki: "Kommunikation, Geschwister, Kurzreisen" },
+  { burc: "Krebs", etki: "Heim, Familie, emotionale Wurzeln" },
+  { burc: "Löwe", etki: "Kreativität, Liebe, Kinder" },
+  { burc: "Jungfrau", etki: "Gesundheit, Arbeit, tägliche Routinen" },
+  { burc: "Waage", etki: "Beziehungen, Partnerschaften, Balance" },
+  { burc: "Skorpion", etki: "Transformation, geteilte Ressourcen, Sexualität" },
+  { burc: "Schütze", etki: "Ausland, Bildung, Philosophie" },
+  { burc: "Steinbock", etki: "Karriere, Status, gesellschaftliche Position" },
+  { burc: "Wassermann", etki: "Freundschaften, Gruppen, Zukunftsvision" },
+  { burc: "Fische", etki: "Spiritualität, Unterbewusstsein, Isolation" },
 ];
 
 export default function AyTutulmasiPage() {
@@ -43,14 +43,14 @@ export default function AyTutulmasiPage() {
       >
         <div style={{ maxWidth: "72rem", margin: "0 auto" }}>
           <Link href="/gok-gundemi" style={{ color: "rgba(255,255,255,0.8)", fontSize: "0.9rem", textDecoration: "none" }}>
-            ← Gök Gündemi
+            ← Kosmischer Kalender
           </Link>
           <div style={{ fontSize: "4rem", marginTop: "1rem" }}>🌑</div>
           <h1 style={{ fontSize: "clamp(2rem, 5vw, 3rem)", fontWeight: 800, color: "#ffffff", marginTop: "0.5rem" }}>
-            Ay Tutulması
+            Mondfinsternis
           </h1>
           <p style={{ fontSize: "1.1rem", color: "rgba(255,255,255,0.85)", maxWidth: "600px", margin: "1rem auto 0" }}>
-            Ay tutulmalarının anlamı ve duygusal etkileri
+            Bedeutung und emotionale Auswirkungen von Mondfinsternissen
           </p>
         </div>
       </section>
@@ -59,7 +59,7 @@ export default function AyTutulmasiPage() {
       <section style={{ padding: "3rem 1rem" }}>
         <div style={{ maxWidth: "72rem", margin: "0 auto" }}>
           <h2 style={{ fontSize: "1.5rem", fontWeight: 700, color: "#ffffff", marginBottom: "1.5rem", textAlign: "center" }}>
-            Ay Tutulmasının Etkileri
+            Auswirkungen der Mondfinsternis
           </h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1rem" }}>
             {AY_TUTULMA_ETKILERI.map((item, i) => (
@@ -87,7 +87,7 @@ export default function AyTutulmasiPage() {
       <section style={{ padding: "3rem 1rem", background: "#1a0b2e" }}>
         <div style={{ maxWidth: "72rem", margin: "0 auto" }}>
           <h2 style={{ fontSize: "1.5rem", fontWeight: 700, color: "#ffffff", marginBottom: "1.5rem", textAlign: "center" }}>
-            Yaklaşan Ay Tutulmaları
+            Bevorstehende Mondfinsternisse
           </h2>
           <div style={{ background: "#1a0b2e", borderRadius: "20px", overflow: "hidden", boxShadow: "0 2px 12px rgba(0,0,0,0.06)" }}>
             {YAKLASAN_AY_TUTULMALARI.map((item, i) => (
@@ -118,7 +118,7 @@ export default function AyTutulmasiPage() {
       <section style={{ padding: "3rem 1rem" }}>
         <div style={{ maxWidth: "72rem", margin: "0 auto" }}>
           <h2 style={{ fontSize: "1.5rem", fontWeight: 700, color: "#ffffff", marginBottom: "1.5rem", textAlign: "center" }}>
-            Burçlara Göre Ay Tutulması Etkileri
+            Mondfinsternis-Auswirkungen nach Sternzeichen
           </h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "0.75rem" }}>
             {BURC_ETKILERI.map((item, i) => (

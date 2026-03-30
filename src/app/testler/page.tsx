@@ -2,76 +2,76 @@ import Link from "next/link";
 
 const TESTLER = [
   {
-    title: "Burç Testi",
-    desc: "Gerçek burcunu keşfet! Doğum tarihinle uyumlu musun?",
+    title: "Sternzeichen-Test",
+    desc: "Entdecke dein wahres Sternzeichen! Passt es zu deinem Geburtsdatum?",
     href: "/testler/burc",
     icon: "♈",
     color: "#a855f7",
     sorular: 12,
-    sure: "3 dk"
+    sure: "3 Min."
   },
   {
-    title: "Numeroloji Testi",
-    desc: "İsmin ve doğum tarihinle kader sayını hesapla",
+    title: "Numerologie-Test",
+    desc: "Berechne deine Schicksalszahl anhand deines Namens und Geburtsdatums",
     href: "/testler/numeroloji",
     icon: "🔢",
     color: "#6366f1",
     sorular: 8,
-    sure: "2 dk"
+    sure: "2 Min."
   },
   {
-    title: "Element Testi",
-    desc: "Ateş, Su, Toprak, Hava - Hangi elemente aitsin?",
+    title: "Element-Test",
+    desc: "Feuer, Wasser, Erde, Luft – zu welchem Element gehörst du?",
     href: "/testler/element",
     icon: "🔥",
     color: "#f97316",
     sorular: 15,
-    sure: "4 dk"
+    sure: "4 Min."
   },
   {
-    title: "Aşk Uyumu Testi",
-    desc: "Sen ve partneriniz ne kadar uyumlusunuz?",
+    title: "Liebes-Kompatibilitätstest",
+    desc: "Wie gut passen du und dein Partner zusammen?",
     href: "/testler/ask-uyumu",
     icon: "💕",
     color: "#ec4899",
     sorular: 10,
-    sure: "3 dk"
+    sure: "3 Min."
   },
   {
-    title: "Yükselen Burç Testi",
-    desc: "Yükselen burcunu ve etkilerini öğren",
+    title: "Aszendent-Test",
+    desc: "Finde deinen Aszendenten und seine Wirkung",
     href: "/testler/yukselen",
     icon: "⬆️",
     color: "#ffffff",
     sorular: 10,
-    sure: "3 dk"
+    sure: "3 Min."
   },
   {
-    title: "Ay Burcu Testi",
-    desc: "Duygusal dünyanı yöneten Ay burcunu bul",
+    title: "Mondzeichen-Test",
+    desc: "Finde dein Mondzeichen, das deine Gefühlswelt lenkt",
     href: "/testler/ay-burcu",
     icon: "🌙",
     color: "#818cf8",
     sorular: 12,
-    sure: "4 dk"
+    sure: "4 Min."
   },
   {
-    title: "Kişilik Arketipi",
-    desc: "12 arketipten hangisi seni tanımlıyor?",
+    title: "Persönlichkeitsarchetyp",
+    desc: "Welcher von 12 Archetypen beschreibt dich am besten?",
     href: "/testler/arketip",
     icon: "🎭",
     color: "#8b5cf6",
     sorular: 20,
-    sure: "5 dk"
+    sure: "5 Min."
   },
   {
-    title: "Çakra Testi",
-    desc: "7 çakrandan hangisi bloke, hangisi aktif?",
+    title: "Chakra-Test",
+    desc: "Welche deiner 7 Chakren sind blockiert, welche aktiv?",
     href: "/testler/cakra",
     icon: "🧘",
     color: "#ffffff",
     sorular: 14,
-    sure: "4 dk"
+    sure: "4 Min."
   },
 ];
 
@@ -103,13 +103,13 @@ export default function TestlerPage() {
               background: "rgba(255,255,255,0.2)",
             }}
           >
-            <span>✨</span> Astroloji Testleri
+            <span>✨</span> Astrologie-Tests
           </div>
           <h1 style={{ fontSize: "clamp(2rem, 5vw, 3rem)", fontWeight: 800, color: "#ffffff", marginBottom: "1rem" }}>
-            Kendini Keşfetmeye Hazır mısın?
+            Bereit, dich selbst zu entdecken?
           </h1>
           <p style={{ fontSize: "1.1rem", color: "rgba(255,255,255,0.85)", maxWidth: "600px", margin: "0 auto" }}>
-            Eğlenceli ve aydınlatıcı testlerle kişiliğini, burcunu ve kozmik enerjini keşfet
+            Entdecke mit unterhaltsamen und aufschlussreichen Tests deine Persönlichkeit, dein Sternzeichen und deine kosmische Energie
           </p>
         </div>
       </section>
@@ -159,7 +159,7 @@ export default function TestlerPage() {
                   <div>
                     <h3 style={{ fontSize: "1.25rem", fontWeight: 700, color: "#ffffff" }}>{test.title}</h3>
                     <div style={{ display: "flex", gap: "0.75rem", marginTop: "0.25rem" }}>
-                      <span style={{ fontSize: "0.8rem", color: "#ffffff" }}>📝 {test.sorular} soru</span>
+                      <span style={{ fontSize: "0.8rem", color: "#ffffff" }}>📝 {test.sorular} Fragen</span>
                       <span style={{ fontSize: "0.8rem", color: "#ffffff" }}>⏱️ {test.sure}</span>
                     </div>
                   </div>
@@ -181,7 +181,7 @@ export default function TestlerPage() {
                       fontWeight: 600,
                     }}
                   >
-                    Teste Başla →
+                    Test starten →
                   </div>
                 </div>
               </Link>
@@ -202,10 +202,10 @@ export default function TestlerPage() {
             }}
           >
             <h2 style={{ fontSize: "1.75rem", fontWeight: 700, marginBottom: "1rem" }}>
-              🌟 Günlük Burç Yorumunu Okudun mu?
+              🌟 Hast du dein Tageshoroskop schon gelesen?
             </h2>
             <p style={{ fontSize: "1rem", color: "rgba(255,255,255,0.8)", marginBottom: "1.5rem", maxWidth: "500px", margin: "0 auto 1.5rem" }}>
-              Testlerle kendini keşfettikten sonra günlük yorumlarını da oku!
+              Nachdem du dich mit Tests entdeckt hast, lies auch dein Tageshoroskop!
             </p>
             <Link
               href="/burclar/gunluk"
@@ -222,7 +222,7 @@ export default function TestlerPage() {
                 textDecoration: "none",
               }}
             >
-              ♈ Günlük Yorumlar
+              ♈ Tageshoroskop
             </Link>
           </div>
         </div>

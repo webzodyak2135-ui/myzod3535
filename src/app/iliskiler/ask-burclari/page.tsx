@@ -5,79 +5,79 @@ const ASK_BURCLARI = [
     burc: "Koç",
     emoji: "♈",
     color: "#ef4444",
-    askTarzi: "Tutkulu ve heyecanlı",
-    sevgiDili: "Fiziksel yakınlık ve macera",
-    uyumlu: ["Aslan", "Yay", "İkizler"],
-    dikkat: "Sabırsızlık ve baskınlık",
-    tavsiye: "Partnerine alan ver, sabırlı ol"
+    askTarzi: "Leidenschaftlich und aufregend",
+    sevgiDili: "Körperliche Nähe und Abenteuer",
+    uyumlu: ["Löwe", "Schütze", "Zwillinge"],
+    dikkat: "Ungeduld und Dominanz",
+    tavsiye: "Gib deinem Partner Raum, sei geduldig"
   },
   {
     burc: "Boğa",
     emoji: "♉",
     color: "#ffffff",
-    askTarzi: "Sadık ve romantik",
-    sevgiDili: "Hediyeler ve fiziksel dokunuş",
-    uyumlu: ["Başak", "Oğlak", "Yengeç"],
-    dikkat: "İnatçılık ve kıskançlık",
-    tavsiye: "Değişime açık ol, güvensizliği bırak"
+    askTarzi: "Treu und romantisch",
+    sevgiDili: "Geschenke und körperliche Berührung",
+    uyumlu: ["Jungfrau", "Steinbock", "Krebs"],
+    dikkat: "Sturheit und Eifersucht",
+    tavsiye: "Sei offen für Veränderungen, lass Misstrauen los"
   },
   {
     burc: "İkizler",
     emoji: "♊",
     color: "#eab308",
-    askTarzi: "Eğlenceli ve entelektüel",
-    sevgiDili: "Sohbet ve zihinsel uyum",
-    uyumlu: ["Terazi", "Kova", "Koç"],
-    dikkat: "Kararsızlık ve yüzeysellik",
-    tavsiye: "Duygusal derinlik geliştir"
+    askTarzi: "Spaßig und intellektuell",
+    sevgiDili: "Gespräche und geistige Harmonie",
+    uyumlu: ["Waage", "Wassermann", "Widder"],
+    dikkat: "Unentschlossenheit und Oberflächlichkeit",
+    tavsiye: "Entwickle emotionale Tiefe"
   },
   {
     burc: "Yengeç",
     emoji: "♋",
     color: "#3b82f6",
-    askTarzi: "Koruyucu ve duygusal",
-    sevgiDili: "Bakım ve ev ortamı",
-    uyumlu: ["Akrep", "Balık", "Boğa"],
-    dikkat: "Aşırı hassasiyet ve bağımlılık",
-    tavsiye: "Bağımsızlığını koru, geçmişi bırak"
+    askTarzi: "Beschützend und emotional",
+    sevgiDili: "Fürsorge und häusliche Umgebung",
+    uyumlu: ["Skorpion", "Fische", "Stier"],
+    dikkat: "Überempfindlichkeit und Abhängigkeit",
+    tavsiye: "Bewahre deine Unabhängigkeit, lass die Vergangenheit los"
   },
   {
     burc: "Aslan",
     emoji: "♌",
     color: "#f97316",
-    askTarzi: "Cömert ve gösterişli",
-    sevgiDili: "Övgü ve dikkat",
-    uyumlu: ["Koç", "Yay", "Terazi"],
-    dikkat: "Ego ve dikkat ihtiyacı",
-    tavsiye: "Partnerin ihtiyaçlarını da gör"
+    askTarzi: "Großzügig und auffällig",
+    sevgiDili: "Lob und Aufmerksamkeit",
+    uyumlu: ["Widder", "Schütze", "Waage"],
+    dikkat: "Ego und Aufmerksamkeitsbedarf",
+    tavsiye: "Sieh auch die Bedürfnisse deines Partners"
   },
   {
-    burc: "Başak",
+    burc: "Jungfrau",
     emoji: "♍",
     color: "#84cc16",
-    askTarzi: "Özenli ve destekleyici",
-    sevgiDili: "Hizmet ve pratik yardım",
-    uyumlu: ["Boğa", "Oğlak", "Yengeç"],
-    dikkat: "Eleştirellik ve mükemmeliyetçilik",
-    tavsiye: "Kusurları kabul et, rahatla"
+    askTarzi: "Sorgfältig und unterstützend",
+    sevgiDili: "Dienst und praktische Hilfe",
+    uyumlu: ["Stier", "Steinbock", "Krebs"],
+    dikkat: "Kritik und Perfektionismus",
+    tavsiye: "Akzeptiere Fehler, entspann dich"
   },
   {
-    burc: "Terazi",
+    burc: "Waage",
     emoji: "♎",
     color: "#ec4899",
-    askTarzi: "Romantik ve uyumlu",
-    sevgiDili: "Estetik ve birliktelik",
-    uyumlu: ["İkizler", "Kova", "Aslan"],
-    dikkat: "Kararsızlık ve çatışmadan kaçınma",
-    tavsiye: "Kendi ihtiyaçlarını da ifade et"
+    askTarzi: "Romantisch und harmonisch",
+    sevgiDili: "Ästhetik und Zusammensein",
+    uyumlu: ["Zwillinge", "Wassermann", "Löwe"],
+    dikkat: "Unentschlossenheit und Konfliktvermeidung",
+    tavsiye: "Drücke auch deine eigenen Bedürfnisse aus"
   },
   {
     burc: "Akrep",
     emoji: "♏",
     color: "#8b5cf6",
-    askTarzi: "Yoğun ve tutkulu",
-    sevgiDili: "Derin bağ ve sadakat",
-    uyumlu: ["Yengeç", "Balık", "Oğlak"],
+    askTarzi: "Intensiv und leidenschaftlich",
+    sevgiDili: "Tiefe Bindung und Loyalität",
+    uyumlu: ["Krebs", "Fische", "Steinbock"],
     dikkat: "Kıskançlık ve kontrol",
     tavsiye: "Güven geliştir, bırakmayı öğren"
   },
@@ -136,14 +136,14 @@ export default function AskBurclariPage() {
       >
         <div style={{ maxWidth: "72rem", margin: "0 auto" }}>
           <Link href="/iliskiler" style={{ color: "rgba(255,255,255,0.8)", fontSize: "0.9rem", textDecoration: "none" }}>
-            ← İlişkiler
+            ← Beziehungen
           </Link>
           <div style={{ fontSize: "4rem", marginTop: "1rem" }}>💕</div>
           <h1 style={{ fontSize: "clamp(2rem, 5vw, 3rem)", fontWeight: 800, color: "#ffffff", marginTop: "0.5rem" }}>
-            Aşk Burçları
+            Liebessternzeichen
           </h1>
           <p style={{ fontSize: "1.1rem", color: "rgba(255,255,255,0.9)", maxWidth: "600px", margin: "1rem auto 0" }}>
-            Her burcun aşk tarzı, sevgi dili ve ilişki dinamikleri
+            Liebesstil, Liebessprache und Beziehungsdynamik jedes Sternzeichens
           </p>
         </div>
       </section>

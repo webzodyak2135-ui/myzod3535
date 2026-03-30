@@ -5,60 +5,60 @@ import Link from "next/link";
 
 const SAYI_ANLAMLARI: Record<number, { baslik: string; anlam: string; ozellikler: string[] }> = {
   1: {
-    baslik: "Lider",
-    anlam: "Bağımsız, yaratıcı ve öncü bir ruhun var. Doğal liderlik özelliklerin seni öne çıkarıyor.",
-    ozellikler: ["Bağımsız", "Yaratıcı", "Kararlı", "Öncü"]
+    baslik: "Führer",
+    anlam: "Du hast eine unabhängige, kreative und pionierhafte Seele. Deine natürlichen Führungsqualitäten heben dich hervor.",
+    ozellikler: ["Unabhängig", "Kreativ", "Entschlossen", "Pionier"]
   },
   2: {
     baslik: "Diplomat",
-    anlam: "Uyumlu, hassas ve işbirlikçi bir yapın var. İlişkilerde denge kurmakta ustasın.",
-    ozellikler: ["Uyumlu", "Hassas", "Sabırlı", "İşbirlikçi"]
+    anlam: "Du hast eine harmonische, sensible und kooperative Natur. Du bist ein Meister darin, Balance in Beziehungen zu schaffen.",
+    ozellikler: ["Harmonisch", "Sensibel", "Geduldig", "Kooperativ"]
   },
   3: {
-    baslik: "Yaratıcı",
-    anlam: "İfade gücü yüksek, sosyal ve iyimser bir ruhun var. Sanat ve iletişim alanlarında parlıyorsun.",
-    ozellikler: ["Yaratıcı", "Sosyal", "İyimser", "Esprili"]
+    baslik: "Kreativer",
+    anlam: "Du hast eine ausdrucksstarke, soziale und optimistische Seele. Du glänzt in Kunst und Kommunikation.",
+    ozellikler: ["Kreativ", "Sozial", "Optimistisch", "Witzig"]
   },
   4: {
-    baslik: "İnşaatçı",
-    anlam: "Pratik, çalışkan ve güvenilir bir yapın var. Sağlam temeller üzerine inşa etmeyi seversin.",
-    ozellikler: ["Pratik", "Çalışkan", "Güvenilir", "Disiplinli"]
+    baslik: "Erbauer",
+    anlam: "Du hast eine praktische, fleißige und zuverlässige Natur. Du liebst es, auf soliden Fundamenten aufzubauen.",
+    ozellikler: ["Praktisch", "Fleißig", "Zuverlässig", "Diszipliniert"]
   },
   5: {
-    baslik: "Özgür Ruh",
-    anlam: "Maceraperest, esnek ve meraklı bir ruhun var. Değişim ve özgürlük senin için vazgeçilmez.",
-    ozellikler: ["Maceraperest", "Esnek", "Meraklı", "Dinamik"]
+    baslik: "Freigeist",
+    anlam: "Du hast eine abenteuerlustige, flexible und neugierige Seele. Veränderung und Freiheit sind für dich unverzichtbar.",
+    ozellikler: ["Abenteuerlustig", "Flexibel", "Neugierig", "Dynamisch"]
   },
   6: {
-    baslik: "Bakıcı",
-    anlam: "Sevgi dolu, sorumlu ve koruyucu bir yapın var. Aile ve toplum için fedakarlık yaparsın.",
-    ozellikler: ["Sevgi dolu", "Sorumlu", "Koruyucu", "Uyumlu"]
+    baslik: "Beschützer",
+    anlam: "Du hast eine liebevolle, verantwortungsvolle und beschützende Natur. Du opferst dich für Familie und Gemeinschaft.",
+    ozellikler: ["Liebevoll", "Verantwortungsvoll", "Beschützend", "Harmonisch"]
   },
   7: {
-    baslik: "Arayışçı",
-    anlam: "Analitik, spiritüel ve içe dönük bir ruhun var. Derin düşünce ve araştırma senin alanın.",
-    ozellikler: ["Analitik", "Spiritüel", "Sezgisel", "Bilge"]
+    baslik: "Sucher",
+    anlam: "Du hast eine analytische, spirituelle und introvertierte Seele. Tiefes Denken und Forschen ist dein Bereich.",
+    ozellikler: ["Analytisch", "Spirituell", "Intuitiv", "Weise"]
   },
   8: {
-    baslik: "Güç Sahibi",
-    anlam: "Hırslı, pratik ve başarı odaklı bir yapın var. Maddi dünyada başarıya ulaşmak için doğmuşsun.",
-    ozellikler: ["Hırslı", "Pratik", "Güçlü", "Başarı odaklı"]
+    baslik: "Machtinhaber",
+    anlam: "Du hast eine ehrgeizige, praktische und erfolgsorientierte Natur. Du bist geboren, um in der materiellen Welt Erfolg zu haben.",
+    ozellikler: ["Ehrgeizig", "Praktisch", "Stark", "Erfolgsorientiert"]
   },
   9: {
-    baslik: "İnsancıl",
-    anlam: "İdealist, şefkatli ve evrensel bir bakış açın var. İnsanlığa hizmet etmek senin misyonun.",
-    ozellikler: ["İdealist", "Şefkatli", "Cömert", "Vizyoner"]
+    baslik: "Humanitär",
+    anlam: "Du hast eine idealistische, mitfühlende und universelle Perspektive. Der Menschheit zu dienen ist deine Mission.",
+    ozellikler: ["Idealistisch", "Mitfühlend", "Großzügig", "Visionär"]
   },
 };
 
 function hesaplaKaderSayisi(tarih: string): number {
   const rakamlar = tarih.replace(/\D/g, '').split('').map(Number);
   let toplam = rakamlar.reduce((a, b) => a + b, 0);
-  
+
   while (toplam > 9) {
     toplam = toplam.toString().split('').map(Number).reduce((a, b) => a + b, 0);
   }
-  
+
   return toplam || 1;
 }
 
@@ -108,7 +108,7 @@ export default function NumerolojiTestiPage() {
               {sonuc}
             </div>
             <h1 style={{ fontSize: "2rem", fontWeight: 800, color: "#ffffff", marginBottom: "0.5rem" }}>
-              Kader Sayın: {sonuc}
+              Deine Schicksalszahl: {sonuc}
             </h1>
             <h2 style={{ fontSize: "1.5rem", fontWeight: 600, color: "rgba(255,255,255,0.9)", marginBottom: "1rem" }}>
               {bilgi.baslik}
@@ -145,7 +145,7 @@ export default function NumerolojiTestiPage() {
                   cursor: "pointer",
                 }}
               >
-                Tekrar Hesapla
+                Neu berechnen
               </button>
               <Link
                 href="/testler"
@@ -158,17 +158,17 @@ export default function NumerolojiTestiPage() {
                   textDecoration: "none",
                 }}
               >
-                Diğer Testler
+                Andere Tests
               </Link>
             </div>
           </div>
         </section>
 
-        {/* Tüm Sayılar */}
+        {/* Alle Zahlen */}
         <section style={{ padding: "3rem 1rem" }}>
           <div style={{ maxWidth: "72rem", margin: "0 auto" }}>
             <h2 style={{ fontSize: "1.5rem", fontWeight: 700, color: "#ffffff", marginBottom: "1.5rem", textAlign: "center" }}>
-              Tüm Kader Sayıları
+              Alle Schicksalszahlen
             </h2>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1rem" }}>
               {Object.entries(SAYI_ANLAMLARI).map(([sayi, bilgi]) => (
@@ -208,13 +208,13 @@ export default function NumerolojiTestiPage() {
       >
         <div style={{ maxWidth: "72rem", margin: "0 auto" }}>
           <Link href="/testler" style={{ color: "rgba(255,255,255,0.8)", fontSize: "0.9rem", textDecoration: "none" }}>
-            ← Testler
+            ← Tests
           </Link>
           <h1 style={{ fontSize: "2rem", fontWeight: 800, color: "#ffffff", marginTop: "1rem" }}>
-            🔢 Numeroloji Testi
+            🔢 Numerologie-Test
           </h1>
           <p style={{ color: "rgba(255,255,255,0.85)", marginTop: "0.5rem", maxWidth: "500px", margin: "0.5rem auto 0" }}>
-            Doğum tarihinden kader sayını hesapla ve hayat yolunu keşfet
+            Berechne deine Schicksalszahl aus deinem Geburtsdatum und entdecke deinen Lebensweg
           </p>
         </div>
       </section>
@@ -231,7 +231,7 @@ export default function NumerolojiTestiPage() {
             }}
           >
             <h2 style={{ fontSize: "1.25rem", fontWeight: 700, color: "#ffffff", marginBottom: "1.5rem", textAlign: "center" }}>
-              Doğum Tarihini Gir
+              Gib dein Geburtsdatum ein
             </h2>
             <input
               type="date"
@@ -261,19 +261,19 @@ export default function NumerolojiTestiPage() {
                 cursor: dogumTarihi ? "pointer" : "not-allowed",
               }}
             >
-              Kader Sayımı Hesapla
+              Schicksalszahl berechnen
             </button>
           </div>
 
           {/* Bilgi */}
           <div style={{ marginTop: "2rem", padding: "1.5rem", background: "#1a0b2e", borderRadius: "16px" }}>
             <h3 style={{ fontSize: "1rem", fontWeight: 600, color: "#ffffff", marginBottom: "0.75rem" }}>
-              📖 Numeroloji Nedir?
+              📖 Was ist Numerologie?
             </h3>
             <p style={{ fontSize: "0.9rem", color: "#ffffff", lineHeight: 1.6 }}>
-              Numeroloji, sayıların mistik anlamlarını inceleyen kadim bir bilimdir. 
-              Kader sayın, doğum tarihindeki tüm rakamların toplamından elde edilir ve 
-              hayat yolunu, kişilik özelliklerini ve potansiyelini ortaya koyar.
+              Numerologie ist eine alte Wissenschaft, die die mystischen Bedeutungen von Zahlen untersucht.
+              Deine Schicksalszahl wird aus der Summe aller Ziffern deines Geburtsdatums berechnet und
+              offenbart deinen Lebensweg, Persönlichkeitsmerkmale und Potenzial.
             </p>
           </div>
         </div>

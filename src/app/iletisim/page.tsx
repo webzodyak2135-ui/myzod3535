@@ -24,10 +24,10 @@ export default function IletisimPage() {
         <div style={{ maxWidth: "72rem", margin: "0 auto" }}>
           <div style={{ fontSize: "3rem", marginBottom: "1rem" }}>📬</div>
           <h1 style={{ fontSize: "clamp(2rem, 5vw, 3rem)", fontWeight: 800, color: "#ffffff", marginBottom: "1rem" }}>
-            İletişim
+            Kontakt
           </h1>
           <p style={{ fontSize: "1.1rem", color: "rgba(255,255,255,0.85)", maxWidth: "600px", margin: "0 auto" }}>
-            Sorularınız, önerileriniz veya geri bildirimleriniz için bize ulaşın
+            Kontaktiere uns bei Fragen, Anregungen oder Feedback
           </p>
         </div>
       </section>
@@ -36,41 +36,41 @@ export default function IletisimPage() {
       <section style={{ padding: "3rem 1rem" }}>
         <div style={{ maxWidth: "800px", margin: "0 auto" }}>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "2rem" }}>
-            
+
             {/* İletişim Bilgileri */}
             <div>
               <h2 style={{ fontSize: "1.25rem", fontWeight: 700, color: "#ffffff", marginBottom: "1.5rem" }}>
-                Bize Ulaşın
+                Kontaktiere uns
               </h2>
-              
+
               <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
                 <div style={{ display: "flex", alignItems: "center", gap: "1rem", padding: "1rem", background: "#1a0b2e", borderRadius: "12px", boxShadow: "0 2px 8px rgba(0,0,0,0.04)" }}>
                   <div style={{ width: "48px", height: "48px", borderRadius: "12px", background: "#ede9fe", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.25rem" }}>
                     📧
                   </div>
                   <div>
-                    <div style={{ fontSize: "0.85rem", color: "#ffffff" }}>E-posta</div>
-                    <div style={{ fontSize: "1rem", fontWeight: 600, color: "#ffffff" }}>info@zodyakli.com</div>
+                    <div style={{ fontSize: "0.85rem", color: "#ffffff" }}>E-Mail</div>
+                    <div style={{ fontSize: "1rem", fontWeight: 600, color: "#ffffff" }}>info@SternenFeed.com</div>
                   </div>
                 </div>
-                
+
                 <div style={{ display: "flex", alignItems: "center", gap: "1rem", padding: "1rem", background: "#1a0b2e", borderRadius: "12px", boxShadow: "0 2px 8px rgba(0,0,0,0.04)" }}>
                   <div style={{ width: "48px", height: "48px", borderRadius: "12px", background: "#1a0b2e", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.25rem" }}>
                     📱
                   </div>
                   <div>
-                    <div style={{ fontSize: "0.85rem", color: "#ffffff" }}>Sosyal Medya</div>
-                    <div style={{ fontSize: "1rem", fontWeight: 600, color: "#ffffff" }}>@zodyakli</div>
+                    <div style={{ fontSize: "0.85rem", color: "#ffffff" }}>Social Media</div>
+                    <div style={{ fontSize: "1rem", fontWeight: 600, color: "#ffffff" }}>@SternenFeed</div>
                   </div>
                 </div>
-                
+
                 <div style={{ display: "flex", alignItems: "center", gap: "1rem", padding: "1rem", background: "#1a0b2e", borderRadius: "12px", boxShadow: "0 2px 8px rgba(0,0,0,0.04)" }}>
                   <div style={{ width: "48px", height: "48px", borderRadius: "12px", background: "#1a0b2e", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.25rem" }}>
                     ⏰
                   </div>
                   <div>
-                    <div style={{ fontSize: "0.85rem", color: "#ffffff" }}>Yanıt Süresi</div>
-                    <div style={{ fontSize: "1rem", fontWeight: 600, color: "#ffffff" }}>24 saat içinde</div>
+                    <div style={{ fontSize: "0.85rem", color: "#ffffff" }}>Antwortzeit</div>
+                    <div style={{ fontSize: "1rem", fontWeight: 600, color: "#ffffff" }}>Innerhalb von 24 Stunden</div>
                   </div>
                 </div>
               </div>
@@ -79,17 +79,17 @@ export default function IletisimPage() {
             {/* Form */}
             <div>
               <h2 style={{ fontSize: "1.25rem", fontWeight: 700, color: "#ffffff", marginBottom: "1.5rem" }}>
-                Mesaj Gönderin
+                Nachricht senden
               </h2>
-              
+
               {gonderildi ? (
                 <div style={{ background: "#1a0b2e", borderRadius: "16px", padding: "2rem", textAlign: "center" }}>
                   <div style={{ fontSize: "3rem", marginBottom: "1rem" }}>✅</div>
                   <h3 style={{ fontSize: "1.25rem", fontWeight: 700, color: "#ffffff", marginBottom: "0.5rem" }}>
-                    Mesajınız Alındı!
+                    Nachricht erhalten!
                   </h3>
                   <p style={{ fontSize: "0.9rem", color: "#ffffff" }}>
-                    En kısa sürede size dönüş yapacağız.
+                    Wir werden uns so schnell wie möglich bei dir melden.
                   </p>
                   <button
                     onClick={() => { setGonderildi(false); setFormData({ isim: "", email: "", konu: "", mesaj: "" }); }}
@@ -103,14 +103,14 @@ export default function IletisimPage() {
                       cursor: "pointer",
                     }}
                   >
-                    Yeni Mesaj
+                    Neue Nachricht
                   </button>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
                   <input
                     type="text"
-                    placeholder="Adınız"
+                    placeholder="Dein Name"
                     value={formData.isim}
                     onChange={(e) => setFormData({ ...formData, isim: e.target.value })}
                     required
@@ -124,7 +124,7 @@ export default function IletisimPage() {
                   />
                   <input
                     type="email"
-                    placeholder="E-posta Adresiniz"
+                    placeholder="Deine E-Mail-Adresse"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     required
@@ -149,14 +149,14 @@ export default function IletisimPage() {
                       background: "#1a0b2e",
                     }}
                   >
-                    <option value="">Konu Seçin</option>
-                    <option value="genel">Genel Soru</option>
-                    <option value="oneri">Öneri</option>
-                    <option value="hata">Hata Bildirimi</option>
-                    <option value="isbirligi">İş Birliği</option>
+                    <option value="">Thema auswählen</option>
+                    <option value="genel">Allgemeine Frage</option>
+                    <option value="oneri">Vorschlag</option>
+                    <option value="hata">Fehlermeldung</option>
+                    <option value="isbirligi">Zusammenarbeit</option>
                   </select>
                   <textarea
-                    placeholder="Mesajınız"
+                    placeholder="Deine Nachricht"
                     value={formData.mesaj}
                     onChange={(e) => setFormData({ ...formData, mesaj: e.target.value })}
                     required
@@ -183,7 +183,7 @@ export default function IletisimPage() {
                       cursor: "pointer",
                     }}
                   >
-                    Gönder
+                    Senden
                   </button>
                 </form>
               )}
@@ -196,31 +196,31 @@ export default function IletisimPage() {
       <section style={{ padding: "3rem 1rem", background: "#1a0b2e" }}>
         <div style={{ maxWidth: "800px", margin: "0 auto" }}>
           <h2 style={{ fontSize: "1.5rem", fontWeight: 700, color: "#ffffff", marginBottom: "1.5rem", textAlign: "center" }}>
-            Sık Sorulan Sorular
+            Häufig gestellte Fragen
           </h2>
           <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
             <div style={{ background: "#1a0b2e", borderRadius: "12px", padding: "1.25rem", boxShadow: "0 2px 8px rgba(0,0,0,0.04)" }}>
               <h3 style={{ fontSize: "1rem", fontWeight: 600, color: "#ffffff", marginBottom: "0.5rem" }}>
-                Burç yorumları ne sıklıkla güncelleniyor?
+                Wie oft werden die Horoskope aktualisiert?
               </h3>
               <p style={{ fontSize: "0.9rem", color: "#ffffff" }}>
-                Günlük yorumlar her gün, haftalık yorumlar her pazartesi, aylık yorumlar ise her ayın başında güncellenmektedir.
+                Tägliche Horoskope werden jeden Tag, wöchentliche jeden Montag und monatliche am Anfang jeden Monats aktualisiert.
               </p>
             </div>
             <div style={{ background: "#1a0b2e", borderRadius: "12px", padding: "1.25rem", boxShadow: "0 2px 8px rgba(0,0,0,0.04)" }}>
               <h3 style={{ fontSize: "1rem", fontWeight: 600, color: "#ffffff", marginBottom: "0.5rem" }}>
-                Rüya tabiri nasıl yapılır?
+                Wie funktioniert die Traumdeutung?
               </h3>
               <p style={{ fontSize: "0.9rem", color: "#ffffff" }}>
-                Rüya sözlüğümüzde arama yaparak veya kategorilere göz atarak rüyanızdaki sembollerin anlamlarını bulabilirsiniz.
+                Du kannst in unserem Traumlexikon suchen oder durch Kategorien stöbern, um die Bedeutungen der Symbole in deinem Traum zu finden.
               </p>
             </div>
             <div style={{ background: "#1a0b2e", borderRadius: "12px", padding: "1.25rem", boxShadow: "0 2px 8px rgba(0,0,0,0.04)" }}>
               <h3 style={{ fontSize: "1rem", fontWeight: 600, color: "#ffffff", marginBottom: "0.5rem" }}>
-                Testler ücretsiz mi?
+                Sind die Tests kostenlos?
               </h3>
               <p style={{ fontSize: "0.9rem", color: "#ffffff" }}>
-                Evet, tüm astroloji testlerimiz tamamen ücretsizdir ve sınırsız kullanılabilir.
+                Ja, alle unsere Astrologie-Tests sind völlig kostenlos und unbegrenzt nutzbar.
               </p>
             </div>
           </div>

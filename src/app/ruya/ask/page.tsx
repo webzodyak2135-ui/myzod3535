@@ -1,29 +1,29 @@
 import Link from "next/link";
 
 const ASK_RUYALARI = [
-  { baslik: "Eski Sevgiliyi Görmek", anlam: "Kapanmamış duygular, geçmişle yüzleşme, özlem veya pişmanlık", icon: "💔", slug: "eski-sevgili-gormek" },
-  { baslik: "Öpüşmek", anlam: "Yakınlık isteği, kabul görme, duygusal bağ kurma arzusu", icon: "💋", slug: "opusmek" },
-  { baslik: "Evlenmek", anlam: "Bağlanma, yeni başlangıç, birleşme, taahhüt", icon: "💒", slug: "evlenmek-ruya" },
-  { baslik: "Aldatılmak", anlam: "Güvensizlik, terk edilme korkusu, öz değer sorunları", icon: "💢", slug: "aldatilmak" },
-  { baslik: "Tanımadık Biriyle Aşk", anlam: "Keşfedilmemiş yönler, ideal partner arayışı", icon: "❓", slug: "tanımadik-asik-olmak" },
-  { baslik: "Ayrılık Yaşamak", anlam: "Değişim korkusu, kayıp endişesi, bağımsızlık isteği", icon: "🚶", slug: "ayrilik-yasama" },
+  { baslik: "Ex-Partner sehen", anlam: "Unverarbeitete Gefühle, Konfrontation mit der Vergangenheit, Sehnsucht oder Reue", icon: "💔", slug: "eski-sevgili-gormek" },
+  { baslik: "Küssen", anlam: "Wunsch nach Nähe, Akzeptanz, Verlangen nach emotionaler Bindung", icon: "💋", slug: "opusmek" },
+  { baslik: "Heiraten", anlam: "Bindung, Neuanfang, Vereinigung, Verpflichtung", icon: "💒", slug: "evlenmek-ruya" },
+  { baslik: "Betrogen werden", anlam: "Misstrauen, Verlustangst, Selbstwertprobleme", icon: "💢", slug: "aldatilmak" },
+  { baslik: "Liebe mit Fremdem", anlam: "Unentdeckte Seiten, Suche nach idealem Partner", icon: "❓", slug: "tanımadik-asik-olmak" },
+  { baslik: "Trennung erleben", anlam: "Angst vor Veränderung, Verlustangst, Wunsch nach Unabhängigkeit", icon: "🚶", slug: "ayrilik-yasama" },
 ];
 
 const DETAYLI_YORUMLAR = [
   {
-    baslik: "Eski Sevgili Rüyaları",
-    icerik: "Eski sevgiliyi rüyada görmek, mutlaka o kişiyi özlediğiniz anlamına gelmez. Genellikle o ilişkiden öğrendiğiniz dersleri, kapanmamış duyguları veya o dönemdeki kendinizi temsil eder. Bu rüyalar, geçmişle barışmanız gerektiğinin işareti olabilir.",
-    tavsiye: "Geçmişte kalan duyguları işleyin ve bırakın."
+    baslik: "Träume vom Ex-Partner",
+    icerik: "Vom Ex-Partner zu träumen bedeutet nicht unbedingt, dass du ihn vermisst. Meist repräsentiert es Lektionen aus dieser Beziehung, unverarbeitete Gefühle oder dein damaliges Selbst. Diese Träume können ein Zeichen sein, dass du mit der Vergangenheit Frieden schließen solltest.",
+    tavsiye: "Verarbeite und lass vergangene Gefühle los."
   },
   {
-    baslik: "Evlilik Rüyaları",
-    icerik: "Evlilik rüyaları, sadece romantik ilişkilerle ilgili değildir. İki farklı yönünüzün birleşmesini, yeni bir projeye bağlanmayı veya hayatınızdaki önemli bir taahhüdü simgeleyebilir.",
-    tavsiye: "Hayatınızda neye bağlanmak istediğinizi düşünün."
+    baslik: "Hochzeitsträume",
+    icerik: "Hochzeitsträume beziehen sich nicht nur auf romantische Beziehungen. Sie können die Vereinigung zweier verschiedener Seiten von dir, die Bindung an ein neues Projekt oder eine wichtige Verpflichtung in deinem Leben symbolisieren.",
+    tavsiye: "Überlege, woran du dich in deinem Leben binden möchtest."
   },
   {
-    baslik: "Aldatılma Rüyaları",
-    icerik: "Aldatılma rüyaları çok yaygındır ve genellikle gerçek bir aldatmayı değil, güvensizlik duygularını, terk edilme korkusunu veya ilişkideki iletişim eksikliğini yansıtır.",
-    tavsiye: "Güvensizlik duygularınızın kaynağını araştırın."
+    baslik: "Betrugsträume",
+    icerik: "Betrugsträume sind sehr verbreitet und spiegeln meist nicht echten Betrug wider, sondern Gefühle von Misstrauen, Verlustangst oder mangelnde Kommunikation in der Beziehung.",
+    tavsiye: "Untersuche die Quelle deiner Unsicherheitsgefühle."
   },
 ];
 
@@ -51,17 +51,17 @@ export default function AskRuyalariPage() {
 
         <div style={{ maxWidth: "72rem", margin: "0 auto", position: "relative", zIndex: 1 }}>
           <Link href="/ruya-tabirleri" style={{ color: "rgba(255,255,255,0.9)", fontSize: "0.9rem", textDecoration: "none", padding: "0.5rem 1rem", background: "rgba(255,255,255,0.15)", backdropFilter: "blur(10px)", borderRadius: "9999px", border: "1px solid rgba(255,255,255,0.2)", display: "inline-block", marginBottom: "1.5rem" }}>
-            ← Rüya Tabirleri
+            ← Traumdeutung
           </Link>
           <div style={{ position: "relative", display: "inline-block", marginBottom: "1rem" }}>
             <div style={{ position: "absolute", inset: "-20px", borderRadius: "50%", background: "rgba(255,255,255,0.2)", filter: "blur(30px)" }} />
             <div style={{ fontSize: "5rem", position: "relative", filter: "drop-shadow(0 0 30px rgba(255,255,255,0.5))" }}>❤️</div>
           </div>
           <h1 style={{ fontSize: "clamp(2.5rem, 6vw, 4rem)", fontWeight: 800, color: "#ffffff", marginTop: "0.5rem", textShadow: "0 4px 30px rgba(0,0,0,0.2)", letterSpacing: "-0.02em" }}>
-            Aşk Rüyaları
+            Liebesträume
           </h1>
           <p style={{ fontSize: "1.1rem", color: "rgba(255,255,255,0.9)", maxWidth: "600px", margin: "1rem auto 0" }}>
-            Romantik rüyaların yorumu - duygusal dünyamızın yansımaları
+            Deutung romantischer Träume - Spiegelungen unserer emotionalen Welt
           </p>
         </div>
         <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "60px", overflow: "hidden" }}>
@@ -75,7 +75,7 @@ export default function AskRuyalariPage() {
       <section style={{ padding: "3rem 1rem" }}>
         <div style={{ maxWidth: "72rem", margin: "0 auto" }}>
           <h2 style={{ fontSize: "1.5rem", fontWeight: 700, color: "#ffffff", marginBottom: "1.5rem", textAlign: "center" }}>
-            Aşk Rüyası Türleri
+            Arten von Liebesträumen
           </h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "1rem" }}>
             {ASK_RUYALARI.map((ruya, i) => (
@@ -135,16 +135,16 @@ export default function AskRuyalariPage() {
         <div style={{ maxWidth: "72rem", margin: "0 auto" }}>
           <div style={{ background: "transparent", borderRadius: "24px", padding: "2rem" }}>
             <h2 style={{ fontSize: "1.25rem", fontWeight: 700, color: "#ffffff", marginBottom: "1rem" }}>
-              💕 Aşk Rüyalarını Anlamak
+              💕 Liebesträume Verstehen
             </h2>
             <p style={{ color: "#ffffff", lineHeight: 1.8, marginBottom: "1rem" }}>
-              Aşk rüyaları, duygusal ihtiyaçlarımızı, ilişki dinamiklerimizi ve içsel arzularımızı yansıtır.
-              Bu rüyalar her zaman gerçek bir kişiyle ilgili değildir - bazen kendi içimizdeki
-              erkeksi/kadınsı enerjilerin birleşimini temsil eder.
+              Liebesträume spiegeln unsere emotionalen Bedürfnisse, Beziehungsdynamiken und inneren Wünsche wider.
+              Diese Träume beziehen sich nicht immer auf eine reale Person - manchmal repräsentieren sie
+              die Vereinigung der männlichen/weiblichen Energien in uns selbst.
             </p>
             <p style={{ color: "#ffffff", lineHeight: 1.8 }}>
-              Rüyanızdaki kişi tanıdık biri olsa bile, o kişinin sizin için neyi temsil ettiğini düşünün.
-              Belki onun bir özelliği, sizin de geliştirmek istediğiniz bir yönünüzdür.
+              Selbst wenn die Person in deinem Traum jemand Bekanntes ist, überlege, was diese Person für dich repräsentiert.
+              Vielleicht ist eine ihrer Eigenschaften ein Aspekt, den du auch in dir entwickeln möchtest.
             </p>
           </div>
         </div>

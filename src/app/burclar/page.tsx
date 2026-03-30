@@ -1,27 +1,27 @@
 import Link from "next/link";
 
 const BURCLAR = [
-  { name: "Koç", emoji: "♈", date: "21 Mart - 19 Nisan", element: "Ateş", slug: "koc", color: "#ef4444" },
-  { name: "Boğa", emoji: "♉", date: "20 Nisan - 20 Mayıs", element: "Toprak", slug: "boga", color: "#ffffff" },
-  { name: "İkizler", emoji: "♊", date: "21 Mayıs - 20 Haziran", element: "Hava", slug: "ikizler", color: "#eab308" },
-  { name: "Yengeç", emoji: "♋", date: "21 Haziran - 22 Temmuz", element: "Su", slug: "yengec", color: "#3b82f6" },
-  { name: "Aslan", emoji: "♌", date: "23 Temmuz - 22 Ağustos", element: "Ateş", slug: "aslan", color: "#f97316" },
-  { name: "Başak", emoji: "♍", date: "23 Ağustos - 22 Eylül", element: "Toprak", slug: "basak", color: "#84cc16" },
-  { name: "Terazi", emoji: "♎", date: "23 Eylül - 22 Ekim", element: "Hava", slug: "terazi", color: "#ec4899" },
-  { name: "Akrep", emoji: "♏", date: "23 Ekim - 21 Kasım", element: "Su", slug: "akrep", color: "#8b5cf6" },
-  { name: "Yay", emoji: "♐", date: "22 Kasım - 21 Aralık", element: "Ateş", slug: "yay", color: "#f43f5e" },
-  { name: "Oğlak", emoji: "♑", date: "22 Aralık - 19 Ocak", element: "Toprak", slug: "oglak", color: "#6366f1" },
-  { name: "Kova", emoji: "♒", date: "20 Ocak - 18 Şubat", element: "Hava", slug: "kova", color: "#ffffff" },
-  { name: "Balık", emoji: "♓", date: "19 Şubat - 20 Mart", element: "Su", slug: "balik", color: "#a855f7" },
+  { name: "Widder", emoji: "♈", date: "21. März - 19. April", element: "Feuer", slug: "koc", color: "#ef4444" },
+  { name: "Stier", emoji: "♉", date: "20. April - 20. Mai", element: "Erde", slug: "boga", color: "#ffffff" },
+  { name: "Zwillinge", emoji: "♊", date: "21. Mai - 20. Juni", element: "Luft", slug: "ikizler", color: "#eab308" },
+  { name: "Krebs", emoji: "♋", date: "21. Juni - 22. Juli", element: "Wasser", slug: "yengec", color: "#3b82f6" },
+  { name: "Löwe", emoji: "♌", date: "23. Juli - 22. August", element: "Feuer", slug: "aslan", color: "#f97316" },
+  { name: "Jungfrau", emoji: "♍", date: "23. August - 22. September", element: "Erde", slug: "basak", color: "#84cc16" },
+  { name: "Waage", emoji: "♎", date: "23. September - 22. Oktober", element: "Luft", slug: "terazi", color: "#ec4899" },
+  { name: "Skorpion", emoji: "♏", date: "23. Oktober - 21. November", element: "Wasser", slug: "akrep", color: "#8b5cf6" },
+  { name: "Schütze", emoji: "♐", date: "22. November - 21. Dezember", element: "Feuer", slug: "yay", color: "#f43f5e" },
+  { name: "Steinbock", emoji: "♑", date: "22. Dezember - 19. Januar", element: "Erde", slug: "oglak", color: "#6366f1" },
+  { name: "Wassermann", emoji: "♒", date: "20. Januar - 18. Februar", element: "Luft", slug: "kova", color: "#ffffff" },
+  { name: "Fische", emoji: "♓", date: "19. Februar - 20. März", element: "Wasser", slug: "balik", color: "#a855f7" },
 ];
 
 const YORUM_TURLERI = [
-  { title: "Günlük Yorumlar", desc: "Bugün seni neler bekliyor?", href: "/burclar/gunluk", icon: "🌅" },
-  { title: "Haftalık Analizler", desc: "Bu haftanın kozmik enerjisi", href: "/burclar/haftalik", icon: "📅" },
-  { title: "Aylık Harita", desc: "Aylık astroloji haritanız", href: "/burclar/aylik", icon: "🗓️" },
-  { title: "Yükselen Burç", desc: "Yükselen burcunuzu keşfedin", href: "/burclar/yukselen", icon: "⬆️" },
-  { title: "Burç Uyumu", desc: "Burçlar arası uyum analizi", href: "/burclar/uyum", icon: "💑" },
-  { title: "Doğum Haritası", desc: "Natal chart detaylı okuma", href: "/burclar/dogum-haritasi", icon: "🌐" },
+  { title: "Tageshoroskop", desc: "Was erwartet dich heute?", href: "/burclar/gunluk", icon: "🌅" },
+  { title: "Wochenhoroskop", desc: "Die kosmische Energie dieser Woche", href: "/burclar/haftalik", icon: "📅" },
+  { title: "Monatshoroskop", desc: "Dein astrologischer Monatsausblick", href: "/burclar/aylik", icon: "🗓️" },
+  { title: "Aszendent", desc: "Entdecke deinen Aszendenten", href: "/burclar/yukselen", icon: "⬆️" },
+  { title: "Kompatibilität", desc: "Kompatibilitätsanalyse zwischen Sternzeichen", href: "/burclar/uyum", icon: "💑" },
+  { title: "Geburtshoroskop", desc: "Detaillierte Deutung des Geburtshoroskops", href: "/burclar/dogum-haritasi", icon: "🌐" },
 ];
 
 export default function BurclarPage() {
@@ -61,7 +61,7 @@ export default function BurclarPage() {
                 backdropFilter: "blur(10px)",
               }}
             >
-              <span>♈</span> Burç Yorumları
+              <span>♈</span> Horoskope
             </div>
             <h1
               style={{
@@ -71,7 +71,7 @@ export default function BurclarPage() {
                 marginBottom: "1rem",
               }}
             >
-              12 Burç İçin Astroloji Rehberi
+              Astrologie-Guide für 12 Sternzeichen
             </h1>
             <p
               style={{
@@ -81,7 +81,7 @@ export default function BurclarPage() {
                 margin: "0 auto",
               }}
             >
-              Günlük, haftalık ve aylık burç yorumlarıyla yıldızların sana ne söylediğini keşfet
+              Entdecke, was die Sterne dir sagen — mit täglichen, wöchentlichen und monatlichen Horoskopen
             </p>
           </div>
         </div>
@@ -91,7 +91,7 @@ export default function BurclarPage() {
       <section style={{ padding: "3rem 1rem", background: "#1a0b2e" }}>
         <div style={{ maxWidth: "72rem", margin: "0 auto" }}>
           <h2 style={{ fontSize: "1.5rem", fontWeight: 700, color: "#ffffff", marginBottom: "1.5rem", textAlign: "center" }}>
-            Yorum Türleri
+            Horoskop-Arten
           </h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1rem" }}>
             {YORUM_TURLERI.map((item) => (
@@ -138,7 +138,7 @@ export default function BurclarPage() {
       <section style={{ padding: "3rem 1rem" }}>
         <div style={{ maxWidth: "72rem", margin: "0 auto" }}>
           <h2 style={{ fontSize: "1.5rem", fontWeight: 700, color: "#ffffff", marginBottom: "1.5rem", textAlign: "center" }}>
-            Burcunu Seç
+            Wähle dein Sternzeichen
           </h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))", gap: "1rem" }}>
             {BURCLAR.map((burc) => (
@@ -225,8 +225,8 @@ export default function BurclarPage() {
                 ✨
               </div>
               <div>
-                <h3 style={{ fontSize: "1.25rem", fontWeight: 700, color: "#ffffff" }}>Günün Öne Çıkan Burcu</h3>
-                <p style={{ fontSize: "0.9rem", color: "#ffffff" }}>Bugün yıldızlar kime gülüyor?</p>
+                <h3 style={{ fontSize: "1.25rem", fontWeight: 700, color: "#ffffff" }}>Sternzeichen des Tages</h3>
+                <p style={{ fontSize: "0.9rem", color: "#ffffff" }}>Wem lächeln die Sterne heute zu?</p>
               </div>
             </div>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem", alignItems: "center" }}>
@@ -245,10 +245,10 @@ export default function BurclarPage() {
                 ♈
               </div>
               <div style={{ flex: 1, minWidth: "200px" }}>
-                <h4 style={{ fontSize: "1.5rem", fontWeight: 700, color: "#ffffff", marginBottom: "0.5rem" }}>Koç Burcu</h4>
+                <h4 style={{ fontSize: "1.5rem", fontWeight: 700, color: "#ffffff", marginBottom: "0.5rem" }}>Widder</h4>
                 <p style={{ fontSize: "0.95rem", color: "#ffffff", lineHeight: 1.6 }}>
-                  Bugün enerjin yüksek ve motivasyonun dorukta! Yeni başlangıçlar için ideal bir gün. 
-                  Cesur adımlar atmaktan çekinme, yıldızlar seni destekliyor.
+                  Heute ist deine Energie hoch und deine Motivation auf dem Höhepunkt! Ein idealer Tag für Neuanfänge.
+                  Hab keine Angst vor mutigen Schritten — die Sterne unterstützen dich.
                 </p>
                 <Link
                   href="/burclar/koc"
@@ -266,7 +266,7 @@ export default function BurclarPage() {
                     textDecoration: "none",
                   }}
                 >
-                  Detaylı Oku →
+                  Mehr lesen →
                 </Link>
               </div>
             </div>

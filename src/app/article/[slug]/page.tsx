@@ -3,53 +3,53 @@ import Link from "next/link";
 import { Share2, MessageCircle, Instagram } from "lucide-react";
 
 const ARTICLE_DATA = {
-  title: "Uçma Rüyası: Özgürlük mü, Kaçış mı?",
-  category: "Rüya Tabirleri",
+  title: "Flugträume: Freiheit oder Flucht?",
+  category: "Traumdeutung",
   categoryColor: "#818cf8",
   categoryHref: "/ruya",
-  author: "Zodyaklı Editör",
-  date: "22 Mart 2025",
-  readTime: "5 dk",
+  author: "SternenFeed Editör",
+  date: "22. März 2025",
+  readTime: "5 Min.",
   heroImage: "/img/hero-default.jpg",
   content: [
     {
       type: "paragraph",
-      text: "Rüyada uçmak, insanlığın en eski ve en evrensel rüya temalarından biridir. Kültürler arası araştırmalar, dünyanın her yerinden insanların benzer uçma deneyimleri yaşadığını gösteriyor. Peki bu rüya ne anlama geliyor?",
+      text: "Vom Fliegen zu träumen ist eines der ältesten und universellsten Traumthemen der Menschheit. Interkulturelle Forschungen zeigen, dass Menschen auf der ganzen Welt ähnliche Flugerfahrungen erleben. Aber was bedeutet dieser Traum?",
     },
     {
       type: "heading",
-      text: "Özgürlük ve Kontrol",
+      text: "Freiheit und Kontrolle",
     },
     {
       type: "paragraph",
-      text: "Uçma rüyası genellikle özgürlük arzusu, sınırlardan kurtulma ve yüksek perspektif kazanma ile ilişkilendirilir. Eğer rüyanızda kolayca ve keyifle uçuyorsanız, bu genellikle hayatınızda kontrol sahibi olduğunuzu ve hedeflerinize doğru ilerlediğinizi gösterir.",
+      text: "Flugträume werden meist mit dem Wunsch nach Freiheit, der Befreiung von Grenzen und dem Gewinn einer höheren Perspektive in Verbindung gebracht. Wenn du in deinem Traum leicht und mit Freude fliegst, zeigt dies normalerweise, dass du die Kontrolle über dein Leben hast und auf deine Ziele zusteuerst.",
     },
     {
       type: "image",
       src: "/img/hero-default.jpg",
-      alt: "Mistik sembol",
+      alt: "Mystisches Symbol",
     },
     {
       type: "heading",
-      text: "Kaçış ve Kaygı",
+      text: "Flucht und Angst",
     },
     {
       type: "paragraph",
-      text: "Öte yandan, uçarken zorluk çekiyorsanız veya düşme korkusu yaşıyorsanız, bu bilinçaltınızın size bir şeylerden kaçmaya çalıştığınızı söylüyor olabilir. Yükseklik korkusu, kontrol kaybı veya sorumlulukların ağırlığı bu tür rüyalarda kendini gösterir.",
+      text: "Wenn du andererseits Schwierigkeiten beim Fliegen hast oder Angst vor dem Fallen verspürst, könnte dein Unterbewusstsein dir sagen, dass du versuchst, vor etwas zu fliehen. Höhenangst, Kontrollverlust oder die Last der Verantwortung zeigen sich in solchen Träumen.",
     },
     {
       type: "quote",
-      text: "Rüyada uçmak, ruhun fiziksel sınırları aşma arzusunun en saf halidir.",
+      text: "Im Traum zu fliegen ist die reinste Form des Wunsches der Seele, physische Grenzen zu überschreiten.",
       author: "Carl Jung",
     },
     {
       type: "paragraph",
-      text: "Jung'a göre uçma rüyası, bireyin bilinçdışı potansiyelini keşfetme ve ego sınırlarını aşma çabasının bir yansımasıdır. Bu rüyalar genellikle yaratıcı dönemlerde veya büyük değişimler öncesinde görülür.",
+      text: "Laut Jung ist der Flugtraum eine Reflexion des Versuchs des Individuums, sein unbewusstes Potenzial zu entdecken und Ego-Grenzen zu überschreiten. Diese Träume treten oft in kreativen Phasen oder vor großen Veränderungen auf.",
     },
   ],
   nextArticle: {
-    title: "Su Rüyası: Duygularınızın Aynası",
-    category: "Rüya Tabirleri",
+    title: "Wasserträume: Spiegel deiner Emotionen",
+    category: "Traumdeutung",
     href: "/article/su-ruyasi",
     image: "/img/hero-default.jpg",
   },
@@ -88,7 +88,7 @@ export default function ArticlePage() {
           <span className="article-meta-divider">•</span>
           <span className="article-meta-item">{ARTICLE_DATA.date}</span>
           <span className="article-meta-divider">•</span>
-          <span className="article-meta-item">{ARTICLE_DATA.readTime} okuma</span>
+          <span className="article-meta-item">{ARTICLE_DATA.readTime} Lesezeit</span>
         </div>
       </div>
 

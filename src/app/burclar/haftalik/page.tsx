@@ -5,18 +5,18 @@ import RelatedCards, { BURC_ONERILERI, ILISKI_ONERILERI } from "@/components/Rel
 export const revalidate = 604800;
 
 const BURCLAR = [
-  { name: "Koç", emoji: "♈", slug: "koc", color: "#ef4444", haftalik: "Bu hafta Mars'ın etkisiyle aksiyona geçme zamanı. Ertelediğin projeler için harekete geç. Hafta ortasında beklenmedik fırsatlar kapını çalabilir." },
-  { name: "Boğa", emoji: "♉", slug: "boga", color: "#ffffff", haftalik: "Venüs'ün desteğiyle bu hafta estetik ve güzellik konularında şanslısın. Finansal yatırımlar için uygun bir dönem." },
-  { name: "İkizler", emoji: "♊", slug: "ikizler", color: "#eab308", haftalik: "Merkür retrosu etkisini azaltıyor, iletişim sorunları çözülüyor. Kısa yolculuklar ve yeni öğrenmeler için ideal hafta." },
-  { name: "Yengeç", emoji: "♋", slug: "yengec", color: "#3b82f6", haftalik: "Ay'ın hareketleriyle duygusal iniş çıkışlar yaşayabilirsin. Ev dekorasyonu veya taşınma planları gündemde olabilir." },
-  { name: "Aslan", emoji: "♌", slug: "aslan", color: "#f97316", haftalik: "Güneş'in gücüyle bu hafta merkez sahnedesin. Tanınma ve takdir alacağın bir dönem. Romantik ilişkilerde tutkulu anlar." },
-  { name: "Başak", emoji: "♍", slug: "basak", color: "#84cc16", haftalik: "Merkür'ün etkisiyle analitik yeteneklerin parlıyor. İş yerinde düzenleme ve iyileştirme projeleri için ideal hafta." },
-  { name: "Terazi", emoji: "♎", slug: "terazi", color: "#ec4899", haftalik: "Venüs'ün desteğiyle romantik ilişkiler canlanıyor. İş ortaklıkları için görüşmeler yapabilirsin." },
-  { name: "Akrep", emoji: "♏", slug: "akrep", color: "#8b5cf6", haftalik: "Plüton'un etkisiyle dönüşüm süreci devam ediyor. Eski alışkanlıklardan kurtulma zamanı." },
-  { name: "Yay", emoji: "♐", slug: "yay", color: "#f43f5e", haftalik: "Jüpiter'in şansıyla bu hafta fırsatlar kapını çalıyor. Yurtdışı bağlantıları ve eğitim konuları ön planda." },
-  { name: "Oğlak", emoji: "♑", slug: "oglak", color: "#6366f1", haftalik: "Satürn'ün etkisiyle sorumluluklar artıyor ama ödüller de yakın. Kariyer atılımları için uygun hafta." },
-  { name: "Kova", emoji: "♒", slug: "kova", color: "#ffffff", haftalik: "Uranüs'ün etkisiyle beklenmedik değişimler olabilir. Arkadaş grupları ve sosyal aktiviteler yoğun." },
-  { name: "Balık", emoji: "♓", slug: "balik", color: "#a855f7", haftalik: "Neptün'ün etkisiyle hayal gücün sınırsız. Sanatsal projeler için ilham dolu bir hafta." },
+  { name: "Widder", emoji: "♈", slug: "koc", color: "#ef4444", haftalik: "Diese Woche bringt dich Mars in Bewegung. Starte endlich die Projekte, die du aufgeschoben hast. Mitte der Woche könnten überraschende Chancen auftauchen." },
+  { name: "Stier", emoji: "♉", slug: "boga", color: "#ffffff", haftalik: "Mit der Unterstützung von Venus hast du diese Woche Glück in Themen wie Ästhetik und Genuss. Eine gute Phase für finanzielle Entscheidungen." },
+  { name: "Zwillinge", emoji: "♊", slug: "ikizler", color: "#eab308", haftalik: "Der Einfluss der Merkur-Retrograde lässt nach, Kommunikationsprobleme lösen sich. Ideal für kurze Reisen und neues Lernen." },
+  { name: "Krebs", emoji: "♋", slug: "yengec", color: "#3b82f6", haftalik: "Durch die Mondbewegungen kannst du emotionale Schwankungen spüren. Themen rund um Zuhause, Deko oder Umzug können aufkommen." },
+  { name: "Löwe", emoji: "♌", slug: "aslan", color: "#f97316", haftalik: "Mit der Kraft der Sonne stehst du diese Woche im Mittelpunkt. Anerkennung ist möglich. In der Liebe: leidenschaftliche Momente." },
+  { name: "Jungfrau", emoji: "♍", slug: "basak", color: "#84cc16", haftalik: "Deine analytischen Fähigkeiten glänzen. Perfekt für Ordnung, Optimierung und Verbesserungsprojekte im Job." },
+  { name: "Waage", emoji: "♎", slug: "terazi", color: "#ec4899", haftalik: "Venus belebt deine Beziehungen. Gute Woche für Gespräche, Kooperationen und Partnerschaften." },
+  { name: "Skorpion", emoji: "♏", slug: "akrep", color: "#8b5cf6", haftalik: "Der Transformationsprozess geht weiter. Zeit, alte Gewohnheiten loszulassen und dich neu auszurichten." },
+  { name: "Schütze", emoji: "♐", slug: "yay", color: "#f43f5e", haftalik: "Mit Jupiters Glück klopfen diese Woche Chancen an. Auslandskontakte, Bildung und Wachstumsthemen stehen im Fokus." },
+  { name: "Steinbock", emoji: "♑", slug: "oglak", color: "#6366f1", haftalik: "Verantwortung steigt, aber auch die Belohnung ist nah. Gute Woche für Karriereschritte und langfristige Planung." },
+  { name: "Wassermann", emoji: "♒", slug: "kova", color: "#ffffff", haftalik: "Uranus kann unerwartete Veränderungen bringen. Freunde, Community und soziale Aktivitäten sind besonders präsent." },
+  { name: "Fische", emoji: "♓", slug: "balik", color: "#a855f7", haftalik: "Neptun stärkt deine Vorstellungskraft. Eine inspirierende Woche für Kunst, Spiritualität und kreative Projekte." },
 ];
 
 export default async function HaftalikBurclarPage() {
@@ -47,7 +47,7 @@ export default async function HaftalikBurclarPage() {
     };
   });
 
-  const weekLabel = `${weekStart.toLocaleDateString("tr-TR", { day: "2-digit", month: "long" })} - ${weekEnd.toLocaleDateString("tr-TR", { day: "2-digit", month: "long", year: "numeric" })}`;
+  const weekLabel = `${weekStart.toLocaleDateString("de-DE", { day: "2-digit", month: "long" })} - ${weekEnd.toLocaleDateString("de-DE", { day: "2-digit", month: "long", year: "numeric" })}`;
 
   return (
     <div style={{ background: "var(--theme-bg)", minHeight: "100vh" }}>
@@ -74,10 +74,10 @@ export default async function HaftalikBurclarPage() {
               background: "rgba(255,255,255,0.2)",
             }}
           >
-            📅 Haftalık Burç Yorumları
+            📅 Wochenhoroskop
           </div>
           <h1 style={{ fontSize: "clamp(1.8rem, 4vw, 2.5rem)", fontWeight: 800, color: "#ffffff", marginBottom: "0.5rem" }}>
-            Bu Hafta Yıldızlar Ne Diyor?
+            Was sagen die Sterne diese Woche?
           </h1>
           <p style={{ fontSize: "1rem", color: "rgba(255,255,255,0.8)" }}>{weekLabel}</p>
         </div>
@@ -130,19 +130,19 @@ export default async function HaftalikBurclarPage() {
                   <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.6rem", marginBottom: "1rem" }}>
                     {burc.ask && (
                       <div style={{ padding: "0.75rem", background: "#1a0b2e", borderRadius: "12px" }}>
-                        <div style={{ fontSize: "0.7rem", fontWeight: 700, color: "#ef4444", marginBottom: "0.3rem" }}>❤️ AŞK</div>
-                        <div style={{ fontSize: "0.82rem", color: "#7f1d1d", lineHeight: 1.5 }}>{burc.ask}</div>
+                        <div style={{ fontSize: "0.7rem", fontWeight: 700, color: "#ef4444", marginBottom: "0.3rem" }}>❤️ LIEBE</div>
+                        <div style={{ fontSize: "0.82rem", color: "#ffffff", lineHeight: 1.5 }}>{burc.ask}</div>
                       </div>
                     )}
                     {burc.kariyer && (
                       <div style={{ padding: "0.75rem", background: "#1a0b2e", borderRadius: "12px" }}>
-                        <div style={{ fontSize: "0.7rem", fontWeight: 700, color: "#ffffff", marginBottom: "0.3rem" }}>💼 KARİYER</div>
+                        <div style={{ fontSize: "0.7rem", fontWeight: 700, color: "#ffffff", marginBottom: "0.3rem" }}>💼 KARRIERE</div>
                         <div style={{ fontSize: "0.82rem", color: "#ffffff", lineHeight: 1.5 }}>{burc.kariyer}</div>
                       </div>
                     )}
                     {burc.saglik && (
                       <div style={{ padding: "0.75rem", background: "#1a0b2e", borderRadius: "12px", gridColumn: "1 / -1" }}>
-                        <div style={{ fontSize: "0.7rem", fontWeight: 700, color: "#ffffff", marginBottom: "0.3rem" }}>🌿 SAĞLIK</div>
+                        <div style={{ fontSize: "0.7rem", fontWeight: 700, color: "#ffffff", marginBottom: "0.3rem" }}>🌿 GESUNDHEIT</div>
                         <div style={{ fontSize: "0.82rem", color: "#ffffff", lineHeight: 1.5 }}>{burc.saglik}</div>
                       </div>
                     )}
@@ -161,7 +161,7 @@ export default async function HaftalikBurclarPage() {
                       textDecoration: "none",
                     }}
                   >
-                    Detaylı Yorum →
+                    Details lesen →
                   </Link>
                 </div>
               </div>
@@ -175,20 +175,20 @@ export default async function HaftalikBurclarPage() {
         <div style={{ maxWidth: "72rem", margin: "0 auto", textAlign: "center" }}>
           <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
             <Link href="/burclar/gunluk" style={{ padding: "0.75rem 1.5rem", background: "#1a0b2e", borderRadius: "9999px", color: "#7c3aed", fontWeight: 600, textDecoration: "none", boxShadow: "0 2px 8px rgba(0,0,0,0.06)" }}>
-              🌅 Günlük Yorumlar
+              🌅 Tageshoroskop
             </Link>
             <Link href="/burclar/aylik" style={{ padding: "0.75rem 1.5rem", background: "#1a0b2e", borderRadius: "9999px", color: "#7c3aed", fontWeight: 600, textDecoration: "none", boxShadow: "0 2px 8px rgba(0,0,0,0.06)" }}>
-              🗓️ Aylık Yorumlar
+              🗓️ Monatshoroskop
             </Link>
             <Link href="/burclar" style={{ padding: "0.75rem 1.5rem", background: "#1a0b2e", borderRadius: "9999px", color: "#7c3aed", fontWeight: 600, textDecoration: "none", boxShadow: "0 2px 8px rgba(0,0,0,0.06)" }}>
-              ♈ Tüm Burçlar
+              ♈ Alle Sternzeichen
             </Link>
           </div>
         </div>
       </section>
 
       <RelatedCards
-        title="İlgini Çekebilir"
+        title="Das könnte dich interessieren"
         items={[BURC_ONERILERI[0], BURC_ONERILERI[2], ILISKI_ONERILERI[0], BURC_ONERILERI[3]]}
       />
     </div>

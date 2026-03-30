@@ -1,21 +1,21 @@
 import Link from "next/link";
 
 const KABUS_TURLERI = [
-  { baslik: "Kovalanmak", anlam: "Kaçınılan sorunlar, bastırılmış korkular, stres", icon: "🏃", cozum: "Kaçtığınız şeyle yüzleşin", slug: "kovalanmak-kabus" },
-  { baslik: "Boğulmak", anlam: "Duygusal baskı, bunaltı, ifade edememe", icon: "😰", cozum: "Duygularınızı ifade edin", slug: "bogulmak" },
-  { baslik: "Kaybolmak", anlam: "Yön kaybı, belirsizlik, kimlik arayışı", icon: "🌫️", cozum: "Hedeflerinizi netleştirin", slug: "kaybolmak" },
-  { baslik: "Ölüm Görmek", anlam: "Dönüşüm, son, yeni başlangıç", icon: "💀", cozum: "Değişimi kabullenin", slug: "olum-gormek" },
-  { baslik: "Felç Olmak", anlam: "Çaresizlik, hareket edememe, karar verememe", icon: "🧊", cozum: "Küçük adımlarla başlayın", slug: "felc-olmak" },
-  { baslik: "Canavar/Yaratık", anlam: "Bastırılmış öfke, korkular, gölge benlik", icon: "👹", cozum: "Karanlık yönlerinizi kabul edin", slug: "canavar-gormek" },
-  { baslik: "Doğal Afet", anlam: "Kontrolsüz değişim, kaos, güçsüzlük hissi", icon: "🌪️", cozum: "Değişime uyum sağlayın", slug: "dogal-afet" },
+  { baslik: "Verfolgt werden", anlam: "Vermiedene Probleme, unterdrückte Ängste, Stress", icon: "🏃", cozum: "Konfrontiere das, vor dem du fliehst", slug: "kovalanmak-kabus" },
+  { baslik: "Ersticken", anlam: "Emotionaler Druck, Beklemmung, Unfähigkeit sich auszudrücken", icon: "😰", cozum: "Drücke deine Gefühle aus", slug: "bogulmak" },
+  { baslik: "Sich verirren", anlam: "Orientierungsverlust, Unsicherheit, Identitätssuche", icon: "🌫️", cozum: "Kläre deine Ziele", slug: "kaybolmak" },
+  { baslik: "Tod sehen", anlam: "Transformation, Ende, Neuanfang", icon: "💀", cozum: "Akzeptiere Veränderung", slug: "olum-gormek" },
+  { baslik: "Gelähmt sein", anlam: "Hilflosigkeit, Bewegungsunfähigkeit, Entscheidungsunfähigkeit", icon: "🧊", cozum: "Beginne mit kleinen Schritten", slug: "felc-olmak" },
+  { baslik: "Monster/Kreatur", anlam: "Unterdrückte Wut, Ängste, Schattenselbst", icon: "👹", cozum: "Akzeptiere deine dunklen Seiten", slug: "canavar-gormek" },
+  { baslik: "Naturkatastrophe", anlam: "Unkontrollierte Veränderung, Chaos, Gefühl der Machtlosigkeit", icon: "🌪️", cozum: "Passe dich der Veränderung an", slug: "dogal-afet" },
 ];
 
 const KABUS_NEDENLERI = [
-  { neden: "Stres ve Anksiyete", aciklama: "Günlük stres ve endişeler gece kabuslarına dönüşebilir" },
-  { neden: "Travmatik Deneyimler", aciklama: "Geçmiş travmalar rüyalarda tekrar yaşanabilir" },
-  { neden: "Uyku Düzensizliği", aciklama: "Düzensiz uyku kabusları tetikleyebilir" },
-  { neden: "Yemek ve İlaçlar", aciklama: "Geç saatte yemek veya bazı ilaçlar etkili olabilir" },
-  { neden: "Bastırılmış Duygular", aciklama: "İfade edilmeyen duygular rüyalarda ortaya çıkar" },
+  { neden: "Stress und Angst", aciklama: "Täglicher Stress und Sorgen können sich in Albträume verwandeln" },
+  { neden: "Traumatische Erfahrungen", aciklama: "Vergangene Traumata können in Träumen wiedererlebt werden" },
+  { neden: "Schlafstörungen", aciklama: "Unregelmäßiger Schlaf kann Albträume auslösen" },
+  { neden: "Essen und Medikamente", aciklama: "Spätes Essen oder bestimmte Medikamente können Einfluss haben" },
+  { neden: "Unterdrückte Emotionen", aciklama: "Nicht ausgedrückte Gefühle treten in Träumen auf" },
 ];
 
 export default function KabusYorumlariPage() {
@@ -42,17 +42,17 @@ export default function KabusYorumlariPage() {
 
         <div style={{ maxWidth: "72rem", margin: "0 auto", position: "relative", zIndex: 1 }}>
           <Link href="/ruya-tabirleri" style={{ color: "rgba(255,255,255,0.9)", fontSize: "0.9rem", textDecoration: "none", padding: "0.5rem 1rem", background: "rgba(255,255,255,0.1)", backdropFilter: "blur(10px)", borderRadius: "9999px", border: "1px solid rgba(255,255,255,0.15)", display: "inline-block", marginBottom: "1.5rem" }}>
-            ← Rüya Tabirleri
+            ← Traumdeutung
           </Link>
           <div style={{ position: "relative", display: "inline-block", marginBottom: "1rem" }}>
             <div style={{ position: "absolute", inset: "-20px", borderRadius: "50%", background: "rgba(255,255,255,0.1)", filter: "blur(30px)" }} />
             <div style={{ fontSize: "5rem", position: "relative", filter: "drop-shadow(0 0 30px rgba(255,255,255,0.3))" }}>�️</div>
           </div>
           <h1 style={{ fontSize: "clamp(2.5rem, 6vw, 4rem)", fontWeight: 800, color: "#ffffff", marginTop: "0.5rem", textShadow: "0 4px 30px rgba(0,0,0,0.3)", letterSpacing: "-0.02em" }}>
-            Kabus Yorumları
+            Albtraum-Deutungen
           </h1>
           <p style={{ fontSize: "1.1rem", color: "rgba(255,255,255,0.85)", maxWidth: "600px", margin: "1rem auto 0" }}>
-            Korkutucu rüyaların anlamı - bilinçaltının uyarı mesajları
+            Die Bedeutung erschreckender Träume - Warnbotschaften des Unterbewusstseins
           </p>
         </div>
         <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "60px", overflow: "hidden" }}>

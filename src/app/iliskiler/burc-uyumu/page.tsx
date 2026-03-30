@@ -20,32 +20,32 @@ const BURCLAR = [
 
 const UYUM_MATRISI: Record<string, Record<string, { uyum: number; yorum: string }>> = {
   koc: {
-    koc: { uyum: 70, yorum: "İki ateş bir arada! Tutku var ama ego çatışmaları olabilir." },
-    boga: { uyum: 55, yorum: "Farklı tempolar. Sabır gerektirir ama tamamlayıcı olabilir." },
-    ikizler: { uyum: 83, yorum: "Eğlenceli ve dinamik bir ilişki. İletişim güçlü." },
-    yengec: { uyum: 42, yorum: "Zor bir kombinasyon. Duygusal ihtiyaçlar farklı." },
-    aslan: { uyum: 95, yorum: "Mükemmel uyum! İki ateş burcu birlikte parlıyor." },
-    basak: { uyum: 50, yorum: "Eleştiri ve sabırsızlık sorun olabilir." },
-    terazi: { uyum: 65, yorum: "Çekicilik var ama uzun vadede zorluklar olabilir." },
-    akrep: { uyum: 60, yorum: "Tutkulu ama güç mücadelesi yaşanabilir." },
-    yay: { uyum: 93, yorum: "Macera dolu harika bir ilişki! Ateş ateşle buluşuyor." },
-    oglak: { uyum: 47, yorum: "Farklı öncelikler. Uzlaşma gerektirir." },
-    kova: { uyum: 78, yorum: "Bağımsızlık seven iki burç. Özgür bir ilişki." },
-    balik: { uyum: 67, yorum: "Tamamlayıcı olabilir ama anlayış gerektirir." },
+    koc: { uyum: 70, yorum: "Zwei Feuer zusammen! Leidenschaft ist da, aber Ego-Konflikte können auftreten." },
+    boga: { uyum: 55, yorum: "Unterschiedliche Tempi. Erfordert Geduld, kann aber ergänzend sein." },
+    ikizler: { uyum: 83, yorum: "Unterhaltsame und dynamische Beziehung. Starke Kommunikation." },
+    yengec: { uyum: 42, yorum: "Schwierige Kombination. Emotionale Bedürfnisse unterscheiden sich." },
+    aslan: { uyum: 95, yorum: "Perfekte Harmonie! Zwei Feuerzeichen strahlen zusammen." },
+    basak: { uyum: 50, yorum: "Kritik und Ungeduld können problematisch sein." },
+    terazi: { uyum: 65, yorum: "Anziehung ist da, aber langfristig können Schwierigkeiten auftreten." },
+    akrep: { uyum: 60, yorum: "Leidenschaftlich, aber Machtkämpfe können entstehen." },
+    yay: { uyum: 93, yorum: "Wunderbare abenteuerliche Beziehung! Feuer trifft Feuer." },
+    oglak: { uyum: 47, yorum: "Unterschiedliche Prioritäten. Erfordert Kompromisse." },
+    kova: { uyum: 78, yorum: "Zwei unabhängigkeitsliebende Zeichen. Freie Beziehung." },
+    balik: { uyum: 67, yorum: "Kann ergänzend sein, erfordert aber Verständnis." },
   },
   aslan: {
-    koc: { uyum: 95, yorum: "Mükemmel uyum! İki ateş burcu birlikte parlıyor." },
-    boga: { uyum: 50, yorum: "İnatçı iki burç. Güç mücadelesi olabilir." },
-    ikizler: { uyum: 80, yorum: "Sosyal ve eğlenceli bir çift." },
-    yengec: { uyum: 65, yorum: "Koruyucu ve sadık ama farklı ihtiyaçlar." },
-    aslan: { uyum: 75, yorum: "İki kral bir arada! Ego yönetimi önemli." },
-    basak: { uyum: 55, yorum: "Eleştiri Aslan'ı incitebilir." },
-    terazi: { uyum: 88, yorum: "Harika bir sosyal çift. Uyum yüksek." },
-    akrep: { uyum: 58, yorum: "Tutkulu ama güç mücadelesi var." },
-    yay: { uyum: 93, yorum: "Ateş ateşle! Macera ve tutku dolu." },
-    oglak: { uyum: 52, yorum: "Farklı yaklaşımlar. Sabır gerektirir." },
-    kova: { uyum: 70, yorum: "Çekici ama zıt kutuplar." },
-    balik: { uyum: 62, yorum: "Romantik ama farklı dünyalar." },
+    koc: { uyum: 95, yorum: "Perfekte Harmonie! Zwei Feuerzeichen strahlen zusammen." },
+    boga: { uyum: 50, yorum: "Zwei stur Zeichen. Machtkämpfe können auftreten." },
+    ikizler: { uyum: 80, yorum: "Ein soziales und unterhaltsames Paar." },
+    yengec: { uyum: 65, yorum: "Beschützend und loyal, aber unterschiedliche Bedürfnisse." },
+    aslan: { uyum: 75, yorum: "Zwei Könige zusammen! Ego-Management ist wichtig." },
+    basak: { uyum: 55, yorum: "Kritik kann den Löwen verletzen." },
+    terazi: { uyum: 88, yorum: "Ein wunderbares soziales Paar. Hohe Harmonie." },
+    akrep: { uyum: 58, yorum: "Leidenschaftlich, aber es gibt Machtkämpfe." },
+    yay: { uyum: 93, yorum: "Feuer mit Feuer! Voller Abenteuer und Leidenschaft." },
+    oglak: { uyum: 52, yorum: "Unterschiedliche Ansätze. Erfordert Geduld." },
+    kova: { uyum: 70, yorum: "Anziehend, aber gegensätzliche Pole." },
+    balik: { uyum: 62, yorum: "Romantisch, aber unterschiedliche Welten." },
   },
 };
 
@@ -73,9 +73,9 @@ function getUyum(burc1: string, burc2: string): { uyum: number; yorum: string } 
   const e1 = getElement(burc1);
   const e2 = getElement(burc2);
 
-  if (e1 === e2) return { uyum: 85, yorum: "Aynı element! Doğal bir uyum var." };
+  if (e1 === e2) return { uyum: 85, yorum: "Gleiches Element! Natürliche Harmonie vorhanden." };
   if ((e1 === "ates" && e2 === "hava") || (e1 === "hava" && e2 === "ates")) {
-    return { uyum: 80, yorum: "Ateş ve hava birbirini besler. Güçlü uyum." };
+    return { uyum: 80, yorum: "Feuer und Luft nähren einander. Starke Harmonie." };
   }
   if ((e1 === "toprak" && e2 === "su") || (e1 === "su" && e2 === "toprak")) {
     return { uyum: 82, yorum: "Toprak ve su birbirini tamamlar. Derin bağ." };
@@ -106,13 +106,13 @@ export default function BurcUyumuPage() {
       >
         <div style={{ maxWidth: "72rem", margin: "0 auto" }}>
           <Link href="/iliskiler" style={{ color: "rgba(255,255,255,0.8)", fontSize: "0.9rem", textDecoration: "none" }}>
-            ← İlişkiler
+            ← Beziehungen
           </Link>
           <h1 style={{ fontSize: "2rem", fontWeight: 800, color: "#ffffff", marginTop: "1rem" }}>
-            💑 Burç Uyumu Hesapla
+            💑 Sternzeichen-Kompatibilität Berechnen
           </h1>
           <p style={{ color: "rgba(255,255,255,0.85)", marginTop: "0.5rem" }}>
-            İki burç arasındaki uyumu keşfet
+            Entdecke die Kompatibilität zwischen zwei Sternzeichen
           </p>
         </div>
       </section>

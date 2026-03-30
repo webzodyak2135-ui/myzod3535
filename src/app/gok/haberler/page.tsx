@@ -2,55 +2,55 @@ import Link from "next/link";
 
 const HABERLER = [
   {
-    tarih: "20 Mart 2026",
-    baslik: "Güneş Koç Burcuna Geçiyor — Astrolojik Yeni Yıl",
-    ozet: "Güneş Koç burcuna adım attı! Yeni bir astrolojik yıl başlarken enerji yükseliyor. Cesaret, kararlılık ve yeni başlangıçlar için mükemmel bir dönem.",
-    kategori: "Burç Geçişi",
+    tarih: "20. März 2026",
+    baslik: "Die Sonne wechselt in den Widder — Astrologisches Neujahr",
+    ozet: "Die Sonne betritt den Widder! Mit dem Beginn eines neuen astrologischen Jahres steigt die Energie. Eine perfekte Zeit für Mut, Entschlossenheit und Neubegìnne.",
+    kategori: "Sternzeichen-Übergang",
     icon: "☀️"
   },
   {
-    tarih: "25 Mart 2026",
-    baslik: "Merkür Koç'ta Güçlü İletişim Dönemi",
-    ozet: "Merkür Koç burcunda cesur ve doğrudan iletişimi destekliyor. Önemli konuşmalar, müzakereler ve yaratıcı fikirler için elverişli bir dönem.",
-    kategori: "Gezegen",
+    tarih: "25. März 2026",
+    baslik: "Merkur im Widder - Starke Kommunikationsphase",
+    ozet: "Merkur im Widder unterstützt mutige und direkte Kommunikation. Eine günstige Zeit für wichtige Gespräche, Verhandlungen und kreative Ideen.",
+    kategori: "Planet",
     icon: "☿️"
   },
   {
-    tarih: "1 Nisan 2026",
-    baslik: "Terazi Dolunayı — İlişkilerde Denge",
-    ozet: "Terazi burcundaki bu dolunay, tüm ilişkilerde denge ve adalet temalarını ön plana çıkarıyor. Ortaklıklar, anlaşmalar ve karşılıklı anlayış önem kazanıyor.",
-    kategori: "Dolunay",
+    tarih: "1. April 2026",
+    baslik: "Waage-Vollmond — Balance in Beziehungen",
+    ozet: "Dieser Vollmond in der Waage bringt Themen wie Balance und Gerechtigkeit in allen Beziehungen in den Vordergrund. Partnerschaften, Vereinbarungen und gegenseitiges Verständnis gewinnen an Bedeutung.",
+    kategori: "Vollmond",
     icon: "🌕"
   },
   {
-    tarih: "17 Nisan 2026",
-    baslik: "Koç Yeni Ayı — Güçlü Başlangıçlar",
-    ozet: "Koç burcundaki yeni ay, cesur adımlar atmak ve uzun süredir ertelenen projeleri başlatmak için muhteşem bir enerji sunuyor.",
-    kategori: "Yeni Ay",
+    tarih: "17. April 2026",
+    baslik: "Widder-Neumond — Kraftvolle Anfänge",
+    ozet: "Der Neumond im Widder bietet eine fantastische Energie, um mutige Schritte zu wagen und lange aufgeschobene Projekte zu starten.",
+    kategori: "Neumond",
     icon: "🌑"
   },
   {
-    tarih: "1 Mayıs 2026",
-    baslik: "Tam Ay Tutulması — Akrep Burcunda",
-    ozet: "Akrep burcundaki bu güçlü ay tutulması derin dönüşümleri tetikleyecek. Gizli kalan gerçekler yüzeye çıkıyor, eski döngüler kapanıyor.",
-    kategori: "Tutulma",
+    tarih: "1. Mai 2026",
+    baslik: "Totale Mondfinsternis — im Skorpion",
+    ozet: "Diese kraftvolle Mondfinsternis im Skorpion wird tiefe Transformationen auslösen. Verborgene Wahrheiten kommen ans Licht, alte Zyklen schließen sich.",
+    kategori: "Finsternis",
     icon: "🌑"
   },
   {
-    tarih: "16 Mayıs 2026",
-    baslik: "Halkalı Güneş Tutulması — Boğa Burcunda",
-    ozet: "Boğa burcundaki bu özel güneş tutulması maddi konular, güvenlik ve değer yargılarında köklü dönüşümler için güçlü bir portal açıyor.",
-    kategori: "Tutulma",
+    tarih: "16. Mai 2026",
+    baslik: "Ringförmige Sonnenfinsternis — im Stier",
+    ozet: "Diese besondere Sonnenfinsternis im Stier öffnet ein kraftvolles Portal für grundlegende Transformationen in materiellen Angelegenheiten, Sicherheit und Werten.",
+    kategori: "Finsternis",
     icon: "🌗"
   },
 ];
 
 const ONEMLI_TARIHLER = [
-  { tarih: "1 Mayıs 2026", olay: "Tam Ay Tutulması — Akrep", onem: "Çok Önemli" },
-  { tarih: "16 Mayıs 2026", olay: "Halkalı Güneş Tutulması — Boğa", onem: "Çok Önemli" },
-  { tarih: "14 Temmuz 2026", olay: "Satürn Retrograde Başlangıcı", onem: "Önemli" },
-  { tarih: "18 Temmuz 2026", olay: "Merkür Retrograde Başlangıcı", onem: "Önemli" },
-  { tarih: "11 Kasım 2026", olay: "Tam Güneş Tutulması — Akrep", onem: "Çok Önemli" },
+  { tarih: "1. Mai 2026", olay: "Totale Mondfinsternis — Skorpion", onem: "Sehr wichtig" },
+  { tarih: "16. Mai 2026", olay: "Ringförmige Sonnenfinsternis — Stier", onem: "Sehr wichtig" },
+  { tarih: "14. Juli 2026", olay: "Saturn wird rückläufig", onem: "Wichtig" },
+  { tarih: "18. Juli 2026", olay: "Merkur wird rückläufig", onem: "Wichtig" },
+  { tarih: "11. November 2026", olay: "Totale Sonnenfinsternis — Skorpion", onem: "Sehr wichtig" },
 ];
 
 export default function KozmikHaberlerPage() {
@@ -66,14 +66,14 @@ export default function KozmikHaberlerPage() {
       >
         <div style={{ maxWidth: "72rem", margin: "0 auto" }}>
           <Link href="/gok-gundemi" style={{ color: "rgba(255,255,255,0.8)", fontSize: "0.9rem", textDecoration: "none" }}>
-            ← Gök Gündemi
+            ← Kosmischer Kalender
           </Link>
           <div style={{ fontSize: "4rem", marginTop: "1rem" }}>📡</div>
           <h1 style={{ fontSize: "clamp(2rem, 5vw, 3rem)", fontWeight: 800, color: "#ffffff", marginTop: "0.5rem" }}>
-            Kozmik Haberler
+            Kosmische Nachrichten
           </h1>
           <p style={{ fontSize: "1.1rem", color: "rgba(255,255,255,0.9)", maxWidth: "600px", margin: "1rem auto 0" }}>
-            Son kozmik gelişmeler ve astrolojik gündem
+            Neueste kosmische Entwicklungen und astrologische Agenda
           </p>
         </div>
       </section>
@@ -82,7 +82,7 @@ export default function KozmikHaberlerPage() {
       <section style={{ padding: "3rem 1rem" }}>
         <div style={{ maxWidth: "72rem", margin: "0 auto" }}>
           <h2 style={{ fontSize: "1.5rem", fontWeight: 700, color: "#ffffff", marginBottom: "1.5rem", textAlign: "center" }}>
-            📅 Yaklaşan Önemli Tarihler
+            📅 Bevorstehende wichtige Daten
           </h2>
           <div style={{ background: "#1a0b2e", borderRadius: "20px", overflow: "hidden", boxShadow: "0 2px 12px rgba(0,0,0,0.06)" }}>
             {ONEMLI_TARIHLER.map((item, i) => (
@@ -108,8 +108,8 @@ export default function KozmikHaberlerPage() {
                     borderRadius: "9999px",
                     fontSize: "0.75rem",
                     fontWeight: 600,
-                    background: item.onem === "Çok Önemli" ? "#1a0b2e" : item.onem === "Önemli" ? "#fef3c7" : "#e0f2fe",
-                    color: item.onem === "Çok Önemli" ? "#991b1b" : item.onem === "Önemli" ? "#92400e" : "#0369a1",
+                    background: item.onem === "Sehr wichtig" ? "#1a0b2e" : item.onem === "Wichtig" ? "#fef3c7" : "#e0f2fe",
+                    color: item.onem === "Sehr wichtig" ? "#991b1b" : item.onem === "Wichtig" ? "#92400e" : "#0369a1",
                   }}
                 >
                   {item.onem}
@@ -124,7 +124,7 @@ export default function KozmikHaberlerPage() {
       <section style={{ padding: "3rem 1rem", background: "#1a0b2e" }}>
         <div style={{ maxWidth: "72rem", margin: "0 auto" }}>
           <h2 style={{ fontSize: "1.5rem", fontWeight: 700, color: "#ffffff", marginBottom: "1.5rem", textAlign: "center" }}>
-            Son Kozmik Gelişmeler
+            Neueste kosmische Entwicklungen
           </h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "1.5rem" }}>
             {HABERLER.map((haber, i) => (
@@ -172,11 +172,11 @@ export default function KozmikHaberlerPage() {
         <div style={{ maxWidth: "72rem", margin: "0 auto" }}>
           <div style={{ background: "linear-gradient(135deg, #0ea5e915, #14b8a615)", borderRadius: "24px", padding: "2rem", textAlign: "center" }}>
             <h2 style={{ fontSize: "1.25rem", fontWeight: 700, color: "#ffffff", marginBottom: "1rem" }}>
-              🔔 Kozmik Güncellemelerden Haberdar Olun
+              🔔 Bleib auf dem Laufenden über kosmische Updates
             </h2>
             <p style={{ color: "#ffffff", lineHeight: 1.8, maxWidth: "600px", margin: "0 auto" }}>
-              Önemli gezegen geçişleri, tutulmalar ve astrolojik olaylar hakkında
-              güncel bilgiler için sayfamızı düzenli takip edin.
+              Folge unserer Seite regelmäßig für aktuelle Informationen über wichtige
+              Planetenübergänge, Finsternisse und astrologische Ereignisse.
             </p>
           </div>
         </div>

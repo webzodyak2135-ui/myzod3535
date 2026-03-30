@@ -133,14 +133,14 @@ export default function BurcUyumuPage() {
               <select
                 value={burc1}
                 onChange={(e) => setBurc1(e.target.value)}
-                style={{ 
-                  padding: "1rem 1.5rem", 
-                  borderRadius: "12px", 
-                  border: "2px solid rgba(168, 85, 247, 0.5)", 
+                style={{
+                  padding: "1rem 1.5rem",
+                  borderRadius: "12px",
+                  border: "2px solid rgba(168, 85, 247, 0.5)",
                   background: "rgba(45, 27, 78, 0.5)",
                   color: "#ffffff",
-                  fontSize: "1rem", 
-                  minWidth: "150px" 
+                  fontSize: "1rem",
+                  minWidth: "150px"
                 }}
               >
                 <option value="" style={{ background: "#1a0b2e", color: "#ffffff" }}>Birinci Burç</option>
@@ -154,14 +154,14 @@ export default function BurcUyumuPage() {
               <select
                 value={burc2}
                 onChange={(e) => setBurc2(e.target.value)}
-                style={{ 
-                  padding: "1rem 1.5rem", 
-                  borderRadius: "12px", 
-                  border: "2px solid rgba(168, 85, 247, 0.5)", 
+                style={{
+                  padding: "1rem 1.5rem",
+                  borderRadius: "12px",
+                  border: "2px solid rgba(168, 85, 247, 0.5)",
                   background: "rgba(45, 27, 78, 0.5)",
                   color: "#ffffff",
-                  fontSize: "1rem", 
-                  minWidth: "150px" 
+                  fontSize: "1rem",
+                  minWidth: "150px"
                 }}
               >
                 <option value="" style={{ background: "#1a0b2e", color: "#ffffff" }}>İkinci Burç</option>
@@ -177,15 +177,15 @@ export default function BurcUyumuPage() {
             <select
               value={tonePreset}
               onChange={(e) => setTonePreset(e.target.value as "kanka" | "uzman" | "soft")}
-              style={{ 
-                width: "100%", 
-                marginBottom: "0.9rem", 
-                padding: "0.85rem 1rem", 
-                borderRadius: "12px", 
-                border: "2px solid rgba(168, 85, 247, 0.5)", 
+              style={{
+                width: "100%",
+                marginBottom: "0.9rem",
+                padding: "0.85rem 1rem",
+                borderRadius: "12px",
+                border: "2px solid rgba(168, 85, 247, 0.5)",
                 background: "rgba(45, 27, 78, 0.5)",
                 color: "#ffffff",
-                fontSize: "0.95rem" 
+                fontSize: "0.95rem"
               }}
             >
               <option value="kanka" style={{ background: "#1a0b2e", color: "#ffffff" }}>Kanka (samimi)</option>
@@ -209,7 +209,7 @@ export default function BurcUyumuPage() {
                 cursor: !burc1 || !burc2 || isLoadingAi ? "not-allowed" : "pointer",
               }}
             >
-              {isLoadingAi ? "✨ Zodyaklı AI ile analiz ediliyor..." : "🔮 Zodyaklı ile Detaylı Uyum Analizi"}
+              {isLoadingAi ? "✨ SternenFeed AI ile analiz ediliyor..." : "🔮 SternenFeed ile Detaylı Uyum Analizi"}
             </button>
 
             {isLoadingAi && (
@@ -258,10 +258,10 @@ export default function BurcUyumuPage() {
                   }}
                 >
                   <p style={{ fontSize: "1rem", color: "#a855f7", fontWeight: 600, marginBottom: "0.5rem" }}>
-                    🌟 Yıldızlar Konuşuyor...
+                    🌟 Die Sterne Sprechen...
                   </p>
                   <p style={{ fontSize: "0.9rem", color: "#ffffff", lineHeight: 1.6 }}>
-                    Zodyaklı AI seçtiğiniz burçları analiz ediyor. Detaylı uyum yorumunuz hazırlanıyor...
+                    SternenFeed AI analysiert die ausgewählten Sternzeichen. Eure detaillierte Kompatibilitätsinterpretation wird vorbereitet...
                   </p>
                 </div>
               </div>
@@ -293,10 +293,10 @@ export default function BurcUyumuPage() {
                   </div>
                 </div>
                 <p style={{ fontSize: "1.1rem", fontWeight: 600, color: "#ffffff" }}>
-                  {uyum >= 90 ? "Mükemmel Uyum! 💕" : uyum >= 80 ? "Harika Uyum! 💖" : uyum >= 70 ? "İyi Uyum 💗" : uyum >= 60 ? "Orta Uyum 💛" : uyum >= 50 ? "Zorlayıcı Uyum 🧡" : "Zor Uyum ❤️‍🩹"}
+                  {uyum >= 90 ? "Perfekte Harmonie! 💕" : uyum >= 80 ? "Wunderbare Harmonie! 💖" : uyum >= 70 ? "Gute Harmonie 💗" : uyum >= 60 ? "Mittlere Harmonie 💛" : uyum >= 50 ? "Herausfordernde Harmonie 🧡" : "Schwierige Harmonie ❤️‍🩹"}
                 </p>
                 <p style={{ fontSize: "0.9rem", color: "#ffffff", marginTop: "0.5rem" }}>
-                  {uyum >= 80 ? "Bu iki burç birbirini mükemmel tamamlıyor!" : uyum >= 60 ? "Anlayış ve sabırla güzel bir ilişki kurulabilir." : "Farklılıklar zorluk yaratabilir ama imkansız değil."}
+                  {uyum >= 80 ? "Diese beiden Sternzeichen ergänzen sich perfekt!" : uyum >= 60 ? "Mit Verständnis und Geduld kann eine schöne Beziehung aufgebaut werden." : "Unterschiede können Schwierigkeiten bereiten, aber es ist nicht unmöglich."}
                 </p>
 
                 {aiAnaliz && (
@@ -312,7 +312,7 @@ export default function BurcUyumuPage() {
                       }}
                     >
                       <h3 style={{ fontSize: "1.1rem", color: "#a855f7", marginBottom: "0.75rem", fontWeight: 700 }}>
-                        🔮 Zodyaklı Yorumu
+                        🔮 SternenFeed Yorumu
                       </h3>
                       <p style={{ fontSize: "0.95rem", color: "#ffffff", lineHeight: "1.6" }}>
                         {aiAnaliz.ozet}

@@ -5,94 +5,94 @@ import Link from "next/link";
 
 const SORULAR = [
   {
-    soru: "Çalışma ortamı tercihin hangisi?",
+    soru: "Was ist deine bevorzugte Arbeitsumgebung?",
     secenekler: [
-      { text: "Ofis, düzenli çalışma saatleri", tip: "geleneksel" },
-      { text: "Evden çalışma, esnek saatler", tip: "bagimsiz" },
-      { text: "Sürekli hareket, saha çalışması", tip: "maceraci" },
-      { text: "Yaratıcı stüdyo, sanatsal ortam", tip: "yaratici" },
+      { text: "Büro, regelmäßige Arbeitszeiten", tip: "geleneksel" },
+      { text: "Homeoffice, flexible Zeiten", tip: "bagimsiz" },
+      { text: "Ständige Bewegung, Außendienst", tip: "maceraci" },
+      { text: "Kreatives Studio, künstlerische Umgebung", tip: "yaratici" },
     ]
   },
   {
-    soru: "Bir projede hangi rolü tercih edersin?",
+    soru: "Welche Rolle bevorzugst du in einem Projekt?",
     secenekler: [
-      { text: "Lider, yönlendiren", tip: "lider" },
-      { text: "Analist, araştıran", tip: "analist" },
-      { text: "Yaratıcı, fikir üreten", tip: "yaratici" },
-      { text: "Destekçi, uyum sağlayan", tip: "destekci" },
+      { text: "Führer, Leitender", tip: "lider" },
+      { text: "Analyst, Forscher", tip: "analist" },
+      { text: "Kreativer, Ideengeber", tip: "yaratici" },
+      { text: "Unterstützer, Harmonisierer", tip: "destekci" },
     ]
   },
   {
-    soru: "Başarı senin için ne demek?",
+    soru: "Was bedeutet Erfolg für dich?",
     secenekler: [
-      { text: "Maddi güvence ve statü", tip: "geleneksel" },
-      { text: "Özgürlük ve bağımsızlık", tip: "bagimsiz" },
-      { text: "Yaratıcı tatmin ve ifade", tip: "yaratici" },
-      { text: "İnsanlara yardım etmek", tip: "destekci" },
+      { text: "Finanzielle Sicherheit und Status", tip: "geleneksel" },
+      { text: "Freiheit und Unabhängigkeit", tip: "bagimsiz" },
+      { text: "Kreative Erfüllung und Ausdruck", tip: "yaratici" },
+      { text: "Menschen helfen", tip: "destekci" },
     ]
   },
   {
-    soru: "Stresli durumlarla nasıl başa çıkarsın?",
+    soru: "Wie gehst du mit stressigen Situationen um?",
     secenekler: [
-      { text: "Planlama ve organize olma", tip: "analist" },
-      { text: "Harekete geçme, çözüm bulma", tip: "lider" },
-      { text: "Yaratıcı çözümler düşünme", tip: "yaratici" },
-      { text: "Destek alma, paylaşma", tip: "destekci" },
+      { text: "Planung und Organisation", tip: "analist" },
+      { text: "Handeln, Lösungen finden", tip: "lider" },
+      { text: "Kreative Lösungen denken", tip: "yaratici" },
+      { text: "Unterstützung suchen, teilen", tip: "destekci" },
     ]
   },
   {
-    soru: "İdeal iş gününde ne yaparsın?",
+    soru: "Was machst du an einem idealen Arbeitstag?",
     secenekler: [
-      { text: "Toplantılar, kararlar, yönetim", tip: "lider" },
-      { text: "Araştırma, analiz, raporlama", tip: "analist" },
-      { text: "Tasarım, yazı, sanat", tip: "yaratici" },
-      { text: "İnsanlarla iletişim, yardım", tip: "destekci" },
+      { text: "Meetings, Entscheidungen, Management", tip: "lider" },
+      { text: "Forschung, Analyse, Berichterstattung", tip: "analist" },
+      { text: "Design, Schreiben, Kunst", tip: "yaratici" },
+      { text: "Kommunikation mit Menschen, Hilfe", tip: "destekci" },
     ]
   },
 ];
 
 const KARIYER_SONUCLARI: Record<string, { baslik: string; aciklama: string; meslekler: string[]; burclar: string[] }> = {
   lider: {
-    baslik: "Lider Ruh",
-    aciklama: "Doğal liderlik özelliklerine sahipsin. İnsanları yönlendirmek ve büyük kararlar almak sana göre.",
-    meslekler: ["CEO / Yönetici", "Girişimci", "Proje Yöneticisi", "Politikacı", "Avukat"],
-    burclar: ["Koç", "Aslan", "Oğlak"]
+    baslik: "Führer-Seele",
+    aciklama: "Du hast natürliche Führungsqualitäten. Menschen zu leiten und große Entscheidungen zu treffen liegt dir.",
+    meslekler: ["CEO / Manager", "Unternehmer", "Projektmanager", "Politiker", "Anwalt"],
+    burclar: ["Widder", "Löwe", "Steinbock"]
   },
   analist: {
-    baslik: "Analitik Zeka",
-    aciklama: "Detaylara hakimsin ve analitik düşünme yeteneğin güçlü. Veri ve araştırma senin alanın.",
-    meslekler: ["Veri Analisti", "Araştırmacı", "Mühendis", "Finansçı", "Bilim İnsanı"],
-    burclar: ["Başak", "Akrep", "Kova"]
+    baslik: "Analytischer Verstand",
+    aciklama: "Du beherrschst Details und hast starke analytische Denkfähigkeiten. Daten und Forschung sind dein Bereich.",
+    meslekler: ["Datenanalyst", "Forscher", "Ingenieur", "Finanzexperte", "Wissenschaftler"],
+    burclar: ["Jungfrau", "Skorpion", "Wassermann"]
   },
   yaratici: {
-    baslik: "Yaratıcı Ruh",
-    aciklama: "Sanatsal yeteneklerin ve yaratıcılığın ön planda. Kendini ifade etmek senin için önemli.",
-    meslekler: ["Tasarımcı", "Yazar", "Müzisyen", "Fotoğrafçı", "Reklamcı"],
-    burclar: ["Balık", "Terazi", "Aslan"]
+    baslik: "Kreative Seele",
+    aciklama: "Deine künstlerischen Talente und Kreativität stehen im Vordergrund. Dich auszudrücken ist dir wichtig.",
+    meslekler: ["Designer", "Autor", "Musiker", "Fotograf", "Werbefachmann"],
+    burclar: ["Fische", "Waage", "Löwe"]
   },
   destekci: {
-    baslik: "Yardımsever Ruh",
-    aciklama: "İnsanlara yardım etmek seni mutlu ediyor. Empati ve iletişim yeteneklerin güçlü.",
-    meslekler: ["Psikolog", "Öğretmen", "Hemşire", "Sosyal Hizmet Uzmanı", "İK Uzmanı"],
-    burclar: ["Yengeç", "Balık", "Terazi"]
+    baslik: "Hilfsbereite Seele",
+    aciklama: "Menschen zu helfen macht dich glücklich. Deine Empathie- und Kommunikationsfähigkeiten sind stark.",
+    meslekler: ["Psychologe", "Lehrer", "Krankenschwester", "Sozialarbeiter", "HR-Spezialist"],
+    burclar: ["Krebs", "Fische", "Waage"]
   },
   bagimsiz: {
-    baslik: "Özgür Ruh",
-    aciklama: "Bağımsızlık ve özgürlük senin için vazgeçilmez. Kendi kurallarınla çalışmak istiyorsun.",
-    meslekler: ["Freelancer", "Danışman", "Dijital Göçebe", "Yatırımcı", "İçerik Üretici"],
-    burclar: ["Yay", "Kova", "İkizler"]
+    baslik: "Freie Seele",
+    aciklama: "Unabhängigkeit und Freiheit sind für dich unverzichtbar. Du möchtest nach deinen eigenen Regeln arbeiten.",
+    meslekler: ["Freelancer", "Berater", "Digitaler Nomade", "Investor", "Content Creator"],
+    burclar: ["Schütze", "Wassermann", "Zwillinge"]
   },
   geleneksel: {
-    baslik: "İstikrar Arayan",
-    aciklama: "Güvenlik ve istikrar senin için önemli. Düzenli ve planlı çalışmayı seviyorsun.",
-    meslekler: ["Bankacı", "Devlet Memuru", "Muhasebeci", "Hukukçu", "Yönetici Asistanı"],
-    burclar: ["Boğa", "Oğlak", "Başak"]
+    baslik: "Stabilitätssuchend",
+    aciklama: "Sicherheit und Stabilität sind dir wichtig. Du liebst regelmäßiges und geplantes Arbeiten.",
+    meslekler: ["Banker", "Beamter", "Buchhalter", "Jurist", "Assistenz der Geschäftsführung"],
+    burclar: ["Stier", "Steinbock", "Jungfrau"]
   },
   maceraci: {
-    baslik: "Maceracı Ruh",
-    aciklama: "Monotonluk sana göre değil. Sürekli hareket ve yeni deneyimler arıyorsun.",
-    meslekler: ["Pilot", "Turizm Rehberi", "Gazeteci", "Satış Temsilcisi", "Etkinlik Organizatörü"],
-    burclar: ["Yay", "Koç", "İkizler"]
+    baslik: "Abenteurer-Seele",
+    aciklama: "Monotonie ist nichts für dich. Du suchst ständige Bewegung und neue Erfahrungen.",
+    meslekler: ["Pilot", "Reiseleiter", "Journalist", "Vertriebsmitarbeiter", "Eventorganisator"],
+    burclar: ["Schütze", "Widder", "Zwillinge"]
   },
 };
 
@@ -131,27 +131,27 @@ export default function KariyerTestiPage() {
             <div style={{ fontSize: "4rem", marginBottom: "1rem" }}>💼</div>
             <h1 style={{ fontSize: "2rem", fontWeight: 800, color: "#ffffff", marginBottom: "0.5rem" }}>{kariyer.baslik}</h1>
             <p style={{ fontSize: "1.1rem", color: "rgba(255,255,255,0.9)", marginBottom: "1.5rem" }}>{kariyer.aciklama}</p>
-            
+
             <div style={{ background: "rgba(255,255,255,0.1)", borderRadius: "16px", padding: "1.5rem", marginBottom: "1.5rem", textAlign: "left" }}>
-              <h3 style={{ fontSize: "1rem", fontWeight: 600, color: "#ffffff", marginBottom: "0.75rem" }}>🎯 Önerilen Meslekler</h3>
+              <h3 style={{ fontSize: "1rem", fontWeight: 600, color: "#ffffff", marginBottom: "0.75rem" }}>🎯 Empfohlene Berufe</h3>
               <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem" }}>
                 {kariyer.meslekler.map((m, i) => (
                   <span key={i} style={{ padding: "0.4rem 0.8rem", background: "rgba(255,255,255,0.2)", borderRadius: "9999px", color: "#ffffff", fontSize: "0.85rem" }}>{m}</span>
                 ))}
               </div>
             </div>
-            
+
             <div style={{ background: "rgba(255,255,255,0.1)", borderRadius: "16px", padding: "1.5rem", marginBottom: "2rem", textAlign: "left" }}>
-              <h3 style={{ fontSize: "1rem", fontWeight: 600, color: "#ffffff", marginBottom: "0.75rem" }}>♈ Uyumlu Burçlar</h3>
+              <h3 style={{ fontSize: "1rem", fontWeight: 600, color: "#ffffff", marginBottom: "0.75rem" }}>♈ Kompatible Sternzeichen</h3>
               <p style={{ color: "rgba(255,255,255,0.9)", fontSize: "0.95rem" }}>{kariyer.burclar.join(", ")}</p>
             </div>
 
             <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
               <button onClick={resetTest} style={{ padding: "0.75rem 1.5rem", background: "#1a0b2e", color: "#ffffff", borderRadius: "9999px", fontWeight: 600, border: "none", cursor: "pointer" }}>
-                Tekrar Dene
+                Nochmal versuchen
               </button>
               <Link href="/testler" style={{ padding: "0.75rem 1.5rem", background: "rgba(255,255,255,0.2)", color: "#ffffff", borderRadius: "9999px", fontWeight: 600, textDecoration: "none" }}>
-                Diğer Testler
+                Andere Tests
               </Link>
             </div>
           </div>
@@ -166,16 +166,16 @@ export default function KariyerTestiPage() {
     <div style={{ background: "var(--theme-bg)", minHeight: "100vh" }}>
       <section style={{ background: "linear-gradient(135deg, #0891b2 0%, #06b6d4 100%)", padding: "2rem 1rem", textAlign: "center" }}>
         <div style={{ maxWidth: "72rem", margin: "0 auto" }}>
-          <Link href="/testler" style={{ color: "rgba(255,255,255,0.8)", fontSize: "0.9rem", textDecoration: "none" }}>← Testler</Link>
-          <h1 style={{ fontSize: "1.75rem", fontWeight: 800, color: "#ffffff", marginTop: "1rem" }}>💼 Kariyer Testi</h1>
-          <p style={{ color: "rgba(255,255,255,0.8)", marginTop: "0.5rem" }}>Yıldızlar hangi kariyeri işaret ediyor?</p>
+          <Link href="/testler" style={{ color: "rgba(255,255,255,0.8)", fontSize: "0.9rem", textDecoration: "none" }}>← Tests</Link>
+          <h1 style={{ fontSize: "1.75rem", fontWeight: 800, color: "#ffffff", marginTop: "1rem" }}>💼 Karriere-Test</h1>
+          <p style={{ color: "rgba(255,255,255,0.8)", marginTop: "0.5rem" }}>Welche Karriere zeigen die Sterne für dich?</p>
         </div>
       </section>
 
       <div style={{ padding: "1rem", background: "#1a0b2e" }}>
         <div style={{ maxWidth: "600px", margin: "0 auto" }}>
           <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "0.5rem" }}>
-            <span style={{ fontSize: "0.85rem", color: "#ffffff" }}>Soru {currentSoru + 1} / {SORULAR.length}</span>
+            <span style={{ fontSize: "0.85rem", color: "#ffffff" }}>Frage {currentSoru + 1} / {SORULAR.length}</span>
           </div>
           <div style={{ height: "8px", background: "#ffffff", borderRadius: "4px", overflow: "hidden" }}>
             <div style={{ width: `${((currentSoru + 1) / SORULAR.length) * 100}%`, height: "100%", background: "linear-gradient(90deg, #0891b2, #06b6d4)", transition: "width 0.3s ease" }} />

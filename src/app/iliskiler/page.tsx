@@ -2,43 +2,43 @@ import Link from "next/link";
 
 const ILISKI_KATEGORILERI = [
   {
-    title: "Burç Uyumu",
-    desc: "İki burç arasındaki uyumu keşfet",
+    title: "Sternzeichen-Kompatibilität",
+    desc: "Entdecke die Harmonie zwischen zwei Sternzeichen",
     href: "/iliskiler/burc-uyumu",
     icon: "💑",
     color: "#ec4899"
   },
   {
-    title: "Çift Uyumu",
-    desc: "Sen ve partneriniz için detaylı analiz",
+    title: "Paar-Kompatibilität",
+    desc: "Detaillierte Analyse für dich und deinen Partner",
     href: "/iliskiler/cift-uyumu",
     icon: "👫",
     color: "#f43f5e"
   },
   {
-    title: "Evlilik Önerileri",
-    desc: "Yıldızlar evlilik için ne diyor?",
+    title: "Ehe-Tipps",
+    desc: "Was sagen die Sterne zur Ehe?",
     href: "/iliskiler/evlilik",
     icon: "💍",
     color: "#a855f7"
   },
   {
-    title: "Ayrılık Rehberi",
-    desc: "İyileşme ve toparlanma yolculuğu",
+    title: "Trennungsratgeber",
+    desc: "Heilung und Neustart nach der Trennung",
     href: "/iliskiler/ayrilik",
     icon: "🌱",
     color: "#ffffff"
   },
   {
-    title: "Flört Taktikleri",
-    desc: "Burcuna göre flört tavsiyeleri",
+    title: "Flirt-Tipps",
+    desc: "Flirt-Ratschläge nach Sternzeichen",
     href: "/iliskiler/flort",
     icon: "😊",
     color: "#f97316"
   },
   {
-    title: "Soulmate Bağı",
-    desc: "Ruh eşini tanımanın yolları",
+    title: "Seelenverwandtschaft",
+    desc: "Wie du deine Seelenverbindung erkennst",
     href: "/iliskiler/soulmate",
     icon: "✨",
     color: "#6366f1"
@@ -46,12 +46,12 @@ const ILISKI_KATEGORILERI = [
 ];
 
 const BURC_UYUMLARI = [
-  { burc1: "Koç", burc2: "Aslan", uyum: 95, emoji1: "♈", emoji2: "♌" },
-  { burc1: "Boğa", burc2: "Başak", uyum: 90, emoji1: "♉", emoji2: "♍" },
-  { burc1: "İkizler", burc2: "Terazi", uyum: 88, emoji1: "♊", emoji2: "♎" },
-  { burc1: "Yengeç", burc2: "Akrep", uyum: 92, emoji1: "♋", emoji2: "♏" },
-  { burc1: "Aslan", burc2: "Yay", uyum: 93, emoji1: "♌", emoji2: "♐" },
-  { burc1: "Balık", burc2: "Yengeç", uyum: 91, emoji1: "♓", emoji2: "♋" },
+  { burc1: "Widder", burc2: "Löwe", uyum: 95, emoji1: "♈", emoji2: "♌" },
+  { burc1: "Stier", burc2: "Jungfrau", uyum: 90, emoji1: "♉", emoji2: "♍" },
+  { burc1: "Zwillinge", burc2: "Waage", uyum: 88, emoji1: "♊", emoji2: "♎" },
+  { burc1: "Krebs", burc2: "Skorpion", uyum: 92, emoji1: "♋", emoji2: "♏" },
+  { burc1: "Löwe", burc2: "Schütze", uyum: 93, emoji1: "♌", emoji2: "♐" },
+  { burc1: "Fische", burc2: "Krebs", uyum: 91, emoji1: "♓", emoji2: "♋" },
 ];
 
 export default function IliskilerPage() {
@@ -82,13 +82,13 @@ export default function IliskilerPage() {
               background: "rgba(255,255,255,0.2)",
             }}
           >
-            <span>💕</span> İlişkiler & Uyum
+            <span>💕</span> Beziehungen & Kompatibilität
           </div>
           <h1 style={{ fontSize: "clamp(2rem, 5vw, 3rem)", fontWeight: 800, color: "#ffffff", marginBottom: "1rem" }}>
-            Aşkta Yıldızların Rehberliği
+            Sternen-Guide für die Liebe
           </h1>
           <p style={{ fontSize: "1.1rem", color: "rgba(255,255,255,0.9)", maxWidth: "600px", margin: "0 auto" }}>
-            Burç uyumları, ilişki analizleri ve astrolojik aşk tavsiyeleri
+            Sternzeichen-Kompatibilität, Beziehungsanalysen und astrologische Liebestipps
           </p>
         </div>
       </section>
@@ -97,7 +97,7 @@ export default function IliskilerPage() {
       <section style={{ padding: "3rem 1rem" }}>
         <div style={{ maxWidth: "72rem", margin: "0 auto" }}>
           <h2 style={{ fontSize: "1.5rem", fontWeight: 700, color: "#ffffff", marginBottom: "1.5rem", textAlign: "center" }}>
-            İlişki Rehberleri
+            Beziehungs-Guides
           </h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1rem" }}>
             {ILISKI_KATEGORILERI.map((item) => (
@@ -151,10 +151,10 @@ export default function IliskilerPage() {
             }}
           >
             <h2 style={{ fontSize: "1.5rem", fontWeight: 700, color: "#ffffff", marginBottom: "1rem", textAlign: "center" }}>
-              💕 Burç Uyumu Hesapla
+              💕 Kompatibilität berechnen
             </h2>
             <p style={{ textAlign: "center", color: "#ffffff", marginBottom: "1.5rem" }}>
-              İki burç seç ve uyum oranını öğren
+              Wähle zwei Sternzeichen und sieh eure Kompatibilität
             </p>
             <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap", alignItems: "center" }}>
               <select
@@ -168,19 +168,19 @@ export default function IliskilerPage() {
                   cursor: "pointer",
                 }}
               >
-                <option>Senin Burcun</option>
-                <option>♈ Koç</option>
-                <option>♉ Boğa</option>
-                <option>♊ İkizler</option>
-                <option>♋ Yengeç</option>
-                <option>♌ Aslan</option>
-                <option>♍ Başak</option>
-                <option>♎ Terazi</option>
-                <option>♏ Akrep</option>
-                <option>♐ Yay</option>
-                <option>♑ Oğlak</option>
-                <option>♒ Kova</option>
-                <option>♓ Balık</option>
+                <option>Dein Sternzeichen</option>
+                <option>♈ Widder</option>
+                <option>♉ Stier</option>
+                <option>♊ Zwillinge</option>
+                <option>♋ Krebs</option>
+                <option>♌ Löwe</option>
+                <option>♍ Jungfrau</option>
+                <option>♎ Waage</option>
+                <option>♏ Skorpion</option>
+                <option>♐ Schütze</option>
+                <option>♑ Steinbock</option>
+                <option>♒ Wassermann</option>
+                <option>♓ Fische</option>
               </select>
               <span style={{ fontSize: "1.5rem" }}>❤️</span>
               <select
@@ -194,19 +194,19 @@ export default function IliskilerPage() {
                   cursor: "pointer",
                 }}
               >
-                <option>Partnerinin Burcu</option>
-                <option>♈ Koç</option>
-                <option>♉ Boğa</option>
-                <option>♊ İkizler</option>
-                <option>♋ Yengeç</option>
-                <option>♌ Aslan</option>
-                <option>♍ Başak</option>
-                <option>♎ Terazi</option>
-                <option>♏ Akrep</option>
-                <option>♐ Yay</option>
-                <option>♑ Oğlak</option>
-                <option>♒ Kova</option>
-                <option>♓ Balık</option>
+                <option>Sternzeichen deines Partners</option>
+                <option>♈ Widder</option>
+                <option>♉ Stier</option>
+                <option>♊ Zwillinge</option>
+                <option>♋ Krebs</option>
+                <option>♌ Löwe</option>
+                <option>♍ Jungfrau</option>
+                <option>♎ Waage</option>
+                <option>♏ Skorpion</option>
+                <option>♐ Schütze</option>
+                <option>♑ Steinbock</option>
+                <option>♒ Wassermann</option>
+                <option>♓ Fische</option>
               </select>
               <button
                 style={{
@@ -220,7 +220,7 @@ export default function IliskilerPage() {
                   cursor: "pointer",
                 }}
               >
-                Hesapla
+                Berechnen
               </button>
             </div>
           </div>
@@ -231,7 +231,7 @@ export default function IliskilerPage() {
       <section style={{ padding: "3rem 1rem" }}>
         <div style={{ maxWidth: "72rem", margin: "0 auto" }}>
           <h2 style={{ fontSize: "1.5rem", fontWeight: 700, color: "#ffffff", marginBottom: "1.5rem", textAlign: "center" }}>
-            🔥 En Uyumlu Burç Çiftleri
+            🔥 Die kompatibelsten Sternzeichen-Paare
           </h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1rem" }}>
             {BURC_UYUMLARI.map((cift, i) => (
@@ -257,7 +257,7 @@ export default function IliskilerPage() {
                 </div>
                 <div style={{ marginTop: "1rem" }}>
                   <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "0.25rem" }}>
-                    <span style={{ fontSize: "0.8rem", color: "#ffffff" }}>Uyum Oranı</span>
+                    <span style={{ fontSize: "0.8rem", color: "#ffffff" }}>Kompatibilität</span>
                     <span style={{ fontSize: "0.8rem", fontWeight: 600, color: "#ec4899" }}>{cift.uyum}%</span>
                   </div>
                   <div style={{ height: "8px", background: "#1a0b2e", borderRadius: "4px", overflow: "hidden" }}>
@@ -289,10 +289,10 @@ export default function IliskilerPage() {
             }}
           >
             <h2 style={{ fontSize: "1.5rem", fontWeight: 700, color: "#ffffff", marginBottom: "1rem" }}>
-              💫 Günlük Aşk Yorumun
+              💫 Dein Liebeshoroskop für heute
             </h2>
             <p style={{ color: "rgba(255,255,255,0.8)", marginBottom: "1.5rem" }}>
-              Bugün aşk hayatında neler olacak? Burcuna özel romantik tahminler
+              Was passiert heute in deinem Liebesleben? Romantische Prognosen nach Sternzeichen
             </p>
             <Link
               href="/burclar/gunluk"
@@ -309,7 +309,7 @@ export default function IliskilerPage() {
                 textDecoration: "none",
               }}
             >
-              Günlük Yorumları Oku →
+              Tageshoroskop lesen →
             </Link>
           </div>
         </div>

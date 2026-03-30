@@ -16,37 +16,43 @@ const sourceSans = Source_Sans_3({
 });
 
 export const metadata: Metadata = {
-  title: "Zodyaklı — Astroloji, Burçlar & Mistisizm",
+  title: "SternenFeed — Astrologie, Sternzeichen & Mystik",
   description:
-    "Günlük burç yorumları, rüya tabirleri, astroloji testleri, gök gündemi ve ilişki rehberi. Kozmik bilgeliği keşfet.",
+    "Tägliche Horoskope, Traumdeutung, Astrologie-Tests, kosmischer Kalender und Beziehungsratgeber. Entdecke kosmische Weisheit.",
   keywords: [
-    "burç yorumları",
-    "astroloji",
-    "rüya tabirleri",
-    "burç uyumu",
-    "günlük burç",
-    "haftalık burç",
-    "doğum haritası",
-    "yükselen burç",
+    "Horoskop",
+    "Astrologie",
+    "Traumdeutung",
+    "Sternzeichen",
+    "Sternzeichen-Kompatibilität",
+    "Tageshoroskop",
+    "Wochenhoroskop",
+    "Geburtshoroskop",
+    "Aszendent",
   ],
-  authors: [{ name: "Zodyaklı" }],
-  creator: "Zodyaklı",
-  publisher: "Zodyaklı",
+  authors: [{ name: "SternenFeed" }],
+  creator: "SternenFeed",
+  publisher: "SternenFeed",
   metadataBase: new URL("https://zodyak.com"),
+  icons: {
+    icon: "/img/newfavicon.png",
+    shortcut: "/img/newfavicon.png",
+    apple: "/img/newfavicon.png",
+  },
   openGraph: {
     type: "website",
-    locale: "tr_TR",
+    locale: "de_DE",
     url: "https://zodyak.com",
-    siteName: "Zodyaklı",
-    title: "Zodyaklı — Astroloji, Burçlar & Mistisizm",
+    siteName: "SternenFeed",
+    title: "SternenFeed — Astrologie, Sternzeichen & Mystik",
     description:
-      "Günlük burç yorumları, rüya tabirleri, astroloji testleri, gök gündemi ve ilişki rehberi.",
+      "Tägliche Horoskope, Traumdeutung, Astrologie-Tests, kosmischer Kalender und Beziehungsratgeber.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Zodyaklı — Astroloji, Burçlar & Mistisizm",
+    title: "SternenFeed — Astrologie, Sternzeichen & Mystik",
     description:
-      "Günlük burç yorumları, rüya tabirleri ve astroloji rehberi.",
+      "Tägliche Horoskope, Traumdeutung und Astrologie-Ratgeber.",
   },
   robots: {
     index: true,
@@ -61,7 +67,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="tr" suppressHydrationWarning>
+    <html lang="de" suppressHydrationWarning>
       <body className={`${notoSerif.variable} ${sourceSans.variable} antialiased`}>
         <ClientLayout>{children}</ClientLayout>
       </body>

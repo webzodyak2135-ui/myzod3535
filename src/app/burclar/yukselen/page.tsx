@@ -88,14 +88,14 @@ export default function YukselenBurcPage() {
                 type="time"
                 value={dogumSaati}
                 onChange={(e) => setDogumSaati(e.target.value)}
-                style={{ 
-                  width: "100%", 
-                  padding: "0.875rem", 
-                  borderRadius: "12px", 
-                  border: "2px solid rgba(168, 85, 247, 0.5)", 
+                style={{
+                  width: "100%",
+                  padding: "0.875rem",
+                  borderRadius: "12px",
+                  border: "2px solid rgba(168, 85, 247, 0.5)",
                   background: "rgba(45, 27, 78, 0.5)",
                   color: "#ffffff",
-                  fontSize: "1rem" 
+                  fontSize: "1rem"
                 }}
               />
             </div>
@@ -109,14 +109,14 @@ export default function YukselenBurcPage() {
                 placeholder="Örn: İstanbul"
                 value={dogumYeri}
                 onChange={(e) => setDogumYeri(e.target.value)}
-                style={{ 
-                  width: "100%", 
-                  padding: "0.875rem", 
-                  borderRadius: "12px", 
-                  border: "2px solid rgba(168, 85, 247, 0.5)", 
+                style={{
+                  width: "100%",
+                  padding: "0.875rem",
+                  borderRadius: "12px",
+                  border: "2px solid rgba(168, 85, 247, 0.5)",
                   background: "rgba(45, 27, 78, 0.5)",
                   color: "#ffffff",
-                  fontSize: "1rem" 
+                  fontSize: "1rem"
                 }}
               />
             </div>
@@ -136,7 +136,7 @@ export default function YukselenBurcPage() {
                 cursor: dogumSaati && dogumYeri && !loading ? "pointer" : "not-allowed",
               }}
             >
-              {loading ? "✨ Zodyaklı AI ile analiz ediliyor..." : "🔮 Yükselen Burçumu Hesapla"}
+              {loading ? "✨ SternenFeed AI ile analiz ediliyor..." : "🔮 Yükselen Burçumu Hesapla"}
             </button>
 
             {loading && (
@@ -186,11 +186,11 @@ export default function YukselenBurcPage() {
                   }}
                 >
                   <p style={{ fontSize: "1rem", color: "#ffffff", fontWeight: 600, marginBottom: "0.5rem" }}>
-                    🌟 Yıldızlar Konuşuyor...
+                    🌟 Die Sterne Sprechen...
                   </p>
                   <p style={{ fontSize: "0.9rem", color: "#ffffff", lineHeight: 1.6 }}>
-                    Zodyaklı AI doğum saatinizi ve yerinizi analiz ederek yükselen burcunuzu hesaplıyor. 
-                    Kişisel yorumunuz hazırlanıyor...
+                    SternenFeed AI analysiert deine Geburtszeit und deinen Geburtsort, um deinen Aszendenten zu berechnen.
+                    Deine persönliche Interpretation wird vorbereitet...
                   </p>
                 </div>
               </div>

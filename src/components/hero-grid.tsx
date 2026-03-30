@@ -290,31 +290,31 @@ function OrbitBackground() {
 const HERO_CARDS = [
   {
     id: "burclar",
-    category: "Burçlar",
+    category: "Sternzeichen",
     categoryColor: "#a78bfa",
     href: "/burclar/haftalik",
-    title: "Haftalık Burç Yorumları: Gökyüzü Bu Hafta Sizin İçin Ne Diyor?",
-    spot: "Aşk, para ve sağlık analizleri — tüm burçlar için detaylı rehber",
+    title: "Wochenhoroskop: Was sagen die Sterne diese Woche?",
+    spot: "Liebe, Geld und Gesundheit — detaillierter Guide für alle Sternzeichen",
     featured: true,
     Background: ZodiacBackground,
   },
   {
     id: "ruya",
-    category: "Rüya Tabirleri",
+    category: "Traumdeutung",
     categoryColor: "#818cf8",
     href: "/ruya/sozluk",
-    title: "Mistik Rüya Sözlüğü: Rüyandaki Sembollerin Gizli Anlamını Keşfet",
-    spot: "A'dan Z'ye binlerce rüya simgesi ve yorumu sizi bekliyor",
+    title: "Mystisches Traumlexikon: Entdecke die verborgene Bedeutung deiner Symbole",
+    spot: "Tausende Traumsymbole und Deutungen von A bis Z",
     featured: false,
     Background: MoonBackground,
   },
   {
     id: "gok",
-    category: "Gök Gündemi",
+    category: "Kosmischer Kalender",
     categoryColor: "#34d399",
     href: "/gok/retrograde",
-    title: "Merkür Retrosu Başlıyor! İletişim Kazalarına Karşı Burç Rehberi",
-    spot: "Retrograde dönemini atlatmak için burç bazlı taktikler",
+    title: "Merkur wird rückläufig! Sternzeichen-Guide gegen Kommunikationspannen",
+    spot: "Sternzeichen-basierte Tipps, um die Retrograde-Phase gut zu meistern",
     featured: false,
     Background: OrbitBackground,
   },
@@ -362,7 +362,7 @@ export default function HeroGrid() {
               className="hero-card-cta"
               style={{ color: featured.categoryColor }}
             >
-              Devamını Oku →
+              Weiterlesen →
             </span>
           </div>
         </Link>

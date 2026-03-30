@@ -5,77 +5,77 @@ import Link from "next/link";
 
 const SORULAR = [
   {
-    soru: "Meditasyon veya içsel pratiklerle ilişkin nasıl?",
+    soru: "Wie ist deine Beziehung zu Meditation oder inneren Praktiken?",
     secenekler: [
-      { text: "Düzenli pratik yapıyorum", puan: 4 },
-      { text: "Ara sıra deniyorum", puan: 3 },
-      { text: "İlgimi çekiyor ama yapmıyorum", puan: 2 },
-      { text: "Hiç ilgilenmiyorum", puan: 1 },
+      { text: "Ich praktiziere regelmäßig", puan: 4 },
+      { text: "Ich probiere es gelegentlich", puan: 3 },
+      { text: "Es interessiert mich, aber ich mache es nicht", puan: 2 },
+      { text: "Ich interessiere mich nicht dafür", puan: 1 },
     ]
   },
   {
-    soru: "Sezgilerine ne kadar güvenirsin?",
+    soru: "Wie sehr vertraust du deiner Intuition?",
     secenekler: [
-      { text: "Tamamen, her zaman dinlerim", puan: 4 },
-      { text: "Çoğunlukla güvenirim", puan: 3 },
-      { text: "Bazen dikkate alırım", puan: 2 },
-      { text: "Mantığa daha çok güvenirim", puan: 1 },
+      { text: "Vollständig, ich höre immer darauf", puan: 4 },
+      { text: "Meistens vertraue ich ihr", puan: 3 },
+      { text: "Manchmal berücksichtige ich sie", puan: 2 },
+      { text: "Ich vertraue mehr der Logik", puan: 1 },
     ]
   },
   {
-    soru: "Doğayla bağlantın nasıl?",
+    soru: "Wie ist deine Verbindung zur Natur?",
     secenekler: [
-      { text: "Çok derin, doğada huzur bulurum", puan: 4 },
-      { text: "Doğayı severim, sık sık çıkarım", puan: 3 },
-      { text: "Ara sıra doğaya çıkarım", puan: 2 },
-      { text: "Şehir hayatını tercih ederim", puan: 1 },
+      { text: "Sehr tief, ich finde Frieden in der Natur", puan: 4 },
+      { text: "Ich liebe die Natur, gehe oft raus", puan: 3 },
+      { text: "Gelegentlich gehe ich in die Natur", puan: 2 },
+      { text: "Ich bevorzuge das Stadtleben", puan: 1 },
     ]
   },
   {
-    soru: "Başkalarının duygularını hisseder misin?",
+    soru: "Spürst du die Gefühle anderer?",
     secenekler: [
-      { text: "Evet, çok güçlü hissederim (empatik)", puan: 4 },
-      { text: "Genellikle fark ederim", puan: 3 },
-      { text: "Bazen fark ederim", puan: 2 },
-      { text: "Pek fark etmem", puan: 1 },
+      { text: "Ja, ich spüre sie sehr stark (empathisch)", puan: 4 },
+      { text: "Normalerweise bemerke ich sie", puan: 3 },
+      { text: "Manchmal bemerke ich sie", puan: 2 },
+      { text: "Ich bemerke sie kaum", puan: 1 },
     ]
   },
   {
-    soru: "Rüyalarınla ilişkin nasıl?",
+    soru: "Wie ist deine Beziehung zu deinen Träumen?",
     secenekler: [
-      { text: "Çok canlı, anlamlı rüyalar görürüm", puan: 4 },
-      { text: "Rüyalarımı hatırlar, yorumlarım", puan: 3 },
-      { text: "Bazen hatırlarım", puan: 2 },
-      { text: "Nadiren hatırlarım", puan: 1 },
+      { text: "Sehr lebhaft, ich habe bedeutungsvolle Träume", puan: 4 },
+      { text: "Ich erinnere und deute meine Träume", puan: 3 },
+      { text: "Manchmal erinnere ich mich", puan: 2 },
+      { text: "Ich erinnere mich selten", puan: 1 },
     ]
   },
   {
-    soru: "Hayatın anlamı hakkında ne düşünürsün?",
+    soru: "Was denkst du über den Sinn des Lebens?",
     secenekler: [
-      { text: "Derin spiritüel bir amacımız var", puan: 4 },
-      { text: "Bir anlam arayışı içindeyim", puan: 3 },
-      { text: "Bazen düşünürüm", puan: 2 },
-      { text: "Pratik yaşama odaklanırım", puan: 1 },
+      { text: "Wir haben einen tiefen spirituellen Zweck", puan: 4 },
+      { text: "Ich bin auf der Suche nach Bedeutung", puan: 3 },
+      { text: "Manchmal denke ich darüber nach", puan: 2 },
+      { text: "Ich konzentriere mich auf das praktische Leben", puan: 1 },
     ]
   },
   {
-    soru: "Tesadüflere nasıl bakarsın?",
+    soru: "Wie siehst du Zufälle?",
     secenekler: [
-      { text: "Evrenin mesajları, senkronisite", puan: 4 },
-      { text: "Anlamlı olabilir diye düşünürüm", puan: 3 },
-      { text: "Bazen dikkat çeker", puan: 2 },
-      { text: "Sadece tesadüf", puan: 1 },
+      { text: "Botschaften des Universums, Synchronizität", puan: 4 },
+      { text: "Ich denke, sie könnten bedeutungsvoll sein", puan: 3 },
+      { text: "Manchmal fallen sie mir auf", puan: 2 },
+      { text: "Nur Zufall", puan: 1 },
     ]
   },
 ];
 
 const getSeviye = (puan: number) => {
   const yuzde = Math.round((puan / (SORULAR.length * 4)) * 100);
-  if (yuzde >= 85) return { seviye: "Uyanmış Ruh", emoji: "🌟", renk: "#a855f7", aciklama: "Spiritüel farkındalığın çok yüksek. Derin bir içsel bilgeliğe sahipsin." };
-  if (yuzde >= 70) return { seviye: "Arayan Ruh", emoji: "✨", renk: "#8b5cf6", aciklama: "Spiritüel yolculuğunda ilerliyorsun. Sezgilerin güçleniyor." };
-  if (yuzde >= 55) return { seviye: "Keşfeden Ruh", emoji: "🔮", renk: "#6366f1", aciklama: "Spiritüel dünyaya ilgi duyuyorsun. Potansiyelin büyük." };
-  if (yuzde >= 40) return { seviye: "Uyanan Ruh", emoji: "🌙", renk: "#818cf8", aciklama: "Spiritüel uyanış sürecinin başındasın. Merak etmeye devam et." };
-  return { seviye: "Topraklanmış Ruh", emoji: "🌍", renk: "#ffffff", aciklama: "Pratik ve gerçekçi bir bakış açısına sahipsin. Bu da değerli." };
+  if (yuzde >= 85) return { seviye: "Erwachte Seele", emoji: "🌟", renk: "#a855f7", aciklama: "Dein spirituelles Bewusstsein ist sehr hoch. Du besitzt tiefe innere Weisheit." };
+  if (yuzde >= 70) return { seviye: "Suchende Seele", emoji: "✨", renk: "#8b5cf6", aciklama: "Du machst Fortschritte auf deiner spirituellen Reise. Deine Intuition wird stärker." };
+  if (yuzde >= 55) return { seviye: "Entdeckende Seele", emoji: "🔮", renk: "#6366f1", aciklama: "Du interessierst dich für die spirituelle Welt. Dein Potenzial ist groß." };
+  if (yuzde >= 40) return { seviye: "Erwachende Seele", emoji: "🌙", renk: "#818cf8", aciklama: "Du bist am Anfang des spirituellen Erwachens. Bleib neugierig." };
+  return { seviye: "Geerdete Seele", emoji: "🌍", renk: "#ffffff", aciklama: "Du hast eine praktische und realistische Perspektive. Das ist auch wertvoll." };
 };
 
 export default function RuhsalOlgunlukTestiPage() {
@@ -103,7 +103,7 @@ export default function RuhsalOlgunlukTestiPage() {
   if (sonuc !== null) {
     const seviyeBilgi = getSeviye(sonuc);
     const yuzde = Math.round((sonuc / (SORULAR.length * 4)) * 100);
-    
+
     return (
       <div style={{ background: "var(--theme-bg)", minHeight: "100vh" }}>
         <section style={{ background: `linear-gradient(135deg, ${seviyeBilgi.renk}dd, ${seviyeBilgi.renk}99)`, padding: "4rem 1rem", textAlign: "center" }}>
@@ -116,23 +116,23 @@ export default function RuhsalOlgunlukTestiPage() {
             </div>
             <h1 style={{ fontSize: "2rem", fontWeight: 800, color: "#ffffff", marginBottom: "0.5rem" }}>{seviyeBilgi.seviye}</h1>
             <p style={{ fontSize: "1.1rem", color: "rgba(255,255,255,0.9)", marginBottom: "2rem", maxWidth: "400px", margin: "0 auto 2rem" }}>{seviyeBilgi.aciklama}</p>
-            
+
             <div style={{ background: "rgba(255,255,255,0.1)", borderRadius: "16px", padding: "1.5rem", marginBottom: "2rem", textAlign: "left" }}>
-              <h3 style={{ fontSize: "1rem", fontWeight: 600, color: "#ffffff", marginBottom: "0.75rem" }}>🧘 Gelişim Önerileri</h3>
+              <h3 style={{ fontSize: "1rem", fontWeight: 600, color: "#ffffff", marginBottom: "0.75rem" }}>🧘 Entwicklungsempfehlungen</h3>
               <ul style={{ color: "rgba(255,255,255,0.9)", fontSize: "0.9rem", lineHeight: 1.8, paddingLeft: "1.25rem" }}>
-                <li>Günlük meditasyon pratiği başlat</li>
-                <li>Rüya günlüğü tut</li>
-                <li>Doğada daha fazla vakit geçir</li>
-                <li>Sezgilerini dinlemeye çalış</li>
+                <li>Beginne mit täglicher Meditationspraxis</li>
+                <li>Führe ein Traumtagebuch</li>
+                <li>Verbringe mehr Zeit in der Natur</li>
+                <li>Versuche auf deine Intuition zu hören</li>
               </ul>
             </div>
 
             <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
               <button onClick={resetTest} style={{ padding: "0.75rem 1.5rem", background: "#1a0b2e", color: seviyeBilgi.renk, borderRadius: "9999px", fontWeight: 600, border: "none", cursor: "pointer" }}>
-                Tekrar Dene
+                Nochmal versuchen
               </button>
               <Link href="/testler" style={{ padding: "0.75rem 1.5rem", background: "rgba(255,255,255,0.2)", color: "#ffffff", borderRadius: "9999px", fontWeight: 600, textDecoration: "none" }}>
-                Diğer Testler
+                Andere Tests
               </Link>
             </div>
           </div>
@@ -147,9 +147,9 @@ export default function RuhsalOlgunlukTestiPage() {
     <div style={{ background: "var(--theme-bg)", minHeight: "100vh" }}>
       <section style={{ background: "linear-gradient(135deg, #a855f7 0%, #8b5cf6 100%)", padding: "2rem 1rem", textAlign: "center" }}>
         <div style={{ maxWidth: "72rem", margin: "0 auto" }}>
-          <Link href="/testler" style={{ color: "rgba(255,255,255,0.8)", fontSize: "0.9rem", textDecoration: "none" }}>← Testler</Link>
-          <h1 style={{ fontSize: "1.75rem", fontWeight: 800, color: "#ffffff", marginTop: "1rem" }}>🧘 Ruhsal Olgunluk Testi</h1>
-          <p style={{ color: "rgba(255,255,255,0.8)", marginTop: "0.5rem" }}>Spiritüel gelişim seviyeniz</p>
+          <Link href="/testler" style={{ color: "rgba(255,255,255,0.8)", fontSize: "0.9rem", textDecoration: "none" }}>← Tests</Link>
+          <h1 style={{ fontSize: "1.75rem", fontWeight: 800, color: "#ffffff", marginTop: "1rem" }}>🧘 Spirituelle Reife Test</h1>
+          <p style={{ color: "rgba(255,255,255,0.8)", marginTop: "0.5rem" }}>Ihr spirituelles Entwicklungsniveau</p>
         </div>
       </section>
 

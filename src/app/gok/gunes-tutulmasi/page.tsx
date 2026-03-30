@@ -1,16 +1,16 @@
 import Link from "next/link";
 
 const TUTULMA_TURLERI = [
-  { tur: "Tam Güneş Tutulması", emoji: "🌑", aciklama: "Ay, Güneş'i tamamen kapatır. En güçlü etki.", etki: "Büyük dönüşümler, yeni başlangıçlar, kader anları" },
-  { tur: "Halkalı Güneş Tutulması", emoji: "💫", aciklama: "Ay, Güneş'in ortasını kapatır, kenarları görünür.", etki: "Odaklanma, netlik, merkeze dönüş" },
-  { tur: "Kısmi Güneş Tutulması", emoji: "🌗", aciklama: "Ay, Güneş'in bir kısmını kapatır.", etki: "Kısmi değişimler, farkındalık, uyarılar" },
-  { tur: "Hibrit Tutulma", emoji: "✨", aciklama: "Farklı bölgelerde farklı görünür.", etki: "Çok katmanlı etkiler, karmaşık dönüşümler" },
+  { tur: "Totale Sonnenfinsternis", emoji: "🌑", aciklama: "Der Mond bedeckt die Sonne vollständig. Stärkste Wirkung.", etki: "Große Transformationen, Neubegìnne, Schicksalsmomente" },
+  { tur: "Ringförmige Sonnenfinsternis", emoji: "💫", aciklama: "Der Mond bedeckt die Mitte der Sonne, Ränder bleiben sichtbar.", etki: "Fokussierung, Klarheit, Rückkehr zum Zentrum" },
+  { tur: "Partielle Sonnenfinsternis", emoji: "🌗", aciklama: "Der Mond bedeckt einen Teil der Sonne.", etki: "Teilweise Veränderungen, Bewusstsein, Warnungen" },
+  { tur: "Hybride Finsternis", emoji: "✨", aciklama: "Erscheint in verschiedenen Regionen unterschiedlich.", etki: "Vielschichtige Wirkungen, komplexe Transformationen" },
 ];
 
 const YAKLASAN_TUTULMALAR = [
-  { tarih: "16 Mayıs 2026", tur: "Halkalı Güneş Tutulması", burc: "Boğa", gorunur: "Kuzey Afrika, Orta Doğu" },
-  { tarih: "11 Kasım 2026", tur: "Tam Güneş Tutulması", burc: "Akrep", gorunur: "Atlantik, Avrupa" },
-  { tarih: "1 Ekim 2027", tur: "Halkalı Güneş Tutulması", burc: "Terazi", gorunur: "Afrika, Hint Okyanusu" },
+  { tarih: "16. Mai 2026", tur: "Ringförmige Sonnenfinsternis", burc: "Stier", gorunur: "Nordafrika, Naher Osten" },
+  { tarih: "11. November 2026", tur: "Totale Sonnenfinsternis", burc: "Skorpion", gorunur: "Atlantik, Europa" },
+  { tarih: "1. Oktober 2027", tur: "Ringförmige Sonnenfinsternis", burc: "Waage", gorunur: "Afrika, Indischer Ozean" },
 ];
 
 export default function GunesTutulmasiPage() {
@@ -26,14 +26,14 @@ export default function GunesTutulmasiPage() {
       >
         <div style={{ maxWidth: "72rem", margin: "0 auto" }}>
           <Link href="/gok-gundemi" style={{ color: "rgba(255,255,255,0.8)", fontSize: "0.9rem", textDecoration: "none" }}>
-            ← Gök Gündemi
+            ← Kosmischer Kalender
           </Link>
           <div style={{ fontSize: "4rem", marginTop: "1rem" }}>☀️</div>
           <h1 style={{ fontSize: "clamp(2rem, 5vw, 3rem)", fontWeight: 800, color: "#ffffff", marginTop: "0.5rem" }}>
-            Güneş Tutulması
+            Sonnenfinsternis
           </h1>
           <p style={{ fontSize: "1.1rem", color: "rgba(255,255,255,0.9)", maxWidth: "600px", margin: "1rem auto 0" }}>
-            Güneş tutulmalarının gücü ve kozmik etkileri
+            Kraft und kosmische Auswirkungen von Sonnenfinsternissen
           </p>
         </div>
       </section>
@@ -42,7 +42,7 @@ export default function GunesTutulmasiPage() {
       <section style={{ padding: "3rem 1rem" }}>
         <div style={{ maxWidth: "72rem", margin: "0 auto" }}>
           <h2 style={{ fontSize: "1.5rem", fontWeight: 700, color: "#ffffff", marginBottom: "1.5rem", textAlign: "center" }}>
-            Güneş Tutulması Türleri
+            Arten von Sonnenfinsternissen
           </h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1rem" }}>
             {TUTULMA_TURLERI.map((item, i) => (
@@ -73,7 +73,7 @@ export default function GunesTutulmasiPage() {
       <section style={{ padding: "3rem 1rem", background: "#1a0b2e" }}>
         <div style={{ maxWidth: "72rem", margin: "0 auto" }}>
           <h2 style={{ fontSize: "1.5rem", fontWeight: 700, color: "#ffffff", marginBottom: "1.5rem", textAlign: "center" }}>
-            Yaklaşan Güneş Tutulmaları
+            Bevorstehende Sonnenfinsternisse
           </h2>
           <div style={{ background: "#1a0b2e", borderRadius: "20px", overflow: "hidden", boxShadow: "0 2px 12px rgba(0,0,0,0.06)" }}>
             {YAKLASAN_TUTULMALAR.map((item, i) => (
@@ -94,8 +94,8 @@ export default function GunesTutulmasiPage() {
                   <p style={{ fontSize: "0.9rem", color: "#ffffff" }}>{item.tur}</p>
                 </div>
                 <div style={{ textAlign: "right" }}>
-                  <p style={{ fontSize: "1rem", fontWeight: 600, color: "#f97316" }}>{item.burc} burcunda</p>
-                  <p style={{ fontSize: "0.85rem", color: "#ffffff" }}>Görünür: {item.gorunur}</p>
+                  <p style={{ fontSize: "1rem", fontWeight: 600, color: "#f97316" }}>Im {item.burc}</p>
+                  <p style={{ fontSize: "0.85rem", color: "#ffffff" }}>Sichtbar: {item.gorunur}</p>
                 </div>
               </div>
             ))}

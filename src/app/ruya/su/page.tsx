@@ -1,39 +1,39 @@
 import Link from "next/link";
 
 const SU_RUYALARI = [
-  { baslik: "Deniz Görmek", anlam: "Bilinçaltı, duygusal derinlik, sonsuzluk hissi", icon: "🌊", slug: "deniz-gormek" },
-  { baslik: "Nehir Görmek", anlam: "Hayatın akışı, değişim, yolculuk", icon: "🏞️", slug: "nehir-gormek" },
-  { baslik: "Göl Görmek", anlam: "İç huzur, durgunluk, yansıma", icon: "🏔️", slug: "gol-gormek" },
-  { baslik: "Yağmur Görmek", anlam: "Arınma, bereket, duygusal boşalma", icon: "🌧️", slug: "yagmur-gormek" },
-  { baslik: "Sel Görmek", anlam: "Kontrolsüz duygular, baskı, temizlenme", icon: "🌊", slug: "sel-gormek" },
-  { baslik: "Havuz Görmek", anlam: "Sınırlı duygular, kontrollü ortam", icon: "🏊", slug: "havuz-gormek" },
+  { baslik: "Meer sehen", anlam: "Unterbewusstsein, emotionale Tiefe, Gefühl der Unendlichkeit", icon: "🌊", slug: "deniz-gormek" },
+  { baslik: "Fluss sehen", anlam: "Fluss des Lebens, Veränderung, Reise", icon: "🏞️", slug: "nehir-gormek" },
+  { baslik: "See sehen", anlam: "Innerer Frieden, Stille, Reflexion", icon: "🏔️", slug: "gol-gormek" },
+  { baslik: "Regen sehen", anlam: "Reinigung, Segen, emotionale Entladung", icon: "🌧️", slug: "yagmur-gormek" },
+  { baslik: "Überschwemmung sehen", anlam: "Unkontrollierte Emotionen, Druck, Reinigung", icon: "🌊", slug: "sel-gormek" },
+  { baslik: "Pool sehen", anlam: "Begrenzte Emotionen, kontrollierte Umgebung", icon: "🏊", slug: "havuz-gormek" },
 ];
 
 const DETAYLI_YORUMLAR = [
   {
-    durum: "Berrak Su",
-    yorum: "Berrak ve temiz su görmek, zihinsel netlik, duygusal arınma ve olumlu gelişmelerin habercisidir. Hayatınızda şeffaflık ve dürüstlük ön plandadır.",
-    anlam: "Olumlu"
+    durum: "Klares Wasser",
+    yorum: "Klares und sauberes Wasser zu sehen ist ein Vorbote geistiger Klarheit, emotionaler Reinigung und positiver Entwicklungen. Transparenz und Ehrlichkeit stehen in deinem Leben im Vordergrund.",
+    anlam: "Positiv"
   },
   {
-    durum: "Bulanık Su",
-    yorum: "Bulanık veya kirli su, karışıklık, belirsizlik ve çözülmemiş duygusal sorunları temsil eder. Hayatınızda netlik kazanmanız gerekebilir.",
-    anlam: "Dikkat"
+    durum: "Trübes Wasser",
+    yorum: "Trübes oder schmutziges Wasser repräsentiert Verwirrung, Unsicherheit und ungelöste emotionale Probleme. Du musst möglicherweise Klarheit in deinem Leben gewinnen.",
+    anlam: "Achtung"
   },
   {
-    durum: "Suda Yüzmek",
-    yorum: "Rahatça yüzmek duygusal özgürlüğü, zorlanarak yüzmek ise duygusal mücadeleyi simgeler. Yüzme şekliniz duygusal durumunuzu yansıtır.",
-    anlam: "Nötr"
+    durum: "Im Wasser schwimmen",
+    yorum: "Mühelos schwimmen symbolisiert emotionale Freiheit, mühsames Schwimmen hingegen emotionalen Kampf. Deine Schwimmweise spiegelt deinen emotionalen Zustand wider.",
+    anlam: "Neutral"
   },
   {
-    durum: "Suda Boğulmak",
-    yorum: "Duygusal baskı, bunaltı ve kontrolü kaybetme hissi. Hayatınızda sizi boğan durumları gözden geçirmeniz gerekebilir.",
-    anlam: "Uyarı"
+    durum: "Im Wasser ertrinken",
+    yorum: "Emotionaler Druck, Beklemmung und das Gefühl, die Kontrolle zu verlieren. Du musst möglicherweise Situationen überprüfen, die dich in deinem Leben erdrücken.",
+    anlam: "Warnung"
   },
   {
-    durum: "Su İçmek",
-    yorum: "Bilgi edinme, spiritüel beslenme ve yenilenme. Temiz su içmek olumlu, kirli su içmek olumsuz haberlere işaret eder.",
-    anlam: "Olumlu"
+    durum: "Wasser trinken",
+    yorum: "Wissen erlangen, spirituelle Nahrung und Erneuerung. Sauberes Wasser trinken deutet auf positive, schmutziges Wasser auf negative Nachrichten hin.",
+    anlam: "Positiv"
   },
 ];
 
@@ -88,7 +88,7 @@ export default function SuRuyalariPage() {
               marginBottom: "1.5rem",
             }}
           >
-            ← Rüya Tabirleri
+            ← Traumdeutung
           </Link>
 
           {/* Glowing Icon */}
@@ -109,10 +109,10 @@ export default function SuRuyalariPage() {
             textShadow: "0 4px 30px rgba(0,0,0,0.2)",
             letterSpacing: "-0.02em",
           }}>
-            Su Rüyaları
+            Wasserträume
           </h1>
           <p style={{ fontSize: "1.1rem", color: "rgba(255,255,255,0.85)", maxWidth: "600px", margin: "1rem auto 0" }}>
-            Su, rüyalarda duygusal durumunuzu ve bilinçaltınızı temsil eder. Suyun şekli ve durumu yorumu etkiler.
+            Die symbolische Bedeutung von Wasser - Emotionen, Unterbewusstsein und Reinigung.
           </p>
         </div>
       </section>

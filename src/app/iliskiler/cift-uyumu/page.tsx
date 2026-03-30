@@ -51,12 +51,12 @@ export default function CiftUyumuPage() {
       });
       const payload = await res.json() as { ok?: boolean; data?: AiSonuc; message?: string };
       if (!res.ok || !payload.ok || !payload.data) {
-        setHata(payload.message ?? "Analiz şu an yapılamadı, lütfen tekrar dene.");
+        setHata(payload.message ?? "Die Analyse konnte momentan nicht durchgeführt werden, bitte versuche es erneut.");
       } else {
         setSonuc(payload.data);
       }
     } catch {
-      setHata("Sunucu ile bağlantı kurulamadı.");
+      setHata("Verbindung zum Server konnte nicht hergestellt werden.");
     } finally {
       setLoading(false);
     }
@@ -114,14 +114,14 @@ export default function CiftUyumuPage() {
 
         <div style={{ maxWidth: "72rem", margin: "0 auto", position: "relative", zIndex: 1 }}>
           <Link href="/iliskiler" style={{ color: "rgba(255,255,255,0.75)", fontSize: "0.9rem", textDecoration: "none", padding: "0.5rem 1rem", background: "rgba(255,255,255,0.08)", backdropFilter: "blur(10px)", borderRadius: "9999px", border: "1px solid rgba(255,255,255,0.12)", display: "inline-block", marginBottom: "1.5rem" }}>
-            ← İlişkiler
+            ← Beziehungen
           </Link>
 
           <h1 style={{ fontSize: "clamp(2.2rem, 5vw, 3.5rem)", fontWeight: 800, color: "#ffffff", marginBottom: "0.5rem", textShadow: "0 0 40px rgba(236,72,153,0.6)", letterSpacing: "-0.02em" }}>
-            Çift Uyumu Analizi
+            Paarkompatibilitätsanalyse
           </h1>
           <p style={{ fontSize: "1rem", color: "rgba(255,255,255,0.65)", maxWidth: "500px", margin: "0 auto 2.5rem" }}>
-            İkili uyum değerlendirmesine analiz
+            Analyse der Kompatibilität zwischen zwei Menschen
           </p>
 
           {/* Hero Görsel - Animasyonlu */}
@@ -207,7 +207,7 @@ export default function CiftUyumuPage() {
                 cursor: burc1 && burc2 && !loading ? "pointer" : "not-allowed",
               }}
             >
-              {loading ? "✨ Zodyaklı AI ile analiz ediliyor..." : "🔮 Zodyaklı ile Uyum Analizi"}
+              {loading ? "✨ SternenFeed AI ile analiz ediliyor..." : "🔮 SternenFeed ile Uyum Analizi"}
             </button>
 
             {loading && (
@@ -256,10 +256,10 @@ export default function CiftUyumuPage() {
                   }}
                 >
                   <p style={{ fontSize: "1rem", color: "#ec4899", fontWeight: 600, marginBottom: "0.5rem" }}>
-                    🌟 Kalpler Analiz Ediliyor...
+                    🌟 Herzen Werden Analysiert...
                   </p>
                   <p style={{ fontSize: "0.9rem", color: "#ffffff", lineHeight: 1.6 }}>
-                    Zodyaklı AI seçtiğiniz burçları analiz ediyor. Çift uyumunuz hazırlanıyor...
+                    SternenFeed AI analysiert die ausgewählten Sternzeichen. Eure Paarkompatibilität wird vorbereitet...
                   </p>
                 </div>
               </div>
@@ -328,7 +328,7 @@ export default function CiftUyumuPage() {
         </div>
       </section>
 
-      {/* Önerilen İçerikler */}
+      {/* Empfohlene Inhalte */}
       <RelatedCards
         title="İlgini Çekebilir"
         items={[

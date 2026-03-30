@@ -5,57 +5,57 @@ import Link from "next/link";
 
 const SORULAR = [
   {
-    soru: "Tartışmalarda nasıl davranırsınız?",
+    soru: "Wie verhältst du dich bei Streitigkeiten?",
     secenekler: [
-      { text: "Hemen çözüm ararım", puan: 3 },
-      { text: "Biraz soğumak için zaman isterim", puan: 2 },
-      { text: "Duygularımı açıkça ifade ederim", puan: 2 },
-      { text: "Konuyu değiştirmeye çalışırım", puan: 1 },
+      { text: "Ich suche sofort nach einer Lösung", puan: 3 },
+      { text: "Ich brauche Zeit zum Abkühlen", puan: 2 },
+      { text: "Ich drücke meine Gefühle offen aus", puan: 2 },
+      { text: "Ich versuche das Thema zu wechseln", puan: 1 },
     ]
   },
   {
-    soru: "İlişkide en önemli şey nedir?",
+    soru: "Was ist das Wichtigste in einer Beziehung?",
     secenekler: [
-      { text: "Güven ve sadakat", puan: 3 },
-      { text: "Tutku ve heyecan", puan: 2 },
-      { text: "Özgürlük ve bağımsızlık", puan: 2 },
-      { text: "Maddi güvence", puan: 1 },
+      { text: "Vertrauen und Loyalität", puan: 3 },
+      { text: "Leidenschaft und Aufregung", puan: 2 },
+      { text: "Freiheit und Unabhängigkeit", puan: 2 },
+      { text: "Finanzielle Sicherheit", puan: 1 },
     ]
   },
   {
-    soru: "Partnerinizle ne sıklıkla vakit geçirmek istersiniz?",
+    soru: "Wie oft möchtest du Zeit mit deinem Partner verbringen?",
     secenekler: [
-      { text: "Her gün, mümkün olduğunca çok", puan: 2 },
-      { text: "Dengeli, kendi zamanım da olsun", puan: 3 },
-      { text: "Hafta sonları yeterli", puan: 2 },
-      { text: "Çok sık değil, kalite önemli", puan: 2 },
+      { text: "Jeden Tag, so viel wie möglich", puan: 2 },
+      { text: "Ausgewogen, ich brauche auch meine Zeit", puan: 3 },
+      { text: "Wochenenden reichen", puan: 2 },
+      { text: "Nicht zu oft, Qualität ist wichtig", puan: 2 },
     ]
   },
   {
-    soru: "Sevgilinize sürpriz yapar mısınız?",
+    soru: "Machst du deinem Partner Überraschungen?",
     secenekler: [
-      { text: "Evet, sık sık!", puan: 3 },
-      { text: "Özel günlerde", puan: 2 },
-      { text: "Nadiren", puan: 1 },
-      { text: "Sürprizleri sevmem", puan: 1 },
+      { text: "Ja, oft!", puan: 3 },
+      { text: "An besonderen Tagen", puan: 2 },
+      { text: "Selten", puan: 1 },
+      { text: "Ich mag keine Überraschungen", puan: 1 },
     ]
   },
   {
-    soru: "İlişkide iletişim tarzınız nasıl?",
+    soru: "Wie ist dein Kommunikationsstil in der Beziehung?",
     secenekler: [
-      { text: "Açık ve doğrudan", puan: 3 },
-      { text: "Nazik ve dolaylı", puan: 2 },
-      { text: "Duygusal ve yoğun", puan: 2 },
-      { text: "Sessiz, davranışlarla gösteririm", puan: 1 },
+      { text: "Offen und direkt", puan: 3 },
+      { text: "Sanft und indirekt", puan: 2 },
+      { text: "Emotional und intensiv", puan: 2 },
+      { text: "Still, ich zeige es durch Handlungen", puan: 1 },
     ]
   },
   {
-    soru: "Partnerinizin arkadaşlarıyla ilişkiniz nasıl?",
+    soru: "Wie ist deine Beziehung zu den Freunden deines Partners?",
     secenekler: [
-      { text: "Çok iyi, hepsiyle arkadaşım", puan: 3 },
-      { text: "İyi, sosyal ortamlarda görüşürüz", puan: 2 },
-      { text: "Mesafeli, kendi arkadaşlarımı tercih ederim", puan: 1 },
-      { text: "Tanışmak istemem", puan: 0 },
+      { text: "Sehr gut, ich bin mit allen befreundet", puan: 3 },
+      { text: "Gut, wir treffen uns in sozialen Umgebungen", puan: 2 },
+      { text: "Distanziert, ich bevorzuge meine eigenen Freunde", puan: 1 },
+      { text: "Ich möchte sie nicht kennenlernen", puan: 0 },
     ]
   },
 ];
@@ -84,11 +84,11 @@ export default function AskUyumTestiPage() {
   };
 
   const getSonucYorum = (yuzde: number) => {
-    if (yuzde >= 85) return { baslik: "Mükemmel Uyum!", emoji: "💕", yorum: "İlişkiniz harika bir uyum içinde! Birbirinizi anlıyor ve destekliyorsunuz." };
-    if (yuzde >= 70) return { baslik: "Güçlü Uyum", emoji: "💖", yorum: "İlişkiniz sağlam temeller üzerine kurulu. Küçük iyileştirmelerle mükemmele ulaşabilirsiniz." };
-    if (yuzde >= 55) return { baslik: "İyi Uyum", emoji: "💗", yorum: "İlişkiniz iyi gidiyor. İletişimi güçlendirerek daha da iyileştirebilirsiniz." };
-    if (yuzde >= 40) return { baslik: "Gelişime Açık", emoji: "💛", yorum: "İlişkinizde çalışılması gereken alanlar var. Açık iletişim önemli." };
-    return { baslik: "Dikkat Gerekli", emoji: "🧡", yorum: "İlişkinizde önemli konuları konuşmanız gerekebilir. Profesyonel destek düşünebilirsiniz." };
+    if (yuzde >= 85) return { baslik: "Perfekte Harmonie!", emoji: "💕", yorum: "Eure Beziehung ist in wunderbarer Harmonie! Ihr versteht und unterstützt einander." };
+    if (yuzde >= 70) return { baslik: "Starke Harmonie", emoji: "💖", yorum: "Eure Beziehung ist auf soliden Grundlagen aufgebaut. Mit kleinen Verbesserungen könnt ihr Perfektion erreichen." };
+    if (yuzde >= 55) return { baslik: "Gute Harmonie", emoji: "💗", yorum: "Eure Beziehung läuft gut. Durch Stärkung der Kommunikation könnt ihr sie noch verbessern." };
+    if (yuzde >= 40) return { baslik: "Entwicklungsfähig", emoji: "💛", yorum: "Es gibt Bereiche in eurer Beziehung, an denen gearbeitet werden sollte. Offene Kommunikation ist wichtig." };
+    return { baslik: "Aufmerksamkeit Erforderlich", emoji: "🧡", yorum: "Ihr solltet wichtige Themen in eurer Beziehung besprechen. Professionelle Unterstützung könnte hilfreich sein." };
   };
 
   if (sonuc !== null) {
@@ -107,10 +107,10 @@ export default function AskUyumTestiPage() {
             <p style={{ fontSize: "1.1rem", color: "rgba(255,255,255,0.9)", marginBottom: "2rem" }}>{yorum.yorum}</p>
             <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
               <button onClick={resetTest} style={{ padding: "0.75rem 1.5rem", background: "#1a0b2e", color: "#ec4899", borderRadius: "9999px", fontWeight: 600, border: "none", cursor: "pointer" }}>
-                Tekrar Dene
+                Erneut Versuchen
               </button>
               <Link href="/iliskiler/burc-uyumu" style={{ padding: "0.75rem 1.5rem", background: "rgba(255,255,255,0.2)", color: "#ffffff", borderRadius: "9999px", fontWeight: 600, textDecoration: "none" }}>
-                Burç Uyumu
+                Sternzeichen-Kompatibilität
               </Link>
             </div>
           </div>

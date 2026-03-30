@@ -37,184 +37,184 @@ const BURCLAR_DATA: Record<string, {
   aylik: string;
 }> = {
   koc: {
-    name: "Koç",
+    name: "Widder",
     emoji: "♈",
-    date: "21 Mart - 19 Nisan",
-    element: "Ateş",
+    date: "21. März - 19. April",
+    element: "Feuer",
     gezegen: "Mars",
     color: "#ef4444",
-    ozet: "Koç burcu, zodyağın ilk burcu olarak öncü ve cesur bir karaktere sahiptir. Doğal liderlik özellikleri ve sınırsız enerjisiyle tanınır.",
-    kisilik: ["Cesur ve atılgan", "Doğal lider", "Enerjik ve dinamik", "Rekabetçi", "Dürüst ve açık sözlü"],
-    uyumlu: ["Aslan", "Yay", "İkizler", "Kova"],
-    uyumsuz: ["Yengeç", "Terazi", "Oğlak"],
-    gunluk: "Bugün enerjin yüksek ve motivasyonun dorukta! Yeni başlangıçlar için ideal bir gün. Cesur adımlar atmaktan çekinme, yıldızlar seni destekliyor. İş hayatında liderlik özelliklerin ön plana çıkacak.",
-    haftalik: "Bu hafta Mars'ın etkisiyle aksiyona geçme zamanı. Ertelediğin projeler için harekete geç. Hafta ortasında beklenmedik fırsatlar kapını çalabilir. Finansal konularda dikkatli ol.",
-    aylik: "Bu ay kariyer odaklı bir dönem seni bekliyor. Yeni iş fırsatları veya terfi haberleri alabilirsin. Ay sonuna doğru ilişkilerde olumlu gelişmeler var. Sağlık konusunda egzersize ağırlık ver."
+    ozet: "Der Widder ist als erstes Sternzeichen des Tierkreises ein Pionier mit mutigem Charakter. Er ist bekannt für seine natürlichen Führungsqualitäten und grenzenlose Energie.",
+    kisilik: ["Mutig und entschlossen", "Natürlicher Anführer", "Energisch und dynamisch", "Wettbewerbsorientiert", "Ehrlich und direkt"],
+    uyumlu: ["Löwe", "Schütze", "Zwillinge", "Wassermann"],
+    uyumsuz: ["Krebs", "Waage", "Steinbock"],
+    gunluk: "Heute ist deine Energie hoch und deine Motivation auf dem Höhepunkt! Ein idealer Tag für Neuanfänge. Scheue dich nicht, mutige Schritte zu gehen, die Sterne unterstützen dich. Im Berufsleben werden deine Führungsqualitäten hervortreten.",
+    haftalik: "Diese Woche ist es Zeit für Aktion unter dem Einfluss von Mars. Geh die Projekte an, die du aufgeschoben hast. Mitte der Woche können unerwartete Chancen anklopfen. Sei vorsichtig in finanziellen Angelegenheiten.",
+    aylik: "Dieser Monat bringt dir eine karriereorientierte Phase. Du könntest neue Jobchancen oder Beförderungsnachrichten erhalten. Gegen Ende des Monats gibt es positive Entwicklungen in Beziehungen. Lege beim Thema Gesundheit Wert auf Bewegung."
   },
   boga: {
-    name: "Boğa",
+    name: "Stier",
     emoji: "♉",
-    date: "20 Nisan - 20 Mayıs",
-    element: "Toprak",
-    gezegen: "Venüs",
+    date: "20. April - 20. Mai",
+    element: "Erde",
+    gezegen: "Venus",
     color: "#ffffff",
-    ozet: "Boğa burcu, istikrar ve güvenlik arayışıyla bilinir. Sabırlı, kararlı ve güvenilir yapısıyla çevresine huzur verir.",
-    kisilik: ["Sabırlı ve kararlı", "Güvenilir", "Pratik düşünen", "Sanata düşkün", "Sadık ve vefalı"],
-    uyumlu: ["Başak", "Oğlak", "Yengeç", "Balık"],
-    uyumsuz: ["Aslan", "Akrep", "Kova"],
-    gunluk: "Maddi konularda olumlu gelişmeler var. Sabırlı ol, emeklerin karşılığını alacaksın. Bugün konfor alanında kalmak isteyebilirsin ama küçük adımlar bile fark yaratır.",
-    haftalik: "Venüs'ün desteğiyle bu hafta estetik ve güzellik konularında şanslısın. Finansal yatırımlar için uygun bir dönem. İlişkilerde güven duygusu ön planda olacak.",
-    aylik: "Bu ay maddi kazançlar ve konfor ön planda. Ev veya araç alımı düşünüyorsan değerlendir. Sağlık açısından boğaz ve boyun bölgesine dikkat et."
+    ozet: "Der Stier ist bekannt für sein Streben nach Stabilität und Sicherheit. Mit seiner geduldigen, entschlossenen und zuverlässigen Natur bringt er seiner Umgebung Frieden.",
+    kisilik: ["Geduldig und entschlossen", "Zuverlässig", "Praktisch denkend", "Kunstliebend", "Loyal und treu"],
+    uyumlu: ["Jungfrau", "Steinbock", "Krebs", "Fische"],
+    uyumsuz: ["Löwe", "Skorpion", "Wassermann"],
+    gunluk: "Es gibt positive Entwicklungen in materiellen Angelegenheiten. Sei geduldig, du wirst die Früchte deiner Arbeit ernten. Heute möchtest du vielleicht in deiner Komfortzone bleiben, aber selbst kleine Schritte machen einen Unterschied.",
+    haftalik: "Mit der Unterstützung von Venus hast du diese Woche Glück in Ästhetik- und Schönheitsangelegenheiten. Eine günstige Zeit für finanzielle Investitionen. Vertrauen wird in Beziehungen im Vordergrund stehen.",
+    aylik: "Dieser Monat steht im Zeichen materieller Gewinne und Komfort. Wenn du überlegst, ein Haus oder Auto zu kaufen, prüfe dies. Achte gesundheitlich auf Hals und Nacken."
   },
   ikizler: {
-    name: "İkizler",
+    name: "Zwillinge",
     emoji: "♊",
-    date: "21 Mayıs - 20 Haziran",
-    element: "Hava",
-    gezegen: "Merkür",
+    date: "21. Mai - 20. Juni",
+    element: "Luft",
+    gezegen: "Merkur",
     color: "#eab308",
-    ozet: "İkizler burcu, zodyağın en meraklı ve iletişim odaklı burcudur. Çok yönlü zekası ve sosyal yetenekleriyle dikkat çeker.",
-    kisilik: ["Meraklı ve öğrenmeye açık", "İletişim ustası", "Çok yönlü", "Esprili", "Uyumlu ve esnek"],
-    uyumlu: ["Terazi", "Kova", "Koç", "Aslan"],
-    uyumsuz: ["Başak", "Balık", "Yay"],
-    gunluk: "İletişim yeteneklerin zirve yapıyor. Sosyal çevren genişliyor, yeni bağlantılar kur. Öğrenme ve paylaşma günü, bilgini çevrene aktar.",
-    haftalik: "Merkür retrosu etkisini azaltıyor, iletişim sorunları çözülüyor. Kısa yolculuklar ve yeni öğrenmeler için ideal hafta. Kardeş veya komşularla ilgili haberler alabilirsin.",
-    aylik: "Bu ay zihinsel aktivite yoğun. Yeni kurslar, eğitimler veya sertifikalar için harika bir dönem. Sosyal medyada aktifliğin artabilir."
+    ozet: "Die Zwillinge sind das neugierigste und kommunikativste Sternzeichen des Tierkreises. Sie fallen durch ihre vielseitige Intelligenz und sozialen Fähigkeiten auf.",
+    kisilik: ["Neugierig und lernbereit", "Kommunikationsmeister", "Vielseitig", "Witzig", "Anpassungsfähig und flexibel"],
+    uyumlu: ["Waage", "Wassermann", "Widder", "Löwe"],
+    uyumsuz: ["Jungfrau", "Fische", "Schütze"],
+    gunluk: "Deine Kommunikationsfähigkeiten erreichen ihren Höhepunkt. Dein sozialer Kreis erweitert sich, knüpfe neue Verbindungen. Ein Tag des Lernens und Teilens, gib dein Wissen an dein Umfeld weiter.",
+    haftalik: "Der Merkur-Rückläufig lässt nach, Kommunikationsprobleme lösen sich. Ideale Woche für Kurzreisen und neues Lernen. Du könntest Nachrichten bezüglich Geschwistern oder Nachbarn erhalten.",
+    aylik: "Dieser Monat ist mental sehr aktiv. Eine großartige Zeit für neue Kurse, Ausbildungen oder Zertifikate. Deine Social-Media-Aktivität könnte zunehmen."
   },
   yengec: {
-    name: "Yengeç",
+    name: "Krebs",
     emoji: "♋",
-    date: "21 Haziran - 22 Temmuz",
-    element: "Su",
-    gezegen: "Ay",
+    date: "21. Juni - 22. Juli",
+    element: "Wasser",
+    gezegen: "Mond",
     color: "#3b82f6",
-    ozet: "Yengeç burcu, duygusal derinliği ve koruyucu yapısıyla bilinir. Aile ve yuva kavramları hayatının merkezindedir.",
-    kisilik: ["Duygusal ve sezgisel", "Koruyucu", "Aile odaklı", "Yaratıcı", "Sadık"],
-    uyumlu: ["Akrep", "Balık", "Boğa", "Başak"],
-    uyumsuz: ["Koç", "Terazi", "Oğlak"],
-    gunluk: "Aile ve ev konuları ön planda. İç dünyana dön, duygusal ihtiyaçlarını dinle. Sevdiklerinle vakit geçirmek seni şarj edecek.",
-    haftalik: "Ay'ın hareketleriyle duygusal iniş çıkışlar yaşayabilirsin. Ev dekorasyonu veya taşınma planları gündemde olabilir. Annenle ilgili haberler alabilirsin.",
-    aylik: "Bu ay aile ve kök konuları ön planda. Geçmişle ilgili kapanışlar yaşanabilir. Gayrimenkul yatırımları için uygun dönem."
+    ozet: "Der Krebs ist bekannt für seine emotionale Tiefe und beschützende Natur. Familie und Heim stehen im Mittelpunkt seines Lebens.",
+    kisilik: ["Emotional und intuitiv", "Beschützend", "Familienorientiert", "Kreativ", "Loyal"],
+    uyumlu: ["Skorpion", "Fische", "Stier", "Jungfrau"],
+    uyumsuz: ["Widder", "Waage", "Steinbock"],
+    gunluk: "Familie und Zuhause stehen im Vordergrund. Kehre zu deiner inneren Welt zurück, höre auf deine emotionalen Bedürfnisse. Zeit mit deinen Lieben zu verbringen wird dich aufladen.",
+    haftalik: "Mit den Bewegungen des Mondes könntest du emotionale Höhen und Tiefen erleben. Heimdekoration oder Umzugspläne könnten auf der Tagesordnung stehen. Du könntest Nachrichten bezüglich deiner Mutter erhalten.",
+    aylik: "Dieser Monat steht im Zeichen von Familie und Wurzeln. Es können Abschlüsse mit der Vergangenheit stattfinden. Günstige Zeit für Immobilieninvestitionen."
   },
   aslan: {
-    name: "Aslan",
+    name: "Löwe",
     emoji: "♌",
-    date: "23 Temmuz - 22 Ağustos",
-    element: "Ateş",
-    gezegen: "Güneş",
+    date: "23. Juli - 22. August",
+    element: "Feuer",
+    gezegen: "Sonne",
     color: "#f97316",
-    ozet: "Aslan burcu, zodyağın en karizmatik ve yaratıcı burcudur. Doğal liderlik ve sahne hakimiyetiyle dikkat çeker.",
-    kisilik: ["Karizmatik", "Yaratıcı", "Cömert", "Sadık", "Kendine güvenen"],
-    uyumlu: ["Koç", "Yay", "İkizler", "Terazi"],
-    uyumsuz: ["Boğa", "Akrep", "Kova"],
-    gunluk: "Yaratıcılığın dorukta! Sahnede parlama zamanı. Kendini ifade etmekten çekinme, tüm gözler sende olacak.",
-    haftalik: "Güneş'in gücüyle bu hafta merkez sahnedesin. Tanınma ve takdir alacağın bir dönem. Romantik ilişkilerde tutkulu anlar seni bekliyor.",
-    aylik: "Bu ay yaratıcı projeler ve eğlence ön planda. Çocuklarla ilgili güzel haberler alabilirsin. Kalp sağlığına dikkat et."
+    ozet: "Der Löwe ist das charismatischste und kreativste Sternzeichen des Tierkreises. Er fällt durch seine natürliche Führung und Bühnenpräsenz auf.",
+    kisilik: ["Charismatisch", "Kreativ", "Großzügig", "Loyal", "Selbstbewusst"],
+    uyumlu: ["Widder", "Schütze", "Zwillinge", "Waage"],
+    uyumsuz: ["Stier", "Skorpion", "Wassermann"],
+    gunluk: "Deine Kreativität ist auf dem Höhepunkt! Zeit, auf der Bühne zu glänzen. Scheue dich nicht, dich auszudrücken, alle Augen werden auf dir sein.",
+    haftalik: "Mit der Kraft der Sonne stehst du diese Woche im Mittelpunkt. Eine Phase der Anerkennung und Wertschätzung. In romantischen Beziehungen erwarten dich leidenschaftliche Momente.",
+    aylik: "Dieser Monat steht im Zeichen kreativer Projekte und Unterhaltung. Du könntest schöne Nachrichten bezüglich Kindern erhalten. Achte auf deine Herzgesundheit."
   },
   basak: {
-    name: "Başak",
+    name: "Jungfrau",
     emoji: "♍",
-    date: "23 Ağustos - 22 Eylül",
-    element: "Toprak",
-    gezegen: "Merkür",
+    date: "23. August - 22. September",
+    element: "Erde",
+    gezegen: "Merkur",
     color: "#84cc16",
-    ozet: "Başak burcu, analitik zekası ve mükemmeliyetçi yapısıyla tanınır. Detaylara olan hakimiyeti ve yardımseverliğiyle öne çıkar.",
-    kisilik: ["Analitik", "Mükemmeliyetçi", "Yardımsever", "Pratik", "Çalışkan"],
-    uyumlu: ["Boğa", "Oğlak", "Yengeç", "Akrep"],
-    uyumsuz: ["İkizler", "Yay", "Balık"],
-    gunluk: "Detaylara odaklan, mükemmeliyetçiliğin işe yarayacak. Organizasyon ve planlama günü. Sağlık rutinlerini gözden geçir.",
-    haftalik: "Merkür'ün etkisiyle analitik yeteneklerin parlıyor. İş yerinde düzenleme ve iyileştirme projeleri için ideal hafta.",
-    aylik: "Bu ay sağlık ve günlük rutinler ön planda. Diyet veya egzersiz programı başlatmak için uygun. İş yerinde verimlilik artıyor."
+    ozet: "Die Jungfrau ist bekannt für ihre analytische Intelligenz und perfektionistische Natur. Sie zeichnet sich durch ihre Beherrschung von Details und Hilfsbereitschaft aus.",
+    kisilik: ["Analytisch", "Perfektionistisch", "Hilfsbereit", "Praktisch", "Fleißig"],
+    uyumlu: ["Stier", "Steinbock", "Krebs", "Skorpion"],
+    uyumsuz: ["Zwillinge", "Schütze", "Fische"],
+    gunluk: "Konzentriere dich auf Details, dein Perfektionismus wird sich auszahlen. Ein Tag für Organisation und Planung. Überprüfe deine Gesundheitsroutinen.",
+    haftalik: "Unter dem Einfluss von Merkur glänzen deine analytischen Fähigkeiten. Ideale Woche für Organisations- und Verbesserungsprojekte am Arbeitsplatz.",
+    aylik: "Dieser Monat steht im Zeichen von Gesundheit und täglichen Routinen. Günstig, um eine Diät oder ein Trainingsprogramm zu starten. Die Produktivität am Arbeitsplatz steigt."
   },
   terazi: {
-    name: "Terazi",
+    name: "Waage",
     emoji: "♎",
-    date: "23 Eylül - 22 Ekim",
-    element: "Hava",
-    gezegen: "Venüs",
+    date: "23. September - 22. Oktober",
+    element: "Luft",
+    gezegen: "Venus",
     color: "#ec4899",
-    ozet: "Terazi burcu, denge ve uyum arayışıyla bilinir. Estetik anlayışı ve diplomatik yetenekleriyle öne çıkar.",
-    kisilik: ["Diplomatik", "Adil", "Estetik", "Sosyal", "Romantik"],
-    uyumlu: ["İkizler", "Kova", "Aslan", "Yay"],
-    uyumsuz: ["Koç", "Yengeç", "Oğlak"],
-    gunluk: "İlişkiler ve ortaklıklar gündemde. Denge ve uyum arayışın meyvelerini verecek. Estetik konularda kararlar alabilirsin.",
-    haftalik: "Venüs'ün desteğiyle romantik ilişkiler canlanıyor. İş ortaklıkları için görüşmeler yapabilirsin. Sanat ve güzellik konularında şanslısın.",
-    aylik: "Bu ay ilişkiler ve ortaklıklar ön planda. Evlilik veya nişan haberleri alabilirsin. Hukuki konularda olumlu gelişmeler var."
+    ozet: "Die Waage ist bekannt für ihr Streben nach Balance und Harmonie. Sie zeichnet sich durch ihr ästhetisches Verständnis und diplomatische Fähigkeiten aus.",
+    kisilik: ["Diplomatisch", "Fair", "Ästhetisch", "Sozial", "Romantisch"],
+    uyumlu: ["Zwillinge", "Wassermann", "Löwe", "Schütze"],
+    uyumsuz: ["Widder", "Krebs", "Steinbock"],
+    gunluk: "Beziehungen und Partnerschaften stehen auf der Tagesordnung. Dein Streben nach Balance und Harmonie wird Früchte tragen. Du könntest Entscheidungen in ästhetischen Angelegenheiten treffen.",
+    haftalik: "Mit der Unterstützung von Venus beleben sich romantische Beziehungen. Du könntest Gespräche für Geschäftspartnerschaften führen. Du hast Glück in Kunst- und Schönheitsangelegenheiten.",
+    aylik: "Dieser Monat steht im Zeichen von Beziehungen und Partnerschaften. Du könntest Hochzeits- oder Verlobungsnachrichten erhalten. Es gibt positive Entwicklungen in rechtlichen Angelegenheiten."
   },
   akrep: {
-    name: "Akrep",
+    name: "Skorpion",
     emoji: "♏",
-    date: "23 Ekim - 21 Kasım",
-    element: "Su",
-    gezegen: "Plüton",
+    date: "23. Oktober - 21. November",
+    element: "Wasser",
+    gezegen: "Pluto",
     color: "#8b5cf6",
-    ozet: "Akrep burcu, derin duygusallığı ve dönüşüm gücüyle tanınır. Sezgisel yetenekleri ve kararlılığıyla dikkat çeker.",
-    kisilik: ["Tutkulu", "Kararlı", "Sezgisel", "Gizemli", "Sadık"],
-    uyumlu: ["Yengeç", "Balık", "Başak", "Oğlak"],
-    uyumsuz: ["Boğa", "Aslan", "Kova"],
-    gunluk: "Derin dönüşümler yaşanıyor. Sezgilerin güçlü, iç sesin dinle. Gizli konular gün yüzüne çıkabilir.",
-    haftalik: "Plüton'un etkisiyle dönüşüm süreci devam ediyor. Eski alışkanlıklardan kurtulma zamanı. Finansal konularda ortaklıklar gündemde.",
-    aylik: "Bu ay dönüşüm ve yenilenme ön planda. Psikolojik derinleşme ve terapi için uygun dönem. Miras veya ortak finanslar gündemde."
+    ozet: "Der Skorpion ist bekannt für seine tiefe Emotionalität und transformative Kraft. Er fällt durch seine intuitiven Fähigkeiten und Entschlossenheit auf.",
+    kisilik: ["Leidenschaftlich", "Entschlossen", "Intuitiv", "Geheimnisvoll", "Loyal"],
+    uyumlu: ["Krebs", "Fische", "Jungfrau", "Steinbock"],
+    uyumsuz: ["Stier", "Löwe", "Wassermann"],
+    gunluk: "Tiefe Transformationen finden statt. Deine Intuition ist stark, höre auf deine innere Stimme. Verborgene Themen könnten ans Licht kommen.",
+    haftalik: "Unter dem Einfluss von Pluto setzt sich der Transformationsprozess fort. Zeit, alte Gewohnheiten abzulegen. Partnerschaften in finanziellen Angelegenheiten stehen auf der Tagesordnung.",
+    aylik: "Dieser Monat steht im Zeichen von Transformation und Erneuerung. Günstige Zeit für psychologische Vertiefung und Therapie. Erbschaft oder gemeinsame Finanzen stehen auf der Tagesordnung."
   },
   yay: {
-    name: "Yay",
+    name: "Schütze",
     emoji: "♐",
-    date: "22 Kasım - 21 Aralık",
-    element: "Ateş",
-    gezegen: "Jüpiter",
+    date: "22. November - 21. Dezember",
+    element: "Feuer",
+    gezegen: "Jupiter",
     color: "#f43f5e",
-    ozet: "Yay burcu, özgürlük aşkı ve felsefi derinliğiyle bilinir. Macera ruhu ve iyimserliğiyle çevresine ilham verir.",
-    kisilik: ["Özgürlükçü", "İyimser", "Felsefi", "Maceraperest", "Dürüst"],
-    uyumlu: ["Koç", "Aslan", "Terazi", "Kova"],
-    uyumsuz: ["İkizler", "Başak", "Balık"],
-    gunluk: "Macera ruhu uyanıyor! Yeni deneyimlere açık ol, ufkunu genişlet. Yabancı kültürler ve uzak yerlerle bağlantı kurabilirsin.",
-    haftalik: "Jüpiter'in şansıyla bu hafta fırsatlar kapını çalıyor. Yurtdışı bağlantıları ve eğitim konuları ön planda. Hukuki konularda olumlu gelişmeler.",
-    aylik: "Bu ay yolculuklar ve yükseköğrenim ön planda. Yayın veya medya projeleri için uygun dönem. Felsefi ve spiritüel arayışlar yoğunlaşıyor."
+    ozet: "Der Schütze ist bekannt für seine Freiheitsliebe und philosophische Tiefe. Mit seinem Abenteuergeist und Optimismus inspiriert er sein Umfeld.",
+    kisilik: ["Freiheitsliebend", "Optimistisch", "Philosophisch", "Abenteuerlustig", "Ehrlich"],
+    uyumlu: ["Widder", "Löwe", "Waage", "Wassermann"],
+    uyumsuz: ["Zwillinge", "Jungfrau", "Fische"],
+    gunluk: "Dein Abenteuergeist erwacht! Sei offen für neue Erfahrungen, erweitere deinen Horizont. Du könntest Verbindungen zu fremden Kulturen und fernen Orten knüpfen.",
+    haftalik: "Mit dem Glück von Jupiter klopfen diese Woche Chancen an deine Tür. Auslandsverbindungen und Bildungsthemen stehen im Vordergrund. Positive Entwicklungen in rechtlichen Angelegenheiten.",
+    aylik: "Dieser Monat steht im Zeichen von Reisen und Hochschulbildung. Günstige Zeit für Verlags- oder Medienprojekte. Philosophische und spirituelle Suchen intensivieren sich."
   },
   oglak: {
-    name: "Oğlak",
+    name: "Steinbock",
     emoji: "♑",
-    date: "22 Aralık - 19 Ocak",
-    element: "Toprak",
-    gezegen: "Satürn",
+    date: "22. Dezember - 19. Januar",
+    element: "Erde",
+    gezegen: "Saturn",
     color: "#6366f1",
-    ozet: "Oğlak burcu, disiplini ve hedef odaklı yapısıyla tanınır. Kariyer tutkusu ve sorumluluk bilinciyle öne çıkar.",
-    kisilik: ["Disiplinli", "Hırslı", "Sorumlu", "Pratik", "Sabırlı"],
-    uyumlu: ["Boğa", "Başak", "Akrep", "Balık"],
-    uyumsuz: ["Koç", "Yengeç", "Terazi"],
-    gunluk: "Kariyer hedeflerin netleşiyor. Disiplinli çalışman ödüllendirilecek. Otorite figürleriyle olumlu etkileşimler var.",
-    haftalik: "Satürn'ün etkisiyle sorumluluklar artıyor ama ödüller de yakın. Kariyer atılımları için uygun hafta. Uzun vadeli planlar yap.",
-    aylik: "Bu ay kariyer ve toplumsal statü ön planda. Terfi veya tanınma haberleri alabilirsin. Kemik ve diş sağlığına dikkat."
+    ozet: "Der Steinbock ist bekannt für seine Disziplin und zielorientierte Natur. Er zeichnet sich durch seine Karriereleidenschaft und sein Verantwortungsbewusstsein aus.",
+    kisilik: ["Diszipliniert", "Ehrgeizig", "Verantwortungsbewusst", "Praktisch", "Geduldig"],
+    uyumlu: ["Stier", "Jungfrau", "Skorpion", "Fische"],
+    uyumsuz: ["Widder", "Krebs", "Waage"],
+    gunluk: "Deine Karriereziele werden klarer. Deine disziplinierte Arbeit wird belohnt werden. Es gibt positive Interaktionen mit Autoritätsfiguren.",
+    haftalik: "Unter dem Einfluss von Saturn nehmen die Verantwortlichkeiten zu, aber auch die Belohnungen sind nah. Günstige Woche für Karrieredurchbrüche. Mache langfristige Pläne.",
+    aylik: "Dieser Monat steht im Zeichen von Karriere und sozialem Status. Du könntest Beförderungs- oder Anerkennungsnachrichten erhalten. Achte auf deine Knochen- und Zahngesundheit."
   },
   kova: {
-    name: "Kova",
+    name: "Wassermann",
     emoji: "♒",
-    date: "20 Ocak - 18 Şubat",
-    element: "Hava",
-    gezegen: "Uranüs",
+    date: "20. Januar - 18. Februar",
+    element: "Luft",
+    gezegen: "Uranus",
     color: "#ffffff",
-    ozet: "Kova burcu, yenilikçi düşüncesi ve insancıl yaklaşımıyla bilinir. Bağımsızlık aşkı ve orijinalliğiyle dikkat çeker.",
-    kisilik: ["Yenilikçi", "Bağımsız", "İnsancıl", "Orijinal", "Entelektüel"],
-    uyumlu: ["İkizler", "Terazi", "Koç", "Yay"],
-    uyumsuz: ["Boğa", "Aslan", "Akrep"],
-    gunluk: "Yenilikçi fikirlerin var! Topluluk çalışmaları ve arkadaşlıklar ön planda. Teknoloji projeleri için harika bir gün.",
-    haftalik: "Uranüs'ün etkisiyle beklenmedik değişimler olabilir. Arkadaş grupları ve sosyal aktiviteler yoğun. Dijital projeler için uygun hafta.",
-    aylik: "Bu ay arkadaşlıklar ve topluluk çalışmaları ön planda. Sosyal medya projeleri parlıyor. Gelecek planları netleşiyor."
+    ozet: "Der Wassermann ist bekannt für sein innovatives Denken und seine humanitäre Einstellung. Er fällt durch seine Unabhängigkeitsliebe und Originalität auf.",
+    kisilik: ["Innovativ", "Unabhängig", "Humanitär", "Original", "Intellektuell"],
+    uyumlu: ["Zwillinge", "Waage", "Widder", "Schütze"],
+    uyumsuz: ["Stier", "Löwe", "Skorpion"],
+    gunluk: "Du hast innovative Ideen! Gemeinschaftsarbeiten und Freundschaften stehen im Vordergrund. Ein großartiger Tag für Technologieprojekte.",
+    haftalik: "Unter dem Einfluss von Uranus könnte es unerwartete Veränderungen geben. Freundesgruppen und soziale Aktivitäten sind intensiv. Günstige Woche für digitale Projekte.",
+    aylik: "Dieser Monat steht im Zeichen von Freundschaften und Gemeinschaftsarbeiten. Social-Media-Projekte glänzen. Zukunftspläne werden klarer."
   },
   balik: {
-    name: "Balık",
+    name: "Fische",
     emoji: "♓",
-    date: "19 Şubat - 20 Mart",
-    element: "Su",
-    gezegen: "Neptün",
+    date: "19. Februar - 20. März",
+    element: "Wasser",
+    gezegen: "Neptun",
     color: "#a855f7",
-    ozet: "Balık burcu, sezgisel derinliği ve empatik yapısıyla tanınır. Sanatsal yetenekleri ve spiritüel bağlantısıyla öne çıkar.",
-    kisilik: ["Sezgisel", "Empatik", "Yaratıcı", "Romantik", "Spiritüel"],
-    uyumlu: ["Yengeç", "Akrep", "Boğa", "Oğlak"],
-    uyumsuz: ["İkizler", "Başak", "Yay"],
-    gunluk: "Sezgisel güçlerin yüksek. Rüyalarına dikkat et, mesajlar alabilirsin. Sanatsal ve spiritüel aktiviteler için ideal gün.",
-    haftalik: "Neptün'ün etkisiyle hayal gücün sınırsız. Sanatsal projeler için ilham dolu bir hafta. Meditasyon ve içsel yolculuk için uygun.",
-    aylik: "Bu ay spiritüel gelişim ve içsel yolculuk ön planda. Sanatsal projeler meyvelerini veriyor. Ayak sağlığına dikkat et."
+    ozet: "Die Fische sind bekannt für ihre intuitive Tiefe und empathische Natur. Sie zeichnen sich durch ihre künstlerischen Fähigkeiten und spirituelle Verbindung aus.",
+    kisilik: ["Intuitiv", "Empathisch", "Kreativ", "Romantisch", "Spirituell"],
+    uyumlu: ["Krebs", "Skorpion", "Stier", "Steinbock"],
+    uyumsuz: ["Zwillinge", "Jungfrau", "Schütze"],
+    gunluk: "Deine intuitiven Kräfte sind hoch. Achte auf deine Träume, du könntest Botschaften erhalten. Idealer Tag für künstlerische und spirituelle Aktivitäten.",
+    haftalik: "Unter dem Einfluss von Neptun ist deine Vorstellungskraft grenzenlos. Eine inspirationsreiche Woche für künstlerische Projekte. Günstig für Meditation und innere Reisen.",
+    aylik: "Dieser Monat steht im Zeichen spiritueller Entwicklung und innerer Reisen. Künstlerische Projekte tragen Früchte. Achte auf deine Fußgesundheit."
   }
 };
 
@@ -293,7 +293,7 @@ export default async function BurcDetayPage({ params }: { params: Promise<{ slug
               transition: "all 0.3s ease",
             }}
           >
-            ← Tüm Burçlar
+            ← Alle Sternzeichen
           </Link>
 
           <div style={{ display: "flex", alignItems: "center", gap: "2rem", flexWrap: "wrap" }}>
@@ -337,7 +337,7 @@ export default async function BurcDetayPage({ params }: { params: Promise<{ slug
                 textShadow: "0 4px 20px rgba(0,0,0,0.2)",
                 letterSpacing: "-0.02em",
               }}>
-                {burc.name} Burcu
+                {burc.name}
               </h1>
               <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
                 <span style={{
@@ -406,7 +406,7 @@ export default async function BurcDetayPage({ params }: { params: Promise<{ slug
             {/* Özet */}
             <div style={{ background: "#1a0b2e", borderRadius: "20px", padding: "1.5rem", boxShadow: "0 2px 12px rgba(0,0,0,0.06)" }}>
               <h2 style={{ fontSize: "1.25rem", fontWeight: 700, color: "#ffffff", marginBottom: "1rem", display: "flex", alignItems: "center", gap: "0.5rem" }}>
-                <span style={{ fontSize: "1.5rem" }}>✨</span> Genel Özellikler
+                <span style={{ fontSize: "1.5rem" }}>✨</span> Allgemeine Merkmale
               </h2>
               <p style={{ color: "#ffffff", lineHeight: 1.7 }}>{burc.ozet}</p>
             </div>
@@ -414,7 +414,7 @@ export default async function BurcDetayPage({ params }: { params: Promise<{ slug
             {/* Kişilik */}
             <div style={{ background: "#1a0b2e", borderRadius: "20px", padding: "1.5rem", boxShadow: "0 2px 12px rgba(0,0,0,0.06)" }}>
               <h2 style={{ fontSize: "1.25rem", fontWeight: 700, color: "#ffffff", marginBottom: "1rem", display: "flex", alignItems: "center", gap: "0.5rem" }}>
-                <span style={{ fontSize: "1.5rem" }}>🎭</span> Kişilik Özellikleri
+                <span style={{ fontSize: "1.5rem" }}>🎭</span> Persönlichkeitsmerkmale
               </h2>
               <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem" }}>
                 {burc.kisilik.map((ozellik, i) => (
@@ -428,24 +428,24 @@ export default async function BurcDetayPage({ params }: { params: Promise<{ slug
             {/* Günlük Yorum */}
             <div style={{ background: `linear-gradient(135deg, ${burc.color}10, ${burc.color}20)`, borderRadius: "20px", padding: "1.5rem", gridColumn: "1 / -1" }}>
               <h2 style={{ fontSize: "1.25rem", fontWeight: 700, color: "#ffffff", marginBottom: "1rem", display: "flex", alignItems: "center", gap: "0.5rem" }}>
-                <span style={{ fontSize: "1.5rem" }}>🌅</span> Günlük Yorum
+                <span style={{ fontSize: "1.5rem" }}>🌅</span> Tageshoroskop
               </h2>
               <p style={{ color: "#ffffff", lineHeight: 1.8, fontSize: "1.05rem" }}>{gunluk}</p>
               <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "1rem", marginTop: "1.25rem" }}>
                 <div style={{ background: "rgba(255,255,255,0.7)", borderRadius: "12px", padding: "1rem" }}>
-                  <div style={{ fontSize: "0.8rem", fontWeight: 600, color: burc.color, marginBottom: "0.5rem" }}>❤️ AŞK</div>
+                  <div style={{ fontSize: "0.8rem", fontWeight: 600, color: burc.color, marginBottom: "0.5rem" }}>❤️ LIEBE</div>
                   <p style={{ fontSize: "0.9rem", color: "#ffffff", lineHeight: 1.6 }}>{ask}</p>
                 </div>
                 <div style={{ background: "rgba(255,255,255,0.7)", borderRadius: "12px", padding: "1rem" }}>
-                  <div style={{ fontSize: "0.8rem", fontWeight: 600, color: burc.color, marginBottom: "0.5rem" }}>💼 KARİYER</div>
+                  <div style={{ fontSize: "0.8rem", fontWeight: 600, color: burc.color, marginBottom: "0.5rem" }}>💼 KARRIERE</div>
                   <p style={{ fontSize: "0.9rem", color: "#ffffff", lineHeight: 1.6 }}>{kariyer}</p>
                 </div>
                 <div style={{ background: "rgba(255,255,255,0.7)", borderRadius: "12px", padding: "1rem" }}>
-                  <div style={{ fontSize: "0.8rem", fontWeight: 600, color: burc.color, marginBottom: "0.5rem" }}>🌿 SAĞLIK</div>
+                  <div style={{ fontSize: "0.8rem", fontWeight: 600, color: burc.color, marginBottom: "0.5rem" }}>🌿 GESUNDHEIT</div>
                   <p style={{ fontSize: "0.9rem", color: "#ffffff", lineHeight: 1.6 }}>{saglik}</p>
                 </div>
                 <div style={{ background: "rgba(255,255,255,0.7)", borderRadius: "12px", padding: "1rem", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
-                  <div style={{ fontSize: "0.8rem", fontWeight: 600, color: burc.color, marginBottom: "0.5rem" }}>🍀 ŞANS</div>
+                  <div style={{ fontSize: "0.8rem", fontWeight: 600, color: burc.color, marginBottom: "0.5rem" }}>🍀 GLÜCK</div>
                   <div style={{ fontSize: "2.5rem", fontWeight: 800, color: burc.color }}>{sans}</div>
                   <div style={{ fontSize: "0.75rem", color: "#ffffff" }}>/10</div>
                 </div>
@@ -455,7 +455,7 @@ export default async function BurcDetayPage({ params }: { params: Promise<{ slug
             {/* Haftalık Yorum */}
             <div style={{ background: "#1a0b2e", borderRadius: "20px", padding: "1.5rem", boxShadow: "0 2px 12px rgba(0,0,0,0.06)" }}>
               <h2 style={{ fontSize: "1.25rem", fontWeight: 700, color: "#ffffff", marginBottom: "1rem", display: "flex", alignItems: "center", gap: "0.5rem" }}>
-                <span style={{ fontSize: "1.5rem" }}>📅</span> Haftalık Yorum
+                <span style={{ fontSize: "1.5rem" }}>📅</span> Wochenhoroskop
               </h2>
               <p style={{ color: "#ffffff", lineHeight: 1.8 }}>{haftalik}</p>
             </div>
@@ -463,7 +463,7 @@ export default async function BurcDetayPage({ params }: { params: Promise<{ slug
             {/* Aylık Yorum */}
             <div style={{ background: "#1a0b2e", borderRadius: "20px", padding: "1.5rem", boxShadow: "0 2px 12px rgba(0,0,0,0.06)" }}>
               <h2 style={{ fontSize: "1.25rem", fontWeight: 700, color: "#ffffff", marginBottom: "1rem", display: "flex", alignItems: "center", gap: "0.5rem" }}>
-                <span style={{ fontSize: "1.5rem" }}>🗓️</span> Aylık Yorum
+                <span style={{ fontSize: "1.5rem" }}>🗓️</span> Monatshoroskop
               </h2>
               <p style={{ color: "#ffffff", lineHeight: 1.8 }}>{aylik}</p>
             </div>
@@ -471,11 +471,11 @@ export default async function BurcDetayPage({ params }: { params: Promise<{ slug
             {/* Uyum */}
             <div style={{ background: "#1a0b2e", borderRadius: "20px", padding: "1.5rem", boxShadow: "0 2px 12px rgba(0,0,0,0.06)", gridColumn: "1 / -1" }}>
               <h2 style={{ fontSize: "1.25rem", fontWeight: 700, color: "#ffffff", marginBottom: "1rem", display: "flex", alignItems: "center", gap: "0.5rem" }}>
-                <span style={{ fontSize: "1.5rem" }}>💑</span> Burç Uyumu
+                <span style={{ fontSize: "1.5rem" }}>💑</span> Kompatibilität
               </h2>
               <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "1rem" }}>
                 <div>
-                  <h3 style={{ fontSize: "0.9rem", fontWeight: 600, color: "#ffffff", marginBottom: "0.5rem" }}>✓ Uyumlu Burçlar</h3>
+                  <h3 style={{ fontSize: "0.9rem", fontWeight: 600, color: "#ffffff", marginBottom: "0.5rem" }}>✓ Kompatible Sternzeichen</h3>
                   <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem" }}>
                     {burc.uyumlu.map((b, i) => (
                       <span key={i} style={{ padding: "0.3rem 0.7rem", background: "#1a0b2e", color: "#ffffff", borderRadius: "9999px", fontSize: "0.85rem" }}>{b}</span>
@@ -483,7 +483,7 @@ export default async function BurcDetayPage({ params }: { params: Promise<{ slug
                   </div>
                 </div>
                 <div>
-                  <h3 style={{ fontSize: "0.9rem", fontWeight: 600, color: "#ef4444", marginBottom: "0.5rem" }}>✗ Uyumsuz Burçlar</h3>
+                  <h3 style={{ fontSize: "0.9rem", fontWeight: 600, color: "#ef4444", marginBottom: "0.5rem" }}>✗ Inkompatible Sternzeichen</h3>
                   <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem" }}>
                     {burc.uyumsuz.map((b, i) => (
                       <span key={i} style={{ padding: "0.3rem 0.7rem", background: "#1a0b2e", color: "#991b1b", borderRadius: "9999px", fontSize: "0.85rem" }}>{b}</span>
@@ -501,7 +501,7 @@ export default async function BurcDetayPage({ params }: { params: Promise<{ slug
       <section style={{ padding: "2rem 0", background: "#1a0b2e" }}>
         <div style={{ maxWidth: "72rem", margin: "0 auto", padding: "0 1rem" }}>
           <h2 style={{ fontSize: "1.25rem", fontWeight: 700, color: "#ffffff", marginBottom: "1rem" }}>
-            🔮 Diğer Burçları Keşfet
+            🔮 Andere Sternzeichen entdecken
           </h2>
         </div>
         <div

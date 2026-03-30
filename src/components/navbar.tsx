@@ -23,94 +23,94 @@ interface MenuItem {
 
 const MENU_DATA: MenuItem[] = [
   {
-    label: "Burçlar",
+    label: "Sternzeichen",
     href: "/burclar",
     emoji: "",
     accentColor: "#a78bfa",
-    description: "12 burç için günlük, haftalık ve aylık astroloji yorumları",
+    description: "Tägliche, wöchentliche und monatliche Horoskope für 12 Sternzeichen",
     items: [
-      { label: "Günlük Yorumlar", href: "/burclar/gunluk", desc: "Bugün seni neler bekliyor?", icon: "" },
-      { label: "Haftalık Analizler", href: "/burclar/haftalik", desc: "Bu haftanın kozmik enerjisi", icon: "" },
-      { label: "Aylık Harita", href: "/burclar/aylik", desc: "Aylık astroloji haritanız", icon: "" },
-      { label: "Yükselen Burç", href: "/burclar/yukselen", desc: "Yükselen burcunuzu keşfedin", icon: "" },
-      { label: "Burç Uyumu", href: "/burclar/uyum", desc: "Burçlar arası uyum analizi", icon: "" },
-      { label: "Doğum Haritası", href: "/burclar/dogum-haritasi", desc: "Natal chart detaylı okuma", icon: "" },
+      { label: "Tageshoroskop", href: "/burclar/gunluk", desc: "Was erwartet dich heute?", icon: "" },
+      { label: "Wochenhoroskop", href: "/burclar/haftalik", desc: "Die kosmische Energie dieser Woche", icon: "" },
+      { label: "Monatshoroskop", href: "/burclar/aylik", desc: "Dein astrologischer Monatsausblick", icon: "" },
+      { label: "Aszendent", href: "/burclar/yukselen", desc: "Entdecke deinen Aszendenten", icon: "" },
+      { label: "Kompatibilität", href: "/burclar/uyum", desc: "Kompatibilitätsanalyse zwischen Sternzeichen", icon: "" },
+      { label: "Geburtshoroskop", href: "/burclar/dogum-haritasi", desc: "Detaillierte Deutung des Geburtshoroskops", icon: "" },
     ],
   },
   {
-    label: "Rüya Tabirleri",
+    label: "Traumdeutung",
     href: "/ruya-tabirleri",
     emoji: "",
     accentColor: "#818cf8",
-    description: "Rüyalarınızın gizli anlamlarını keşfedin",
+    description: "Entdecke die verborgenen Bedeutungen deiner Träume",
     items: [
-      { label: "Rüya Sözlüğü", href: "/ruya/sozluk", desc: "A'dan Z'ye rüya anlamları", icon: "" },
-      { label: "Rüya Yorumlama", href: "/ruya/yorumla", desc: "Zodyaklı ile kişisel rüya analizi", icon: "" },
-      { label: "Su Rüyaları", href: "/ruya/su", desc: "Su ile ilgili rüyaların yorumu", icon: "" },
-      { label: "Uçma Rüyaları", href: "/ruya/ucma", desc: "Havada uçmanın mistik anlamı", icon: "" },
-      { label: "Aşk Rüyaları", href: "/ruya/ask", desc: "Romantik rüyaların sırları", icon: "" },
-      { label: "Kâbus Yorumları", href: "/ruya/kabus", desc: "Korkutucu rüyaların anlamı", icon: "" },
-      { label: "Renk Sembolleri", href: "/ruya/renkler", desc: "Rüyadaki renklerin dili", icon: "" },
+      { label: "Traumlexikon", href: "/ruya/sozluk", desc: "Traumsymbole von A bis Z", icon: "" },
+      { label: "Traum analysieren", href: "/ruya/yorumla", desc: "Persönliche Traumanalyse mit SternenFeed", icon: "" },
+      { label: "Wasserträume", href: "/ruya/su", desc: "Deutung von Träumen rund ums Wasser", icon: "" },
+      { label: "Flugträume", href: "/ruya/ucma", desc: "Die mystische Bedeutung des Fliegens", icon: "" },
+      { label: "Liebesträume", href: "/ruya/ask", desc: "Die Geheimnisse romantischer Träume", icon: "" },
+      { label: "Albträume", href: "/ruya/kabus", desc: "Die Bedeutung erschreckender Träume", icon: "" },
+      { label: "Farbsymbole", href: "/ruya/renkler", desc: "Die Sprache der Farben im Traum", icon: "" },
     ],
   },
   {
-    label: "Testler",
+    label: "Tests",
     href: "/testler",
     emoji: "",
     accentColor: "#f472b6",
-    description: "Ruhsal ve astrolojik kişilik testleri",
+    description: "Spirituelle und astrologische Persönlichkeitstests",
     items: [
-      { label: "Burç Testi", href: "/testler/burc", desc: "Gerçek burcunu keşfet", icon: "" },
-      { label: "Kişilik Analizi", href: "/testler/kisilik", desc: "Ruhsal kişilik haritanız", icon: "" },
-      { label: "Aşk Uyum Testi", href: "/testler/ask-uyum", desc: "Sevgiliniyle uyumunuzu ölçün", icon: "" },
-      { label: "Kariyer Testi", href: "/testler/kariyer", desc: "Yıldızlar hangi kariyeri işaret ediyor?", icon: "" },
-      { label: "Geçmiş Yaşam", href: "/testler/gecmis-yasam", desc: "Önceki hayatınızı keşfedin", icon: "" },
-      { label: "Ruhsal Olgunluk", href: "/testler/ruhsal", desc: "Spiritüel gelişim seviyeniz", icon: "" },
+      { label: "Sternzeichen-Test", href: "/testler/burc", desc: "Entdecke dein wahres Sternzeichen", icon: "" },
+      { label: "Persönlichkeitsanalyse", href: "/testler/kisilik", desc: "Deine spirituelle Persönlichkeitskarte", icon: "" },
+      { label: "Liebes-Kompatibilität", href: "/testler/ask-uyum", desc: "Miss eure Kompatibilität", icon: "" },
+      { label: "Karriere-Test", href: "/testler/kariyer", desc: "Welche Karriere zeigen die Sterne?", icon: "" },
+      { label: "Vergangenes Leben", href: "/testler/gecmis-yasam", desc: "Entdecke dein früheres Leben", icon: "" },
+      { label: "Spirituelle Reife", href: "/testler/ruhsal", desc: "Dein spirituelles Entwicklungslevel", icon: "" },
     ],
   },
   {
-    label: "Gök Gündemi",
+    label: "Kosmischer Kalender",
     href: "/gok-gundemi",
     emoji: "",
     accentColor: "#34d399",
-    description: "Gezegen hareketleri, tutulmalar ve kozmik olaylar",
+    description: "Planetenbewegungen, Finsternisse und kosmische Ereignisse",
     items: [
-      { label: "Ay Takvimleri", href: "/gok/ay-takvimi", desc: "Yeni ay ve dolunay tarihleri", icon: "" },
-      { label: "Gezegen Geçişleri", href: "/gok/gezegenler", desc: "Gezegenlerin etkili hareketleri", icon: "" },
-      { label: "Güneş Tutulması", href: "/gok/gunes-tutulmasi", desc: "Güneş tutulmalarının gücü", icon: "" },
-      { label: "Ay Tutulması", href: "/gok/ay-tutulmasi", desc: "Ay tutulmalarının anlamı", icon: "" },
-      { label: "Retrograde Dönemleri", href: "/gok/retrograde", desc: "Retrograde etkileri ve rehber", icon: "" },
-      { label: "Kozmik Haberler", href: "/gok/haberler", desc: "Son kozmik gelişmeler", icon: "" },
+      { label: "Mondkalender", href: "/gok/ay-takvimi", desc: "Neumond- und Vollmonddaten", icon: "" },
+      { label: "Planetentransite", href: "/gok/gezegenler", desc: "Wichtige Bewegungen der Planeten", icon: "" },
+      { label: "Sonnenfinsternis", href: "/gok/gunes-tutulmasi", desc: "Die Kraft der Sonnenfinsternisse", icon: "" },
+      { label: "Mondfinsternis", href: "/gok/ay-tutulmasi", desc: "Die Bedeutung von Mondfinsternissen", icon: "" },
+      { label: "Retrograde-Phasen", href: "/gok/retrograde", desc: "Einfluss & Leitfaden zu Retrograden", icon: "" },
+      { label: "Kosmische Nachrichten", href: "/gok/haberler", desc: "Aktuelle kosmische Entwicklungen", icon: "" },
     ],
   },
   {
-    label: "İlişkiler",
+    label: "Beziehungen",
     href: "/iliskiler",
     emoji: "",
     accentColor: "#fb923c",
-    description: "Aşk, çift uyumu ve ilişkilerde yıldızların rehberliği",
+    description: "Liebe, Paar-Kompatibilität und astrologische Beziehungstipps",
     items: [
-      { label: "Aşk Burçları", href: "/iliskiler/ask", desc: "Hangi burç seni sever?", icon: "" },
-      { label: "Çift Uyumu", href: "/iliskiler/cift-uyumu", desc: "İkili uyum derinlemesine analiz", icon: "" },
-      { label: "Evlilik Önerileri", href: "/iliskiler/evlilik", desc: "Yıldızlar evlilik için ne diyor?", icon: "" },
-      { label: "Ayrılık Rehberi", href: "/iliskiler/ayrilik", desc: "İyileşme ve toparlanma yolculuğu", icon: "" },
-      { label: "Flört Taktikleri", href: "/iliskiler/flort", desc: "Burcuna göre flört tavsiyeleri", icon: "" },
-      { label: "Soulmate Bağı", href: "/iliskiler/soulmate", desc: "Ruh eşini tanımanın yolları", icon: "" },
+      { label: "Liebes-Sternzeichen", href: "/iliskiler/ask", desc: "Welches Sternzeichen passt zu dir?", icon: "" },
+      { label: "Paar-Kompatibilität", href: "/iliskiler/cift-uyumu", desc: "Tiefgehende Analyse eurer Harmonie", icon: "" },
+      { label: "Ehe-Tipps", href: "/iliskiler/evlilik", desc: "Was sagen die Sterne zur Ehe?", icon: "" },
+      { label: "Trennungsratgeber", href: "/iliskiler/ayrilik", desc: "Heilung und Neustart nach der Trennung", icon: "" },
+      { label: "Flirt-Tipps", href: "/iliskiler/flort", desc: "Flirt-Ratschläge nach Sternzeichen", icon: "" },
+      { label: "Seelenverwandtschaft", href: "/iliskiler/soulmate", desc: "Wie du deine Seelenverbindung erkennst", icon: "" },
     ],
   },
   {
-    label: "Astro Blog",
+    label: "Astro-Blog",
     href: "/blog",
     emoji: "",
     accentColor: "#fbbf24",
-    description: "Astroloji dünyasından haberler, trendler ve güncel içerikler",
+    description: "News, Trends und aktuelle Inhalte aus der Astrologie",
     items: [
-      { label: "Astroloji Haberleri", href: "/blog/haberler", desc: "Son astroloji gelişmeleri", icon: "" },
-      { label: "Burç Trendleri", href: "/blog/trendler", desc: "Popüler burç analizleri", icon: "" },
-      { label: "Yıldızlardan Öyküler", href: "/blog/oykuler", desc: "Mitoloji ve astroloji hikayeleri", icon: "" },
-      { label: "Uzman Görüşleri", href: "/blog/uzmanlar", desc: "Astrologlardan özel yazılar", icon: "" },
-      { label: "Kozmik Takvim", href: "/blog/takvim", desc: "Önemli astrolojik tarihler", icon: "" },
-      { label: "Burç İstatistikleri", href: "/blog/istatistik", desc: "Burçlarla ilgili ilginç veriler", icon: "" },
+      { label: "Astrologie-News", href: "/blog/haberler", desc: "Die neuesten Entwicklungen", icon: "" },
+      { label: "Sternzeichen-Trends", href: "/blog/trendler", desc: "Beliebte Sternzeichen-Analysen", icon: "" },
+      { label: "Sternengeschichten", href: "/blog/oykuler", desc: "Mythologie- und Astrologie-Erzählungen", icon: "" },
+      { label: "Expertenmeinungen", href: "/blog/uzmanlar", desc: "Besondere Texte von Astrologen", icon: "" },
+      { label: "Kosmischer Kalender", href: "/blog/takvim", desc: "Wichtige astrologische Termine", icon: "" },
+      { label: "Sternzeichen-Statistik", href: "/blog/istatistik", desc: "Spannende Daten rund um Sternzeichen", icon: "" },
     ],
   },
 ];
@@ -165,8 +165,8 @@ export default function Navbar() {
             <Link href="/" className="flex items-center gap-2.5 flex-shrink-0 group">
               <div className="w-10 h-10 rounded-full overflow-hidden shadow-lg border border-purple-500/20 relative">
                 <Image
-                  src="/img/logo.jpg"
-                  alt="Zodyaklı Logo"
+                  src="/img/newfavicon.png"
+                  alt="SternenFeed Logo"
                   fill
                   className="object-cover"
                 />
@@ -183,13 +183,13 @@ export default function Navbar() {
                     WebkitTextFillColor: "transparent",
                   }}
                 >
-                  Zodyaklı
+                  SternenFeed
                 </div>
                 <div
                   className="text-[9px] tracking-[0.18em] uppercase mt-[-1px]"
                   style={{ color: "#a855f7", fontFamily: "var(--font-sans), sans-serif", fontWeight: 500 }}
                 >
-                  Astroloji &amp; Mistisizm
+                  Astrologie &amp; Mystik
                 </div>
               </div>
             </Link>
@@ -253,7 +253,7 @@ export default function Navbar() {
                 background: "rgba(168,85,247,0.2)",
                 border: "none",
               }}
-              aria-label="Menüyü aç/kapat"
+              aria-label="Menü öffnen/schließen"
             >
               {mobileOpen ? <X size={22} strokeWidth={2.5} /> : <Menu size={22} strokeWidth={2.5} />}
             </button>

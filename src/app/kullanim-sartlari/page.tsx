@@ -4,61 +4,61 @@ export default function KullanimSartlariPage() {
       <section style={{ padding: "4rem 1rem" }}>
         <div style={{ maxWidth: "800px", margin: "0 auto" }}>
           <h1 style={{ fontSize: "2rem", fontWeight: 800, color: "#ffffff", marginBottom: "2rem" }}>
-            Kullanım Şartları
+            Nutzungsbedingungen
           </h1>
 
           <div style={{ background: "#1a0b2e", borderRadius: "20px", padding: "2rem", boxShadow: "0 2px 12px rgba(0,0,0,0.06)" }}>
             <p style={{ color: "#ffffff", lineHeight: 1.8, marginBottom: "1.5rem" }}>
-              Son güncelleme: Mart 2024
+              Letzte Aktualisierung: März 2024
             </p>
 
             <h2 style={{ fontSize: "1.25rem", fontWeight: 700, color: "#ffffff", marginBottom: "1rem", marginTop: "1.5rem" }}>
-              1. Kabul
+              1. Akzeptanz
             </h2>
             <p style={{ color: "#ffffff", lineHeight: 1.8, marginBottom: "1.5rem" }}>
-              Zodyaklı web sitesini kullanarak bu kullanım şartlarını kabul etmiş sayılırsınız.
-              Bu şartları kabul etmiyorsanız, lütfen siteyi kullanmayınız.
+              Durch die Nutzung der SternenFeed-Website erklärst du dich mit diesen Nutzungsbedingungen einverstanden.
+              Wenn du diese Bedingungen nicht akzeptierst, nutze bitte die Website nicht.
             </p>
 
             <h2 style={{ fontSize: "1.25rem", fontWeight: 700, color: "#ffffff", marginBottom: "1rem", marginTop: "1.5rem" }}>
-              2. Hizmet Tanımı
+              2. Leistungsbeschreibung
             </h2>
             <p style={{ color: "#ffffff", lineHeight: 1.8, marginBottom: "1.5rem" }}>
-              Zodyaklı, astroloji, burç yorumları, rüya tabirleri ve ilgili içerikler sunan bir
-              eğlence ve bilgi platformudur. Sunulan içerikler yalnızca eğlence amaçlıdır ve
-              profesyonel tavsiye yerine geçmez.
+              SternenFeed ist eine Unterhaltungs- und Informationsplattform, die Astrologie, Horoskope,
+              Traumdeutung und verwandte Inhalte anbietet. Die bereitgestellten Inhalte dienen ausschließlich
+              der Unterhaltung und ersetzen keine professionelle Beratung.
             </p>
 
             <h2 style={{ fontSize: "1.25rem", fontWeight: 700, color: "#ffffff", marginBottom: "1rem", marginTop: "1.5rem" }}>
-              3. İçerik Kullanımı
+              3. Inhaltsnutzung
             </h2>
             <p style={{ color: "#ffffff", lineHeight: 1.8, marginBottom: "1.5rem" }}>
-              Sitedeki tüm içerikler Zodyaklı&apos;ya aittir. İçeriklerin izinsiz kopyalanması,
-              dağıtılması veya ticari amaçla kullanılması yasaktır.
+              Alle Inhalte auf der Website gehören SternenFeed. Das unbefugte Kopieren, Verbreiten oder
+              die kommerzielle Nutzung der Inhalte ist untersagt.
             </p>
 
             <h2 style={{ fontSize: "1.25rem", fontWeight: 700, color: "#ffffff", marginBottom: "1rem", marginTop: "1.5rem" }}>
-              4. Sorumluluk Reddi
+              4. Haftungsausschluss
             </h2>
             <p style={{ color: "#ffffff", lineHeight: 1.8, marginBottom: "1.5rem" }}>
-              Burç yorumları ve rüya tabirleri genel bilgi amaçlıdır. Kişisel kararlarınızda
-              bu içeriklere dayanarak aldığınız sonuçlardan Zodyaklı sorumlu tutulamaz.
-              Önemli kararlar için profesyonel danışmanlık almanızı öneririz.
+              Horoskope und Traumdeutungen dienen der allgemeinen Information. SternenFeed kann nicht für
+              Ergebnisse verantwortlich gemacht werden, die auf persönlichen Entscheidungen basierend auf diesen
+              Inhalten getroffen wurden. Für wichtige Entscheidungen empfehlen wir professionelle Beratung.
             </p>
 
             <h2 style={{ fontSize: "1.25rem", fontWeight: 700, color: "#ffffff", marginBottom: "1rem", marginTop: "1.5rem" }}>
-              5. Değişiklikler
+              5. Änderungen
             </h2>
             <p style={{ color: "#ffffff", lineHeight: 1.8, marginBottom: "1.5rem" }}>
-              Zodyaklı, bu kullanım şartlarını önceden haber vermeksizin değiştirme hakkını
-              saklı tutar. Değişiklikler sitede yayınlandığı anda yürürlüğe girer.
+              SternenFeed behält sich das Recht vor, diese Nutzungsbedingungen ohne vorherige Ankündigung zu ändern.
+              Änderungen treten sofort nach Veröffentlichung auf der Website in Kraft.
             </p>
 
             <h2 style={{ fontSize: "1.25rem", fontWeight: 700, color: "#ffffff", marginBottom: "1rem", marginTop: "1.5rem" }}>
-              6. İletişim
+              6. Kontakt
             </h2>
             <p style={{ color: "#ffffff", lineHeight: 1.8 }}>
-              Kullanım şartları hakkında sorularınız için info@zodyakli.com adresinden bize ulaşabilirsiniz.
+              Bei Fragen zu den Nutzungsbedingungen kannst du uns unter info@zodyakli.com kontaktieren.
             </p>
           </div>
         </div>

@@ -5,65 +5,65 @@ import Link from "next/link";
 
 const SORULAR = [
   {
-    soru: "Bir partide genellikle nasıl davranırsın?",
+    soru: "Wie verhältst du dich normalerweise auf einer Party?",
     secenekler: [
-      { text: "Herkesin dikkatini çekerim, merkezdeyimdir", burclar: ["aslan", "koc"] },
-      { text: "Küçük gruplarla derin sohbetler ederim", burclar: ["akrep", "balik"] },
-      { text: "Herkesle konuşurum, sosyalleşmeyi severim", burclar: ["ikizler", "terazi"] },
-      { text: "Köşede oturup gözlem yaparım", burclar: ["basak", "oglak"] },
+      { text: "Ich ziehe die Aufmerksamkeit aller auf mich, ich bin im Mittelpunkt", burclar: ["aslan", "koc"] },
+      { text: "Ich führe tiefe Gespräche mit kleinen Gruppen", burclar: ["akrep", "balik"] },
+      { text: "Ich rede mit allen, ich liebe es zu sozialisieren", burclar: ["ikizler", "terazi"] },
+      { text: "Ich sitze in der Ecke und beobachte", burclar: ["basak", "oglak"] },
     ]
   },
   {
-    soru: "Stresli bir durumda ilk tepkin ne olur?",
+    soru: "Was ist deine erste Reaktion in einer stressigen Situation?",
     secenekler: [
-      { text: "Hemen harekete geçerim", burclar: ["koc", "yay"] },
-      { text: "Sakin kalıp analiz ederim", burclar: ["basak", "oglak"] },
-      { text: "Duygusal tepki veririm", burclar: ["yengec", "balik"] },
-      { text: "Başkalarıyla konuşup fikir alırım", burclar: ["terazi", "ikizler"] },
+      { text: "Ich handle sofort", burclar: ["koc", "yay"] },
+      { text: "Ich bleibe ruhig und analysiere", burclar: ["basak", "oglak"] },
+      { text: "Ich reagiere emotional", burclar: ["yengec", "balik"] },
+      { text: "Ich spreche mit anderen und hole mir Rat", burclar: ["terazi", "ikizler"] },
     ]
   },
   {
-    soru: "İdeal tatil planın hangisi?",
+    soru: "Was ist dein idealer Urlaubsplan?",
     secenekler: [
-      { text: "Macera dolu bir safari veya dağcılık", burclar: ["yay", "koc"] },
-      { text: "Lüks bir spa ve dinlenme", burclar: ["boga", "terazi"] },
-      { text: "Tarihi yerler ve müzeler", burclar: ["basak", "oglak"] },
-      { text: "Deniz kenarında huzurlu bir kaçış", burclar: ["yengec", "balik"] },
+      { text: "Eine abenteuerliche Safari oder Bergsteigen", burclar: ["yay", "koc"] },
+      { text: "Ein luxuriöses Spa und Entspannung", burclar: ["boga", "terazi"] },
+      { text: "Historische Orte und Museen", burclar: ["basak", "oglak"] },
+      { text: "Ein friedlicher Rückzug am Meer", burclar: ["yengec", "balik"] },
     ]
   },
   {
-    soru: "Bir projede en çok hangi rolü üstlenirsin?",
+    soru: "Welche Rolle übernimmst du am liebsten in einem Projekt?",
     secenekler: [
-      { text: "Lider - yönlendiren", burclar: ["aslan", "koc"] },
-      { text: "Detaycı - planlayan", burclar: ["basak", "oglak"] },
-      { text: "Yaratıcı - fikir üreten", burclar: ["kova", "balik"] },
-      { text: "Arabulucu - uyum sağlayan", burclar: ["terazi", "ikizler"] },
+      { text: "Führer - der Leitende", burclar: ["aslan", "koc"] },
+      { text: "Detailorientiert - der Planer", burclar: ["basak", "oglak"] },
+      { text: "Kreativ - der Ideengeber", burclar: ["kova", "balik"] },
+      { text: "Vermittler - der Harmonisierer", burclar: ["terazi", "ikizler"] },
     ]
   },
   {
-    soru: "Para konusunda nasılsın?",
+    soru: "Wie gehst du mit Geld um?",
     secenekler: [
-      { text: "Biriktirmeyi severim, güvenlik önemli", burclar: ["boga", "oglak"] },
-      { text: "Anı yaşarım, harcamaktan çekinmem", burclar: ["aslan", "yay"] },
-      { text: "Dengeli olmaya çalışırım", burclar: ["terazi", "basak"] },
-      { text: "Başkalarına harcamayı severim", burclar: ["balik", "yengec"] },
+      { text: "Ich spare gerne, Sicherheit ist wichtig", burclar: ["boga", "oglak"] },
+      { text: "Ich lebe im Moment, ich scheue mich nicht auszugeben", burclar: ["aslan", "yay"] },
+      { text: "Ich versuche ausgeglichen zu sein", burclar: ["terazi", "basak"] },
+      { text: "Ich gebe gerne für andere aus", burclar: ["balik", "yengec"] },
     ]
   },
 ];
 
 const BURC_BILGILERI: Record<string, { name: string; emoji: string; color: string }> = {
-  koc: { name: "Koç", emoji: "♈", color: "#ef4444" },
-  boga: { name: "Boğa", emoji: "♉", color: "#ffffff" },
-  ikizler: { name: "İkizler", emoji: "♊", color: "#eab308" },
-  yengec: { name: "Yengeç", emoji: "♋", color: "#3b82f6" },
-  aslan: { name: "Aslan", emoji: "♌", color: "#f97316" },
-  basak: { name: "Başak", emoji: "♍", color: "#84cc16" },
-  terazi: { name: "Terazi", emoji: "♎", color: "#ec4899" },
-  akrep: { name: "Akrep", emoji: "♏", color: "#8b5cf6" },
-  yay: { name: "Yay", emoji: "♐", color: "#f43f5e" },
-  oglak: { name: "Oğlak", emoji: "♑", color: "#6366f1" },
-  kova: { name: "Kova", emoji: "♒", color: "#ffffff" },
-  balik: { name: "Balık", emoji: "♓", color: "#a855f7" },
+  koc: { name: "Widder", emoji: "♈", color: "#ef4444" },
+  boga: { name: "Stier", emoji: "♉", color: "#ffffff" },
+  ikizler: { name: "Zwillinge", emoji: "♊", color: "#eab308" },
+  yengec: { name: "Krebs", emoji: "♋", color: "#3b82f6" },
+  aslan: { name: "Löwe", emoji: "♌", color: "#f97316" },
+  basak: { name: "Jungfrau", emoji: "♍", color: "#84cc16" },
+  terazi: { name: "Waage", emoji: "♎", color: "#ec4899" },
+  akrep: { name: "Skorpion", emoji: "♏", color: "#8b5cf6" },
+  yay: { name: "Schütze", emoji: "♐", color: "#f43f5e" },
+  oglak: { name: "Steinbock", emoji: "♑", color: "#6366f1" },
+  kova: { name: "Wassermann", emoji: "♒", color: "#ffffff" },
+  balik: { name: "Fische", emoji: "♓", color: "#a855f7" },
 };
 
 export default function BurcTestiPage() {
@@ -111,10 +111,10 @@ export default function BurcTestiPage() {
           <div style={{ maxWidth: "500px" }}>
             <div style={{ fontSize: "5rem", marginBottom: "1rem" }}>{burc.emoji}</div>
             <h1 style={{ fontSize: "2.5rem", fontWeight: 800, color: "#ffffff", marginBottom: "0.5rem" }}>
-              {burc.name} Burcu
+              {burc.name}
             </h1>
             <p style={{ fontSize: "1.1rem", color: "rgba(255,255,255,0.9)", marginBottom: "2rem" }}>
-              Kişilik özelliklerine göre en uyumlu olduğun burç!
+              Das Sternzeichen, das am besten zu deiner Persönlichkeit passt!
             </p>
             <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
               <Link
@@ -128,7 +128,7 @@ export default function BurcTestiPage() {
                   textDecoration: "none",
                 }}
               >
-                Burcunu Keşfet →
+                Dein Sternzeichen entdecken →
               </Link>
               <button
                 onClick={resetTest}
@@ -142,7 +142,7 @@ export default function BurcTestiPage() {
                   cursor: "pointer",
                 }}
               >
-                Tekrar Dene
+                Nochmal versuchen
               </button>
             </div>
           </div>
@@ -165,13 +165,13 @@ export default function BurcTestiPage() {
       >
         <div style={{ maxWidth: "72rem", margin: "0 auto" }}>
           <Link href="/testler" style={{ color: "rgba(255,255,255,0.8)", fontSize: "0.9rem", textDecoration: "none" }}>
-            ← Testler
+            ← Tests
           </Link>
           <h1 style={{ fontSize: "1.75rem", fontWeight: 800, color: "#ffffff", marginTop: "1rem" }}>
-            ♈ Burç Testi
+            ♈ Sternzeichen-Test
           </h1>
           <p style={{ color: "rgba(255,255,255,0.8)", marginTop: "0.5rem" }}>
-            Kişiliğine en uygun burcu keşfet
+            Entdecke das Sternzeichen, das am besten zu dir passt
           </p>
         </div>
       </section>
@@ -180,7 +180,7 @@ export default function BurcTestiPage() {
       <div style={{ padding: "1rem", background: "#1a0b2e" }}>
         <div style={{ maxWidth: "600px", margin: "0 auto" }}>
           <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "0.5rem" }}>
-            <span style={{ fontSize: "0.85rem", color: "#ffffff" }}>Soru {currentSoru + 1} / {SORULAR.length}</span>
+            <span style={{ fontSize: "0.85rem", color: "#ffffff" }}>Frage {currentSoru + 1} / {SORULAR.length}</span>
             <span style={{ fontSize: "0.85rem", color: "#ffffff" }}>{Math.round(((currentSoru + 1) / SORULAR.length) * 100)}%</span>
           </div>
           <div style={{ height: "8px", background: "#ffffff", borderRadius: "4px", overflow: "hidden" }}>

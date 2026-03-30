@@ -1,33 +1,178 @@
 import Link from "next/link";
 
 const RUYA_SOZLUGU = [
-  { harf: "A", kelimeler: ["Araba", "At", "Ayna", "Ağaç", "Altın", "Anne", "Aşk", "Ay"] },
-  { harf: "B", kelimeler: ["Bebek", "Balık", "Bahçe", "Bıçak", "Böcek", "Bulut", "Baba"] },
-  { harf: "C", kelimeler: ["Cami", "Cenaze", "Cadde", "Cüzdan"] },
-  { harf: "Ç", kelimeler: ["Çiçek", "Çocuk", "Çamur", "Çıplak"] },
-  { harf: "D", kelimeler: ["Deniz", "Dağ", "Diş", "Düğün", "Düşmek", "Deve"] },
-  { harf: "E", kelimeler: ["Ev", "Ekmek", "El", "Eski sevgili", "Elbise"] },
-  { harf: "F", kelimeler: ["Fare", "Fırtına", "Futbol"] },
-  { harf: "G", kelimeler: ["Gemi", "Göl", "Gül", "Güneş", "Gece"] },
-  { harf: "H", kelimeler: ["Hamile", "Hastane", "Hayvan", "Hırsız"] },
-  { harf: "I", kelimeler: ["Işık", "Irmak"] },
-  { harf: "İ", kelimeler: ["İnek", "İğne"] },
-  { harf: "K", kelimeler: ["Kan", "Kapı", "Kedi", "Köpek", "Kuş", "Kovalanmak"] },
-  { harf: "L", kelimeler: ["Lamba", "Labirent"] },
-  { harf: "M", kelimeler: ["Merdiven", "Mezar", "Melek", "Mum"] },
-  { harf: "N", kelimeler: ["Nehir", "Nişan"] },
-  { harf: "O", kelimeler: ["Okul", "Orman", "Otobüs"] },
-  { harf: "Ö", kelimeler: ["Ölüm", "Ölü", "Öpücük"] },
-  { harf: "P", kelimeler: ["Para", "Polis", "Pencere"] },
-  { harf: "R", kelimeler: ["Rüzgar", "Resim"] },
-  { harf: "S", kelimeler: ["Su", "Saç", "Silah", "Sarı", "Siyah"] },
-  { harf: "Ş", kelimeler: ["Şeker", "Şeytan"] },
-  { harf: "T", kelimeler: ["Tren", "Tavuk", "Toprak"] },
-  { harf: "U", kelimeler: ["Uçak", "Uçmak", "Uyumak"] },
-  { harf: "Ü", kelimeler: ["Üzüm"] },
-  { harf: "V", kelimeler: ["Vapur", "Veda"] },
-  { harf: "Y", kelimeler: ["Yılan", "Yağmur", "Yangın", "Yol", "Yüzmek"] },
-  { harf: "Z", kelimeler: ["Ziyaret", "Zehir"] },
+  {
+    harf: "A", kelimeler: [
+      { kelime: "Auto", aciklama: "Lebensweg und Kontrolle über dein Schicksal" },
+      { kelime: "Pferd", aciklama: "Stärke, Freiheit und sexuelle Energie" },
+      { kelime: "Spiegel", aciklama: "Selbstreflexion und innere Wahrheit" },
+      { kelime: "Baum", aciklama: "Wachstum, Wurzeln und Lebensstabilität" },
+      { kelime: "Gold", aciklama: "Wert, Erfolg und spiritueller Reichtum" },
+      { kelime: "Mutter", aciklama: "Nährung, Schutz und emotionale Unterstützung" },
+      { kelime: "Liebe", aciklama: "Emotionale Erfüllung und Herzenswünsche" },
+      { kelime: "Mond", aciklama: "Weibliche Energie und Unterbewusstsein" }
+    ]
+  },
+  {
+    harf: "B", kelimeler: [
+      { kelime: "Baby", aciklama: "Neubeginn, Unschuld und neue Projekte" },
+      { kelime: "Fisch", aciklama: "Unterbewusste Gefühle und Intuition" },
+      { kelime: "Garten", aciklama: "Persönliches Wachstum und Pflege" },
+      { kelime: "Messer", aciklama: "Trennung, Konflikt oder Entscheidung" },
+      { kelime: "Insekt", aciklama: "Kleine Störungen oder Ängste" },
+      { kelime: "Wolke", aciklama: "Unklarheit oder spirituelle Höhe" },
+      { kelime: "Vater", aciklama: "Autorität, Schutz und Führung" }
+    ]
+  },
+  { harf: "C", kelimeler: [] },
+  {
+    harf: "D", kelimeler: [
+      { kelime: "Blume", aciklama: "Schönheit, Wachstum und Romantik" },
+      { kelime: "Kind", aciklama: "Inneres Kind und Unschuld" },
+      { kelime: "Schlamm", aciklama: "Festgefahrene Situation oder Unreinheit" },
+      { kelime: "Nackt", aciklama: "Verletzlichkeit und Authentizität" }
+    ]
+  },
+  {
+    harf: "E", kelimeler: [
+      { kelime: "Meer", aciklama: "Emotionale Tiefe und Unbewusstes" },
+      { kelime: "Berg", aciklama: "Herausforderungen und Ziele" },
+      { kelime: "Zahn", aciklama: "Selbstvertrauen und Kommunikation" },
+      { kelime: "Hochzeit", aciklama: "Vereinigung und neue Verpflichtungen" },
+      { kelime: "Fallen", aciklama: "Kontrollverlust und Ängste" },
+      { kelime: "Kamel", aciklama: "Ausdauer und Geduld" }
+    ]
+  },
+  {
+    harf: "F", kelimeler: [
+      { kelime: "Haus", aciklama: "Selbst, Sicherheit und Familie" },
+      { kelime: "Brot", aciklama: "Grundbedürfnisse und Nährung" },
+      { kelime: "Hand", aciklama: "Handlungsfähigkeit und Kontrolle" },
+      { kelime: "Ex-Partner", aciklama: "Unverarbeitete Gefühle" },
+      { kelime: "Kleid", aciklama: "Identität und Selbstdarstellung" }
+    ]
+  },
+  {
+    harf: "G", kelimeler: [
+      { kelime: "Maus", aciklama: "Kleine Probleme oder Schüchternheit" },
+      { kelime: "Sturm", aciklama: "Emotionale Turbulenzen" },
+      { kelime: "Fußball", aciklama: "Teamarbeit und Wettbewerb" }
+    ]
+  },
+  {
+    harf: "H", kelimeler: [
+      { kelime: "Schiff", aciklama: "Lebensreise und emotionale Navigation" },
+      { kelime: "See", aciklama: "Innere Ruhe oder verborgene Tiefen" },
+      { kelime: "Rose", aciklama: "Liebe, Schönheit und Leidenschaft" },
+      { kelime: "Sonne", aciklama: "Lebenskraft und Bewusstsein" },
+      { kelime: "Nacht", aciklama: "Unbewusstes und Geheimnisse" }
+    ]
+  },
+  {
+    harf: "I", kelimeler: [
+      { kelime: "Schwanger", aciklama: "Neue Ideen oder Projekte" },
+      { kelime: "Krankenhaus", aciklama: "Heilung und Transformation" },
+      { kelime: "Tier", aciklama: "Instinkte und natürliche Impulse" },
+      { kelime: "Dieb", aciklama: "Verlust oder Vertrauensbruch" }
+    ]
+  },
+  {
+    harf: "K", kelimeler: [
+      { kelime: "Licht", aciklama: "Erleuchtung und Klarheit" },
+      { kelime: "Fluss", aciklama: "Lebensfluss und Veränderung" },
+      { kelime: "Kuh", aciklama: "Fülle und Mütterlichkeit" },
+      { kelime: "Nadel", aciklama: "Heilung oder kleine Schmerzen" }
+    ]
+  },
+  {
+    harf: "L", kelimeler: [
+      { kelime: "Blut", aciklama: "Lebenskraft und Opfer" },
+      { kelime: "Tür", aciklama: "Möglichkeiten und Übergänge" },
+      { kelime: "Katze", aciklama: "Unabhängigkeit und Weiblichkeit" },
+      { kelime: "Hund", aciklama: "Treue und Freundschaft" },
+      { kelime: "Vogel", aciklama: "Freiheit und Spiritualität" },
+      { kelime: "Verfolgt werden", aciklama: "Vermeidung und Ängste" }
+    ]
+  },
+  {
+    harf: "M", kelimeler: [
+      { kelime: "Lampe", aciklama: "Erleuchtung und Hoffnung" },
+      { kelime: "Labyrinth", aciklama: "Verwirrung und Suche" }
+    ]
+  },
+  {
+    harf: "N", kelimeler: [
+      { kelime: "Treppe", aciklama: "Fortschritt und Entwicklung" },
+      { kelime: "Grab", aciklama: "Ende und Transformation" },
+      { kelime: "Engel", aciklama: "Schutz und spirituelle Führung" },
+      { kelime: "Kerze", aciklama: "Hoffnung und Erleuchtung" }
+    ]
+  },
+  { harf: "O", kelimeler: [] },
+  {
+    harf: "P", kelimeler: [
+      { kelime: "Schule", aciklama: "Lernen und Lebenslektionen" },
+      { kelime: "Wald", aciklama: "Unbewusstes und Geheimnisse" },
+      { kelime: "Bus", aciklama: "Gemeinsame Reise und Richtung" }
+    ]
+  },
+  { harf: "Q", kelimeler: [] },
+  {
+    harf: "R", kelimeler: [
+      { kelime: "Geld", aciklama: "Wert und Selbstwert" },
+      { kelime: "Polizei", aciklama: "Autorität und Regeln" },
+      { kelime: "Fenster", aciklama: "Perspektive und Möglichkeiten" }
+    ]
+  },
+  {
+    harf: "S", kelimeler: [
+      { kelime: "Wind", aciklama: "Veränderung und Kommunikation" },
+      { kelime: "Bild", aciklama: "Erinnerungen und Selbstbild" },
+      { kelime: "Tod", aciklama: "Ende und Neuanfang" },
+      { kelime: "Toter", aciklama: "Vergangenheit und Transformation" },
+      { kelime: "Kuss", aciklama: "Zuneigung und Verbindung" }
+    ]
+  },
+  {
+    harf: "T", kelimeler: [
+      { kelime: "Wasser", aciklama: "Emotionen und Unterbewusstsein" },
+      { kelime: "Haar", aciklama: "Stärke und Identität" },
+      { kelime: "Waffe", aciklama: "Aggression oder Verteidigung" },
+      { kelime: "Gelb", aciklama: "Freude und Intellekt" },
+      { kelime: "Schwarz", aciklama: "Geheimnis und Unbewusstes" }
+    ]
+  },
+  { harf: "U", kelimeler: [] },
+  {
+    harf: "V", kelimeler: [
+      { kelime: "Zug", aciklama: "Lebensreise und Schicksal" },
+      { kelime: "Huhn", aciklama: "Fruchtbarkeit und Angst" },
+      { kelime: "Erde", aciklama: "Stabilität und Grundlage" }
+    ]
+  },
+  {
+    harf: "W", kelimeler: [
+      { kelime: "Flugzeug", aciklama: "Hohe Ziele und Ambitionen" },
+      { kelime: "Fliegen", aciklama: "Freiheit und Transzendenz" },
+      { kelime: "Schlafen", aciklama: "Ruhe und Vermeidung" }
+    ]
+  },
+  { harf: "X", kelimeler: [] },
+  { harf: "Y", kelimeler: [] },
+  {
+    harf: "Z", kelimeler: [
+      { kelime: "Schlange", aciklama: "Transformation und verborgene Feinde" },
+      { kelime: "Regen", aciklama: "Reinigung und emotionale Befreiung" },
+      { kelime: "Feuer", aciklama: "Leidenschaft und Zerstörung" },
+      { kelime: "Weg", aciklama: "Lebensrichtung und Entscheidungen" },
+      { kelime: "Schwimmen", aciklama: "Emotionale Bewältigung" },
+      { kelime: "Zucker", aciklama: "Süße und Vergnügen" },
+      { kelime: "Teufel", aciklama: "Versuchung und Schatten" },
+      { kelime: "Traube", aciklama: "Fülle und Genuss" },
+      { kelime: "Dampfer", aciklama: "Emotionale Reise" },
+      { kelime: "Abschied", aciklama: "Ende und Loslassen" }
+    ]
+  }
 ];
 
 export default function RuyaSozlukPage() {
@@ -43,13 +188,13 @@ export default function RuyaSozlukPage() {
       >
         <div style={{ maxWidth: "72rem", margin: "0 auto" }}>
           <Link href="/ruya-tabirleri" style={{ color: "rgba(255,255,255,0.8)", fontSize: "0.9rem", textDecoration: "none" }}>
-            ← Rüya Tabirleri
+            ← Traumdeutung
           </Link>
           <h1 style={{ fontSize: "clamp(1.8rem, 4vw, 2.5rem)", fontWeight: 800, color: "#ffffff", marginTop: "1rem" }}>
-            📖 Rüya Sözlüğü
+            📖 Traumlexikon
           </h1>
           <p style={{ fontSize: "1rem", color: "rgba(255,255,255,0.8)", marginTop: "0.5rem" }}>
-            A&apos;dan Z&apos;ye tüm rüya sembolleri ve anlamları
+            Alle Traumsymbole und Bedeutungen von A bis Z
           </p>
         </div>
       </section>
@@ -99,25 +244,33 @@ export default function RuyaSozlukPage() {
               }}>
                 {item.harf}
               </h2>
-              <div style={{ display: "flex", flexWrap: "wrap", gap: "0.75rem" }}>
-                {item.kelimeler.map((kelime) => (
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: "1rem" }}>
+                {item.kelimeler.map((item) => (
                   <Link
-                    key={kelime}
-                    href={`/ruya/${kelime.toLowerCase().replace(/ /g, '-')}`}
+                    key={item.kelime}
+                    href={`/ruya/${item.kelime.toLowerCase().replace(/ /g, '-')}`}
                     style={{
-                      padding: "0.6rem 1.2rem",
-                      background: "transparent",
-                      borderRadius: "12px",
+                      padding: "1.25rem",
+                      background: "rgba(168, 85, 247, 0.1)",
+                      borderRadius: "16px",
                       color: "#ffffff",
                       textDecoration: "none",
-                      fontSize: "0.95rem",
-                      fontWeight: 500,
-                      boxShadow: "0 1px 3px rgba(168,85,247,0.2)",
+                      border: "1px solid rgba(168, 85, 247, 0.3)",
                       transition: "all 0.2s ease",
-                      border: "none",
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: "0.5rem",
                     }}
                   >
-                    {kelime}
+                    <div style={{ fontSize: "1.1rem", fontWeight: 700, color: "#a855f7" }}>
+                      {item.kelime}
+                    </div>
+                    <div style={{ fontSize: "0.85rem", color: "rgba(255,255,255,0.7)", lineHeight: 1.5 }}>
+                      {item.aciklama}
+                    </div>
+                    <div style={{ fontSize: "0.75rem", color: "#a855f7", marginTop: "auto" }}>
+                      Mehr erfahren →
+                    </div>
                   </Link>
                 ))}
               </div>
