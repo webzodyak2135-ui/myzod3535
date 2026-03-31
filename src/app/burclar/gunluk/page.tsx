@@ -4,6 +4,7 @@ import { generateDailyHoroscopeBatch } from "@/lib/ai-content";
 import RelatedCards from "@/components/RelatedCards";
 import { BURC_ONERILERI, ILISKI_ONERILERI } from "@/components/related-cards-data";
 
+export const runtime = "edge";
 export const dynamic = "force-dynamic";
 
 function getBerlinDateISO(date = new Date()) {
