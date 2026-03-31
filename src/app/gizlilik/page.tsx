@@ -87,7 +87,31 @@ export default function GizlilikPage() {
             </p>
 
             <h2 style={{ fontSize: "1.25rem", fontWeight: 700, color: "#ffffff", marginBottom: "1rem", marginTop: "1.5rem" }}>
-              8. Kontakt
+              8. Speicherdauer (Retention)
+            </h2>
+            <ul style={{ color: "#ffffff", lineHeight: 1.8, marginLeft: "1.5rem", marginBottom: "1.5rem" }}>
+              <li><strong>Server- und Sicherheitslogs (Cloudflare):</strong> in der Regel bis zu 30 Tage.</li>
+              <li><strong>Analyse-Daten (Google Analytics):</strong> nur nach Einwilligung; Aufbewahrung gemaß Kontoeinstellung (derzeit bis zu 14 Monate).</li>
+              <li><strong>Cookie-Einwilligungsstatus:</strong> lokal im Browser gespeichert, bis du ihn löschst oder änderst.</li>
+            </ul>
+
+            <h2 style={{ fontSize: "1.25rem", fontWeight: 700, color: "#ffffff", marginBottom: "1rem", marginTop: "1.5rem" }}>
+              9. Muster für Datenschutzanfragen (Art. 15 ff. DSGVO)
+            </h2>
+            <p style={{ color: "#ffffff", lineHeight: 1.8, marginBottom: "0.75rem" }}>
+              Du kannst Auskunft, Berichtigung, Löschung, Einschränkung oder Datenübertragbarkeit per E-Mail anfordern.
+            </p>
+            <div style={{ background: "#12081f", border: "1px solid rgba(255,255,255,0.2)", borderRadius: "12px", padding: "1rem", marginBottom: "1.5rem" }}>
+              <p style={{ color: "#ffffff", lineHeight: 1.8, margin: 0 }}>
+                Betreff: DSGVO-Anfrage – [Auskunft/Löschung/Berichtigung]
+                <br />
+                "Hiermit bitte ich um Bearbeitung meiner Datenschutzanfrage nach Art. 15 ff. DSGVO.
+                Bitte bestätigen Sie den Eingang und informieren Sie mich über die weiteren Schritte."
+              </p>
+            </div>
+
+            <h2 style={{ fontSize: "1.25rem", fontWeight: 700, color: "#ffffff", marginBottom: "1rem", marginTop: "1.5rem" }}>
+              10. Kontakt
             </h2>
             <p style={{ color: "#ffffff", lineHeight: 1.8 }}>
               Bei datenschutzrechtlichen Anliegen erreichst du uns unter:

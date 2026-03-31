@@ -1,6 +1,9 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { generateStaticDreamDetail } from "@/lib/ai-content";
+
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://sternenfeed.de";
 
 const RUYA_VERILERI: Record<string, {
   baslik: string;
@@ -1160,6 +1163,47 @@ export const dynamicParams = true;
 
 export function generateStaticParams() {
   return Object.keys(RUYA_VERILERI).map((slug) => ({ slug }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const ruya = RUYA_VERILERI[slug];
+  const canonicalUrl = `${BASE_URL}/ruya/${slug}`;
+
+  if (!ruya) {
+    return {
+      title: "Traum nicht gefunden | SternenFeed",
+      robots: { index: false, follow: false },
+    };
+  }
+
+  const title = `${ruya.baslik} im Traum deuten | SternenFeed`;
+  const description = `${ruya.anlam} ${ruya.tavsiye}`.slice(0, 160);
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: canonicalUrl,
+      languages: { "de-DE": canonicalUrl },
+    },
+    openGraph: {
+      type: "article",
+      locale: "de_DE",
+      url: canonicalUrl,
+      title,
+      description,
+    },
+    twitter: {
+      card: "summary",
+      title,
+      description,
+    },
+  };
 }
 
 export default async function RuyaDetayPage({ params }: { params: Promise<{ slug: string }> }) {

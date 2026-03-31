@@ -8,6 +8,7 @@ type ConsentState = "accepted" | "rejected" | null;
 
 const CONSENT_KEY = "sternenfeed_cookie_consent";
 const OPEN_COOKIE_SETTINGS_EVENT = "sternenfeed-open-cookie-settings";
+const ANALYTICS_DEBUG = process.env.NODE_ENV === "development";
 
 type ConsentModeValue = "granted" | "denied";
 
@@ -34,6 +35,10 @@ function applyConsentMode(consent: ConsentState) {
     ad_user_data: value,
     ad_personalization: value,
   });
+
+  if (ANALYTICS_DEBUG) {
+    console.info("[analytics-debug] consent updated", { consent, value });
+  }
 }
 
 export default function CookieConsentBanner() {
@@ -56,11 +61,19 @@ export default function CookieConsentBanner() {
       wait_for_update: 500,
     });
 
+    if (ANALYTICS_DEBUG) {
+      console.info("[analytics-debug] default consent initialized as denied");
+    }
+
     const savedConsent = window.localStorage.getItem(CONSENT_KEY);
 
     if (savedConsent === "accepted" || savedConsent === "rejected") {
       setConsent(savedConsent);
       applyConsentMode(savedConsent);
+
+      if (ANALYTICS_DEBUG) {
+        console.info("[analytics-debug] restored saved consent", { savedConsent });
+      }
     }
 
     const handleOpenCookieSettings = () => {
@@ -82,6 +95,10 @@ export default function CookieConsentBanner() {
     window.localStorage.setItem(CONSENT_KEY, value);
     setConsent(value);
     applyConsentMode(value);
+
+    if (ANALYTICS_DEBUG) {
+      console.info("[analytics-debug] user set consent", { value, hasGaId: Boolean(gaId) });
+    }
   };
 
   const canLoadAnalytics = Boolean(gaId) && consent === "accepted";
@@ -95,7 +112,7 @@ export default function CookieConsentBanner() {
             strategy="afterInteractive"
           />
           <Script id="sternenfeed-ga" strategy="afterInteractive">
-            {`window.dataLayer = window.dataLayer || [];\nfunction gtag(){dataLayer.push(arguments);}\ngtag('js', new Date());\ngtag('config', '${gaId}', { anonymize_ip: true });`}
+            {`window.dataLayer = window.dataLayer || [];\nfunction gtag(){dataLayer.push(arguments);}\ngtag('js', new Date());\ngtag('config', '${gaId}', { anonymize_ip: true, debug_mode: ${ANALYTICS_DEBUG ? "true" : "false"} });`}
           </Script>
         </>
       ) : null}

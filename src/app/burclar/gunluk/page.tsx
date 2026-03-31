@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { unstable_cache } from "next/cache";
 import { generateDailyHoroscopeBatch } from "@/lib/ai-content";
 import RelatedCards from "@/components/RelatedCards";
 import { BURC_ONERILERI, ILISKI_ONERILERI } from "@/components/related-cards-data";
@@ -19,6 +20,18 @@ function getBerlinDateISO(date = new Date()) {
 
   return `${year}-${month}-${day}`;
 }
+
+const getCachedDailyHoroscopeBatch = unstable_cache(
+  async (dateISO: string, signs: string[]) =>
+    generateDailyHoroscopeBatch({
+      dateISO,
+      signs,
+    }),
+  ["daily-horoscope-batch"],
+  {
+    revalidate: 86400,
+  }
+);
 
 type BurcCard = {
   name: string;
@@ -170,10 +183,10 @@ const BURCLAR: BurcCard[] = [
 export default async function GunlukBurclarPage() {
   const now = new Date();
   const todayISO = getBerlinDateISO(now);
-  const aiHoroscopes = await generateDailyHoroscopeBatch({
-    dateISO: todayISO,
-    signs: BURCLAR.map((burc) => burc.slug),
-  });
+  const aiHoroscopes = await getCachedDailyHoroscopeBatch(
+    todayISO,
+    BURCLAR.map((burc) => burc.slug)
+  );
 
   const burclar = BURCLAR.map((burc) => {
     const ai = aiHoroscopes?.[burc.slug];

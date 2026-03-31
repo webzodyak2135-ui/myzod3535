@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { generateStaticParams as generateDreamStaticParams } from "./ruya/[slug]/page";
-import { ARTICLE_SLUGS } from "@/lib/article-slugs";
+import { ARTICLE_SLUGS } from "@/lib/article-data";
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://sternenfeed.de";
 

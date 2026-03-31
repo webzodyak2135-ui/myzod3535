@@ -1,1 +1,1 @@
-export const ARTICLE_SLUGS = ["su-ruyasi"] as const;
+export { ARTICLE_SLUGS } from "@/lib/article-data";
