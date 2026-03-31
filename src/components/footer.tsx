@@ -206,13 +206,13 @@ export default function Footer() {
           </p>
           <div style={{ display: "flex", gap: "1.5rem" }}>
             <Link
-              href="/kunye"
+              href="/impressum"
               style={{ fontSize: "0.8rem", color: "rgba(255,255,255,0.5)", textDecoration: "none" }}
             >
               Impressum (Künye)
             </Link>
             <Link
-              href="/gizlilik"
+              href="/datenschutz"
               style={{ fontSize: "0.8rem", color: "rgba(255,255,255,0.5)", textDecoration: "none" }}
             >
               Datenschutzerklärung

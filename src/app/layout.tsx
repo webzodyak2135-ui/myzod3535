@@ -33,7 +33,13 @@ export const metadata: Metadata = {
   authors: [{ name: "SternenFeed" }],
   creator: "SternenFeed",
   publisher: "SternenFeed",
-  metadataBase: new URL("https://zodyak.com"),
+  metadataBase: new URL("https://sternenfeed.de"),
+  alternates: {
+    canonical: "/",
+    languages: {
+      "de-DE": "/",
+    },
+  },
   icons: {
     icon: "/img/newfavicon.png",
     shortcut: "/img/newfavicon.png",
@@ -42,7 +48,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "de_DE",
-    url: "https://zodyak.com",
+    url: "https://sternenfeed.de",
     siteName: "SternenFeed",
     title: "SternenFeed — Astrologie, Sternzeichen & Mystik",
     description:
@@ -57,6 +63,9 @@ export const metadata: Metadata = {
   verification: {
     google: "IWxTZG6MLB91OFZOOtTLOen_WTwIdzNKgWYXbuCK9A8",
   },
+  other: {
+    "content-language": "de-DE",
+  },
   robots: {
     index: true,
     follow: true,
@@ -70,7 +79,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="de" suppressHydrationWarning>
+    <html lang="de-DE" suppressHydrationWarning>
       <body className={`${notoSerif.variable} ${sourceSans.variable} antialiased`}>
         <ClientLayout>{children}</ClientLayout>
       </body>

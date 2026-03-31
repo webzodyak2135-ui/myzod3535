@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { generateDailyHoroscopeBatch, TONE_PRESETS, type TonePreset, ZODIAC_SIGNS } from "@/lib/ai-content";
+import { generateDailyHoroscopeBatch, resolveTonePreset, ZODIAC_SIGNS } from "@/lib/ai-content";
 
 export const runtime = "edge";
 
@@ -15,9 +15,7 @@ export async function POST(request: Request) {
       ? body.signs.filter((s): s is string => typeof s === "string" && s.length > 0)
       : ZODIAC_SIGNS.map((s) => s.slug);
 
-    const tonePreset = TONE_PRESETS.includes(body.tonePreset as TonePreset)
-      ? (body.tonePreset as TonePreset)
-      : "uzman";
+    const tonePreset = resolveTonePreset(body.tonePreset, "wissenschaftlich");
 
     const data = await generateDailyHoroscopeBatch({
       dateISO: body.dateISO,

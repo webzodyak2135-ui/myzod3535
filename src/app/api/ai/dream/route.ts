@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { generateDreamInterpretation, TONE_PRESETS, type TonePreset } from "@/lib/ai-content";
+import { generateDreamInterpretation, resolveTonePreset } from "@/lib/ai-content";
 
 export const runtime = "edge";
 
@@ -11,9 +11,7 @@ export async function POST(request: Request) {
       tonePreset?: string;
     };
 
-    const tonePreset = TONE_PRESETS.includes(body.tonePreset as TonePreset)
-      ? (body.tonePreset as TonePreset)
-      : "soft";
+    const tonePreset = resolveTonePreset(body.tonePreset, "soft");
 
     const dreamText = typeof body.dreamText === "string" ? body.dreamText.trim() : "";
     if (!dreamText || dreamText.length < 10) {

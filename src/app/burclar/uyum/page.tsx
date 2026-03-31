@@ -36,7 +36,7 @@ const UYUM_TABLOSU: Record<string, Record<string, number>> = {
 export default function BurcUyumuPage() {
   const [burc1, setBurc1] = useState("");
   const [burc2, setBurc2] = useState("");
-  const [tonePreset, setTonePreset] = useState<"kanka" | "uzman" | "soft">("uzman");
+  const [tonePreset, setTonePreset] = useState<"magazin" | "wissenschaftlich" | "soft">("wissenschaftlich");
   const [isLoadingAi, setIsLoadingAi] = useState(false);
   const [aiError, setAiError] = useState("");
   const [aiAnaliz, setAiAnaliz] = useState<{
@@ -176,7 +176,7 @@ export default function BurcUyumuPage() {
             </label>
             <select
               value={tonePreset}
-              onChange={(e) => setTonePreset(e.target.value as "kanka" | "uzman" | "soft")}
+              onChange={(e) => setTonePreset(e.target.value as "magazin" | "wissenschaftlich" | "soft")}
               style={{
                 width: "100%",
                 marginBottom: "0.9rem",
@@ -188,8 +188,8 @@ export default function BurcUyumuPage() {
                 fontSize: "0.95rem"
               }}
             >
-              <option value="kanka" style={{ background: "#1a0b2e", color: "#ffffff" }}>Kanka (samimi)</option>
-              <option value="uzman" style={{ background: "#1a0b2e", color: "#ffffff" }}>Uzman (profesyonel)</option>
+              <option value="magazin" style={{ background: "#1a0b2e", color: "#ffffff" }}>Magazin (canli/akici)</option>
+              <option value="wissenschaftlich" style={{ background: "#1a0b2e", color: "#ffffff" }}>Wissenschaftlich (editorial)</option>
               <option value="soft" style={{ background: "#1a0b2e", color: "#ffffff" }}>Soft (sakin/destekleyici)</option>
             </select>
 

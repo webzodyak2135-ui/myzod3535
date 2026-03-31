@@ -55,9 +55,30 @@ export type StaticDreamDetail = {
   tavsiye: string;
 };
 
-export type TonePreset = "kanka" | "uzman" | "soft";
+export type TonePreset = "magazin" | "wissenschaftlich" | "soft";
 
-export const TONE_PRESETS: TonePreset[] = ["kanka", "uzman", "soft"];
+type LegacyTonePreset = "kanka" | "uzman";
+
+export const TONE_PRESETS: TonePreset[] = ["magazin", "wissenschaftlich", "soft"];
+
+const LEGACY_TONE_MAP: Record<LegacyTonePreset, TonePreset> = {
+  kanka: "magazin",
+  uzman: "wissenschaftlich",
+};
+
+export function resolveTonePreset(rawValue: unknown, fallback: TonePreset = "wissenschaftlich"): TonePreset {
+  if (typeof rawValue !== "string") return fallback;
+
+  if (TONE_PRESETS.includes(rawValue as TonePreset)) {
+    return rawValue as TonePreset;
+  }
+
+  if (rawValue in LEGACY_TONE_MAP) {
+    return LEGACY_TONE_MAP[rawValue as LegacyTonePreset];
+  }
+
+  return fallback;
+}
 
 export const ZODIAC_SIGNS = [
   { slug: "koc", name: "Koc" },
@@ -85,16 +106,29 @@ const GEMINI_FALLBACK_MODELS = [
   "gemini-2.0-flash-lite-001",
 ];
 
-function toneInstruction(tonePreset: TonePreset = "uzman") {
-  if (tonePreset === "kanka") {
-    return "Ton: vertraut, nah, alltäglich und warm; verwende kurze aber klare Sätze.";
+function toneInstruction(tonePreset: TonePreset = "wissenschaftlich") {
+  if (tonePreset === "magazin") {
+    return "Ton: magazinartig, zugänglich, lebendig und nahbar; schreibe warm, klar und mit leichter Dynamik.";
   }
 
   if (tonePreset === "soft") {
     return "Ton: sanft, ruhig, unterstützend und einfühlsam; vermeide wertende Sprache.";
   }
 
-  return "Ton: wie ein professioneller Astrologe - vertrauenerweckend aber natürlich und menschlich.";
+  return "Ton: wissenschaftlich-klar, redaktionell sauber und vertrauenswürdig; bleibe dennoch natürlich und gut lesbar.";
+}
+
+function germanEditorialDirectives(persona: string, topicHint: string) {
+  return [
+    `Persona: ${persona}`,
+    `Thema-Kontext: ${topicHint}`,
+    "EEAT: Starte mit 1-2 Sätzen wie aus einer echten Beobachtung oder Beratungsszene, damit Nähe und Erfahrung spürbar werden.",
+    "Struktur: Jeder längere Abschnitt soll klar aufgebaut sein: neugieriger Einstieg, fundierte Einordnung, konkrete Handlungsempfehlung.",
+    "Sprachrhythmus: Variiere Satzlängen bewusst; kombiniere kurze, prägnante Sätze mit längeren, erklärenden Sätzen.",
+    "Vermeide KI-typische Floskeln wie 'Es ist wichtig zu beachten' oder ähnliche starre Formulierungen.",
+    "Lokalisierung: Verwende natürliches Deutsch für Deutschland; nutze metrische Einheiten (km, kg) falls Zahlen vorkommen.",
+    "Wenn inhaltlich passend, beziehe dich kurz auf Deutschland, ESA oder europäische Beobachtungen.",
+  ];
 }
 
 function getApiKey() {
@@ -185,10 +219,13 @@ export async function generateDailyHoroscopeBatch(input?: {
 }): Promise<Record<string, DailyHoroscope> | null> {
   const signs = (input?.signs?.length ? input.signs : ZODIAC_SIGNS.map((s) => s.slug)).join(", ");
   const dateISO = input?.dateISO ?? new Date().toISOString().slice(0, 10);
-  const tone = toneInstruction(input?.tonePreset ?? "uzman");
+  const tone = toneInstruction(input?.tonePreset ?? "wissenschaftlich");
 
   const prompt = [
-    "Du bist ein erfahrener, vertrauter und aufrichtiger Astrologie-Redakteur und Life-Coach.",
+    ...germanEditorialDirectives(
+      "Du bist ein senior Astrologie-Redakteur mit 10+ Jahren Erfahrung fur den deutschen Markt.",
+      "Tageshoroskope fur Leserinnen und Leser in Deutschland"
+    ),
     `Datum: ${dateISO}`,
     `Sternzeichen: ${signs}`,
     "Gib nur gültiges JSON zurück. Verwende kein Markdown.",
@@ -229,7 +266,10 @@ export async function generateDreamInterpretation(input: {
 }): Promise<DreamInterpretation | null> {
   const tone = toneInstruction(input.tonePreset ?? "soft");
   const prompt = [
-    "Du bist ein erfahrener Traumdeuter.",
+    ...germanEditorialDirectives(
+      "Du bist ein erfahrener Traumdeuter und psychologischer Redakteur fur deutschsprachige Leser.",
+      "Traumdeutung mit personlicher, nahbarer Ansprache"
+    ),
     `Sternzeichen (optional): ${input.zodiacSign ?? "nicht angegeben"}`,
     `Traumbeschreibung: ${input.dreamText}`,
     "Gib nur gültiges JSON zurück.",
@@ -259,10 +299,13 @@ export async function generateWeeklyHoroscopeBatch(input?: {
 }): Promise<Record<string, WeeklyHoroscope> | null> {
   const signs = (input?.signs?.length ? input.signs : ZODIAC_SIGNS.map((s) => s.slug)).join(", ");
   const weekStartISO = input?.weekStartISO ?? new Date().toISOString().slice(0, 10);
-  const tone = toneInstruction(input?.tonePreset ?? "uzman");
+  const tone = toneInstruction(input?.tonePreset ?? "wissenschaftlich");
 
   const prompt = [
-    "Du bist ein erfahrener, vertrauter und aufrichtiger Astrologie-Redakteur und Life-Coach.",
+    ...germanEditorialDirectives(
+      "Du bist ein senior Astrologie-Redakteur mit 10+ Jahren Erfahrung fur den deutschen Markt.",
+      "Wochenhoroskope fur Leserinnen und Leser in Deutschland"
+    ),
     `Wochenbeginn (ISO): ${weekStartISO}`,
     `Sternzeichen: ${signs}`,
     "Gib nur gültiges JSON zurück. Verwende kein Markdown.",
@@ -299,9 +342,12 @@ export async function generateCompatibility(input: {
   sign2: string;
   tonePreset?: TonePreset;
 }): Promise<CompatibilityInterpretation | null> {
-  const tone = toneInstruction(input.tonePreset ?? "uzman");
+  const tone = toneInstruction(input.tonePreset ?? "wissenschaftlich");
   const prompt = [
-    "Du bist ein Experte für Beziehungsastrologie.",
+    ...germanEditorialDirectives(
+      "Du bist ein Experte fur Beziehungsastrologie und schreibst in Magazin-Stil fur Deutschland.",
+      "Kompatibilitatsanalyse zwischen zwei Sternzeichen"
+    ),
     `Erstes Sternzeichen: ${input.sign1}`,
     `Zweites Sternzeichen: ${input.sign2}`,
     "Gib nur gültiges JSON zurück.",
@@ -333,10 +379,13 @@ export async function generateBurcFullContent(input: {
 }): Promise<BurcFullContent | null> {
   const dateISO = input.dateISO ?? new Date().toISOString().slice(0, 10);
   const monthISO = dateISO.slice(0, 7);
-  const tone = toneInstruction(input.tonePreset ?? "uzman");
+  const tone = toneInstruction(input.tonePreset ?? "wissenschaftlich");
 
   const prompt = [
-    "Du bist ein erfahrener, vertrauter und aufrichtiger Astrologie-Redakteur und Life-Coach.",
+    ...germanEditorialDirectives(
+      "Du bist ein senior Astrologie-Redakteur mit 10+ Jahren Erfahrung fur den deutschen Markt.",
+      "Vollstandiger Sternzeichen-Content: taglich, wochentlich, monatlich"
+    ),
     `Sternzeichen: ${input.name} (${input.slug})`,
     `Heutiges Datum: ${dateISO}`,
     `Jahr-Monat dieses Monats: ${monthISO}`,
@@ -375,10 +424,13 @@ export async function generateMonthlyHoroscopeBatch(input?: {
 }): Promise<Record<string, MonthlyHoroscope> | null> {
   const signs = (input?.signs?.length ? input.signs : ZODIAC_SIGNS.map((s) => s.slug)).join(", ");
   const monthISO = input?.monthISO ?? new Date().toISOString().slice(0, 7);
-  const tone = toneInstruction(input?.tonePreset ?? "uzman");
+  const tone = toneInstruction(input?.tonePreset ?? "wissenschaftlich");
 
   const prompt = [
-    "Du bist ein erfahrener, vertrauter und aufrichtiger Astrologie-Redakteur und Life-Coach.",
+    ...germanEditorialDirectives(
+      "Du bist ein senior Astrologie-Redakteur mit 10+ Jahren Erfahrung fur den deutschen Markt.",
+      "Monatshoroskope fur Leserinnen und Leser in Deutschland"
+    ),
     `Monat (YYYY-MM): ${monthISO}`,
     `Sternzeichen: ${signs}`,
     "Gib nur gültiges JSON zurück. Verwende kein Markdown.",
@@ -423,9 +475,12 @@ export async function generateRisingSignInterpretation(input: {
   birthTime?: string;
   tonePreset?: TonePreset;
 }): Promise<RisingSignResult | null> {
-  const tone = toneInstruction(input.tonePreset ?? "uzman");
+  const tone = toneInstruction(input.tonePreset ?? "wissenschaftlich");
   const prompt = [
-    "Du bist ein erfahrener, vertrauter und aufrichtiger Astrologie-Redakteur und Life-Coach.",
+    ...germanEditorialDirectives(
+      "Du bist ein senior Astrologie-Redakteur und Aszendenten-Experte fur den deutschen Markt.",
+      "Aszendenten-Interpretation fur alltagsnahe Beratung"
+    ),
     `Aszendent: ${input.risingSign}`,
     input.sunSign ? `Sonnenzeichen: ${input.sunSign}` : "",
     input.birthTime ? `Geburtszeit: ${input.birthTime}` : "",
@@ -466,9 +521,12 @@ export async function generateNatalChartReading(input: {
   birthPlace?: string;
   tonePreset?: TonePreset;
 }): Promise<NatalChartReading | null> {
-  const tone = toneInstruction(input.tonePreset ?? "uzman");
+  const tone = toneInstruction(input.tonePreset ?? "wissenschaftlich");
   const prompt = [
-    "Du bist ein erfahrener, vertrauter und aufrichtiger Astrologie-Redakteur und Geburtshoroskop-Experte.",
+    ...germanEditorialDirectives(
+      "Du bist ein senior Geburtshoroskop-Experte und Wissenschaftsredakteur fur deutschsprachige Leser.",
+      "Interpretation von Geburtsdaten in klarer, gut strukturierter Form"
+    ),
     `Geburtsdatum: ${input.birthDate}`,
     input.birthTime ? `Geburtszeit: ${input.birthTime}` : "Geburtszeit: unbekannt (verwende 12:00)",
     input.birthPlace ? `Geburtsort: ${input.birthPlace}` : "Geburtsort: nicht angegeben",
@@ -506,7 +564,10 @@ export async function generateStaticDreamDetail(input: {
   const tone = toneInstruction(input.tonePreset ?? "soft");
 
   const prompt = [
-    "Du bist ein erfahrener Traumdeuter und Psychologie-Experte.",
+    ...germanEditorialDirectives(
+      "Du bist ein erfahrener Traumdeuter und Psychologie-Experte fur den deutschen Markt.",
+      "Ausfuhrliche Traumdetail-Seite im Magazin-Stil"
+    ),
     `Traumthema: ${input.dreamTitle}`,
     input.dreamKeywords ? `Schlüsselwörter / Symbole: ${input.dreamKeywords}` : "",
     "Gib nur gültiges JSON zurück.",

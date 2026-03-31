@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { generateCompatibility, TONE_PRESETS, type TonePreset } from "@/lib/ai-content";
+import { generateCompatibility, resolveTonePreset } from "@/lib/ai-content";
 
 export const runtime = "edge";
 
@@ -11,9 +11,7 @@ export async function POST(request: Request) {
       tonePreset?: string;
     };
 
-    const tonePreset = TONE_PRESETS.includes(body.tonePreset as TonePreset)
-      ? (body.tonePreset as TonePreset)
-      : "uzman";
+    const tonePreset = resolveTonePreset(body.tonePreset, "wissenschaftlich");
 
     const sign1 = typeof body.sign1 === "string" ? body.sign1.trim() : "";
     const sign2 = typeof body.sign2 === "string" ? body.sign2.trim() : "";
