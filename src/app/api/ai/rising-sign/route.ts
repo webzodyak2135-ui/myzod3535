@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { generateRisingSignInterpretation, TonePreset } from "@/lib/ai-content";
+import { generateRisingSignInterpretation, resolveTonePreset } from "@/lib/ai-content";
 
 export const runtime = "edge";
 
@@ -9,7 +9,7 @@ export async function POST(req: NextRequest) {
       risingSign?: string;
       sunSign?: string;
       birthTime?: string;
-      tonePreset?: TonePreset;
+      tonePreset?: string;
     };
     if (!body.risingSign) {
       return NextResponse.json({ ok: false, message: "risingSign zorunlu." }, { status: 400 });
@@ -18,7 +18,7 @@ export async function POST(req: NextRequest) {
       risingSign: body.risingSign,
       sunSign: body.sunSign,
       birthTime: body.birthTime,
-      tonePreset: body.tonePreset,
+      tonePreset: resolveTonePreset(body.tonePreset, "wissenschaftlich"),
     });
     if (!data) {
       return NextResponse.json({ ok: false, message: "Yorum su an uretilemiyor." }, { status: 503 });

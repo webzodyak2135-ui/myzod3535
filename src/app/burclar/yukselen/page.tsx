@@ -25,6 +25,7 @@ type AiYorum = { yorum: string; gucluYonler: string[]; iliski: string; kariyer: 
 export default function YukselenBurcPage() {
   const [dogumSaati, setDogumSaati] = useState("");
   const [dogumYeri, setDogumYeri] = useState("");
+  const [tonePreset, setTonePreset] = useState<"magazin" | "wissenschaftlich" | "soft">("wissenschaftlich");
   const [seciliYukselen, setSeciliYukselen] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   const [aiYorum, setAiYorum] = useState<AiYorum | null>(null);
@@ -41,7 +42,7 @@ export default function YukselenBurcPage() {
       const res = await fetch("/api/ai/rising-sign", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ risingSign: burcAdi, birthTime: dogumSaati }),
+        body: JSON.stringify({ risingSign: burcAdi, birthTime: dogumSaati, tonePreset }),
       });
       const payload = await res.json() as { ok?: boolean; data?: AiYorum };
       if (payload.ok && payload.data) setAiYorum(payload.data);
@@ -99,6 +100,29 @@ export default function YukselenBurcPage() {
                   fontSize: "1rem"
                 }}
               />
+            </div>
+
+            <div style={{ marginBottom: "1.5rem" }}>
+              <label style={{ display: "block", fontSize: "0.9rem", fontWeight: 600, color: "#ffffff", marginBottom: "0.5rem" }}>
+                Yorum Tarzı
+              </label>
+              <select
+                value={tonePreset}
+                onChange={(e) => setTonePreset(e.target.value as "magazin" | "wissenschaftlich" | "soft")}
+                style={{
+                  width: "100%",
+                  padding: "0.875rem",
+                  borderRadius: "12px",
+                  border: "2px solid rgba(168, 85, 247, 0.5)",
+                  background: "rgba(45, 27, 78, 0.5)",
+                  color: "#ffffff",
+                  fontSize: "1rem"
+                }}
+              >
+                <option value="magazin">Magazin (canli/akici)</option>
+                <option value="wissenschaftlich">Wissenschaftlich (editorial)</option>
+                <option value="soft">Soft (sakin/destekleyici)</option>
+              </select>
             </div>
 
             <div style={{ marginBottom: "1.5rem" }}>

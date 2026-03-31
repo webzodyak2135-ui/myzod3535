@@ -44,6 +44,7 @@ type NatalResult = {
 
 export default function DogumHaritasiPage() {
   const [formData, setFormData] = useState({ tarih: "", saat: "", yer: "" });
+  const [tonePreset, setTonePreset] = useState<"magazin" | "wissenschaftlich" | "soft">("wissenschaftlich");
   const [loading, setLoading] = useState(false);
   const [hata, setHata] = useState("");
   const [sonuc, setSonuc] = useState<NatalResult | null>(null);
@@ -61,6 +62,7 @@ export default function DogumHaritasiPage() {
           birthDate: formData.tarih,
           birthTime: formData.saat || undefined,
           birthPlace: formData.yer || undefined,
+          tonePreset,
         }),
       });
       const payload = await res.json() as { ok?: boolean; data?: NatalResult; message?: string };
@@ -117,6 +119,21 @@ export default function DogumHaritasiPage() {
                 onChange={(e) => setFormData({ ...formData, tarih: e.target.value })}
                 style={{ width: "100%", padding: "0.875rem", borderRadius: "12px", border: "2px solid #ffffff", fontSize: "1rem" }}
               />
+            </div>
+
+            <div style={{ marginBottom: "1.5rem" }}>
+              <label style={{ display: "block", fontSize: "0.9rem", fontWeight: 600, color: "#ffffff", marginBottom: "0.5rem" }}>
+                Yorum Tarzı
+              </label>
+              <select
+                value={tonePreset}
+                onChange={(e) => setTonePreset(e.target.value as "magazin" | "wissenschaftlich" | "soft")}
+                style={{ width: "100%", padding: "0.875rem", borderRadius: "12px", border: "2px solid #ffffff", fontSize: "1rem", background: "#1a0b2e", color: "#ffffff" }}
+              >
+                <option value="magazin">Magazin (canli/akici)</option>
+                <option value="wissenschaftlich">Wissenschaftlich (editorial)</option>
+                <option value="soft">Soft (sakin/destekleyici)</option>
+              </select>
             </div>
 
             <div style={{ marginBottom: "1rem" }}>

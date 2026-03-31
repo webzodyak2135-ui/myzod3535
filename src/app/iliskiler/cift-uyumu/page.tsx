@@ -35,6 +35,7 @@ type AiSonuc = {
 export default function CiftUyumuPage() {
   const [burc1, setBurc1] = useState("");
   const [burc2, setBurc2] = useState("");
+  const [tonePreset, setTonePreset] = useState<"magazin" | "wissenschaftlich" | "soft">("wissenschaftlich");
   const [loading, setLoading] = useState(false);
   const [hata, setHata] = useState("");
   const [sonuc, setSonuc] = useState<AiSonuc | null>(null);
@@ -48,7 +49,7 @@ export default function CiftUyumuPage() {
       const res = await fetch("/api/ai/compatibility", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ sign1: burc1, sign2: burc2, tonePreset: "uzman" }),
+        body: JSON.stringify({ sign1: burc1, sign2: burc2, tonePreset }),
       });
       const payload = await res.json() as { ok?: boolean; data?: AiSonuc; message?: string };
       if (!res.ok || !payload.ok || !payload.data) {
@@ -190,6 +191,21 @@ export default function CiftUyumuPage() {
                   </select>
                 </div>
               </div>
+            </div>
+
+            <div style={{ marginTop: "0.25rem" }}>
+              <label style={{ display: "block", fontSize: "0.85rem", fontWeight: 600, color: "#ffffff", marginBottom: "0.5rem" }}>
+                Yorum Tarzı
+              </label>
+              <select
+                value={tonePreset}
+                onChange={(e) => setTonePreset(e.target.value as "magazin" | "wissenschaftlich" | "soft")}
+                style={{ width: "100%", padding: "0.75rem", borderRadius: "12px", border: "2px solid #1a0b2e", fontSize: "1rem" }}
+              >
+                <option value="magazin">Magazin (canli/akici)</option>
+                <option value="wissenschaftlich">Wissenschaftlich (editorial)</option>
+                <option value="soft">Soft (sakin/destekleyici)</option>
+              </select>
             </div>
 
             <button
