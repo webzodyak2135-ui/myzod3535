@@ -4,12 +4,6 @@ import { Share2, MessageCircle, Instagram } from "lucide-react";
 
 export const runtime = "edge";
 
-const ARTICLE_SLUGS = ["su-ruyasi"];
-
-export function generateStaticParams() {
-  return ARTICLE_SLUGS.map((slug) => ({ slug }));
-}
-
 const ARTICLE_DATA = {
   title: "Flugträume: Freiheit oder Flucht?",
   category: "Traumdeutung",
