@@ -5,6 +5,7 @@ import { useState } from "react";
 export default function IletisimPage() {
   const [formData, setFormData] = useState({ isim: "", email: "", konu: "", mesaj: "" });
   const [gonderildi, setGonderildi] = useState(false);
+  const [privacyAccepted, setPrivacyAccepted] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -175,17 +176,33 @@ export default function IletisimPage() {
                       resize: "vertical",
                     }}
                   />
+                  <label style={{ display: "flex", alignItems: "flex-start", gap: "0.6rem", color: "#ffffff", fontSize: "0.85rem", lineHeight: 1.6 }}>
+                    <input
+                      type="checkbox"
+                      checked={privacyAccepted}
+                      onChange={(e) => setPrivacyAccepted(e.target.checked)}
+                      required
+                      style={{ marginTop: "0.2rem" }}
+                    />
+                    <span>
+                      Ich stimme der Verarbeitung meiner Angaben zur Bearbeitung meiner Anfrage zu.
+                      Die Daten werden ausschließlich für die Kommunikation verwendet und in der Regel nach
+                      spätestens 6 Monaten gelöscht, sofern keine gesetzlichen Aufbewahrungspflichten bestehen.
+                      Details findest du in der Datenschutzerklärung.
+                    </span>
+                  </label>
                   <button
                     type="submit"
+                    disabled={!privacyAccepted}
                     style={{
                       padding: "1rem",
-                      background: "linear-gradient(135deg, #7c3aed, #a855f7)",
-                      color: "#ffffff",
+                      background: privacyAccepted ? "linear-gradient(135deg, #7c3aed, #a855f7)" : "rgba(255,255,255,0.2)",
+                      color: privacyAccepted ? "#ffffff" : "rgba(255,255,255,0.7)",
                       border: "none",
                       borderRadius: "12px",
                       fontSize: "1rem",
                       fontWeight: 600,
-                      cursor: "pointer",
+                      cursor: privacyAccepted ? "pointer" : "not-allowed",
                     }}
                   >
                     Senden

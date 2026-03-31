@@ -1,5 +1,9 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+
+const OPEN_COOKIE_SETTINGS_EVENT = "sternenfeed-open-cookie-settings";
 
 const FOOTER_LINKS = {
   burclar: [
@@ -29,6 +33,10 @@ const FOOTER_LINKS = {
 };
 
 export default function Footer() {
+  const openCookieSettings = () => {
+    window.dispatchEvent(new Event(OPEN_COOKIE_SETTINGS_EVENT));
+  };
+
   return (
     <footer
       style={{
@@ -223,6 +231,21 @@ export default function Footer() {
             >
               Nutzungsbedingungen
             </Link>
+            <button
+              type="button"
+              onClick={openCookieSettings}
+              style={{
+                fontSize: "0.8rem",
+                color: "rgba(255,255,255,0.5)",
+                textDecoration: "none",
+                background: "transparent",
+                border: "none",
+                padding: 0,
+                cursor: "pointer",
+              }}
+            >
+              Cookie-Einstellungen
+            </button>
           </div>
         </div>
       </div>

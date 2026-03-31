@@ -9,7 +9,7 @@ export default function GizlilikPage() {
 
           <div style={{ background: "#1a0b2e", borderRadius: "20px", padding: "2rem", boxShadow: "0 2px 12px rgba(0,0,0,0.06)" }}>
             <p style={{ color: "#ffffff", lineHeight: 1.8, marginBottom: "1.5rem" }}>
-              Letzte Aktualisierung: März 2024
+              Letzte Aktualisierung: März 2026
             </p>
 
             <h2 style={{ fontSize: "1.25rem", fontWeight: 700, color: "#ffffff", marginBottom: "1rem", marginTop: "1.5rem" }}>
@@ -45,12 +45,33 @@ export default function GizlilikPage() {
               4. Dienste von Drittanbietern
             </h2>
             <p style={{ color: "#ffffff", lineHeight: 1.8, marginBottom: "1.5rem" }}>
-              Unsere Website kann Drittanbieter-Tools für Analyse- und Werbedienste verwenden. Diese Dienste
-              haben ihre eigenen Datenschutzrichtlinien.
+              Wir nutzen folgende Drittanbieter-Dienste:
+            </p>
+            <ul style={{ color: "#ffffff", lineHeight: 1.8, marginLeft: "1.5rem", marginBottom: "1.5rem" }}>
+              <li>
+                <strong>Cloudflare</strong> (Hosting, CDN, Sicherheitsfunktionen): Verarbeitung technischer
+                Verbindungsdaten zur stabilen und sicheren Auslieferung der Website.
+              </li>
+              <li>
+                <strong>Google Analytics</strong> (Nutzungsanalyse): Aktiv nur nach Einwilligung über das
+                Cookie-Banner; Rechtsgrundlage ist Art. 6 Abs. 1 lit. a DSGVO.
+              </li>
+            </ul>
+            <p style={{ color: "#ffffff", lineHeight: 1.8, marginBottom: "1.5rem" }}>
+              Für diese Dienste gelten ergänzend die jeweiligen Datenschutzbestimmungen der Anbieter.
             </p>
 
             <h2 style={{ fontSize: "1.25rem", fontWeight: 700, color: "#ffffff", marginBottom: "1rem", marginTop: "1.5rem" }}>
-              5. Datensicherheit
+              5. Auftragsverarbeitung (AVV / DPA)
+            </h2>
+            <p style={{ color: "#ffffff", lineHeight: 1.8, marginBottom: "1.5rem" }}>
+              Soweit wir externe Dienstleister (z. B. Hosting, Analyse oder technische Infrastruktur) einsetzen,
+              erfolgt dies auf Grundlage eines Vertrags zur Auftragsverarbeitung (AVV / Data Processing Agreement,
+              Art. 28 DSGVO), sofern eine Verarbeitung personenbezogener Daten in unserem Auftrag stattfindet.
+            </p>
+
+            <h2 style={{ fontSize: "1.25rem", fontWeight: 700, color: "#ffffff", marginBottom: "1rem", marginTop: "1.5rem" }}>
+              6. Datensicherheit
             </h2>
             <p style={{ color: "#ffffff", lineHeight: 1.8, marginBottom: "1.5rem" }}>
               Die Sicherheit der Nutzerdaten ist uns wichtig. Wir setzen branchenübliche Sicherheitsmaßnahmen
@@ -58,7 +79,15 @@ export default function GizlilikPage() {
             </p>
 
             <h2 style={{ fontSize: "1.25rem", fontWeight: 700, color: "#ffffff", marginBottom: "1rem", marginTop: "1.5rem" }}>
-              6. Kontakt
+              7. Cookie-Einstellungen
+            </h2>
+            <p style={{ color: "#ffffff", lineHeight: 1.8, marginBottom: "1.5rem" }}>
+              Du kannst deine Einwilligung jederzeit ändern oder widerrufen. Verwende dafür den Link
+              "Cookie-Einstellungen" im Footer der Website.
+            </p>
+
+            <h2 style={{ fontSize: "1.25rem", fontWeight: 700, color: "#ffffff", marginBottom: "1rem", marginTop: "1.5rem" }}>
+              8. Kontakt
             </h2>
             <p style={{ color: "#ffffff", lineHeight: 1.8 }}>
               Bei datenschutzrechtlichen Anliegen erreichst du uns unter:

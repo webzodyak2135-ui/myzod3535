@@ -34,6 +34,15 @@ export default function KünyePage() {
             </p>
 
             <h2 style={{ fontSize: "1.25rem", fontWeight: 700, color: "#ffffff", marginBottom: "0.75rem" }}>
+              Technische Dienste
+            </h2>
+            <p style={{ color: "#ffffff", lineHeight: 1.8, marginBottom: "1.5rem" }}>
+              Fur die technische Bereitstellung und Sicherheit dieser Website nutzen wir Cloudflare
+              (Hosting, CDN und Schutzmechanismen). Fur Reichweitenmessung verwenden wir Google Analytics
+              ausschliesslich nach vorheriger Einwilligung uber das Cookie-Banner.
+            </p>
+
+            <h2 style={{ fontSize: "1.25rem", fontWeight: 700, color: "#ffffff", marginBottom: "0.75rem" }}>
               Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV
             </h2>
             <p style={{ color: "#ffffff", lineHeight: 1.8 }}>

@@ -7,6 +7,34 @@ import Script from "next/script";
 type ConsentState = "accepted" | "rejected" | null;
 
 const CONSENT_KEY = "sternenfeed_cookie_consent";
+const OPEN_COOKIE_SETTINGS_EVENT = "sternenfeed-open-cookie-settings";
+
+type ConsentModeValue = "granted" | "denied";
+
+declare global {
+  interface Window {
+    dataLayer?: unknown[];
+    gtag?: (...args: unknown[]) => void;
+  }
+}
+
+function applyConsentMode(consent: ConsentState) {
+  if (typeof window === "undefined") return;
+
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = window.gtag || function (...args: unknown[]) {
+    window.dataLayer?.push(args);
+  };
+
+  const value: ConsentModeValue = consent === "accepted" ? "granted" : "denied";
+
+  window.gtag("consent", "update", {
+    ad_storage: value,
+    analytics_storage: value,
+    ad_user_data: value,
+    ad_personalization: value,
+  });
+}
 
 export default function CookieConsentBanner() {
   const [consent, setConsent] = useState<ConsentState>(null);
@@ -15,18 +43,45 @@ export default function CookieConsentBanner() {
   const gaId = useMemo(() => process.env.NEXT_PUBLIC_GA_ID, []);
 
   useEffect(() => {
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = window.gtag || function (...args: unknown[]) {
+      window.dataLayer?.push(args);
+    };
+
+    window.gtag("consent", "default", {
+      ad_storage: "denied",
+      analytics_storage: "denied",
+      ad_user_data: "denied",
+      ad_personalization: "denied",
+      wait_for_update: 500,
+    });
+
     const savedConsent = window.localStorage.getItem(CONSENT_KEY);
 
     if (savedConsent === "accepted" || savedConsent === "rejected") {
       setConsent(savedConsent);
+      applyConsentMode(savedConsent);
     }
 
+    const handleOpenCookieSettings = () => {
+      window.localStorage.removeItem(CONSENT_KEY);
+      setConsent(null);
+      applyConsentMode("rejected");
+    };
+
+    window.addEventListener(OPEN_COOKIE_SETTINGS_EVENT, handleOpenCookieSettings);
+
     setHydrated(true);
+
+    return () => {
+      window.removeEventListener(OPEN_COOKIE_SETTINGS_EVENT, handleOpenCookieSettings);
+    };
   }, []);
 
   const handleConsent = (value: Exclude<ConsentState, null>) => {
     window.localStorage.setItem(CONSENT_KEY, value);
     setConsent(value);
+    applyConsentMode(value);
   };
 
   const canLoadAnalytics = Boolean(gaId) && consent === "accepted";

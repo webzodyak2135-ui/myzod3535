@@ -1,0 +1,20 @@
+Service: Cloudflare
+Purpose: Hosting, CDN, security and traffic protection
+DPA Status: Available (Data Processing Addendum)
+Evidence Files:
+- Cloudflare-DPA-dashboard-2026-03-31.png
+- Cloudflare-DPA-review-2026-03-31.png
+- Cloudflare-DPA-2026-03-31.pdf
+Account: webzodyakli@gmail.com
+Domain: sternenfeed.de
+Date: 2026-03-31
+
+Service: Google Analytics
+Purpose: Usage analytics (only after cookie consent)
+DPA Status: Completed (Accepted in Data Processing settings)
+Evidence Files:
+- Google-DPA-kabul-2026-03-31.png
+- Google-DPA-data-processing-screen-2026-03-31.png
+Account: webzodyakli@gmail.com
+Domain: sternenfeed.de
+Date: 2026-03-31
