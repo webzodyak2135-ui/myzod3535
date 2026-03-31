@@ -15,7 +15,7 @@ type DreamResponse = {
 export default function RuyaYorumlaPage() {
   const [dreamText, setDreamText] = useState("");
   const [zodiacSign, setZodiacSign] = useState("");
-  const [tonePreset, setTonePreset] = useState<"kanka" | "uzman" | "soft">("soft");
+  const [tonePreset, setTonePreset] = useState<"magazin" | "wissenschaftlich" | "soft">("soft");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [result, setResult] = useState<DreamResponse | null>(null);
@@ -94,11 +94,11 @@ export default function RuyaYorumlaPage() {
           </label>
           <select
             value={tonePreset}
-            onChange={(e) => setTonePreset(e.target.value as "kanka" | "uzman" | "soft")}
+            onChange={(e) => setTonePreset(e.target.value as "magazin" | "wissenschaftlich" | "soft")}
             style={{ width: "100%", marginBottom: "0.75rem", border: "none", borderRadius: "10px", padding: "0.7rem 0.8rem", fontSize: "0.95rem", background: "#1a0b2e", color: "#ffffff" }}
           >
-            <option value="kanka">Kanka (samimi)</option>
-            <option value="uzman">Uzman (profesyonel)</option>
+            <option value="magazin">Magazin (canli/akici)</option>
+            <option value="wissenschaftlich">Wissenschaftlich (editorial)</option>
             <option value="soft">Soft (sakin/destekleyici)</option>
           </select>
 
