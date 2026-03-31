@@ -3,7 +3,22 @@ import { generateDailyHoroscopeBatch } from "@/lib/ai-content";
 import RelatedCards from "@/components/RelatedCards";
 import { BURC_ONERILERI, ILISKI_ONERILERI } from "@/components/related-cards-data";
 
-export const revalidate = 86400;
+export const dynamic = "force-dynamic";
+
+function getBerlinDateISO(date = new Date()) {
+  const parts = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Europe/Berlin",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).formatToParts(date);
+
+  const year = parts.find((part) => part.type === "year")?.value;
+  const month = parts.find((part) => part.type === "month")?.value;
+  const day = parts.find((part) => part.type === "day")?.value;
+
+  return `${year}-${month}-${day}`;
+}
 
 type BurcCard = {
   name: string;
@@ -153,7 +168,8 @@ const BURCLAR: BurcCard[] = [
 ];
 
 export default async function GunlukBurclarPage() {
-  const todayISO = new Date().toISOString().slice(0, 10);
+  const now = new Date();
+  const todayISO = getBerlinDateISO(now);
   const aiHoroscopes = await generateDailyHoroscopeBatch({
     dateISO: todayISO,
     signs: BURCLAR.map((burc) => burc.slug),
@@ -173,7 +189,8 @@ export default async function GunlukBurclarPage() {
     };
   });
 
-  const today = new Date().toLocaleDateString('de-DE', {
+  const today = now.toLocaleDateString('de-DE', {
+    timeZone: 'Europe/Berlin',
     weekday: 'long',
     year: 'numeric',
     month: 'long',
